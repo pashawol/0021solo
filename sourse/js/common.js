@@ -196,15 +196,14 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = 'online-Shop_Footer_768x1024.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 	$(document).on('click', '.btn-top', function () {
 		let th = $(this);
-		th.addClass('active');
-		$('html, body').animate({ scrollTop: 0 }, 1500, function () {
-			th.removeClass('show').removeClass('active')
+		$('html, body').animate({ scrollTop: 0 }, 100, function () {
+			th.removeClass('show')
 
 		});
 	})
@@ -213,7 +212,7 @@ function eventHandler() {
 		if ($(window).scrollTop() > topH) {
 			$('.btn-top  ').addClass('show');
 		} else {
-			$('.btn-top  ').removeClass('show').removeClass('active');
+			$('.btn-top  ').removeClass('show');
 		}
 
 	}

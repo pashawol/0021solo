@@ -1,21 +1,33 @@
 
 	// start .sCategories
 	.sCategories {
-		--sPT: #{rem(76)};
-		--sTPB: #{rem(10)};
+			@include media-breakpoint-up(xll){
+				--sPT: #{rem(82)};
+				--sPB: #{rem(47)};
+			}
+			--sPB: #{rem(24)};
+			@include media-breakpoint-up(xl){
+				--sPT: #{rem(24)};
+			}
+			--sPT: #{rem(54)};
+		--sTPB: #{rem(22)};
 		h2{
 			font-size: 1rem;
-			font-weight: bold;
-		}
-		ul{
-			columns: 4;
-		}
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: rem(0.56);
+		} 
 		li{
 			display: inline-block;
 			width: 100%;
-			margin-bottom: rem(10);
+				@include media-breakpoint-up(xll){
+					font-size: 1rem;
+					margin-bottom: em(14);
+				}
+				font-size: rem(14);
+				margin-bottom: em(13);
 			position: relative;
-			padding-left: rem(10);
+			padding-left: rem(15);
 			&::before{
 				content: url(../img/svg/chevron-right.svg);
 				position: absolute;

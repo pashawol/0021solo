@@ -16,7 +16,11 @@
 		
 	}
 	.icon{
-	font-size: rem(30);
+			@include media-breakpoint-up(xl){
+				font-size: rem(30);
+				
+			}
+			font-size: rem(22);
 	}
 	 
 

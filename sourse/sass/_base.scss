@@ -1,6 +1,6 @@
 
 .pixel-perfect {
-	top: 0;
+	top: -32px;
 	display: block;
 	@include a-cent(x); 
 	pointer-events: none;
@@ -34,19 +34,21 @@ html {
 body {  
 	min-width: 320px;  
 
-	position: relative; 
 	@include mt(.1);
-
+	position: relative; 
+	
 	&.loaded_hiding {
-
+		
 		opacity: 0;
 		pointer-events: none;
-			&::before{
-				display: none;
-			}
+		&::before{
+			display: none;
+		}
 	}
-
+	
 	.loaded {
+		transition: none;
+		// @include mt(0);
 		pointer-events: visible;
 		opacity: 1;
 	}

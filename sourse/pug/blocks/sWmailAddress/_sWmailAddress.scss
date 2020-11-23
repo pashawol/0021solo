@@ -4,16 +4,40 @@
 		color: #ffffff;
 		background-color: $primary;
 		text-align: center;
-		--sPB: #{rem(36)};
-		&__title{
-			@extend .h6;
-			margin-bottom: 1rem;
+		@include media-breakpoint-up(xl){
+
+			--sPB: #{rem(42)};
+		} 
+		--sPB: #{rem(38)};
+	// 	@include media-breakpoint-up(xll){
+	// 	}
+	// --sPB: #{rem(46)};
+		&__title{ 
+			font-weight: 500;
+			@include media-breakpoint-up(xll){
+				margin-bottom: 1rem;
+				font-size: $h6-font-size;
+			}
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 16px;
+			@include media-breakpoint-up(xl){
+				max-width: none;
+				// font-size: rem(28);
+				margin-bottom: rem(22);
+			}
+			margin-bottom: rem(32);
+			max-width: rem(230);
 
 		}
 		form{
 			margin-left: auto;
 			margin-right: auto;
-			max-width: rem(360);
+				@include media-breakpoint-up(xl){
+
+					max-width: rem(360);
+				}
+				max-width: rem(278);
 		}
 		&__input{
 			border-radius: 0;
@@ -23,10 +47,20 @@
 			border-top: none;
 			background-color: transparent !important;
 			text-align: center;
-			// font-size: rem(35);
-		@include rfs(35px);
+			@include media-breakpoint-up(xll){
+
+				font-size: rem(35);
+			}
+			@include media-breakpoint-up(xl){
+
+				font-size: rem(28);
+			}
+			font-size: $h5-font-size;
+		// @include rfs(35px);
 			padding-left: 0;
 			padding-right: rem(40);
+			padding-top: 0;
+			// padding-bottom: 0;
 			@include input-placeholder() {
 				color: #710000;
 			}
@@ -34,11 +68,11 @@
 			 font-weight: bold;
 			 background-image: url(../img/svg/pen.svg);
 			 background-position: right 50%;
-			 background-size: rem(31);
+			 background-size: em(21);
 			 background-repeat: no-repeat;
 		}
 		&__input-wrap{
-			margin-bottom: rem(53);
+			margin-bottom: rem(33);
 		}
 		&__btn{
 			@extend .btn;
@@ -49,19 +83,38 @@
 			font-weight: bold;
 			width: rem(280);
 			padding: rem(10.5) rem(10);
-			margin-bottom: rem(53);
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(53);
+			}
+			margin-bottom: rem(33);
 		}
 
 		.soc{
 			justify-content: center;
 			text-transform: uppercase;
+			@include media-breakpoint-up(xl) {
 			--bs-gutter-x: #{rem(28)};
+		}
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(35)};
+
+			}
 			flex-wrap: wrap;
 			&__item{
 				color: #ffffff;
 				font-weight: 900;
-				@extend .h5;
+				@include media-breakpoint-up(xl) {
+
+					font-size: $h5-font-size;
+				}
+				font-size: 15px;
 				margin-bottom: rem(29);
+				@include media-breakpoint-down(sm) {
+					.icon{
+						font-size: rem(35);
+					}
+				}	
 			}
 		}
 			

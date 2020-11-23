@@ -2,13 +2,13 @@ mixin footer()
 	+b.FOOTER.footer.section.block-with-lazy
 		.container
 			.row
-				+e.col.col-xxl.col-xl-auto.col-md-12.col-sm-6
+				+e.col.col-xxl.col-xll-auto.col-xl-12.col-sm-6
 					+e.logo(href="/")
 						img(src="img/svg/logo.svg", alt="")
 					.row
-						.col-xl-12.col-md
+						.col-xll-12.col-xl
 							+e.text.small.mb-5 SOLO Kleinmotoren GmbH&nbsp;&mdash; THE BETTER CHOICE. SINCE 1948. German quality sprayers and cut-off machines.
-						.col-xl-12.col-md
+						.col-xll-12.col-xl
 							+e.link(href="mailto:info@solo-germany.de") 
 								+e.icon-wrap
 									+icon('mail')
@@ -18,11 +18,11 @@ mixin footer()
 								+e.icon-wrap--tel
 									+icon('tel')
 								| +49 (0) 7031 - 301-0
-						.col-xl-12.col-md.mb-4
+						.col-xll-12.col-xl.mb-4
 							+e.text.small.mb-2 Montag&nbsp;&mdash; Freitag: 9:00&nbsp;&mdash; 18:00 Uhr (ausgenommen regionale Feiertage)
 							.small.text-secondary *Regul&auml;rer Festnetztarif Ihres Telefonanbieters.
 				mixin list(t,...items)
-					+e.col-nav.col-sm
+					+e.col-nav.col-xl.col-sm-6
 						+e.group
 							+e.title= t
 							ul
@@ -47,5 +47,5 @@ mixin footer()
 			.row
 				+e.col.col Diese Webseite verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können. #[a(href="#") Mehr Informationen …]
 				+e.btns.col-sm-auto
-					+e.btn.btn-gray.px-4(href="#") Ablehnen
-					+e.btn.btn-primary.px-4(href="#") Konfigurieren
+					+e.btn.btn-gray(href="#") Ablehnen
+					+e.btn.btn-primary(href="#") Konfigurieren

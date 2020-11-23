@@ -4,35 +4,61 @@ mixin sCategories(data)
 		.container
 			+b.section-title
 				h2 TOP KATEGorien
-				
-			ul
-				-
-					var nav= [
-						'Pflanzenschutz/-pflege',
-						'Schädlingsbekämpfung',
-						'Land- und Forstwirtschaft',
-						'Reinigung/Desinfektion',
-						'Baugewerbe',
-						'Streuen',
-						'Pflanzenschutz/-pflege',
-						'Schädlingsbekämpfung',
-						'Land- und Forstwirtschaft',
-						'Reinigung/Desinfektion',
-						'Baugewerbe',
-						'Streuen',
-						'Zubehör',
-						'Lanzen',
-						'Düsen und Spritzschirme',
-						'Dichtungen',
-						'Zubehör für Motorspritzen ',
-						'Zubehör für Sprühgeräte',
-						'Granulatstreuer',
-						'Trennschleifer',
-						'Blasgerät',
-					]
-				each linkName in nav
-					li
-						a(href="#")= linkName
+			.row
+				.col-3
+					ul
+						-
+							var nav= [
+								'Pflanzenschutz/-pflege',
+								'Schädlingsbekämpfung',
+								'Land- und Forstwirtschaft',
+								'Reinigung/Desinfektion',
+								'Baugewerbe',
+								'Streuen',
+							]
+						each linkName in nav
+							li
+								a(href="#")= linkName
+				.col-3
+					ul
+						-
+							var nav= [
+								'Handspritzen',
+								'Druckspritzen',
+								'Rückenspritzen',
+								'Akkuspritzen',
+								'Motorspritzen',
+								'Sprühgeräte',
+								'Schaumsprüher',
+							]
+						each linkName in nav
+							li
+								a(href="#")= linkName
+				.col-3
+					ul
+						-
+							var nav= [
+								'Zubehör',
+								'Lanzen',
+								'Düsen und Spritzschirme',
+								'Dichtungen',
+								'Zubehör für Motorspritzen ',
+								'Zubehör für Sprühgeräte',
+							]
+						each linkName in nav
+							li
+								a(href="#")= linkName
+				.col-3
+					ul
+						-
+							var nav= [
+								'Granulatstreuer',
+								'Trennschleifer',
+								'Blasgerät',
+							]
+						each linkName in nav
+							li
+								a(href="#")= linkName
 
 				
 	// end sCategories

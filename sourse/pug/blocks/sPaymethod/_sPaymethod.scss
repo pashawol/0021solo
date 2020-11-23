@@ -2,15 +2,15 @@
 	// start .sPaymethod
 	.sPaymethod {
 		 background-color: $light;
-		 --sPT: #{rem(55)};
-		 --sPB: #{rem(30)};
+		 --sPT: #{rem(57)};
+		 --sPB: #{rem(20)};
 		 &__row{
 			 justify-content: space-between;
 		 }
 		 &__col{
 			 font-weight: 900;
 			 @extend .h6;
-			 margin-bottom: rem(30);
+			 margin-bottom: rem(52);
 			 @include media-breakpoint-down(md) {
 				 text-align: center;
 				 .row{
@@ -22,7 +22,13 @@
 			 }
 			}
 			 &__title{ 
-				 margin-bottom: rem(10);
+				 margin-bottom: rem(30);
+				 text-transform: uppercase;
+				 letter-spacing: rem(0.56px);
+				 @include media-breakpoint-up(xll) {
+					 font-size: 1rem;
+					}
+					font-size: $small;
 				  
 			 }
 	@include media-breakpoint-up(xl) {}

@@ -4,15 +4,15 @@ mixin sPaymethod(data)
 		.container
 			+e.row.row
 				mixin item(t, i)
-					+e.col.col-xl-auto.col-md-6
+					+e.col&attributes(attributes)
 						+e.title!= t
 						.row
 							.col-auto
 								+pic(`pay-${i}.png`,'',0)
 							block
-				+item(`ZAHLUNGSMÖGLICHKEITEN`,`1`)
-				+item(`WIR VERSENDEN MIT`,`2`)
-				+item(`GEPRÜFTER ONLINESHOP`,`3`)
+				+item(`ZAHLUNGSMÖGLICHKEITEN`,`1`).col-xll-5.col-md-6
+				+item(`WIR VERSENDEN MIT`,`2`).col-xll.col-md-6
+				+item(`GEPRÜFTER ONLINESHOP`,`3`).col-xll-3.col-md-6
 					.col-auto
 						+pic(`pay-4.png`,'',0)
 	// end sPaymethod

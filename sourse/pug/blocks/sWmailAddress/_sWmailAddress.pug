@@ -4,7 +4,7 @@ mixin sWmailAddress(data)
 		.container
 			+e.title Bleiben Sie auf dem Laufenden mit dem SOLO Newsletter
 			form()
-				+input('E-MAIL-ADRESSE', 'email')
+				+input('E-MAIL-ADRESSE', 'email')(autocomplete="off")
 				+e.btn(type="submit") ZUR NEWSLETTER-ANMELDUNG
 			+soc()
 	// end sWmailAddress
