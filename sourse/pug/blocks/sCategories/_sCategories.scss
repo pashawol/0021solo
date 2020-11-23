@@ -1,0 +1,40 @@
+
+	// start .sCategories
+	.sCategories {
+		--sPT: #{rem(76)};
+		--sTPB: #{rem(10)};
+		h2{
+			font-size: 1rem;
+			font-weight: bold;
+		}
+		ul{
+			columns: 4;
+		}
+		li{
+			display: inline-block;
+			width: 100%;
+			margin-bottom: rem(10);
+			position: relative;
+			padding-left: rem(10);
+			&::before{
+				content: url(../img/svg/chevron-right.svg);
+				position: absolute;
+				left: 0;
+				top: rem(-2);
+			}
+		}
+		a{
+			@extend .text-body;
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sCategories

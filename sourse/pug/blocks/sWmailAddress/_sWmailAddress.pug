@@ -1,0 +1,10 @@
+mixin sWmailAddress(data)
+	// start sWmailAddress
+	+b.SECTION.sWmailAddress.section#sWmailAddress&attributes(attributes)
+		.container
+			+e.title Bleiben Sie auf dem Laufenden mit dem SOLO Newsletter
+			form()
+				+input('E-MAIL-ADRESSE', 'email')
+				+e.btn(type="submit") ZUR NEWSLETTER-ANMELDUNG
+			+soc()
+	// end sWmailAddress

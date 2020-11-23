@@ -1,11 +1,11 @@
  
 	  
 .soc{
-	margin: 0 rem(-5px);
+	margin: 0 calc(-1 * var(--bs-gutter-x) / 2);
 	display: flex;
 	&__item{
 		text-decoration: none !important;
-		margin: 0 rem(5px);
+		margin: 0 calc(var(--bs-gutter-x) / 2);
 		vertical-align: middle;
 		@include mt;
 		display: block;

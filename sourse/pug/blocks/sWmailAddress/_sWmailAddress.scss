@@ -1,0 +1,79 @@
+
+	// start .sWmailAddress
+	.sWmailAddress {
+		color: #ffffff;
+		background-color: $primary;
+		text-align: center;
+		--sPB: #{rem(36)};
+		&__title{
+			@extend .h6;
+			margin-bottom: 1rem;
+
+		}
+		form{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(360);
+		}
+		&__input{
+			border-radius: 0;
+			border-width: 2px;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			background-color: transparent !important;
+			text-align: center;
+			// font-size: rem(35);
+		@include rfs(35px);
+			padding-left: 0;
+			padding-right: rem(40);
+			@include input-placeholder() {
+				color: #710000;
+			}
+			 color: #fff !important;
+			 font-weight: bold;
+			 background-image: url(../img/svg/pen.svg);
+			 background-position: right 50%;
+			 background-size: rem(31);
+			 background-repeat: no-repeat;
+		}
+		&__input-wrap{
+			margin-bottom: rem(53);
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-outline-white;
+			border-radius: 0;
+			border-width: 2px;
+			font-size: $small;
+			font-weight: bold;
+			width: rem(280);
+			padding: rem(10.5) rem(10);
+			margin-bottom: rem(53);
+		}
+
+		.soc{
+			justify-content: center;
+			text-transform: uppercase;
+			--bs-gutter-x: #{rem(28)};
+			flex-wrap: wrap;
+			&__item{
+				color: #ffffff;
+				font-weight: 900;
+				@extend .h5;
+				margin-bottom: rem(29);
+			}
+		}
+			
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sWmailAddress

@@ -1,0 +1,17 @@
+mixin sIcons(data)
+	// start sIcons
+	+b.sIcons.section#sIcons&attributes(attributes)
+		.container 
+			+e.wrap
+				.row
+					mixin item(i, t)
+						+e.col.col-sm-auto
+							+e.item
+								+e.img-wrap
+									img.res-i(src=`img/svg/icon-${i}.svg`, alt="", loading="lazy")
+								+e.title!= t
+						// /+e.col.col-auto
+					+item(`1`,`SOLO Qualit&auml;t seit &uuml;ber 72&nbsp;Jahren`)
+					+item(`2`,`Lieferung nach Hause oder zu&nbsp;Ihrem Fachh&auml;ndler`)
+					+item(`3`,`30&nbsp;Tage <br> R&uuml;ckgaberecht`)
+	// end sIcons

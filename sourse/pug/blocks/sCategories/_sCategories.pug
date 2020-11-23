@@ -1,0 +1,38 @@
+mixin sCategories(data)
+	// start sCategories
+	+b.sCategories.section.d-none.d-md-block
+		.container
+			+b.section-title
+				h2 TOP KATEGorien
+				
+			ul
+				-
+					var nav= [
+						'Pflanzenschutz/-pflege',
+						'Schädlingsbekämpfung',
+						'Land- und Forstwirtschaft',
+						'Reinigung/Desinfektion',
+						'Baugewerbe',
+						'Streuen',
+						'Pflanzenschutz/-pflege',
+						'Schädlingsbekämpfung',
+						'Land- und Forstwirtschaft',
+						'Reinigung/Desinfektion',
+						'Baugewerbe',
+						'Streuen',
+						'Zubehör',
+						'Lanzen',
+						'Düsen und Spritzschirme',
+						'Dichtungen',
+						'Zubehör für Motorspritzen ',
+						'Zubehör für Sprühgeräte',
+						'Granulatstreuer',
+						'Trennschleifer',
+						'Blasgerät',
+					]
+				each linkName in nav
+					li
+						a(href="#")= linkName
+
+				
+	// end sCategories

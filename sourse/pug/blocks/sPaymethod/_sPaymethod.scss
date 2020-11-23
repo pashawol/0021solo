@@ -1,0 +1,38 @@
+
+	// start .sPaymethod
+	.sPaymethod {
+		 background-color: $light;
+		 --sPT: #{rem(55)};
+		 --sPB: #{rem(30)};
+		 &__row{
+			 justify-content: space-between;
+		 }
+		 &__col{
+			 font-weight: 900;
+			 @extend .h6;
+			 margin-bottom: rem(30);
+			 @include media-breakpoint-down(md) {
+				 text-align: center;
+				 .row{
+					 justify-content: center;
+				 }
+				 .col-auto{
+					 max-width: 100%;
+				 }
+			 }
+			}
+			 &__title{ 
+				 margin-bottom: rem(10);
+				  
+			 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sPaymethod

@@ -7,7 +7,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var JSCCommon = {
-	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
@@ -164,50 +163,6 @@ var JSCCommon = {
 			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
-	sendForm: function sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$("form").submit(function (e) {
-			e.preventDefault();
-			var th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				}); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
-	},
 	heightwindow: function heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
@@ -223,7 +178,6 @@ var JSCCommon = {
 		});
 	},
 	animateScroll: function animateScroll() {
-		// листалка по стр
 		$(" .top-nav li a, .scroll-link").click(function () {
 			var elementClick = $(this).attr("href");
 			var destination = $(elementClick).offset().top;
@@ -249,34 +203,43 @@ function eventHandler() {
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
-	// добавляет подложку для pixel perfect
-
+	JSCCommon.animateScroll();
 	var x = window.location.host;
 	var screenName;
 	screenName = 'main.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
-	} // /добавляет подложку для pixel perfect
+	}
 
+	$(document).on('click', '.btn-top', function () {
+		var th = $(this);
+		th.addClass('active');
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1500, function () {
+			th.removeClass('show').removeClass('active');
+		});
+	});
 
 	function whenResize() {
-		var topH = $("header ").innerHeight();
+		var topH = document.documentElement.clientHeight / 2;
 
 		if ($(window).scrollTop() > topH) {
-			$('.top-nav  ').addClass('fixed');
+			$('.btn-top  ').addClass('show');
 		} else {
-			$('.top-nav  ').removeClass('fixed');
+			$('.btn-top  ').removeClass('show').removeClass('active');
 		}
 	}
 
-	window.addEventListener('resize', function () {
+	window.addEventListener('resize ', function () {
 		whenResize();
 	}, {
 		passive: true
+	});
+	$(window).scroll(function () {
+		whenResize();
 	});
 	whenResize();
 	var defaultSl = (_defaultSl = {
@@ -304,6 +267,18 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+
+	window.onload = function () {
+		document.body.classList.add('loaded_hiding');
+		window.setTimeout(function () {
+			document.body.classList.add('loaded');
+			document.body.classList.remove('loaded_hiding');
+		}, 500);
+	};
+
+	$(".footer__title").click(function () {
+		$(this).toggleClass('active').next().slideToggle();
+	});
 }
 
 ;

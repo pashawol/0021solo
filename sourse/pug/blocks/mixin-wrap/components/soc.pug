@@ -1,5 +1,5 @@
 mixin item-sos(icon, a='#')
-	+e.A.item(href= a target="_blank")
+	+e.A.item(href=a target="_blank")
 		if block
 			block
 		else
@@ -10,8 +10,10 @@ mixin soc()
 		if block
 			block
 		else
-			+item-sos('fb')
+			+item-sos('youtube')
 			+item-sos('instagram')
-			+item-sos('telegram')
+			+item-sos('fb')
+			+item-sos()
+				| #solo_sprühgeräte
 
 //- /social buttons 

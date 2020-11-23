@@ -1,4 +1,51 @@
 mixin footer()
-	+b.FOOTER.footer.block-with-lazy
+	+b.FOOTER.footer.section.block-with-lazy
 		.container
-			h2 footer
+			.row
+				+e.col.col-xxl.col-xl-auto.col-md-12.col-sm-6
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
+					.row
+						.col-xl-12.col-md
+							+e.text.small.mb-5 SOLO Kleinmotoren GmbH&nbsp;&mdash; THE BETTER CHOICE. SINCE 1948. German quality sprayers and cut-off machines.
+						.col-xl-12.col-md
+							+e.link(href="mailto:info@solo-germany.de") 
+								+e.icon-wrap
+									+icon('mail')
+								| info@solo-germany.de
+							br
+							+e.link(href="tel:+49(0)7031-301-0") 
+								+e.icon-wrap--tel
+									+icon('tel')
+								| +49 (0) 7031 - 301-0
+						.col-xl-12.col-md.mb-4
+							+e.text.small.mb-2 Montag&nbsp;&mdash; Freitag: 9:00&nbsp;&mdash; 18:00 Uhr (ausgenommen regionale Feiertage)
+							.small.text-secondary *Regul&auml;rer Festnetztarif Ihres Telefonanbieters.
+				mixin list(t,...items)
+					+e.col-nav.col-sm
+						+e.group
+							+e.title= t
+							ul
+								each item in items
+									li
+										a(href="#")= item
+				+list('Service & Beratung','Mein Benutzerkonto','Newsletter','Zahlarten','Sicher Einkaufen','Versand und Lieferung','Rückgabe & Umtausch','Häufige Fragen / FAQ','Kundeninformationen Österreich')
+
+				+list('Über Solo','Ihre Vorteile bei SOLO','Firmenprofil','Händler-Links','SOLO Gutscheine','SOLO Kataloge','SOLO Produkttest','Karriere bei SOLO')
+				
+				+list('Informationen','AGB','Impressum','Datenschutz','Widerrufsrecht','Cookie-Einstellungen')
+		+e.copy-line 
+			.container
+				img(src="img/svg/logo-white.svg", alt="", loading="lazy")
+				strong © 2020 SOLO Kleinmotoren GmbH  
+				| 
+				span.text-secondary |  Design: VI-BRAND STUDIOS  |  Entwicklung: VI-ARISE Communikation
+	+b.btn-top
+		img(src="img/svg/arrow-up.svg", alt="")
+	+b.cookies-block
+		.container
+			.row
+				+e.col.col Diese Webseite verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können. #[a(href="#") Mehr Informationen …]
+				+e.btns.col-sm-auto
+					+e.btn.btn-gray.px-4(href="#") Ablehnen
+					+e.btn.btn-primary.px-4(href="#") Konfigurieren
