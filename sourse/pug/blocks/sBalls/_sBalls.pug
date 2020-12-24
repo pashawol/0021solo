@@ -1,0 +1,34 @@
+mixin sBalls(data)
+	// start sBalls
+	+b.SECTION.sBalls.section#sBalls&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2
+					| Alle Sprüher sind geeignet
+					br.d-xl-none
+					| für folgende Sprühmedien
+			+e.row.row
+				+ballItem(1)(class="big")
+					| Ölhaltige &
+					| aggressive Sprühmedien
+				+ballItem(2)
+					| Fungizide
+				+ballItem(3)
+					| Pflanzenschutz
+					| & Pflege
+				+ballItem(4)
+					| Schädlings-
+					| bekämpfung
+				+ballItem(5)
+					| Reinigung &
+					| Desinfektion
+				+ballItem(6)
+					| pH-Bereich 1-7
+	// end sBalls
+
+mixin ballItem(imgNum)
+	+e.col.col-md-4.col-6
+		+e.icon
+			img(loading="lazy" src=`img/svg/sBalls-${imgNum}.svg` alt="")
+		+e.txt&attributes(attributes)
+			block

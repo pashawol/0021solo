@@ -1,0 +1,54 @@
+// start .sMail
+.sMail {
+	overflow: hidden;
+
+	--sPT: 0;
+
+	--sPB: 45px;
+	--sTPB: 72px;
+	@include media-breakpoint-up(md){
+		--sPB: 45px;
+		--sTPB: 66px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPB: 0px;
+		--sTPB: 68px;
+	}
+	@include media-breakpoint-up(xll){
+		--sPB: 46px;
+		--sTPB: 77px;
+	}
+	@include media-breakpoint-up(xxl){
+		--sPB: 34px;
+		--sTPB: 88px;
+	}
+
+	&__red-row{}
+	&__r-col{}
+	.section-title{
+		h2{
+			b{
+
+			}
+			span{
+
+			}
+		}
+		//
+		p{
+
+		}
+		//
+		&__btn{
+
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sMail

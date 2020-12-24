@@ -1,0 +1,117 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Produkte
+				p Mit leistungsstarken SOLO Sprühgeräten und Spritzgeräten können Sie kräfteschonend und präzise Samen, Granulate, Dünger oder Pflanzenschutzmittel ausbringen – auch auf schwierigem Terrain.
+			+e.filter-row.row
+				+filterItem("Alle Produkte")
+				+filterItem("Spritzen")
+				+filterItem("Handspritzen")
+				+filterItem("Druckspritzen")
+				+filterItem("Rückenspritzen")
+				+filterItem("Akkuspritzen")
+				+filterItem("Schaumsprüher")
+				.col-12.d-sm-none
+					select.form-control.form-select
+						//-Filtern nach:
+						option Druckspritzen
+						option Druckspritzen2
+						option Druckspritzen3
+			+e.slider
+				+b.catalog-prev--js
+					+icon('chevron-left')
+				+b.catalog-next--js
+					+icon('chevron-right')
+				.swiper-container.catalog-slider-js
+					.swiper-wrapper
+						//-try use object later
+						+catalogSlide({
+							imgNum: '1',
+							nameTxt: '402 Hand-Druckspritze',
+							descr: '2,0 Liter  Handruckspitze',
+							discount: '-15%',
+							activeLike: false,
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+						+catalogSlide({
+							imgNum: '2',
+							nameTxt: '416 LI AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-21%',
+							activeLike: true,
+							oldPrice: '499,48 €*',
+							newPrice: '484.50 €*',
+							grayTxt: '3',
+						})
+						+catalogSlide({
+							imgNum: '3',
+							nameTxt: '404 COMFORT',
+							descr: '2,0 Liter  Handruckspitze',
+							oldPrice: '€18.89 ',
+						})
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+				+b.catalog-pugin--js.d-sm-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN
+	// end sCatalog
+
+mixin filterItem(txt)
+	+e.row-col.col-auto.d-none.d-sm-block
+		+e.filter-item(href="#")=txt
+
+mixin catalogSlide(data)
+	.swiper-slide
+		+e.item
+			if data.discount
+				+e.discount=data.discount
+			if data.activeLike
+				+e.like-btn.active(href="#")
+					+icon('heart')
+			else
+				+e.like-btn(href="#")
+					+icon('heart')
+			+e.img(href="#")
+				img.swiper-lazy(src="#" data-src=`img/@2x/catalog-item-${data.imgNum}.png` alt="")
+			+e.name=data.nameTxt
+			+e.descr=data.descr
+			+e.price-cont
+				if data.newPrice
+					+e.price--new=data.newPrice
+					+e.price--old=data.oldPrice
+				else
+					+e.price--common=data.oldPrice
+			if data.grayTxt
+				+e.gray
+					span Inhalt:
+					span=data.grayTxt
+		//catalog-item-1

@@ -1,0 +1,117 @@
+// start .sVantageLine
+.sVantageLine {
+	background-color: $light;
+	//background-color: $pink;
+	--sTPB: 0;
+
+	--sPT: 34px;
+	--sPB: 0px;
+	@include media-breakpoint-up(md){
+		--sPT: 35px;
+		--sPB: 10px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 36px;
+		--sPB: 0;
+	}
+	@include media-breakpoint-up(xll){
+		--sPT: 48px;
+		--sPB: 16px;
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: 48px;
+		--sPB: 16px;
+	}
+
+	//
+	&__container{
+		@include media-breakpoint-up(md){
+			padding-left: 25px;
+			padding-right: 31px;
+		}
+		@include media-breakpoint-up(xl){
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+		@include media-breakpoint-up(xll){
+			padding-left: 41px;
+			padding-right: 0px;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-left: 63px;
+			padding-right: 49px;
+		}
+	}
+	&__row{
+		@include media-breakpoint-down(md){
+			@include roww(40px)
+		}
+		@include media-breakpoint-only(md){
+			@include roww(60px)
+		}
+	}
+	&__col{
+		margin-bottom: 50px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: 41px;
+		}
+		@include media-breakpoint-up(md){
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(xll){
+			margin-bottom: 25px;
+		}
+	}
+	&__item{
+		align-items: center;
+
+		text-align: center;
+		@include media-breakpoint-up(xll){
+			text-align: left;
+			display: flex;
+		}
+	}
+	&__icon{
+		height: 36px;
+		@include media-breakpoint-up(xl){
+			height: 43px;
+		}
+		margin-right: auto;
+		margin-left: auto;
+		@include media-breakpoint-up(xll){
+			margin-right: rem(18);
+			margin-left: 0;
+			margin-bottom: 0;
+
+			width: auto;
+			height: auto;
+			max-width: rem(60);
+			max-height: rem(60);
+		}
+		//??
+		@include media-breakpoint-up(xxl){
+			margin-right: rem(18);
+		}
+
+		img{
+			transform: scale(.8);
+			@include media-breakpoint-up(xl){
+				transform: scale(1);
+			}
+
+			width: auto;
+			height: auto;
+			max-width: rem(60);
+			max-height: rem(60);
+		}
+	}
+	&__txt{
+		color: darken($secondary, 2);
+		text-transform: uppercase;
+		font-size: rem(13);
+		font-weight: 700;
+		letter-spacing: rem(0.5);
+	}
+	&__{}
+	&__{}
+} // end.sVantageLine

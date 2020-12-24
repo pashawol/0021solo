@@ -228,6 +228,7 @@
 	padding-top: rem(18);
 	padding-bottom: rem(18);
 	position: sticky;
+	z-index: 100;
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -264,6 +265,7 @@
 }
 .btn-top {
 	position: fixed;
+	z-index: 101;
 	right: rem(43);
 	// @extend .btn;
 	@extend .btn-primary;

@@ -1,0 +1,140 @@
+// start .sSocMedia
+.sSocMedia {
+	overflow: hidden;
+
+	--sPT: 74px;
+	--sPB: 45px;
+	--sTPB: 38px;
+	@include media-breakpoint-up(md){
+		--sPT: 37px;
+		--sPB: 25px;
+		--sTPB: 56px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 61px;
+		--sPB: 10px;
+		--sTPB: 55px;
+	}
+	@include media-breakpoint-up(xll){
+		--sPT: 45px;
+		--sPB: 30px;
+		--sTPB: 57px;
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: 38px;
+		--sPB: 34px;
+		--sTPB: 56px;
+	}
+
+	&__container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.section-title{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		h2{
+			color: $black;
+			border-bottom: 1px solid $gray2 !important;
+			font-weight: 400;
+
+			font-size: 22px;
+			padding-bottom: 28px;
+			margin-bottom: 25px;
+			@include media-breakpoint-up(md){
+				font-size: 28px;
+				padding-bottom: 24px;
+				margin-bottom: 25px;
+			}
+			@include media-breakpoint-up(xll){
+				font-size: 32px;
+				padding-bottom: 20px;
+				margin-bottom: 25px;
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 35px;
+			}
+		}
+		p{
+			margin-left: auto;
+			margin-right: auto;
+
+			//max-width: 570px;
+			@include media-breakpoint-up(xl){
+				max-width: 710px;
+			}
+			@include media-breakpoint-up(xll){
+				max-width: 730px;
+			}
+			@include media-breakpoint-up(xxl){
+				max-width: 860px;
+			}
+
+			color: $brown;
+			font-size: 16px;
+			//1.6
+
+			line-height: 1.52;
+			@include media-breakpoint-up(md){
+				line-height: 1.6;
+				font-size: 15px;
+			}
+
+			@include media-breakpoint-up(xl){
+				font-size: 16px;
+				line-height: (25/18);
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__slider{
+		position: relative;
+		@include media-breakpoint-down(sm){
+			width: 248px;
+			left: calc(-1 * (248px - 100%) / 2);
+		}
+		@include media-breakpoint-between(sm, md){
+			width: 511px;// 248 * 2 + (15 * 1)
+			left: calc(-1 * (511px - 100%) / 2);
+		}
+		@include media-breakpoint-between(md, xll){
+			width: 688px;// 334 * 2 + (20 * 1)
+			left: calc(-1 * (688px - 100%) / 2);
+		}
+		@include media-breakpoint-between(xll, xxl){
+			width: 100vw;
+			left: calc(-1 * (100vw - 100%) / 2);
+			padding: 0 22px;
+		}
+
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			height: auto;
+			width: 248px;
+			@include media-breakpoint-up(md){
+				width: 334px;
+			}
+			@include media-breakpoint-up(xll){
+				width: calc((100% / 4) - (20px * 3 / 4));
+			}
+		}
+	}
+	&__link{
+		@extend .accept-ratio-frame;
+		padding-top: 100%;
+	}
+	//
+	&__{}
+	&__{}
+} // end.sSocMedia

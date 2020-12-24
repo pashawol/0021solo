@@ -1,0 +1,57 @@
+mixin sPromo(data)
+	// start sPromo
+	+b.SECTION.sPromo.section#sPromo&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2.text-danger
+					| Leistungsstarken
+					br.d-xl-none
+					| SOLO Sprühgeräten und Spritzgeräten
+				p
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					| Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			+e.row.row
+				.col-xl-3.d-none.d-xl-block
+					+promoSmItem('1.jpg', 'Qualität des Produktionsprozesses', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
+					+promoSmItem('2.png', 'Flexibel Einsetzbar', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolo')
+				.col-md-8.offset-md-2.col-xl-6.offset-xl-0
+					+b.red-promo
+						+e.made
+							img(loading="lazy" src="img/@2x/madeIn.png" alt="")
+						+e.title
+							| Qualität zahlt sich aus,
+							br
+							| seit 1948
+						+e.img
+							img(loading="lazy" src="img/@2x/promo-big-img.png" alt="")
+						+e.small Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolo
+				.col-xl-3.d-none.d-xl-block
+					+promoSmItem('3.png', 'ISO 9001 Zertifizierung', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
+					+promoSmItem('4.png', 'Akku Power', 'blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. ')
+			+e.slider.d-xl-none
+				+b.promo-prev--js.d-sm-none
+					+icon('chevron-left')
+				+b.promo-next--js.d-sm-none
+					+icon('chevron-right')
+				.swiper-container.promo-slider-js
+					.swiper-wrapper
+						+promoSlide('1.jpg', 'Qualität des Produktionsprozesses', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
+						+promoSlide('2.png', 'Flexibel Einsetzbar', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolo')
+						+promoSlide('3.png', 'ISO 9001 Zertifizierung', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
+						+promoSlide('4.png', 'Akku Power', 'blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. ')
+				+b.promo-pugin--js.d-sm-none
+	// end sPromo
+mixin promoSlide(imgEnd, title, descr)
+	.swiper-slide
+		+e.item
+			+e.item-img
+				img(loading="lazy" src=`img/@2x/promo-sm-${imgEnd}` alt="")
+			+e.title=title
+			+e.descr=descr
+
+mixin promoSmItem(imgEnd, title, descr)
+	+e.item
+		+e.item-img
+			img(loading="lazy" src=`img/@2x/promo-sm-${imgEnd}` alt="")
+		+e.title=title
+		+e.descr=descr

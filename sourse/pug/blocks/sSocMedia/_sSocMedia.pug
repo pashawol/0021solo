@@ -1,0 +1,21 @@
+mixin sSocMedia(data)
+	// start sSocMedia
+	+b.SECTION.sSocMedia.section#sSocMedia&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 SOCIAL MEDIA
+			+e.slider
+				.swiper-container.soc-m-slider-js
+					.swiper-wrapper
+						+socMediaSlide(1)
+						+socMediaSlide(2)
+						+socMediaSlide(3)
+						+socMediaSlide(4)
+						+socMediaSlide(5)
+						+socMediaSlide(6)
+	// end sSocMedia
+
+mixin socMediaSlide(imgNum)
+	.swiper-slide
+		+e.link(href='#')
+			img.swiper-lazy(src="#" data-src=`img/@2x/soc-media-${imgNum}.jpg`)

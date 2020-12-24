@@ -1,0 +1,18 @@
+mixin sMail(data)
+	// start sMail
+	+b.SECTION.sMail.section#sMail&attributes(attributes)
+		.container
+			+e.red-row.row
+				+e.r-col.col-md-6
+					+b.section-title.text-center
+						h2
+							b Newsletter abonnieren und
+							span 10% Rabatt sichern.
+						p Aktionen, Angebote und Produktneuheiten nie mehr verpassen!
+						+e.btn(href="#") JETZT REGISTRIEREN
+				+e.r-col.col-md-6.d-none.d-md-block
+					+e.r-img
+						img(loading="lazy" src="img/@2x/mail-red-img.jpg" alt="")
+			+e.items
+
+	// end sMail

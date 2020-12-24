@@ -1,0 +1,41 @@
+mixin sUsage(data)
+	// start sUsage
+	+b.SECTION.sUsage.section#sUsage&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Anwendungsbereich
+				p
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					| Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			+e.slider
+				+b.usage-prev--js.d-flex.d-md-none
+					+icon('chevron-left')
+				+b.usage-next--js.d-flex.d-md-none
+					+icon('chevron-right')
+				.swiper-container.usage-slider-js
+					.swiper-wrapper
+						+usageSlide(1)
+							| Pflanzenschutz/
+							br
+							|
+							| -pflege
+						+usageSlide(2)
+							|Reinigung/
+							br
+							|
+							| Desinfektion
+						+usageSlide(3)
+							| Streuen
+					+b.usage-pugin--js.d-flex.d-md-none
+	// end sUsage
+
+mixin usageSlide(imgNum, name='usage-slide-')
+	.swiper-slide&attributes(attributes)
+		+e.item
+			+e.img
+				img.swiper-lazy(src="#" data-src=`img/@2x/${name}${imgNum}.jpg` alt="")
+			+e.descr
+				+e.txt
+					block
+				+e.icon
+					img.swiper-lazy(src="#" data-src=`img/svg/usage-slide-icon-${imgNum}.svg` alt="")
