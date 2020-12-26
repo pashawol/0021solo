@@ -1,12 +1,5 @@
 .pixel-perfect {
-	//top: -32px;
-	//top: -900px;//xxl
-	//top: -720px;//xll
-	//top: -717px;//xl
-	//top: -1188px;//md
-	//top: -1045px;//xs1
-	//top: -968px;//xs2
-	//top: -911px;//xs3
+	top: 0;
 
 	display: block;
 	@include a-cent(x); 
@@ -17,7 +10,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	//opacity: 0.7;
+	opacity: 0.7;
 }
 html{
 	

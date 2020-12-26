@@ -1,9 +1,26 @@
 mixin topLine()
 	// start topLine
-	+b.SECTION.topLine.section#topLine&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+	+b.topLine#topLine&attributes(attributes)
+		+e.container.container
+			+e.row.row.align-items-center
+				.col-auto
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col
+					+mnu()
+				.col-auto
+					+e.icons-items
+						+e.icon(href='#')
+							+icon('zoom')
+						+e.icon(href='#')
+							+icon('heart')
+						+e.icon(href='#')
+							+icon('user')
+						+e.cart
+							+e.c-ball.has-ball
+								img(loading="lazy" src="img/@2x/cart-icon.png" alt="")
+							+e.c-info
+								+e.c-amount 1 Produkt
+								+e.c-price 25,80 €*
+
 	// end topLine

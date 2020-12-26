@@ -75,8 +75,10 @@ $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: #f6f7fc !default;
+
 $dark: $gray-800 !default;
 $brown: #333333;
+$dark-gray: #575757;
 
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,

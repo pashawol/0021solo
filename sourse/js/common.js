@@ -196,7 +196,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main375.png';
+	screenName = 'main.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -446,6 +446,30 @@ function eventHandler() {
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 10,
+		},
+	});
+
+	//hSlider
+	let hSlider = new Swiper('.h-slider-js', {
+		slidesPerView: "auto",
+		loop: true,
+		//watchOverflow: true,
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+
+		//pugination
+		pagination: {
+			el: $(this).find('.h-pugin--js'),
+			clickable: true,
+		},
+
+		//nav
+		navigation: {
+			nextEl: $(this).find('.h-slide-next--js'),
+			prevEl: $(this).find('.h-slide-prev--js'),
 		},
 	});
 

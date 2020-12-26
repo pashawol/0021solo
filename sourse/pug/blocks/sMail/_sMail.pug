@@ -1,18 +1,155 @@
 mixin sMail(data)
 	// start sMail
 	+b.SECTION.sMail.section#sMail&attributes(attributes)
+		+e.red-wrap
+			.container
+				+e.red-row.row
+					+e.r-col.col-md-6
+						+b.section-title
+							h2
+								b Newsletter abonnieren und
+								span 10% Rabatt sichern.
+							p Aktionen, Angebote und Produktneuheiten nie mehr verpassen!
+							+e.btn(href="#") JETZT REGISTRIEREN
+					+e.r-col.col-md-6.d-none.d-md-block
+						+e.r-img
+							img(loading="lazy" src="img/@2x/mail-red-img.jpg" alt="")
 		.container
-			+e.red-row.row
-				+e.r-col.col-md-6
-					+b.section-title.text-center
-						h2
-							b Newsletter abonnieren und
-							span 10% Rabatt sichern.
-						p Aktionen, Angebote und Produktneuheiten nie mehr verpassen!
-						+e.btn(href="#") JETZT REGISTRIEREN
-				+e.r-col.col-md-6.d-none.d-md-block
-					+e.r-img
-						img(loading="lazy" src="img/@2x/mail-red-img.jpg" alt="")
 			+e.items
-
+				//-1
+				+e.item
+					+e.i-row.row
+						+e.i-col--title.col-xl-6
+							h1
+								| Drucksprüher von SOLO:
+								|
+								br.d-xll-none
+								| Aussaat, Pflege und Schutz
+							+e.made-txt
+								span SOLO Germany
+								span The better choice. SINCE 1948
+						+e.i-col--txt.col-xl-6
+							p
+								| Mit
+								|
+								strong leistungsstarken SOLO Sprühgeräten und Spritzgeräten
+								|
+								| können Sie kräfteschonend und präzise Samen, Granulate, Dünger oder Pflanzenschutzmittel ausbringen – auch auf schwierigem Terrain.
+				//-2
+				+e.item
+					+e.i-row.row
+						+e.i-col--title.col-xl-6
+							h2 Herbizideinsatz im Garten Loren ipsum?
+						+e.i-col--txt.col-xl-6
+							p
+								| Entscheiden Sie sich für
+								|
+								strong SOLO Sprühgeräte und Spritzgeräte
+								|, wenn ein effektiver Schutz und gutes Wachstum von Sträuchern, Blumen, Obst oder Gemüse zu Ihren Aufgaben gehört. Alle SOLO Sprühgeräte und Spritzgeräte können Sie
+								|
+								strong mit passendem Zubehör an Ihre individuellen Bedürfnisse anpassen.
+								| Ob
+								strong Gelegenheitsanwender
+								| oder
+								|
+								strong Profi:
+								| Mit SOLO Sprühgeräten und Spritzgeräten sind Sie noch breiter aufgestellt und flexibler ausgestattet.
+				//-3
+				+e.item
+					+e.i-row.row
+						+e.i-col--title.col-xl-6
+							h2 Solo Druck Sprüher für mehr Präzision, Drucksprühgeräte für mehr Reichweite
+						+e.i-col--txt.col-xl-6
+							p
+								| Ob Sie eine
+								|
+								strong Pflanzenschutzspritze
+								|
+								| oder eine
+								|
+								strong Unkrautspritze
+								|
+								| benötigen, hängt ganz von der jeweiligen Anforderung und Ihrem individuellen Bedarf ab. Mit einem
+								|
+								strong manuellen Spritzgerät
+								| arbeiten Sie Blatt für Blatt ganz sauber – bei
+								|
+								strong einzelnen Pflanzen
+								|
+								| und
+								|
+								strong ganzen Flächenkulturen
+								|. Sie können
+								|
+								strong Gartenspritzen
+								|
+								| beispielsweise hervorragend bei Blumenkästen und Topfpflanzen, Setzlingen, Zier- und Gemüsepflanzenbeeten sowie bei kleinen Sträuchern und Bäumen nutzen.
+								|
+								strong Manuelle Spritzgeräte überzeugen durch ihre hohe Präzision.
+								|
+								| Damit können Sie einzelne und
+								|
+								strong sensible Pflanzen punktuell
+								|
+								| und ganz
+								|
+								strong gezielt mit Schutzmitteln oder Düngern versorgen.
+								|
+								| Die besondere Präzision des Spritzmechanismus ist der integrierten Düse zu verdanken. Sie zerstäubt die jeweilige Flüssigkeit in grobe Tropfen und verhindert eine große Sprühwolke. So landen Dünger oder Pflanzenschutzmittel genau da, wo sie hingehören. Durch die geringe Abdrift ermöglichen Spritzgeräte auch die zielgenaue Unkrautbekämpfung, ohne das benachbarte Pflanzen darunter leiden. Die Geräte befördern die jeweilige Flüssigkeit ohne Motor mithilfe einer Pumpe auf die Gewächse und sind somit auch in Innenräumen einsetzbar. Unser
+								|
+								strong Sprühgeräte
+								|
+								| und
+								|
+								strong Spritzgeräte-Sortiment
+								|
+								| reicht von kleinen
+								strong Handspritzgeräten
+								|
+								| bis hin zu
+								|
+								strong Hochleistungsdrucksprühgeräten und Rückensprühgeräten für professionelle Anwendungen.
+							p
+								strong SOLO Drucksprühgeräte
+								|
+								| unterstützen Sie effizient unter anderem bei der
+								strong professionellen landwirtschaftlichen Arbeit
+								|, beim
+								|
+								strong Obstanbau
+								| oder
+								|
+								strong im Weinberg
+								|. Mit einem rückentragbaren Drucksprühgerät mit Einhand-Multifunktionsgriff können Sie in kurzer Zeit auf großen Flächen Flüssigkeiten, Granulate oder Saatgut ausbringen. Somit sind auch Einsätze an steilen Hängen und schwierigem Gelände kräfteschonend machbar. Hilfreich ist dabei die ausgefeilte Ergonomie aller Modelle: Hochwertige Gurte und ausgeformte Rückenplatten passen sich Ihrer individuellen Anatomie an. Angetrieben werden die
+								|
+								strong SOLO Drucksprühgeräte
+								|
+								| durch einen
+								|
+								strong Benzinmotor
+								|, der im Betrieb mit einem Gebläserad einen Luftstrom erzeugt. Dieser Luftstrom versetzt Ihre Pflanzen und Sträucher in Bewegung. So erreichen Sie mit der großen Sprühwolke die Unterseiten tiefer Blattschichten genauso wie hohe Gewächse.
+							p
+								strong Bestellen Sie das passende Gerät Ihrer Wahl einfach direkt im SOLO Online Shop.
+				//-4
+				+e.item
+					+e.i-row.row
+						+e.i-col--title.col-xl-6
+							h2 Zubehör für SOLO Sprühgeräte und Spritzgeräte
+						+e.i-col--txt.col-xl-6
+							p
+								| Nutzen Sie für den optimalen Einsatz in Raum- und Flächenkulturen auch das umfassende
+								|
+								strong SOLO Sprühgeräte
+								|
+								| und
+								|
+								strong Spritzgeräte Zubehör.
+								|
+								| Es ermöglicht noch vielseitigere Anwendungen für Ihre Drucksprüher im Gemüse-, Obst- und Zierpflanzenanbau ebenso wie in Baumschulen und Weinbergen. Das Zubehör für Sprühgeräte umfasst unter anderem einen Anbausatz für die Druckpumpe und einen zusätzlichen, optimierten Hüftgurt. Das Zubehör für Spritzgeräte ist besonders umfangreich. Es bietet Ihnen
+								|
+								strong weitere Düsen wie Flachstrahldüse und Gabeldüse, Teleskoprohre
+								|
+								| für einen größeren Arbeitsbereich, einen Spritzschirm für eine noch geringere Abdrift oder spezielle Druckventile.
+							p
+								strong Alle SOLO Sprühgeräte und Spritzgeräte sowie das praktische Zubehör sind im SOLO Online Shop erhältlich.
 	// end sMail
