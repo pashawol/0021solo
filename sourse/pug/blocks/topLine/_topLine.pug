@@ -3,24 +3,121 @@ mixin topLine()
 	+b.topLine#topLine&attributes(attributes)
 		+e.container.container
 			+e.row.row.align-items-center
-				.col-auto
+				//-mob menu
+				+e.burger-col.col.d-xll-none
+					+e.burger.burger-js
+						span
+					+e.icon.mob-search
+						+icon('zoom')
+				//-logo
+				+e.logo-col.col-auto
 					+e.logo(href='#')
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				//-menu
 				.col
-					+mnu()
+					+b.mob-menu--js
+						+e.wrap
+							+e.header.d-xl-none
+								+e.close.close-sm-menu-js
+									span Menü Schliessen
+									+icon('cross')
+								//-red line
+								+b.red-line--mob.d-flex
+									+e.btn
+										+e.dd.dd-js
+											+e.dd-btn.dd-btn-js € EURO
+											+e.dd-content.dd-content-js
+												+e.dd-item(href="#") €  EURO 2
+												+e.dd-item(href="#") €  EURO 3
+												+e.dd-item(href="#") €  EURO 4
+									+e.btn
+										+e.q-sign ?
+										+e.dd.dd-js
+											+e.dd-btn.dd-btn-js Service/Hilfe
+											+e.dd-content.dd-content-js
+												+e.dd-item(href="#") €  EURO 2
+												+e.dd-item(href="#") €  EURO 3
+												+e.dd-item(href="#") €  EURO 4
+								+e.search-strip
+									+e.BUTTON.search-btn
+										img(loading="lazy" src="img/@2x/search-3bars.png" alt="")
+									+e.INPUT.input.form-control(type="text" name="search" placeholder="Zeige alle Kategorien")
+							+e.content
+								//dt-menu
+								+b.UL.navMenu--js&attributes(attributes)
+									+e.LI.item
+										+e.A.link.menu-link-js(href="#") HAUS UND GARTEN
+										+dtDDMenu()
+									+e.LI.item
+										+e.A.link.menu-link-js(href="#") PROFI
+										+dtDDMenu(2)
+									+e.LI.item
+										+e.A.link.menu-link-js(href="#") Wissenswertes
+										+dtDDMenu(3)
+									+e.LI.item
+										+e.A.link.menu-link-js(href="#") SERVICE
+										+dtDDMenu(4)
+									//remove class '.menu-link-js' if need simple link
+									+e.LI.item
+										+e.A.link.menu-link-js(href="#") Unternehmen
+										+dtDDMenu(5)
+				//-cart col
 				.col-auto
 					+e.icons-items
-						+e.icon(href='#')
+						+e.icon.d-none.d-xxl-block(href='#')
 							+icon('zoom')
-						+e.icon(href='#')
+						+e.icon.d-none.d-md-block(href='#')
 							+icon('heart')
-						+e.icon(href='#')
+						+e.icon.d-none.d-md-block(href='#')
 							+icon('user')
 						+e.cart
 							+e.c-ball.has-ball
 								img(loading="lazy" src="img/@2x/cart-icon.png" alt="")
-							+e.c-info
+							+e.c-info.d-none.d-xl-block
 								+e.c-amount 1 Produkt
 								+e.c-price 25,80 €*
-
 	// end topLine
+
+mixin dtDDMenu(diff='', backBtnTxt='Haus & Garten')
+	+b.dt-dd-menu--js
+		+e.wrap
+			+e.container.container
+				+e.back-btn.back-btn-js.d-xll-none
+					span=`Zur Kategorie ${backBtnTxt}`
+					+icon('arrow-right')
+				+e.row.row
+					.col-xl-3
+						+e.title.sb-title-js=`Anwendung${diff}`
+						+e.UL.submenu.sb-mnu-js
+							+submenuItem('Pflanzenschutz/ -pflege', 'submenu-icon-1')
+							+submenuItem('Reinigung/Desinfektion', 'submenu-icon-2')
+							+submenuItem('Streuen', 'submenu-icon-3')
+					.col-xl-3
+						+e.title.sb-title-js=`Spritzen${diff}`
+						+e.UL.submenu.sb-mnu-js
+							+submenuItem('Handspritze')
+							+submenuItem('Druckspritze')
+							+submenuItem('Rückenspritze')
+							+submenuItem('Akkuspritzen')
+							+submenuItem('Schaumsprüher')
+					.col-xl-3
+						+e.title.sb-title-js Granulatstreuer
+						+e.UL.submenu.sb-mnu-js
+							+submenuItem('421 Granulatstreuer')
+						+e.title.sb-title-js Zubehör
+						+e.UL.submenu.sb-mnu-js
+							+submenuItem('Lanzen')
+							+submenuItem('Düsen und Spritzschirme')
+							+submenuItem('Dichtungen')
+							+submenuItem('weiteres Zubehör')
+					.col-xl-3.d-none.d-xl-block
+						+e.img
+							img(loading="lazy" src="img/@2x/submenu-img.jpg" alt="")
+
+mixin submenuItem(txt, iconName)
+	+e.LI.item
+		+e.A.link(href="#")
+			if iconName
+				+e.icon
+					img(loading="lazy" src=`img/svg/${iconName}.svg` alt="")
+			span=txt

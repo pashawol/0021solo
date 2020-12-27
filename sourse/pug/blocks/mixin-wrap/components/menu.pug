@@ -12,5 +12,17 @@ mixin mnu()
 		each linkPatch, linkName in nav
 			//-item
 			+e.LI.item( itemprop="item" )
-				+e.A.link(href=linkPatch)=linkName
+				+e.A.link.menu-link-js(href=linkPatch)=linkName
 //- /menu
+mixin menu()
+	+b.UL.navMenu&attributes(attributes)
+		+e.LI.item
+			+e.A.link.menu-link-js(href="#") HAUS UND GARTEN
+		+e.LI.item
+			+e.A.link.menu-link-js(href="#") PROFI
+		+e.LI.item
+			+e.A.link.menu-link-js(href="#") Wissenswertes
+		+e.LI.item
+			+e.A.link.menu-link-js(href="#") SERVICE
+		+e.LI.item
+			+e.A.link.menu-link-js(href="#") Unternehmen

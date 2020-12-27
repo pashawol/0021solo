@@ -3,17 +3,15 @@
 }
 
 .red-line{
-	padding: 10px 0 11px 0;
 	color: $white;
 	background-color: $crimson;
 	border-bottom: 1px solid rgba($crimson, .5);
 
-
-	--btnSpace: 15px;
-	@include media-breakpoint-up(xll){
+	--btnSpace: 20px;
+	@include media-breakpoint-up(xl){
 		--btnSpace: 20px;
 	}
-	@include media-breakpoint-up(xxl){
+	@include media-breakpoint-up(xll){
 		--btnSpace: 30px;
 	}
 
@@ -25,7 +23,20 @@
 	}
 
 	&__container{
-
+		padding: 12px 10px 11px;
+		@include media-breakpoint-up(sm) {
+			padding: 6px 10px 7px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 6px 10px 9px;
+		}
+		@include media-breakpoint-only(xll){
+			max-width: calc(100% - 30px);
+			padding: 6px 10px 9px;
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 6px 10px 9px;
+		}
 	}
 	&__row{
 
@@ -35,9 +46,20 @@
 		align-items: center;
 
 		&--mid{
+
 			@include media-breakpoint-up(xll){
 				justify-content: center;
 			}
+
+			span{
+				font-size: 13px;
+			}
+			@include media-breakpoint-up(xxl){
+				span{
+					font-size: 13px;
+				}
+			}
+
 			.red-line__btn{
 				&:not(:last-child) {
 					&:after{
@@ -52,17 +74,22 @@
 	&__btn{
 
 		.icon{
-			margin-right: rem(10);
+			font-size: 15px;
+
+			margin-right: 15px;
+			@include media-breakpoint-up(xll){
+				margin-right: 10px;
+			}
 			&.icon-car-long{
 				font-size: 16px;
 			}
 			&.icon-phone{
 				font-size: 16px;
 			}
-
 		}
+
 		span{
-			font-size: 13px;
+			font-size: 12px;
 			font-weight: 500;
 		}
 
@@ -94,7 +121,13 @@
 	}
 	&__dd-btn{
 		//background-color: $blue;
-		padding-right: rem(20);
+		padding-right: 16px;
+		@include media-breakpoint-up(xll){
+			padding-right: 13px;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-right: 20px;
+		}
 		position: relative;
 		cursor: pointer;
 
@@ -112,6 +145,8 @@
 			border-width: 5px 3.5px 0 3.5px;
 			border-color: $white transparent transparent transparent;
 		}
+
+		font-size: 13px;
 	}
 	&__dd-content{
 		transform-origin: 0 0;
@@ -149,7 +184,7 @@
 	&__q-sign{
 		font-size: 19px;
 		font-weight: 900;
-		margin-right: rem(15);
+		margin-right: rem(10);
 	}
 	//
 	&__{}

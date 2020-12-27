@@ -79,6 +79,7 @@ $light: #f6f7fc !default;
 $dark: $gray-800 !default;
 $brown: #333333;
 $dark-gray: #575757;
+$dark-blue: #22252a;
 
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,
@@ -190,6 +191,8 @@ $paragraph-margin-bottom: 1rem !default;
 // adapting to different screen sizes, for use in media queries.
 
 // scss-docs-start grid-breakpoints
+
+//!! change carefully, need to change css for submenu [ctrl + shift + f => //it will be broken]
 $grid-breakpoints: (xs: 0,
   sm: 576px,
   md: 768px,

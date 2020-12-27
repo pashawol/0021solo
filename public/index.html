@@ -72,37 +72,410 @@
 			<div class="topLine" id="topLine">
 				<div class="topLine__container container">
 					<div class="topLine__row row align-items-center">
-						<div class="col-auto"><a class="topLine__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-						</div>
-						<div class="col">
-							<ul class="navMenu">
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">HAUS UND GARTEN</a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">PROFI</a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Wissenswertes</a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">SERVICE</a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Unternehmen</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-auto">
-							<div class="topLine__icons-items"><a class="topLine__icon" href="#">
+						<div class="topLine__burger-col col d-xll-none">
+							<div class="topLine__burger burger-js"><span></span>
+							</div>
+							<div class="topLine__icon mob-search">
 								<svg class="icon icon-zoom ">
 									<use xlink:href="img/svg/sprite.svg#zoom"></use>
-								</svg></a><a class="topLine__icon" href="#">
+								</svg>
+							</div>
+						</div>
+						<div class="topLine__logo-col col-auto"><a class="topLine__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+						</div>
+						<div class="col">
+							<div class="mob-menu mob-menu--js">
+								<div class="mob-menu__wrap">
+									<div class="mob-menu__header d-xl-none">
+										<div class="mob-menu__close close-sm-menu-js"><span>Menü Schliessen</span>
+											<svg class="icon icon-cross ">
+												<use xlink:href="img/svg/sprite.svg#cross"></use>
+											</svg>
+										</div>
+										<div class="red-line red-line--mob d-flex">
+											<div class="red-line__btn">
+												<div class="red-line__dd dd-js">
+													<div class="red-line__dd-btn dd-btn-js">€ EURO
+													</div>
+													<div class="red-line__dd-content dd-content-js"><a class="red-line__dd-item" href="#">€  EURO 2</a><a class="red-line__dd-item" href="#">€  EURO 3</a><a class="red-line__dd-item" href="#">€  EURO 4</a>
+													</div>
+												</div>
+											</div>
+											<div class="red-line__btn">
+												<div class="red-line__q-sign">?
+												</div>
+												<div class="red-line__dd dd-js">
+													<div class="red-line__dd-btn dd-btn-js">Service/Hilfe
+													</div>
+													<div class="red-line__dd-content dd-content-js"><a class="red-line__dd-item" href="#">€  EURO 2</a><a class="red-line__dd-item" href="#">€  EURO 3</a><a class="red-line__dd-item" href="#">€  EURO 4</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mob-menu__search-strip">
+											<button class="mob-menu__search-btn"><img loading="lazy" src="img/@2x/search-3bars.png" alt=""/>
+											</button><input class="mob-menu__input form-control" type="text" name="search" placeholder="Zeige alle Kategorien"/>
+										</div>
+									</div>
+									<div class="mob-menu__content">
+										<!--dt-menu-->
+										<ul class="navMenu navMenu--js">
+											<li class="navMenu__item"><a class="navMenu__link menu-link-js" href="#">HAUS UND GARTEN</a>
+												<div class="dt-dd-menu dt-dd-menu--js">
+													<div class="dt-dd-menu__wrap">
+														<div class="dt-dd-menu__container container">
+															<div class="dt-dd-menu__back-btn back-btn-js d-xll-none"><span>Zur Kategorie Haus &amp; Garten</span>
+																<svg class="icon icon-arrow-right ">
+																	<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+																</svg>
+															</div>
+															<div class="dt-dd-menu__row row">
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Anwendung
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-1.svg" alt=""/></span><span>Pflanzenschutz/ -pflege</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-2.svg" alt=""/></span><span>Reinigung/Desinfektion</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-3.svg" alt=""/></span><span>Streuen</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Spritzen
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Handspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Druckspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Rückenspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Akkuspritzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Schaumsprüher</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Granulatstreuer
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>421 Granulatstreuer</span></a>
+																		</li>
+																	</ul>
+																	<div class="dt-dd-menu__title sb-title-js">Zubehör
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Lanzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Düsen und Spritzschirme</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Dichtungen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>weiteres Zubehör</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3 d-none d-xl-block">
+																	<div class="dt-dd-menu__img"><img loading="lazy" src="img/@2x/submenu-img.jpg" alt=""/>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="navMenu__item"><a class="navMenu__link menu-link-js" href="#">PROFI</a>
+												<div class="dt-dd-menu dt-dd-menu--js">
+													<div class="dt-dd-menu__wrap">
+														<div class="dt-dd-menu__container container">
+															<div class="dt-dd-menu__back-btn back-btn-js d-xll-none"><span>Zur Kategorie Haus &amp; Garten</span>
+																<svg class="icon icon-arrow-right ">
+																	<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+																</svg>
+															</div>
+															<div class="dt-dd-menu__row row">
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Anwendung2
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-1.svg" alt=""/></span><span>Pflanzenschutz/ -pflege</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-2.svg" alt=""/></span><span>Reinigung/Desinfektion</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-3.svg" alt=""/></span><span>Streuen</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Spritzen2
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Handspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Druckspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Rückenspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Akkuspritzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Schaumsprüher</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Granulatstreuer
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>421 Granulatstreuer</span></a>
+																		</li>
+																	</ul>
+																	<div class="dt-dd-menu__title sb-title-js">Zubehör
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Lanzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Düsen und Spritzschirme</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Dichtungen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>weiteres Zubehör</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3 d-none d-xl-block">
+																	<div class="dt-dd-menu__img"><img loading="lazy" src="img/@2x/submenu-img.jpg" alt=""/>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="navMenu__item"><a class="navMenu__link menu-link-js" href="#">Wissenswertes</a>
+												<div class="dt-dd-menu dt-dd-menu--js">
+													<div class="dt-dd-menu__wrap">
+														<div class="dt-dd-menu__container container">
+															<div class="dt-dd-menu__back-btn back-btn-js d-xll-none"><span>Zur Kategorie Haus &amp; Garten</span>
+																<svg class="icon icon-arrow-right ">
+																	<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+																</svg>
+															</div>
+															<div class="dt-dd-menu__row row">
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Anwendung3
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-1.svg" alt=""/></span><span>Pflanzenschutz/ -pflege</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-2.svg" alt=""/></span><span>Reinigung/Desinfektion</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-3.svg" alt=""/></span><span>Streuen</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Spritzen3
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Handspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Druckspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Rückenspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Akkuspritzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Schaumsprüher</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Granulatstreuer
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>421 Granulatstreuer</span></a>
+																		</li>
+																	</ul>
+																	<div class="dt-dd-menu__title sb-title-js">Zubehör
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Lanzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Düsen und Spritzschirme</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Dichtungen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>weiteres Zubehör</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3 d-none d-xl-block">
+																	<div class="dt-dd-menu__img"><img loading="lazy" src="img/@2x/submenu-img.jpg" alt=""/>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="navMenu__item"><a class="navMenu__link menu-link-js" href="#">SERVICE</a>
+												<div class="dt-dd-menu dt-dd-menu--js">
+													<div class="dt-dd-menu__wrap">
+														<div class="dt-dd-menu__container container">
+															<div class="dt-dd-menu__back-btn back-btn-js d-xll-none"><span>Zur Kategorie Haus &amp; Garten</span>
+																<svg class="icon icon-arrow-right ">
+																	<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+																</svg>
+															</div>
+															<div class="dt-dd-menu__row row">
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Anwendung4
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-1.svg" alt=""/></span><span>Pflanzenschutz/ -pflege</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-2.svg" alt=""/></span><span>Reinigung/Desinfektion</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-3.svg" alt=""/></span><span>Streuen</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Spritzen4
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Handspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Druckspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Rückenspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Akkuspritzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Schaumsprüher</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Granulatstreuer
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>421 Granulatstreuer</span></a>
+																		</li>
+																	</ul>
+																	<div class="dt-dd-menu__title sb-title-js">Zubehör
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Lanzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Düsen und Spritzschirme</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Dichtungen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>weiteres Zubehör</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3 d-none d-xl-block">
+																	<div class="dt-dd-menu__img"><img loading="lazy" src="img/@2x/submenu-img.jpg" alt=""/>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<!--remove class '.menu-link-js' if need simple link-->
+											<li class="navMenu__item"><a class="navMenu__link menu-link-js" href="#">Unternehmen</a>
+												<div class="dt-dd-menu dt-dd-menu--js">
+													<div class="dt-dd-menu__wrap">
+														<div class="dt-dd-menu__container container">
+															<div class="dt-dd-menu__back-btn back-btn-js d-xll-none"><span>Zur Kategorie Haus &amp; Garten</span>
+																<svg class="icon icon-arrow-right ">
+																	<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+																</svg>
+															</div>
+															<div class="dt-dd-menu__row row">
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Anwendung5
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-1.svg" alt=""/></span><span>Pflanzenschutz/ -pflege</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-2.svg" alt=""/></span><span>Reinigung/Desinfektion</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span class="dt-dd-menu__icon"><img loading="lazy" src="img/svg/submenu-icon-3.svg" alt=""/></span><span>Streuen</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Spritzen5
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Handspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Druckspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Rückenspritze</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Akkuspritzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Schaumsprüher</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3">
+																	<div class="dt-dd-menu__title sb-title-js">Granulatstreuer
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>421 Granulatstreuer</span></a>
+																		</li>
+																	</ul>
+																	<div class="dt-dd-menu__title sb-title-js">Zubehör
+																	</div>
+																	<ul class="dt-dd-menu__submenu sb-mnu-js">
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Lanzen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Düsen und Spritzschirme</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>Dichtungen</span></a>
+																		</li>
+																		<li class="dt-dd-menu__item"><a class="dt-dd-menu__link" href="#"><span>weiteres Zubehör</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="col-xl-3 d-none d-xl-block">
+																	<div class="dt-dd-menu__img"><img loading="lazy" src="img/@2x/submenu-img.jpg" alt=""/>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="topLine__icons-items"><a class="topLine__icon d-none d-xxl-block" href="#">
+								<svg class="icon icon-zoom ">
+									<use xlink:href="img/svg/sprite.svg#zoom"></use>
+								</svg></a><a class="topLine__icon d-none d-md-block" href="#">
 								<svg class="icon icon-heart ">
 									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg></a><a class="topLine__icon" href="#">
+								</svg></a><a class="topLine__icon d-none d-md-block" href="#">
 								<svg class="icon icon-user ">
 									<use xlink:href="img/svg/sprite.svg#user"></use>
 								</svg></a>
 								<div class="topLine__cart">
 									<div class="topLine__c-ball has-ball"><img loading="lazy" src="img/@2x/cart-icon.png" alt=""/>
 									</div>
-									<div class="topLine__c-info">
+									<div class="topLine__c-info d-none d-xl-block">
 										<div class="topLine__c-amount">1 Produkt
 										</div>
 										<div class="topLine__c-price">25,80 €*
