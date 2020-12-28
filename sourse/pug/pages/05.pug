@@ -18,6 +18,7 @@ include ../blocks/sSocMedia/_sSocMedia.pug
 include ../blocks/sFolow/_sFolow.pug
 include ../blocks/sMail/_sMail.pug
 include ../blocks/sHSlider/_sHSlider.pug
+include ../blocks/sInfo/_sInfo.pug
 
 block variables
 	- let  mainPage= null
@@ -29,21 +30,5 @@ block pagecontent
 	+header()
 		+top-nav()
 		+topLine()
-	+sHSlider()
-	+sVantageLine()
-	+sUsage()
-	+sBalls()
-	+sCatalog()
-	+sClean()
-	+sPromo()
-	+sNew()
-	+sContact()
-	+sNews()
-	+sSocMedia()
-	+sFolow()
-	+sMail()
-	+sWmailAddress
-	+sIcons
-	+sPaymethod
-	+sCategories
+	+sInfo()
 	+footer()

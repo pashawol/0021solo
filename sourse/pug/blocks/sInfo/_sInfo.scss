@@ -1,0 +1,257 @@
+// start .sInfo
+.sInfo {
+	background-color: $light;
+	border-top: 13px solid $primary;
+	border-bottom: 13px solid $primary;
+
+	--sPT: 46px;
+	--sPB: 45px;
+	--sTPB: 55px;
+	@include media-breakpoint-up(md){
+		--sPT: 45px;
+		--sPB: 45px;
+		--sTPB: 53px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 49px;
+		--sPB: 10px;
+		--sTPB: 53px;
+	}
+	@include media-breakpoint-up(xll){
+		--sPT: 40px;
+		--sPB: 46px;
+		--sTPB: 57px;
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: 80px;
+		--sPB: 84px;
+		--sTPB: 53px;
+	}
+
+	&__container{
+		padding: 0 12px;
+	}
+	&__row{
+		padding-bottom: 56px;
+		@include media-breakpoint-up(xxl){
+			padding-bottom: 56px;
+		}
+	}
+	&__col{
+
+		&--content{
+			padding-right: 127px;
+			@include media-breakpoint-up(xxl){
+				padding-right: 127px;
+			}
+		}
+		&--sidebar{
+			width: 490px;
+			@include media-breakpoint-up(xxl){
+				width: 590px;
+				padding-top: 8px;
+			}
+		}
+	}
+	.section-title{
+
+		@include media-breakpoint-up(xxl){
+			max-width: 84%;
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		&__info{
+			color: $brown;
+			font-weight: 900;
+			text-transform: uppercase;
+
+			font-size: 18px;
+			margin-bottom: 10px;
+			letter-spacing: 0.56px;
+			@include media-breakpoint-up(xxl){
+				font-size: 18px;
+				margin-bottom: 10px;
+				letter-spacing: 0.6px;
+			}
+		}
+		h1, h2{
+			color: $brown;
+			font-weight: 400;
+
+			font-size: 35px;
+			margin-bottom: 30px;
+			@include media-breakpoint-up(xxl){
+				font-size: 35px;
+				margin-bottom: 30px;
+			}
+		}
+		p{
+			color: $brown;
+
+			line-height: 1.4;
+			font-size: 18px;
+		}
+	}
+
+	//sNews
+	.sNews{
+		.sNews__img{
+			padding-top: 87.5%;
+			@include media-breakpoint-up(md){
+				padding-top: 78.5%;
+			}
+			@include media-breakpoint-up(xl){
+				padding-top: 87%;
+			}
+			@include media-breakpoint-up(xll){
+				padding-top: 74.6%;
+			}
+		}
+	}
+	//
+	&__{}
+	&__{}
+	&__{}
+} // end.sInfo
+
+.faq{
+	background-color: $white;
+	min-height: 100%;
+
+	padding: 54px 62px 50px 55px;
+	@include media-breakpoint-up(xxl){
+		padding: 53px 62px 50px 52px;
+	}
+
+	&__item{
+		margin-bottom: 66px;
+		@include media-breakpoint-up(xxl){
+			margin-bottom: 66px;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__title{
+		color: $brown;
+		font-weight: 900;
+		text-transform: uppercase;
+
+		font-size: 18px;
+		letter-spacing: 0.72px;
+		margin-bottom: 1px;
+		@include media-breakpoint-up(xxl){
+			font-size: 18px;
+			letter-spacing: 0.72px;
+			margin-bottom: 6px;
+		}
+	}
+	&__descr{
+		color: $brown;
+
+		font-size: 18px;
+		line-height: (25/18);
+		margin-bottom: 23px;
+		@include media-breakpoint-up(xxl){
+			font-size: 18px;
+			line-height: (25/18);
+			margin-bottom: 23px;
+		}
+	}
+	&__questions{
+		@include media-breakpoint-up(xxl){
+			padding: 0 1px 0 3px;
+		}
+	}
+	//question
+	&__question{
+		border-bottom: 1px solid $brown;
+
+		padding: 26px 0 24px;
+		@include media-breakpoint-up(xxl){
+			padding: 26px 0 24px;
+		}
+	}
+	&__header{
+		cursor: pointer;
+		display: flex;
+		align-items: flex-start;
+		.icon{
+			flex-shrink: 0;
+			color: $crimson;
+			font-size: 26px;
+			margin-right: 15px;
+		}
+
+		span{
+			@include mt();
+
+			font-size: 18px;
+			font-weight: 900;
+			line-height: (25/18);
+		}
+
+		.plus{
+			flex-shrink: 0;
+			width: 16px;
+			height: 16px;
+			position: relative;
+
+			margin: 8px 1px 0 0;
+			@include media-breakpoint-up(xxl){
+				margin: 8px 1px 0 0;
+			}
+
+			&:before,
+			&:after{
+				@include mt();
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				background-color: $crimson;
+			}
+			&:before{
+				width: 16px;
+				height: 2px;
+			}
+			&:after{
+				height: 16px;
+				width: 2px;
+			}
+		}
+
+		color: $brown;
+		&.active{
+			color: $primary;
+			.plus:after{
+				background-color: transparent;
+			}
+		}
+	}
+	&__q-descr{
+		color: $secondary2;
+		//padd-left = icon width + icon margin
+
+		padding: 12px 37px 10px 41px;
+		font-size: 18px;
+		line-height: (25/18);
+		@include media-breakpoint-up(xxl){
+			padding: 12px 37px 8px 41px;
+			font-size: 18px;
+			line-height: (25/18);
+		}
+
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	//
+	&__{}
+}

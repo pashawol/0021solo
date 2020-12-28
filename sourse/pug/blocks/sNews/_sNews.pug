@@ -55,8 +55,31 @@ mixin newsSlide(data)
 				if data.youtube
 					+e.link(href="#")
 						+e.icon
-							img.swiper-lazy(src="#" data-src="img/svg/youtube-logo.svg" alt="")
+							img.img-svg-js(src="img/svg/youtube-logo.svg" alt="")
 						+e.l-txt=data.linkTxt
 				else
 					+e.link(href="#")
 						+e.l-txt=data.linkTxt
+
+mixin newsItem(data)
+	+e.item&attributes(attributes)
+		if data.youtube
+			+e.img.play-btn(href='#')
+				img(loading="lazy" src=`img/@2x/sNews-${data.imgNum}.jpg` alt="")
+		else
+			+e.img(href='#')
+				img(loading="lazy" src=`img/@2x/sNews-${data.imgNum}.jpg` alt="")
+		+e.descr-bl
+			+e.date-line
+				+e.d-bold=data.boldTxt
+				+e.d-date=data.dateTxt
+			+e.title=data.title
+			+e.descr=data.descr
+			if data.youtube
+				+e.link
+					+e.icon
+						img.img-svg-js(loading="lazy" src="img/svg/youtube-logo.svg" alt="")
+					+e.l-txt=data.linkTxt
+			else
+				+e.link(href="#")
+					+e.l-txt=data.linkTxt

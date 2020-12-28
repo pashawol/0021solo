@@ -1,0 +1,79 @@
+mixin sInfo(data)
+	// start sInfo
+	+b.SECTION.sInfo.section#sInfo&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+e.col--content.col
+					+b.section-title
+						+e.info WISSENSWERTES
+						h1
+							| Herbizideinsatz im Garten
+							br
+							| Loren ipsum?
+						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					//div.sNews can be removed here
+					+b.sNews
+						+newsItem({
+							imgNum: "1",
+							boldTxt: "YouTube",
+							dateTxt: "OCTOBER 2019",
+							title: "Solo 451 3-Gallon 66.5cc",
+							descr: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+							youtube: true,
+							linkTxt: "VIDEO ANSEHEN",
+						})
+				+e.col--sidebar.col.col-xl-auto
+					+b.faq
+						+e.item
+							+e.title Krankheiten & Schädlinge
+							+e.descr Häufige Fragen rund um das Thema Krankheiten & Schädlinge:
+							+e.questions
+								+faqQuestion('Wer frisst meine Tomaten und was kann ich dagegen tun?')
+								+faqQuestion('Wie kann ich bei auftretender Tomatenwelke handeln?')
+						+e.item
+							+e.title Wann sprühen satt spritzen?
+							+e.descr In Raumkulturen in der Landschaft, im Obst-, Garten- und Weinbau sowie bei vielen weiteren weltweit angebauten Kulturpflanzenbeständen.
+							+e.questions
+								+faqQuestion('Ist SOLO für Flüssig oder feste Aufbringung geeignet?', 'active')
+								+faqQuestion('Kann man Pflanzenschutzmittel in feine  Tröpfchen zerteilen?')
+			//div.sNews can be removed here
+			+b.sNews
+				+e.slider
+					.swiper-container.news-slider-js
+						.swiper-wrapper
+							+newsSlide({
+								imgNum: "1",
+								boldTxt: "YouTube",
+								dateTxt: "OCTOBER 2019",
+								title: "Solo 451 3-Gallon 66.5cc",
+								descr: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget",
+								youtube: true,
+								linkTxt: "VIDEO ANSEHEN",
+							})
+							+newsSlide({
+								imgNum: "2",
+								boldTxt: "NEWS",
+								dateTxt: "Februar 2020",
+								title: "Solo im Einsatz gegen Corona",
+								descr: "Das Thema Desinfektion hat momentan leider einen dramatischen Stellenwert erlangt. Das Corona-Virus COVID-19 breitet sich rasant aus.",
+								youtube: false,
+								linkTxt: "WEITER LESEN",
+							})
+							+newsSlide({
+								imgNum: "3",
+								boldTxt: "NEWS",
+								dateTxt: "Februar 2020",
+								title: "SEHR GUT bei Vergleich.org für den SOLO 421",
+								descr: "Qualität zahlt sich aus. Unser Granulatstreuer SOLO 421 wurde bei Vergleich.ORG mit „sehr gut“ ausgezeichnet…",
+								youtube: false,
+								linkTxt: "WEITER LESEN",
+							})
+	// end sInfo
+
+mixin faqQuestion(title, activeClass='')
+	+e.question
+		+e.header.q-head-js(class=activeClass)
+			+icon('chevron-r-circle')
+			span=title
+			.plus
+		+e.q-descr.q-descr-js(class=activeClass) Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa uis enim. Donec pede justo, fringilla vel, aliquet nec.

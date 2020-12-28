@@ -124,7 +124,34 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
+		@include mt();
+
 		background-color: $light;
+		--nItemColor: #{$brown};
+		--nItemGrayColor: #{$gray550};
+		--nYoutubeColor: #{#db3232};
+		&:hover{
+			--nItemColor: #{$white};
+			--nItemGrayColor: #{$white};
+			--nYoutubeColor: #{$white};
+			background-color: $primary;
+		}
+
+		//??
+		//&--big{
+		//	.sNews__img{
+		//		padding-top: 87.5%;
+		//		@include media-breakpoint-up(md){
+		//			padding-top: 78.5%;
+		//		}
+		//		@include media-breakpoint-up(xl){
+		//			padding-top: 87%;
+		//		}
+		//		@include media-breakpoint-up(xll){
+		//			padding-top: 74.6%;
+		//		}
+		//	}
+		//}
 	}
 	&__img{
 		@extend .accept-ratio-frame;
@@ -170,7 +197,8 @@
 	}
 	&__descr-bl{
 		flex-grow: 1;
-		color: $brown;
+		@include mt();
+		color: var(--nItemColor);
 		display: flex;
 		flex-direction: column;
 
@@ -209,7 +237,8 @@
 		display: flex;
 		font-weight: 900;
 		align-items: center;
-		color: $brown;
+		@include mt();
+		color: var(--nItemColor);
 
 		&:after{
 			content: '|';
@@ -217,18 +246,17 @@
 		}
 	}
 	&__d-date{
-		color: $gray550;
+		@include mt();
+		color: var(--nItemGrayColor);
 		font-weight: 700;
 		text-transform: uppercase;
 
 		letter-spacing: 0.52px;
 	}
 	&__title{
-		color: $brown;
+		@include mt();
+		color: var(--nItemColor);
 		font-weight: 700;
-		&:hover{
-			opacity: .6;
-		}
 
 		font-size: 16px;
 		line-height: 1.5;
@@ -275,7 +303,9 @@
 		align-items: flex-start;
 
 		margin-top: auto;
-		color: $brown;
+
+		@include mt();
+		color: var(--nItemColor);
 	}
 	&__l-txt{
 		font-weight: 700;
@@ -286,10 +316,10 @@
 
 		padding: 4px 0;
 		border-bottom: 1px solid currentColor;
-		&:hover{
-			opacity: .6;
-			border-bottom: 1px solid transparent;
-		}
+		//&:hover{
+		//	opacity: .6;
+		//	border-bottom: 1px solid transparent;
+		//}
 	}
 	&__icon{
 		height: 100%;
@@ -300,6 +330,11 @@
 		}
 		@include media-breakpoint-up(xl){
 			margin-right: 16px;
+		}
+
+		path{
+			@include mt();
+			fill: var(--nYoutubeColor)!important;
 		}
 		img{
 			width: auto;
