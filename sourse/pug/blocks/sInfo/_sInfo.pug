@@ -6,6 +6,7 @@ mixin sInfo(data)
 				+e.col--content.col
 					+b.section-title
 						+e.info WISSENSWERTES
+						//can be changed for h2
 						h1
 							| Herbizideinsatz im Garten
 							br
@@ -22,7 +23,7 @@ mixin sInfo(data)
 							youtube: true,
 							linkTxt: "VIDEO ANSEHEN",
 						})
-				+e.col--sidebar.col.col-xl-auto
+				+e.col--sidebar.col-12.col-xl-auto
 					+b.faq
 						+e.item
 							+e.title Krankheiten & Schädlinge
@@ -45,8 +46,8 @@ mixin sInfo(data)
 								imgNum: "1",
 								boldTxt: "YouTube",
 								dateTxt: "OCTOBER 2019",
-								title: "Solo 451 3-Gallon 66.5cc",
-								descr: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget",
+								title: "Solo 456",
+								descr: "Der 7mm starke Behälter macht die SOLO 456 zum absoluten Profi unter den Druckspritzen. Eine 340 cm3-Pumpe erzeugt im 5-Liter Behälter …",
 								youtube: true,
 								linkTxt: "VIDEO ANSEHEN",
 							})
@@ -68,6 +69,9 @@ mixin sInfo(data)
 								youtube: false,
 								linkTxt: "WEITER LESEN",
 							})
+					+b.news-pugin--js.d-xl-none
+			+e.btn-cont
+				+e.btn(href="#") Mehr wissenswertes
 	// end sInfo
 
 mixin faqQuestion(title, activeClass='')

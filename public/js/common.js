@@ -207,7 +207,7 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 	var x = window.location.host;
 	var screenName;
-	screenName = '05.png';
+	screenName = '05-375.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -411,6 +411,12 @@ function eventHandler() {
 				spaceBetween: 0
 			}
 		},
+		//pugin
+		pagination: {
+			el: $(this).find('.news-pugin--js'),
+			clickable: true
+		},
+		//
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 5

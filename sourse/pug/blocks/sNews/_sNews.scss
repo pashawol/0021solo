@@ -119,6 +119,12 @@
 			}
 			height: auto;
 		}
+		//pugin
+		.news-pugin{
+			margin-top: 15px;
+			@extend .swiper-pugin-frame;
+		}
+
 	}
 	&__item{
 		display: flex;
@@ -255,7 +261,7 @@
 	}
 	&__title{
 		@include mt();
-		color: var(--nItemColor);
+		color: var(--nItemColor)!important;
 		font-weight: 700;
 
 		font-size: 16px;
@@ -305,7 +311,7 @@
 		margin-top: auto;
 
 		@include mt();
-		color: var(--nItemColor);
+		color: var(--nItemColor)!important;
 	}
 	&__l-txt{
 		font-weight: 700;

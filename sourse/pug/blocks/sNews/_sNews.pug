@@ -73,7 +73,7 @@ mixin newsItem(data)
 			+e.date-line
 				+e.d-bold=data.boldTxt
 				+e.d-date=data.dateTxt
-			+e.title=data.title
+			+e.title(href='#')=data.title
 			+e.descr=data.descr
 			if data.youtube
 				+e.link
