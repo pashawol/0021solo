@@ -196,9 +196,10 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '05-375.png';
+	screenName = '03-step1.png';
 	if (screenName && x === "localhost:3000") {
-		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+		//$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+		$(".footerCart").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 	$(document).on('click', '.btn-top', function () {
 		let th = $(this);

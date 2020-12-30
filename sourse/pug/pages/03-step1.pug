@@ -19,16 +19,20 @@ include ../blocks/sFolow/_sFolow.pug
 include ../blocks/sMail/_sMail.pug
 include ../blocks/sHSlider/_sHSlider.pug
 include ../blocks/sInfo/_sInfo.pug
+include ../blocks/sImpressum/_sImpressum.pug
+include ../blocks/sPrivacy/_sPrivacy.pug
+include ../blocks/sCartEnter/_sCartEnter.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '05'
+	- let  title= '03-step1'
 	title= title
 block pagecontent
 	//-+mob-mnu()
 	+header()
 		+top-nav()
-		+topLine()
-	+sInfo()
-	+footer()
+		+topLineCart()
+	+cartCheckLine(0)
+	+sCartEnter()
+	+footerCart()

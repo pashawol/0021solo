@@ -121,3 +121,27 @@ mixin submenuItem(txt, iconName)
 				+e.icon
 					img(loading="lazy" src=`img/svg/${iconName}.svg` alt="")
 			span=txt
+
+mixin topLineCart()
+	// start topLine
+	+b.topLine--cart#topLine&attributes(attributes)
+		+e.container.container
+			+e.row.row.align-items-center
+				//-logo
+				+e.logo-col.col.col-xl-auto
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				//-questions col
+				+e.question-col.col-12.col-xl
+					+e.qc-content
+						+e.qc-title Fragen zu Ihrer Bestellung?
+						+e.qc-bot
+							+e.qc-link(href="tell:+49070313010") +49 (0) 7031 - 301-0
+							+e.qc-shedule Montag – Freitag: 7:00 – 17:00 Uhr
+				//-back btn
+				.col-xl-auto
+					+e.back-shop-btn(href='#')
+						+icon('chevron-left')
+						span Zurück zum Shop
+
+	// end topLine

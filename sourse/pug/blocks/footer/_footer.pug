@@ -49,3 +49,31 @@ mixin footer()
 				+e.btns.col-sm-auto
 					+e.btn.btn-gray(href="#") Ablehnen
 					+e.btn.btn-primary(href="#") Konfigurieren
+
+mixin footerCart()
+	+b.footerCart
+		.container
+			+e.row.row
+				+footerCartItem('footersCart-1', 'Kostenloser Versand Deutschlandweit')
+				+footerCartItem('vantage-item-4', 'Kostenlose Rückgabe Innerhalb von 30 Tagen')
+				+footerCartItem('vantage-item-3', 'Sichere Bezahlmöglichkeit Verschlüsselte Übertragung')
+				+footerCartItem()
+					+e.pay-img(href="#")
+						img(loading="lazy" src='img/@2x/pay-ways.png' alt="")
+			+e.bot-links
+				a(href="#") Download
+				a(href="#") Händlersuche
+				a(href="#") Support
+				a(href="#") Kataloge
+				a(href="#") FAQ
+				a(href="#") Datenschutz
+
+mixin footerCartItem(imgName, txt)
+	+e.col.col-6.col-xl-3
+		if block
+			block
+		else
+			+e.item
+				+e.i-img
+					img(loading="lazy" src=`img/svg/${imgName}.svg` alt="")
+				+e.txt=txt

@@ -1,6 +1,8 @@
 //- breadcrumb
 mixin breadcrumb(...items)
-	nav(aria-label="breadcrumb" )
+	nav.breadcrumb-wrap(aria-label="breadcrumb")
+		a.breadcrumb-home(href="/")
+			+icon("home")
 		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
 			-for (var i = 0; i < items.length; i++)
 				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")

@@ -45,6 +45,7 @@ $crimson: #cc1a1a;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #28a745 !default;
+$green2: #54b105;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
@@ -151,6 +152,7 @@ $spacers: (0: 0,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  6: $spacer * 4.8,
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;

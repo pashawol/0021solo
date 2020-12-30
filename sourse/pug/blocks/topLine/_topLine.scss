@@ -1,9 +1,130 @@
 // start .topLine
 .topLine {
   position: relative;
-  @include media-breakpoint-up(xl){
-    position: relative;
+
+  //cart
+  &--cart{
+    .topLine__container{
+      @include media-breakpoint-up(xll){
+        padding: 20px 10px 27px 10px;
+      }
+    }
   }
+  &__back-shop-btn{
+    @extend .btn;
+    @extend .btn-brown;
+    color: $white!important;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.56px;
+
+    @include media-breakpoint-up(xxl){
+      padding: 11px 20px;
+    }
+
+    .icon{
+      margin-right: 15px;
+      color: $white!important;
+    }
+    span{
+
+    }
+  }
+  &__question-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-up(xxl){
+      padding-left: 58px;
+      padding-top: 3px;
+    }
+  }
+  &__qc-title{
+    color: $secondary2;
+    font-weight: 700;
+
+    font-size: 14px;
+    line-height: (25/14);
+    @include media-breakpoint-up(md){
+      font-size: 16px;
+      line-height: (25/16);
+    }
+    padding: 0 0 0px 41px;
+
+
+    @include media-breakpoint-up(xxl){
+      letter-spacing: .4px;
+    }
+  }
+  &__qc-bot{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__qc-link{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+
+    color: $primary;
+    font-weight: 700;
+
+    font-size: 16px;
+    @include media-breakpoint-up(md){
+      font-size: 18px;
+      line-height: (22/18);
+    }
+
+    &:before{
+      content: '';
+      display: inline-flex;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background-color: $light;
+      margin-right: 14px;
+
+      background-image: url(../img/svg/red-phone.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__qc-shedule{
+    color: $secondary2;
+    font-weight: 700;
+
+    font-size: 14px;
+    line-height: (25/14);
+    @include media-breakpoint-up(md){
+      font-size: 16px;
+      line-height: (25/16);
+    }
+
+    @include media-breakpoint-up(xxl){
+      //letter-spacing: .4px;
+    }
+  }
+  //
+  &__{}
+  &__{}
+
+  //end cart
+
+  &:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+    background-color: $light;
+  }
+
+  //@include media-breakpoint-up(xl){
+  //  position: relative;
+  //}
   &__container{
     padding: 26px 10px;
     @include media-breakpoint-up(md){
