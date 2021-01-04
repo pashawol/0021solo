@@ -1,0 +1,111 @@
+mixin sCartFinish(data)
+	// start sCartFinish
+	+b.SECTION.sCartFinish.section#sCartFinish&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Vielen Dank für Ihre Bestellung bei SOLO!
+			+e.info-txt.text-center
+				+e.order-num Ihre Bestellnummer: 100002
+				+e.confirm-txt Bestellbestätigung wurde verschickt.
+			+e.row.row
+				+cartDataItem('Rechnungsadresse')
+				+cartDataItem('Lieferadresse')
+				+cartDataItem('Informationen')
+					+e.data-item
+						strong Zahlungsart:
+						span Rechnung
+					+e.data-item
+						strong Versandart:
+						span Standard
+				+e.col.col-xl-8
+					+cartSummeryLg()
+				+e.col.col-xl-4
+					+b.iResult--summery
+						+e.ir-header Zusammenfassung
+						+e.ir-content
+							+e.ir-top
+								+e.ir-item
+									span Zwischensumme
+									span 357,00 €*
+								+e.ir-item
+									span Versandkosten
+									span gratis
+							+e.ir-item--bold2
+								span Gesamtsumme
+								span 357,00 €*
+							+e.ir-item--gray
+								span Gesamtnettosumme
+								span 300,00 €
+							+e.ir-item--gray
+								span zzgl. 19% MwSt.
+								span 57,00 €
+							+e.ir-gray *Preise inkl. Gesenkter Mehrwertsteuer. Nur garantiert für SOLO-Artikel.
+	// end sCartFinish
+
+mixin cartDataItem(titleTxt)
+	+e.col.col-xl-4
+		+e.item
+			+e.title=titleTxt
+			if block
+				block
+			else
+				+e.addr-item
+					strong Silke Mustermann
+					span Osterholzallee 144/2
+					span 71763 Ludwigsburg
+				+e.addr-item
+					span Baden-Württemberg
+					span Deutschland
+
+mixin cartSummeryLg()
+	+b.cSummery
+		+e.header.d-none.d-xll-flex
+			+e.h-item--prod Produkt
+			+e.h-item--amount Anzahl
+			+e.h-item--tax inkl. MwSt.
+			+e.h-item--total Summe
+		+e.items
+			+summeryItem({
+				imgNum: '1',
+				name: '403 HAND-DRUCKSPRITZE',
+				volume: '3 Liter',
+				code: 'Produkt-Nr. SW21431',
+				delivery: 'Lieferzeitraum: 28.11.20 – 01.12.20',
+				inpVal: '3',
+				tax: '57,00 €',
+				totalPrice: '357,00 €',
+			})
+			+summeryItem({
+				imgNum: '2',
+				name: '417 AKKU-SPRITZE, RÜCKENTRAGBAR',
+				volume: '18 Liter',
+				code: 'Produkt-Nr. SW214334',
+				delivery: 'Lieferzeitraum: 28.11.20 – 01.12.20',
+				inpVal: '1',
+				tax: '57,00 €',
+				totalPrice: '281,02 €',
+			})
+
+mixin summeryItem(data)
+	+e.item
+		+e.i-col--prod
+			+e.img
+				img(loading="lazy" src=`img/@2x/cSummery-item-${data.imgNum}.png` alt="")
+			+e.i-descr
+				+e.i-name=data.name
+				+e.i-volume=data.volume
+				+e.i-code=data.code
+				+e.i-delivery=data.delivery
+		+e.i-col--amount
+			+e.inp-cont
+				input.form-control(type="number" name="prod-amount" value=data.inpVal)
+				+e.BUTTON.inp-btn--plus
+				+e.BUTTON.inp-btn--min
+		+e.i-col--tax
+			+e.tax-txt.d-xll-none inkl. MwSt.
+			+e.tax=data.tax
+		+e.i-col--total
+			+e.total-txt.d-xll-none Summe
+			+e.total-price=data.totalPrice
+		+e.trash-btn(href='#')
+			+icon('trash')

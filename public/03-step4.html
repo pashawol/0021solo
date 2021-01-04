@@ -2,7 +2,7 @@
 <html lang="de">
 	<head>
 		<meta charset="utf-8">
-		<title>03-step2</title>
+		<title>03-step4</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -99,142 +99,157 @@
 			<div class="checkLine__container container">
 				<div class="checkLine__item checked">Anmelden
 				</div>
-				<div class="checkLine__item checked current">Adresse
+				<div class="checkLine__item checked">Adresse
 				</div>
-				<div class="checkLine__item">Zahlungsart
+				<div class="checkLine__item checked">Zahlungsart
 				</div>
-				<div class="checkLine__item">Bestätigen
+				<div class="checkLine__item checked">Bestätigen
 				</div>
-				<div class="checkLine__item">Fertig
+				<div class="checkLine__item checked current">Fertig
 				</div>
 			</div>
 		</div>
-		<!-- start sCartAdress-->
-		<section class="sCartAdress section" id="sCartAdress">
-			<div class="sCartAdress__container container">
-				<div class="sCartAdress__row row">
-					<div class="sCartAdress__col col-12 col-xl-7 col-xxl-8">
-						<div class="sCartAdress__item">
-							<div class="section-title">
-								<h2>Bestellung als Gast</h2>
+		<!-- start sCartFinish-->
+		<section class="sCartFinish section" id="sCartFinish">
+			<div class="sCartFinish__container container">
+				<div class="section-title text-center">
+					<h2>Vielen Dank für Ihre Bestellung bei SOLO!</h2>
+				</div>
+				<div class="sCartFinish__info-txt text-center">
+					<div class="sCartFinish__order-num">Ihre Bestellnummer: 100002
+					</div>
+					<div class="sCartFinish__confirm-txt">Bestellbestätigung wurde verschickt.
+					</div>
+				</div>
+				<div class="sCartFinish__row row">
+					<div class="sCartFinish__col col-xl-4">
+						<div class="sCartFinish__item">
+							<div class="sCartFinish__title">Rechnungsadresse
 							</div>
-							<div class="form-wrap">
-								<form>
-									<div class="form-wrap__big-title">Persönliche Informationen
-									</div>
-									<div class="form-wrap__radio-cont">
-										<div class="form-wrap__title form-wrap__title--lonely">Anrede*
-										</div>
-										<div class="form-wrap__radio-box">
-											<label class="radio-frame">
-												<input class="d-none" type="radio" name="gender" value="Keine"/>
-												<div class="r-btn">Keine</div>
-											</label>
-											<label class="radio-frame">
-												<input class="d-none" type="radio" name="gender" value="Keine Angaben"/>
-												<div class="r-btn">Keine Angaben</div>
-											</label>
-											<label class="radio-frame">
-												<input class="d-none" type="radio" name="gender" value="Frau" checked="checked"/>
-												<div class="r-btn">Frau</div>
-											</label>
-											<label class="radio-frame">
-												<input class="d-none" type="radio" name="gender" value="Herr"/>
-												<div class="r-btn">Herr</div>
-											</label>
-										</div>
-									</div>
-									<div class="form-wrap__inner-row form-wrap__inner-row--top row">
-										<div class="col-12 col-xxl-6">
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__title">Vorname*</span><input class="form-wrap__input form-control" type="text" placeholder="Vorname eingeben …" name="name"/>
-												</label>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-										<div class="col-12 col-xxl-6">
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__title">Nachname*</span><input class="form-wrap__input form-control" type="text" placeholder="Nachname eingeben …" name="surname"/>
-												</label>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-										<div class="col-12 col-xxl-6">
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__title">Neue E-Mail-Adresse*</span><input class="form-wrap__input form-control" type="email" placeholder="Neue Email-Adresse eingeben …" name="email"/>
-												</label>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-									</div>
-									<div class="form-wrap__big-title">Ihre Adresse
-									</div>
-									<div class="form-wrap__inner-row form-wrap__inner-row--last row">
-										<div class="col-12 col-xxl-6">
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__title">Straße und Hausnummer*</span><input class="form-wrap__input form-control" type="text" placeholder="Straße und Hausnummer eingeben …" name="address"/>
-												</label>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-										<div class="col-12 col-xxl-6">
-											<div class="form-wrap__two-inps">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__title">PLZ*</span><input class="form-wrap__input form-control" type="text" placeholder="Postleitzahl eingeb" name="post_index"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__title">Ort*</span><input class="form-wrap__input form-control" type="text" placeholder="Ort eingeben …" name="ort"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-										</div>
-										<div class="col-12 col-xxl-6">
-											<div class="form-wrap__title form-wrap__title--lonely">Land*
-											</div>
-											<div class="form-wrap__select-wrap">
-												<select class="form-control form-select">
-													<option value="de">Deutschland</option>
-													<option value="ua">Ukraine</option>
-													<option value="en">England</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-12 col-xxl-6">
-											<div class="form-wrap__title form-wrap__title--lonely">Bundesland
-											</div>
-											<div class="form-wrap__select-wrap">
-												<select class="form-control form-select">
-													<option value="de">BUndesland auswählen</option>
-													<option value="ua">BUndesland auswählen2</option>
-													<option value="en">BUndesland auswählen3</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<label class="chb-frame diff-checkbox">
-										<input class="d-none" type="checkbox" name="address_diff"/>
-										<div class="circle"></div>
-										<div class="txt">Die Lieferadresse weicht von der Rechnungsadresse ab.</div>
-									</label>
-									<div class="form-wrap__privacy">
-										<div class="form-wrap__p-title">Datenschutz
-										</div>
-										<div class="form-wrap__p-txt"><span>Ich habe die</span><a href="#">Datenschutzbestimmungen</a><span>zur Kenntnis genommen.</span>
-										</div>
-									</div>
-									<div class="form-wrap__gray-txt">Die mit einem Stern (*) markierten Felder sind Pflichtfelder.
-									</div>
-									<button class="form-wrap__continue-btn" type="submit">WEITER
-									</button>
-								</form>
+							<div class="sCartFinish__addr-item"><strong>Silke Mustermann</strong><span>Osterholzallee 144/2</span><span>71763 Ludwigsburg</span>
+							</div>
+							<div class="sCartFinish__addr-item"><span>Baden-Württemberg</span><span>Deutschland</span>
 							</div>
 						</div>
 					</div>
-					<div class="sCartAdress__col col-12 col-xl-5 col-xxl-4">
-						<div class="iResult">
+					<div class="sCartFinish__col col-xl-4">
+						<div class="sCartFinish__item">
+							<div class="sCartFinish__title">Lieferadresse
+							</div>
+							<div class="sCartFinish__addr-item"><strong>Silke Mustermann</strong><span>Osterholzallee 144/2</span><span>71763 Ludwigsburg</span>
+							</div>
+							<div class="sCartFinish__addr-item"><span>Baden-Württemberg</span><span>Deutschland</span>
+							</div>
+						</div>
+					</div>
+					<div class="sCartFinish__col col-xl-4">
+						<div class="sCartFinish__item">
+							<div class="sCartFinish__title">Informationen
+							</div>
+							<div class="sCartFinish__data-item"><strong>Zahlungsart:</strong><span>Rechnung</span>
+							</div>
+							<div class="sCartFinish__data-item"><strong>Versandart:</strong><span>Standard</span>
+							</div>
+						</div>
+					</div>
+					<div class="sCartFinish__col col-xl-8">
+						<div class="cSummery">
+							<div class="cSummery__header d-none d-xll-flex">
+								<div class="cSummery__h-item cSummery__h-item--prod">Produkt
+								</div>
+								<div class="cSummery__h-item cSummery__h-item--amount">Anzahl
+								</div>
+								<div class="cSummery__h-item cSummery__h-item--tax">inkl. MwSt.
+								</div>
+								<div class="cSummery__h-item cSummery__h-item--total">Summe
+								</div>
+							</div>
+							<div class="cSummery__items">
+								<div class="cSummery__item">
+									<div class="cSummery__i-col cSummery__i-col--prod">
+										<div class="cSummery__img"><img loading="lazy" src="img/@2x/cSummery-item-1.png" alt=""/>
+										</div>
+										<div class="cSummery__i-descr">
+											<div class="cSummery__i-name">403 HAND-DRUCKSPRITZE
+											</div>
+											<div class="cSummery__i-volume">3 Liter
+											</div>
+											<div class="cSummery__i-code">Produkt-Nr. SW21431
+											</div>
+											<div class="cSummery__i-delivery">Lieferzeitraum: 28.11.20 – 01.12.20
+											</div>
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--amount">
+										<div class="cSummery__inp-cont">
+											<input class="form-control" type="number" name="prod-amount" value="3"/>
+											<button class="cSummery__inp-btn cSummery__inp-btn--plus">
+											</button>
+											<button class="cSummery__inp-btn cSummery__inp-btn--min">
+											</button>
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--tax">
+										<div class="cSummery__tax-txt d-xll-none">inkl. MwSt.
+										</div>
+										<div class="cSummery__tax">57,00 €
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--total">
+										<div class="cSummery__total-txt d-xll-none">Summe
+										</div>
+										<div class="cSummery__total-price">357,00 €
+										</div>
+									</div><a class="cSummery__trash-btn" href="#">
+									<svg class="icon icon-trash ">
+										<use xlink:href="img/svg/sprite.svg#trash"></use>
+									</svg></a>
+								</div>
+								<div class="cSummery__item">
+									<div class="cSummery__i-col cSummery__i-col--prod">
+										<div class="cSummery__img"><img loading="lazy" src="img/@2x/cSummery-item-2.png" alt=""/>
+										</div>
+										<div class="cSummery__i-descr">
+											<div class="cSummery__i-name">417 AKKU-SPRITZE, RÜCKENTRAGBAR
+											</div>
+											<div class="cSummery__i-volume">18 Liter
+											</div>
+											<div class="cSummery__i-code">Produkt-Nr. SW214334
+											</div>
+											<div class="cSummery__i-delivery">Lieferzeitraum: 28.11.20 – 01.12.20
+											</div>
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--amount">
+										<div class="cSummery__inp-cont">
+											<input class="form-control" type="number" name="prod-amount" value="1"/>
+											<button class="cSummery__inp-btn cSummery__inp-btn--plus">
+											</button>
+											<button class="cSummery__inp-btn cSummery__inp-btn--min">
+											</button>
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--tax">
+										<div class="cSummery__tax-txt d-xll-none">inkl. MwSt.
+										</div>
+										<div class="cSummery__tax">57,00 €
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--total">
+										<div class="cSummery__total-txt d-xll-none">Summe
+										</div>
+										<div class="cSummery__total-price">281,02 €
+										</div>
+									</div><a class="cSummery__trash-btn" href="#">
+									<svg class="icon icon-trash ">
+										<use xlink:href="img/svg/sprite.svg#trash"></use>
+									</svg></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sCartFinish__col col-xl-4">
+						<div class="iResult iResult--summery">
 							<div class="iResult__ir-header">Zusammenfassung
 							</div>
 							<div class="iResult__ir-content">
@@ -244,54 +259,13 @@
 									<div class="iResult__ir-item"><span>Versandkosten</span><span>gratis</span>
 									</div>
 								</div>
-								<div class="iResult__ir-item iResult__ir-item--bold"><span>Gesamtsumme</span><span>357,00 €*</span>
+								<div class="iResult__ir-item iResult__ir-item--bold2"><span>Gesamtsumme</span><span>357,00 €*</span>
+								</div>
+								<div class="iResult__ir-item iResult__ir-item--gray"><span>Gesamtnettosumme</span><span>300,00 €</span>
+								</div>
+								<div class="iResult__ir-item iResult__ir-item--gray"><span>zzgl. 19% MwSt.</span><span>57,00 €</span>
 								</div>
 								<div class="iResult__ir-gray">*Preise inkl. Gesenkter Mehrwertsteuer. Nur garantiert für SOLO-Artikel.
-								</div><a class="iResult__ir-btn" href="#">Zur Kasse</a>
-							</div>
-						</div>
-						<div class="sCartAdress__item sCartAdress__item--voucher">
-							<div class="sCartAdress__iv-title"><span>Gutschein hinzufügen</span><span class="text-secondary">(optional)</span>
-							</div>
-							<div class="form-wrap">
-								<form>
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Rabattcode hier eingeben oder einfügen" name="voucher"/>
-									</div>
-									<!-- +e.input-wrap-->
-								</form>
-							</div>
-						</div>
-						<div class="sCartAdress__item sCartAdress__item--content">
-							<div class="sCartAdress__ic-title">Warenkorb
-							</div>
-							<div class="sCartAdress__ic-items">
-								<div class="sCartAdress__ic-item"><a class="sCartAdress__ic-img" href="#"><img loading="lazy" src="img/@2x/cart-item-sm-1.png" alt=""/></a>
-									<div class="sCartAdress__ic-content"><a class="sCartAdress__ic-name" href="#">403 HAND-DRUCKSPRITZE</a>
-										<div class="sCartAdress__ic-volume">3 Liter
-										</div>
-										<div class="sCartAdress__ic-amount">Anzahl: 3
-										</div>
-										<div class="sCartAdress__ic-price-cont">
-											<div class="sCartAdress__ic-price sCartAdress__ic-price--old">29,99 €*
-											</div>
-											<div class="sCartAdress__ic-price sCartAdress__ic-price--new">24,90 €
-											</div>
-										</div>
-										<div class="sCartAdress__ic-save">Du sparst 17%
-										</div>
-									</div>
-								</div>
-								<div class="sCartAdress__ic-item"><a class="sCartAdress__ic-img" href="#"><img loading="lazy" src="img/@2x/cart-item-sm-2.png" alt=""/></a>
-									<div class="sCartAdress__ic-content"><a class="sCartAdress__ic-name" href="#">417 AKKU-SPRITZE, RÜCKENTRAGBAR</a>
-										<div class="sCartAdress__ic-volume">18 Liter
-										</div>
-										<div class="sCartAdress__ic-amount">Anzahl: 1
-										</div>
-										<div class="sCartAdress__ic-price-cont">
-											<div class="sCartAdress__ic-price sCartAdress__ic-price--curr">281,02 €*
-											</div>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -299,7 +273,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- end sCartAdress-->
+		<!-- end sCartFinish-->
 		<div class="footerCart">
 			<div class="container">
 				<div class="footerCart__row row">
