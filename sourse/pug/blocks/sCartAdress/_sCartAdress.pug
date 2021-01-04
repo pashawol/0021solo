@@ -1,0 +1,127 @@
+mixin sCartAdress(data)
+  // start sCartAdress
+  +b.SECTION.sCartAdress.section#sCartAdress&attributes(attributes)
+    +e.container.container
+      +e.row.row
+        //-big
+        +e.col.col-12.col-xl-7.col-xxl-8
+          +e.item
+            +b.section-title
+              h2 Bestellung als Gast
+            +form-wrap
+              +e.big-title Persönliche Informationen
+              +e.radio-cont
+                +e.title--lonely Anrede*
+                +e.radio-box
+                  +radioFrame('gender', 'Keine')
+                  +radioFrame('gender', 'Keine Angaben')
+                  +radioFrame('gender', 'Frau')(checked)
+                  +radioFrame('gender', 'Herr')
+              +e.inner-row--top.row
+                .col-12.col-xxl-6
+                  +input('Vorname eingeben …', 'text', 'Vorname*', 'name')
+                .col-12.col-xxl-6
+                  +input('Nachname eingeben …', 'text', 'Nachname*', 'surname')
+                .col-12.col-xxl-6
+                  +input('Neue Email-Adresse eingeben …', 'email', 'Neue E-Mail-Adresse*')
+              +e.big-title Ihre Adresse
+              +e.inner-row--last.row
+                .col-12.col-xxl-6
+                  +input('Straße und Hausnummer eingeben …', 'text', 'Straße und Hausnummer*', 'address')
+                .col-12.col-xxl-6
+                  +e.two-inps
+                    +input('Postleitzahl eingeb', 'text', 'PLZ*', 'post_index')
+                    +input('Ort eingeben …', 'text', 'Ort*', 'ort')
+                .col-12.col-xxl-6
+                  +e.title--lonely Land*
+                  +e.select-wrap
+                    select.form-control.form-select
+                      option(value="de") Deutschland
+                      option(value="ua") Ukraine
+                      option(value="en") England
+                .col-12.col-xxl-6
+                  +e.title--lonely Bundesland
+                  +e.select-wrap
+                    select.form-control.form-select
+                      option(value="de") BUndesland auswählen
+                      option(value="ua") BUndesland auswählen2
+                      option(value="en") BUndesland auswählen3
+              +chbFrame('address_diff', 'Die Lieferadresse weicht von der Rechnungsadresse ab.', 'diff-checkbox')
+              +e.privacy
+                +e.p-title Datenschutz
+                +e.p-txt
+                  span Ich habe die
+                  a(href='#') Datenschutzbestimmungen
+                  span zur Kenntnis genommen.
+              +e.gray-txt Die mit einem Stern (*) markierten Felder sind Pflichtfelder.
+              +e.continue-btn(type="submit") WEITER
+        //-small
+        +e.col.col-12.col-xl-5.col-xxl-4
+          +e.item-result
+            +e.ir-header Zusammenfassung
+            +e.ir-content
+              +e.ir-top
+                +e.ir-item
+                  span Zwischensumme
+                  span 357,00 €*
+                +e.ir-item
+                  span Versandkosten
+                  span gratis
+              +e.ir-item--bold
+                span Gesamtsumme
+                span 357,00 €*
+              +e.ir-gray *Preise inkl. Gesenkter Mehrwertsteuer. Nur garantiert für SOLO-Artikel.
+              +e.ir-btn(href='#') Zur Kasse
+          +e.item--voucher
+            +e.iv-title
+              span Gutschein hinzufügen
+              span.text-secondary (optional)
+            +form-wrap
+              +input('Rabattcode hier eingeben oder einfügen', 'text', undefined, 'voucher')
+          +e.item--content
+            +e.ic-title Warenkorb
+            +e.ic-items
+              +cartItemSm({
+                imgNum: "1",
+                name: "403 HAND-DRUCKSPRITZE",
+                volume: "3 Liter",
+                amount: "Anzahl: 3",
+                priceNew: "24,90 €",
+                priceOld: "29,99 €*"
+              })
+              +cartItemSm({
+                imgNum: "2",
+                name: "417 AKKU-SPRITZE, RÜCKENTRAGBAR",
+                volume: "18 Liter",
+                amount: "Anzahl: 1",
+                priceOld: "281,02 €*"
+              })
+  // end sCartAdress
+
+mixin cartItemSm(data)
+  +e.ic-item
+    +e.ic-img(href="#")
+      img(loading="lazy" src=`img/@2x/cart-item-sm-${data.imgNum}.png` alt="")
+    +e.ic-content
+      +e.ic-name(href="#")=data.name
+      +e.ic-volume=data.volume
+      +e.ic-amount=data.amount
+      +e.ic-price-cont
+        if data.priceNew
+          +e.ic-price--old=data.priceOld
+          +e.ic-price--new=data.priceNew
+        else
+          +e.ic-price--curr=data.priceOld
+      if data.priceNew
+        +e.ic-save Du sparst 17%
+
+mixin radioFrame(nameGroup, val)
+  +b.LABEL.radio-frame
+    input.d-none(type="radio" name=nameGroup value=val)&attributes(attributes)
+    .r-btn=val
+
+mixin chbFrame(name, txt, addClasses="")
+  +b.LABEL.chb-frame(class=addClasses)
+    input.d-none(type="checkbox" name=name)&attributes(attributes)
+    .circle
+    .txt=txt

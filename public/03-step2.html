@@ -2,7 +2,7 @@
 <html lang="de">
 	<head>
 		<meta charset="utf-8">
-		<title>03-step1</title>
+		<title>03-step2</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -97,9 +97,9 @@
 		<!-- end header-->
 		<div class="checkLine">
 			<div class="checkLine__container container">
-				<div class="checkLine__item checked current">Anmelden
+				<div class="checkLine__item checked">Anmelden
 				</div>
-				<div class="checkLine__item">Adresse
+				<div class="checkLine__item checked current">Adresse
 				</div>
 				<div class="checkLine__item">Zahlungsart
 				</div>
@@ -109,63 +109,197 @@
 				</div>
 			</div>
 		</div>
-		<!-- start sCartEnter-->
-		<div class="sCartEnter section" id="sCartEnter">
-			<div class="sCartEnter__container container">
-				<div class="sCartEnter__row row">
-					<div class="sCartEnter__col col-12 col-xl-4">
-						<div class="sCartEnter__item">
-							<div class="sCartEnter__title">Ich habe bereits ein Konto
-							</div>
-							<div class="sCartEnter__descr">Einloggen mit E-Mail-Adresse und Passwort
+		<!-- start sCartAdress-->
+		<section class="sCartAdress section" id="sCartAdress">
+			<div class="sCartAdress__container container">
+				<div class="sCartAdress__row row">
+					<div class="sCartAdress__col col-12 col-xl-7 col-xxl-8">
+						<div class="sCartAdress__item">
+							<div class="section-title">
+								<h2>Bestellung als Gast</h2>
 							</div>
 							<div class="form-wrap">
 								<form>
-									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Ihre E-Mail Adresse</span><input class="form-wrap__input form-control" type="email" placeholder="E-Mail-Adresse" name="email"/>
-										</label>
+									<div class="form-wrap__big-title">Persönliche Informationen
 									</div>
-									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Ihr Passwort</span><input class="form-wrap__input form-control" type="password" placeholder="Passwort" name="password"/>
-										</label>
+									<div class="form-wrap__radio-cont">
+										<div class="form-wrap__title form-wrap__title--lonely">Anrede*
+										</div>
+										<div class="form-wrap__radio-box">
+											<label class="radio-frame">
+												<input class="d-none" type="radio" name="gender" value="Keine"/>
+												<div class="r-btn">Keine</div>
+											</label>
+											<label class="radio-frame">
+												<input class="d-none" type="radio" name="gender" value="Keine Angaben"/>
+												<div class="r-btn">Keine Angaben</div>
+											</label>
+											<label class="radio-frame">
+												<input class="d-none" type="radio" name="gender" value="Frau" checked="checked"/>
+												<div class="r-btn">Frau</div>
+											</label>
+											<label class="radio-frame">
+												<input class="d-none" type="radio" name="gender" value="Herr"/>
+												<div class="r-btn">Herr</div>
+											</label>
+										</div>
 									</div>
-									<!-- +e.input-wrap--><a class="form-wrap__pass-restor" href="#">Ich habe mein Passwort vergessen.</a>
-									<button class="sCartEnter__btn btn-primary" type="submit">Anmelden</button>
+									<div class="form-wrap__inner-row form-wrap__inner-row--top row">
+										<div class="col-12 col-xxl-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__title">Vorname*</span><input class="form-wrap__input form-control" type="text" placeholder="Vorname eingeben …" name="name"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-12 col-xxl-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__title">Nachname*</span><input class="form-wrap__input form-control" type="text" placeholder="Nachname eingeben …" name="surname"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-12 col-xxl-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__title">Neue E-Mail-Adresse*</span><input class="form-wrap__input form-control" type="email" placeholder="Neue Email-Adresse eingeben …" name="email"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+									<div class="form-wrap__big-title">Ihre Adresse
+									</div>
+									<div class="form-wrap__inner-row form-wrap__inner-row--last row">
+										<div class="col-12 col-xxl-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__title">Straße und Hausnummer*</span><input class="form-wrap__input form-control" type="text" placeholder="Straße und Hausnummer eingeben …" name="address"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-12 col-xxl-6">
+											<div class="form-wrap__two-inps">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">PLZ*</span><input class="form-wrap__input form-control" type="text" placeholder="Postleitzahl eingeb" name="post_index"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Ort*</span><input class="form-wrap__input form-control" type="text" placeholder="Ort eingeben …" name="ort"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+										<div class="col-12 col-xxl-6">
+											<div class="form-wrap__title form-wrap__title--lonely">Land*
+											</div>
+											<div class="form-wrap__select-wrap">
+												<select class="form-control form-select">
+													<option value="de">Deutschland</option>
+													<option value="ua">Ukraine</option>
+													<option value="en">England</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-12 col-xxl-6">
+											<div class="form-wrap__title form-wrap__title--lonely">Bundesland
+											</div>
+											<div class="form-wrap__select-wrap">
+												<select class="form-control form-select">
+													<option value="de">BUndesland auswählen</option>
+													<option value="ua">BUndesland auswählen2</option>
+													<option value="en">BUndesland auswählen3</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<label class="chb-frame diff-checkbox">
+										<input class="d-none" type="checkbox" name="address_diff"/>
+										<div class="circle"></div>
+										<div class="txt">Die Lieferadresse weicht von der Rechnungsadresse ab.</div>
+									</label>
+									<div class="form-wrap__privacy">
+										<div class="form-wrap__p-title">Datenschutz
+										</div>
+										<div class="form-wrap__p-txt"><span>Ich habe die</span><a href="#">Datenschutzbestimmungen</a><span>zur Kenntnis genommen.</span>
+										</div>
+									</div>
+									<div class="form-wrap__gray-txt">Die mit einem Stern (*) markierten Felder sind Pflichtfelder.
+									</div>
+									<button class="form-wrap__continue-btn" type="submit">WEITER
+									</button>
 								</form>
 							</div>
 						</div>
 					</div>
-					<div class="sCartEnter__col col-12 col-xl-4">
-						<div class="sCartEnter__item">
-							<div class="sCartEnter__title">Ich möchte mich als neuer Kunde registrieren
+					<div class="sCartAdress__col col-12 col-xl-5 col-xxl-4">
+						<div class="sCartAdress__item-result">
+							<div class="sCartAdress__ir-header">Zusammenfassung
 							</div>
-							<div class="sCartEnter__descr">Die Regierung Ihrer Kundenkontos bietet Ihnen bei zukünftigen Bestellungen einige Vorteile.
+							<div class="sCartAdress__ir-content">
+								<div class="sCartAdress__ir-top">
+									<div class="sCartAdress__ir-item"><span>Zwischensumme</span><span>357,00 €*</span>
+									</div>
+									<div class="sCartAdress__ir-item"><span>Versandkosten</span><span>gratis</span>
+									</div>
+								</div>
+								<div class="sCartAdress__ir-item sCartAdress__ir-item--bold"><span>Gesamtsumme</span><span>357,00 €*</span>
+								</div>
+								<div class="sCartAdress__ir-gray">*Preise inkl. Gesenkter Mehrwertsteuer. Nur garantiert für SOLO-Artikel.
+								</div><a class="sCartAdress__ir-btn" href="#">Zur Kasse</a>
 							</div>
-							<ul class="sCartEnter__ch-list">
-								<li>Bequemes Bestellen</li>
-								<li>Noch schnellere Abwicklung</li>
-								<li>Einfacher Zugriff auf Ihre Bestellungen</li>
-							</ul><a class="sCartEnter__btn btn-primary" href="#">Ein Konto erstellen</a>
 						</div>
-					</div>
-					<div class="sCartEnter__col col-12 col-xl-4">
-						<div class="sCartEnter__item">
-							<div class="sCartEnter__title">Ich möchte nur als Gast bestellen
+						<div class="sCartAdress__item sCartAdress__item--voucher">
+							<div class="sCartAdress__iv-title"><span>Gutschein hinzufügen</span><span class="text-secondary">(optional)</span>
 							</div>
-							<div class="sCartEnter__descr">Der schnelle Weg zu Ihrer Bestellung ohne Kundenkonto
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Rabattcode hier eingeben oder einfügen" name="voucher"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</form>
 							</div>
-							<ul class="sCartEnter__ch-list">
-								<li>Datensicherheit dank SSL-Verschlüsselung</li>
-								<li>Schnelle Abwicklung</li>
-								<li>Schneller und sicherer Versand</li>
-							</ul><a class="sCartEnter__btn btn-brown" href="#">Bestellung als Gast</a>
+						</div>
+						<div class="sCartAdress__item sCartAdress__item--content">
+							<div class="sCartAdress__ic-title">Warenkorb
+							</div>
+							<div class="sCartAdress__ic-items">
+								<div class="sCartAdress__ic-item"><a class="sCartAdress__ic-img" href="#"><img loading="lazy" src="img/@2x/cart-item-sm-1.png" alt=""/></a>
+									<div class="sCartAdress__ic-content"><a class="sCartAdress__ic-name" href="#">403 HAND-DRUCKSPRITZE</a>
+										<div class="sCartAdress__ic-volume">3 Liter
+										</div>
+										<div class="sCartAdress__ic-amount">Anzahl: 3
+										</div>
+										<div class="sCartAdress__ic-price-cont">
+											<div class="sCartAdress__ic-price sCartAdress__ic-price--old">29,99 €*
+											</div>
+											<div class="sCartAdress__ic-price sCartAdress__ic-price--new">24,90 €
+											</div>
+										</div>
+										<div class="sCartAdress__ic-save">Du sparst 17%
+										</div>
+									</div>
+								</div>
+								<div class="sCartAdress__ic-item"><a class="sCartAdress__ic-img" href="#"><img loading="lazy" src="img/@2x/cart-item-sm-2.png" alt=""/></a>
+									<div class="sCartAdress__ic-content"><a class="sCartAdress__ic-name" href="#">417 AKKU-SPRITZE, RÜCKENTRAGBAR</a>
+										<div class="sCartAdress__ic-volume">18 Liter
+										</div>
+										<div class="sCartAdress__ic-amount">Anzahl: 1
+										</div>
+										<div class="sCartAdress__ic-price-cont">
+											<div class="sCartAdress__ic-price sCartAdress__ic-price--curr">281,02 €*
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- end sCartEnter-->
+		</section>
+		<!-- end sCartAdress-->
 		<div class="footerCart">
 			<div class="container">
 				<div class="footerCart__row row">

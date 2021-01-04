@@ -196,7 +196,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '03-step1.png';
+	screenName = '03-step2.png';
 	if (screenName && x === "localhost:3000") {
 		//$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 		$(".footerCart").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);

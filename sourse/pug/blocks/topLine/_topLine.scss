@@ -31,9 +31,15 @@
     }
   }
   &__question-col{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    order: 1;
+    padding-top: 20px;
+    @include media-breakpoint-up(xl){
+      padding-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 0;
+    }
 
     @include media-breakpoint-up(xxl){
       padding-left: 58px;
@@ -50,7 +56,11 @@
       font-size: 16px;
       line-height: (25/16);
     }
-    padding: 0 0 0px 41px;
+
+    padding-bottom: 10px;
+    @include media-breakpoint-up(xl){
+      padding: 0 0 0px 41px;
+    }
 
 
     @include media-breakpoint-up(xxl){
@@ -69,6 +79,11 @@
 
     color: $primary;
     font-weight: 700;
+
+    padding-bottom: 10px;
+    @include media-breakpoint-up(xl){
+      padding-bottom: 0;
+    }
 
     font-size: 16px;
     @include media-breakpoint-up(md){
@@ -93,6 +108,11 @@
   &__qc-shedule{
     color: $secondary2;
     font-weight: 700;
+
+    padding-bottom: 10px;
+    @include media-breakpoint-up(xl){
+      padding-bottom: 0;
+    }
 
     font-size: 14px;
     line-height: (25/14);
@@ -229,6 +249,13 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     @include media-breakpoint-up(xll){
+      position: static;
+      top: unset;
+      left: unset;
+      transform: none;
+    }
+
+    &--static{
       position: static;
       top: unset;
       left: unset;
@@ -435,7 +462,7 @@
     //bad idea
     //&:hover{
     //  .dt-dd-menu{
-    //    transform: scaleY(1);
+    //    transform: scaleY(1)!important;
     //  }
     //}
   }
