@@ -19,9 +19,9 @@ var JSCCommon = {
 			autoFocus: false,
 			i18n: {
 				en: {
-					CLOSE: "Закрыть",
-					NEXT: "Вперед",
-					PREV: "Назад" // PLAY_START: "Start slideshow",
+					CLOSE: "Close",
+					NEXT: "Next",
+					PREV: "Previous" // PLAY_START: "Start slideshow",
 					// PLAY_STOP: "Pause slideshow",
 					// FULL_SCREEN: "Full screen",
 					// THUMBS: "Thumbnails",
@@ -121,7 +121,7 @@ var JSCCommon = {
 		}
 	},
 	// /mobileMenu
-	// табы  .
+	// tabs
 	tabscostume: function tabscostume(tab) {
 		var tabs = {
 			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
@@ -146,7 +146,7 @@ var JSCCommon = {
 		// 		.eq($(this).index()).fadeIn().addClass('active');
 		// });
 	},
-	// /табы
+	// tabs
 	inputMask: function inputMask() {
 		// mask for input
 		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
@@ -159,9 +159,7 @@ var JSCCommon = {
 	ifie: function ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
-		if (isIE11) {
-			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
+		if (isIE11) {}
 	},
 	heightwindow: function heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit

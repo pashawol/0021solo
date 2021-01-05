@@ -2,7 +2,7 @@
 <html lang="de">
 	<head>
 		<meta charset="utf-8">
-		<title>03-step4</title>
+		<title>03-step3</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -103,56 +103,77 @@
 				</div>
 				<div class="checkLine__item checked">Zahlungsart
 				</div>
-				<div class="checkLine__item checked">Bestätigen
+				<div class="checkLine__item checked current">Bestätigen
 				</div>
-				<div class="checkLine__item checked current">Fertig
+				<div class="checkLine__item">Fertig
 				</div>
 			</div>
 		</div>
-		<!-- start sCartFinish-->
-		<section class="sCartFinish section" id="sCartFinish">
-			<div class="sCartFinish__container container">
-				<div class="section-title text-center">
-					<h2>Vielen Dank für Ihre Bestellung bei SOLO!</h2>
-				</div>
-				<div class="sCartFinish__info-txt text-center">
-					<div class="sCartFinish__order-num">Ihre Bestellnummer: 100002
-					</div>
-					<div class="sCartFinish__confirm-txt">Bestellbestätigung wurde verschickt.
+		<!-- start sGuestOrder-->
+		<section class="sGuestOrder section" id="sGuestOrder">
+			<div class="sGuestOrder__container container">
+				<div class="sGuestOrder__row row">
+					<div class="sGuestOrder__col col-12 col-xl-8">
+						<div class="sGuestOrder__item sGuestOrder__item--title">
+							<h2 class="mb-0">Bestellung als Gast abschließen</h2>
+						</div>
 					</div>
 				</div>
-				<div class="sCartFinish__row row">
-					<div class="sCartFinish__col col-xl-4">
-						<div class="sCartFinish__item">
-							<div class="sCartFinish__title">Rechnungsadresse
+				<div class="sGuestOrder__row row">
+					<div class="sGuestOrder__col sGuestOrder__col--left col-12 col-xl-8">
+						<!--inner-row-->
+						<div class="sGuestOrder__row row">
+							<div class="sGuestOrder__col col-xl-6">
+								<div class="sGuestOrder__item flex">
+									<div class="sGuestOrder__title">Rechnungsadresse
+									</div>
+									<div class="sGuestOrder__addr-item"><strong>Silke Mustermann</strong><span>Osterholzallee 144/2</span><span>71763 Ludwigsburg</span>
+									</div>
+									<div class="sGuestOrder__addr-item"><span>Baden-Württemberg</span><span>Deutschland</span>
+									</div><a class="sGuestOrder__gray-btn" href="#">Rechnungsadresse ändern</a>
+								</div>
 							</div>
-							<div class="sCartFinish__addr-item"><strong>Silke Mustermann</strong><span>Osterholzallee 144/2</span><span>71763 Ludwigsburg</span>
+							<div class="sGuestOrder__col col-xl-6">
+								<div class="sGuestOrder__item flex">
+									<div class="sGuestOrder__title">Lieferadresse
+									</div>
+									<div class="sGuestOrder__addr-item"><span>Entspricht der Rechnungsadresse</span>
+									</div><a class="sGuestOrder__gray-btn" href="#">Lieferadresse ändern</a>
+								</div>
 							</div>
-							<div class="sCartFinish__addr-item"><span>Baden-Württemberg</span><span>Deutschland</span>
+							<div class="sGuestOrder__col col-xl-6">
+								<div class="sGuestOrder__item">
+									<div class="sGuestOrder__title">Lieferadresse
+									</div>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="payment" value="payment1" checked="checked"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/payment-1.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>Rechnung</strong><span>(kostenlos)</span></span><span class="big-radio__descr">Der Rechnungsbetrag wird erst innerhalb 14 Tagen nach der Versandbestätigung per E-Mail fällig.</span></span>
+									</label>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="payment" value="payment2"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/payment-2.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>SEPA-Lastschrift</strong><span>(kostenlos)</span></span></span>
+									</label>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="payment" value="payment3"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/payment-3.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>PayPal</strong><span>(kostenlos)</span></span></span>
+									</label>
+								</div>
+							</div>
+							<div class="sGuestOrder__col col-xl-6">
+								<div class="sGuestOrder__item">
+									<div class="sGuestOrder__title">Versandart
+									</div>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="delivery" value="delivery1" checked="checked"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/delivery-1.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>UPS Deliveries</strong></span><span class="big-radio__descr">Lieferung innerhalb 3 Werktagen</span></span>
+									</label>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="delivery" value="delivery1"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/delivery-2.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>DHL Express</strong></span><span class="big-radio__descr">Lieferung innerhalb 3 Werktagen</span></span>
+									</label>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="sCartFinish__col col-xl-4">
-						<div class="sCartFinish__item">
-							<div class="sCartFinish__title">Lieferadresse
-							</div>
-							<div class="sCartFinish__addr-item"><strong>Silke Mustermann</strong><span>Osterholzallee 144/2</span><span>71763 Ludwigsburg</span>
-							</div>
-							<div class="sCartFinish__addr-item"><span>Baden-Württemberg</span><span>Deutschland</span>
-							</div>
-						</div>
-					</div>
-					<div class="sCartFinish__col col-xl-4">
-						<div class="sCartFinish__item">
-							<div class="sCartFinish__title">Informationen
-							</div>
-							<div class="sCartFinish__data-item"><strong>Zahlungsart:</strong><span>Rechnung</span>
-							</div>
-							<div class="sCartFinish__data-item"><strong>Versandart:</strong><span>Standard</span>
-							</div>
-						</div>
-					</div>
-					<div class="sCartFinish__col col-xl-8">
 						<div class="cSummery">
 							<div class="cSummery__header d-none d-xll-flex">
 								<div class="cSummery__h-item cSummery__h-item--prod">Produkt
@@ -248,8 +269,25 @@
 							</div>
 						</div>
 					</div>
-					<div class="sCartFinish__col col-xl-4">
-						<div class="iResult iResult--summery">
+					<div class="sGuestOrder__col sGuestOrder__col--right col-xl-4">
+						<div class="sGuestOrder__item sGuestOrder__item--outer">
+							<div class="sGuestOrder__title">Versandart
+							</div>
+							<div class="sGuestOrder__ta-title">Möchten Sie uns etwas über Ihre Bestellung mitteilen?
+							</div><textarea class="sGuestOrder__message form-control" placeholder="Kommentieren Sie hier …"></textarea>
+						</div>
+						<div class="sGuestOrder__item sGuestOrder__item--outer">
+							<div class="sGuestOrder__title">AGB und Widerrufsbelehrung
+							</div>
+							<div class="sGuestOrder__withdraw-txt">Bitte beachten Sie die Widerrufsbelehrung.
+							</div>
+							<label class="chb-frame withdraw-chb">
+								<input class="d-none" type="checkbox" name="agb" checked="checked"/>
+								<div class="circle"></div>
+								<div class="txt"><span>Ich habe die</span><a href="#">AGB</a><span>gelesen und bin mit ihnen einverstanden.</span></div>
+							</label>
+						</div>
+						<div class="iResult">
 							<div class="iResult__ir-header">Zusammenfassung
 							</div>
 							<div class="iResult__ir-content">
@@ -263,17 +301,17 @@
 								</div>
 								<div class="iResult__ir-item iResult__ir-item--gray"><span>Gesamtnettosumme</span><span>300,00 €</span>
 								</div>
-								<div class="iResult__ir-item iResult__ir-item--gray"><span>zzgl. 19% MwSt.</span><span>57,00 €</span>
+								<div class="iResult__ir-item iResult__ir-item--gray mb-40"><span>zzgl. 19% MwSt.</span><span>57,00 €</span>
 								</div>
 								<div class="iResult__ir-gray">*Preise inkl. Gesenkter Mehrwertsteuer. Nur garantiert für SOLO-Artikel.
-								</div>
+								</div><a class="iResult__ir-btn" href="#">Zur Kasse</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end sCartFinish-->
+		<!-- end sGuestOrder-->
 		<div class="footerCart">
 			<div class="container">
 				<div class="footerCart__row row">

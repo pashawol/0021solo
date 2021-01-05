@@ -13,9 +13,9 @@ const JSCCommon = {
 			autoFocus: false,
 			i18n: {
 				en: {
-					CLOSE: "Закрыть",
-					NEXT: "Вперед",
-					PREV: "Назад",
+					CLOSE: "Close",
+					NEXT: "Next",
+					PREV: "Previous",
 					// PLAY_START: "Start slideshow",
 					// PLAY_STOP: "Pause slideshow",
 					// FULL_SCREEN: "Full screen",
@@ -106,7 +106,7 @@ const JSCCommon = {
 	},
 	// /mobileMenu
 
-	// табы  .
+	// tabs
 	tabscostume(tab) {
 
 		let tabs = {
@@ -135,7 +135,7 @@ const JSCCommon = {
 		// });
 
 	},
-	// /табы
+	// tabs
 
 	inputMask() {
 		// mask for input
@@ -149,7 +149,6 @@ const JSCCommon = {
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		if (isIE11) {
-			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>')
 
 		}
 	},
