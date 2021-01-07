@@ -7,3 +7,4 @@
 1. <https://pashawol.github.io/0021solo/public/04-impressum.html>
 1. <https://pashawol.github.io/0021solo/public/04-privacy.html>
 1. <https://pashawol.github.io/0021solo/public/05.html>
+1. <https://pashawol.github.io/0021solo/public/06-prod-card.html>

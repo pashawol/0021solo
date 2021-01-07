@@ -471,12 +471,14 @@ iframe {
 		object-fit: cover;
 	}
 }
+
 //swiper
 .swiper-pugin-frame{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 14px 0;
+
 	.swiper-pagination-bullet{
 		width: 8px;
 		height: 8px;
@@ -575,6 +577,7 @@ iframe {
 .form-select{
 	background-image: url(../img/svg/select-chevron-down.svg);
 }
+
 //.breadcrumb
 .breadcrumb-wrap{
 	margin: 10px 0 35px 0;
@@ -611,12 +614,12 @@ iframe {
 	li{
 		display: inline-flex;
 		align-items: center;
-		margin-right: 9px;
+		margin-right: 10px;
 
 		&:after{
 			content: '';
 			display: inline-block;
-			margin-left: 9px;
+			margin-left: 10px;
 			width: 7px;
 			height: 12px;
 
@@ -627,6 +630,7 @@ iframe {
 		}
 		&:last-child{
 			margin-right: 0;
+			font-weight: 900;
 			&:after{
 				content: none;
 			}
@@ -639,7 +643,6 @@ iframe {
 
 			line-height: (18/13);
 			font-size: 13px;
-			font-weight: 900;
 		}
 	}
 }

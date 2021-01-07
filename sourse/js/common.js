@@ -195,10 +195,10 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '03-step4.png';
+	screenName = '06.png';
 	if (screenName && x === "localhost:3000") {
-		//$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-		$(".footerCart").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+		//$(".footerCart").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 	$(document).on('click', '.btn-top', function () {
 		let th = $(this);
@@ -620,6 +620,60 @@ function eventHandler() {
 			$img.replaceWith($svg);
 		}, 'xml');
 	});
+
+
+	//prod card
+	let prodCardThumb = new Swiper('.prod-thumb-js', {
+		slidesPerView: 'auto',
+
+		breakpoints: {
+			1: {
+				direction: 'horizontal',
+				spaceBetween: 10,
+			},
+			// 1024: {
+			// 	direction: 'vertical',
+			// 	spaceBetween: 10,
+			// },
+			1300: {
+				direction: 'vertical',
+				spaceBetween: 8,
+			},
+		},
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6,
+		},
+
+	});
+	let prodCardSlider = new Swiper('.prod-slider-js', {
+		//spaceBetween: 20,
+
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3,
+		},
+		loop: true,
+		//pugination
+		pagination: {
+			el: $(this).find('.prod-pugin--js'),
+			clickable: true,
+		},
+
+		//nav
+		navigation: {
+			nextEl: $(this).find('.prod-next--js'),
+			prevEl: $(this).find('.prod-prev--js'),
+		},
+
+	});
+
+	//end prod card
 
 
 };

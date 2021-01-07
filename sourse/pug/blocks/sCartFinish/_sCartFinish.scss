@@ -328,67 +328,7 @@
 		line-height: (25/14);
 	}
 	//2 amount
-	&__inp-cont{
-		display: inline-flex;
-		position: relative;
-		input{
-			border: none;
-			width: 76px;
-			height: 46px;
-			border-radius: 4px;
-			background-color: $light;
-		}
-	}
-	&__inp-btn{
-		@extend .btn;
-		box-shadow: none!important;
-		border: none!important;
 
-		position: absolute;
-		//background-color: red;
-		right: 0;
-		width: 24px;
-		height: 50%;
-
-		&:after{
-			@include mt();
-			content: '';
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-
-			width: 0;
-			height: 0;
-			border-style: solid;
-		}
-
-		&:hover{
-			&:after{
-				transform: translateX(-50%) scale(1.2);
-			}
-		}
-
-		&--plus{
-			top: 0;
-
-			&:after{
-				bottom: 1px;
-
-				border-width: 0 4px 7px 4px;
-				border-color: transparent transparent $brown transparent;
-			}
-		}
-		&--min{
-			bottom: 0;
-
-			&:after{
-				top: 1px;
-
-				border-width: 7px 4px 0 4px;
-				border-color: $brown transparent transparent transparent;
-			}
-		}
-	}
 	//3 tax
 	&__tax-txt{
 		color: $primary;
@@ -465,4 +405,71 @@
 	}
 	&__{}
 	&__{}
+}
+
+//
+.amount-inp{
+	display: inline-flex;
+	position: relative;
+	input{
+		border: none;
+		width: 76px;
+		min-height: 46px;
+		border-radius: 4px;
+		background-color: $light;
+	}
+
+	&__btn{
+		@extend .btn;
+		box-shadow: none!important;
+		border: none!important;
+
+		position: absolute;
+		//background-color: red;
+		right: 0;
+		width: 24px;
+		height: 50%;
+
+		&:after{
+			@include mt();
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+
+		color: $brown;
+		&:hover{
+			color: $red;
+			&:after{
+				transform: translateX(-50%) scale(1.2);
+			}
+		}
+
+		&--plus{
+			top: 0;
+
+			&:after{
+				bottom: 1px;
+
+				//$brown
+				border-width: 0 4px 7px 4px;
+				border-color: transparent transparent currentColor transparent;
+			}
+		}
+		&--min{
+			bottom: 0;
+
+			&:after{
+				top: 1px;
+
+				border-width: 7px 4px 0 4px;
+				border-color: currentColor transparent transparent transparent;
+			}
+		}
+	}
 }

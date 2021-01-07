@@ -97,10 +97,10 @@ mixin summeryItem(data)
 				+e.i-code=data.code
 				+e.i-delivery=data.delivery
 		+e.i-col--amount
-			+e.inp-cont
+			+b.amount-inp
 				input.form-control(type="number" name="prod-amount" value=data.inpVal)
-				+e.BUTTON.inp-btn--plus
-				+e.BUTTON.inp-btn--min
+				+e.BUTTON.btn--plus
+				+e.BUTTON.btn--min
 		+e.i-col--tax
 			+e.tax-txt.d-xll-none inkl. MwSt.
 			+e.tax=data.tax
