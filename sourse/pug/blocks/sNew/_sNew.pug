@@ -43,3 +43,29 @@ mixin sNew(data)
 			+e.btn-cont
 				+e.btn(href="#") ALLE PRUKTE ENTDECKEN
 	// end sNew
+
+mixin sPFunctionality(data)
+	// start sNew
+	+b.SECTION.sNew--sFunc.section#sNew&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Ausstattung und Funktion
+				p Bei den Abbildungen handelt es sich um Musterfotos. Aussehen und die konkrete Anbringung der Ausstattungsmerkmale am Produkt können – bei gleichartiger Funktionalität – von den bildlichen Darstellungen abweichen.
+			+b.sUsage
+				+e.slider
+					+b.usage-prev--js.d-flex.d-md-none
+						+icon('chevron-left')
+					+b.usage-next--js.d-flex.d-md-none
+						+icon('chevron-right')
+					.swiper-container.usage-slider-js
+						.swiper-wrapper
+							+usageSlide(1)
+								| Ergonomische
+								|
+								br
+								| Bedienelemente
+							+usageSlide(2,'new-slide-')
+								| Hohlkehldüsen
+							+usageSlide(3,'new-slide-')
+								| Sicherheitsventil
+						+b.usage-pugin--js.d-flex.d-md-none

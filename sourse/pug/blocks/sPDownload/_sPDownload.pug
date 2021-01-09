@@ -1,0 +1,19 @@
+mixin sPDownload(data)
+	// start sPDownload
+	+b.SECTION.sPDownload.section#sPDownload&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Downloads
+			+e.row.row
+				+pDownloadItem('Gebrauchsanweisung 403/404', 'Download 900,69K')
+				+pDownloadItem('Produktinformation', 'Download 4MB')
+	// end sPDownload
+
+mixin pDownloadItem(nameTxt, size)
+	+e.col.col-12.col-md-6
+		+e.item(href='#')
+			+e.i-txt
+				+e.name=nameTxt
+				+e.size=size
+			+e.i-circle
+				+icon('download')

@@ -1,0 +1,23 @@
+mixin sProdData(data)
+	// start sProdData
+	+b.SECTION.sProdData.section#sProdData&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+e.col--left.col-12.col-sm-8.col-md-7.col-xl-6.col-xll-5
+					+b.section-title
+						h2 Technische Daten
+					+e.chars
+						+PDcharItem('Kolbenpumpe', '✓')
+						+PDcharItem('Nennvolumen Liter', '1,25')
+						+PDcharItem('Spritzdruck bar max.', '2')
+						+PDcharItem('Überdruckventil', '✓')
+						+PDcharItem('Leergewicht kg', '0,5')
+				+e.col--right.col-12.col-sm-4.col-md-5.col-xl-4.offset-xl-2.col-xll-3.offset-xll-3
+					+e.img
+						img(loading="lazy" src="img/@2x/pChars-img.png" alt="")
+	// end sProdData
+
+mixin PDcharItem(name, val)
+	+e.char-item
+		strong=name
+		span=val

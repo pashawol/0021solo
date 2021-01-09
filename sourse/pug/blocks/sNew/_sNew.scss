@@ -28,6 +28,14 @@
 		--sTPB: 81px;
 	}
 
+	&--sFunc{
+		@include media-breakpoint-up(xxl){
+			--sPT: 84px;
+			--sPB: 30px;
+			--sTPB: 50px;
+		}
+	}
+
 	&__container{
 		padding-left: 10px;
 		padding-right: 10px;

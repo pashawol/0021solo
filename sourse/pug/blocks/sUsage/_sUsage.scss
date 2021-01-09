@@ -173,6 +173,14 @@
 			padding-top: 74%;
 		}
 		//82%
+
+		&--sm{
+			padding-top: 50%!important;
+			@include media-breakpoint-up(xl){
+				padding-top: 58.7%!important;
+			}
+		}
+
 	}
 	&__descr{
 		width: 100%;
@@ -251,6 +259,32 @@
 			max-height: 100%;
 		}
 	}
+
+
+	//for sProdDet
+	&__all-link{
+		display: inline-block;
+
+		font-size: 12px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+
+		margin: 10px 0;
+		@include media-breakpoint-up(xxl){
+			margin: 0;
+		}
+
+		padding: 5px;
+		border-bottom: 2px solid currentColor;
+
+		color: $black;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__{}
+	//
 	&__{}
 	&__{}
 } // end.sUsage

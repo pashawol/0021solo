@@ -1,0 +1,53 @@
+mixin sProdDet(data)
+	// start sProdDet
+	+b.SECTION.sProdDet.section#sProdDet&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Zubehör
+			+e.row.row
+				//-big
+				+e.col.col-12.col-xl-6
+					//-
+					.sUsage__item
+						.sUsage__img.sUsage__img--sm
+							img(loading="lazy" src=`img/@2x/sProdDet-1.png` alt="")
+						.sUsage__descr
+							.sUsage__txt
+								span.d-block
+									| Düsen und Spritzschirme
+									|
+									br.d-none.d-xxl-block
+									| für Druck und Rückenspritzen
+								.sUsage__all-link(href="#") ALLE PRODUKTE ANSEHEN
+							.sUsage__icon
+								img(loading="lazy" src=`img/svg/usage-slide-icon-2.svg` alt="")
+				+e.col.col-sm-6.col-xl-3
+					//-
+					.sCatalog__item
+						.sCatalog__like-btn.active(href="#")
+							+icon('heart')
+						.sCatalog__img(href="#")
+							img(loading="lazy" src=`img/@2x/catalog-item-det-1.png` alt="")
+						.sCatalog__name Universaldüse
+						.sCatalog__descr
+							| Passend für alle manuellen
+							br.d-none.d-xxl-block
+							| SOLO-Prühgeräte
+						.sCatalog__price-cont
+							.sCatalog__price.sCatalog__price--common €18.89
+					//-
+				+e.col.col-sm-6.col-xl-3
+					//-
+					.sCatalog__item
+						.sCatalog__discount -21%
+						.sCatalog__like-btn.active(href="#")
+							+icon('heart')
+						.sCatalog__img(href="#")
+							img(loading="lazy" src=`img/@2x/catalog-item-det-2.png` alt="")
+						.sCatalog__name Kugelventil-Filter
+						.sCatalog__descr Verhindert Nachtropfen nach dem Abstellen des Handventils
+						.sCatalog__price-cont
+							.sCatalog__price.sCatalog__price--new 10 €*
+							.sCatalog__price.sCatalog__price--old 499,48 €*
+					//-
+	// end sProdDet

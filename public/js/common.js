@@ -329,24 +329,26 @@ function eventHandler() {
 		});
 	}); //usageSlider
 
-	var catalogSlider = new Swiper('.catalog-slider-js', {
-		slidesPerView: "auto",
-		//watchOverflow: true,
-		spaceBetween: 17,
-		lazy: {
-			loadPrevNext: true,
-			loadPrevNextAmount: 5
-		},
-		//pugination
-		pagination: {
-			el: $(this).find('.catalog-pugin--js'),
-			clickable: true
-		},
-		//nav
-		navigation: {
-			nextEl: $(this).find('.catalog-next--js'),
-			prevEl: $(this).find('.catalog-prev--js')
-		}
+	$('.sCatalog').each(function () {
+		var catalogSlider = new Swiper($(this).find('.catalog-slider-js'), {
+			slidesPerView: "auto",
+			//watchOverflow: true,
+			spaceBetween: 17,
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 5
+			},
+			//pugination
+			pagination: {
+				el: $(this).find('.catalog-pugin--js'),
+				clickable: true
+			},
+			//nav
+			navigation: {
+				nextEl: $(this).find('.catalog-next--js'),
+				prevEl: $(this).find('.catalog-prev--js')
+			}
+		});
 	}); //
 
 	var cleanSlider = new Swiper('.clean-slider-js', {

@@ -1,0 +1,63 @@
+// start .sProdDet
+.sProdDet {
+	--sPT: 30px;
+	--sPB: 40px;
+	--sTPB: 25px;
+	@include media-breakpoint-up(md){
+		--sPT: 35px;
+		--sPB: 45px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 40px;
+		--sPB: 50px;
+		--sTPB: 35px;
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: 31px;
+		--sPB: 53px;
+		--sTPB: 49px;
+	}
+
+	&__container{
+		padding: 0 10px;
+		@include media-breakpoint-up(xxl){
+			padding: 0 12px;
+		}
+	}
+
+	.section-title{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		h2{
+			font-size: 22px;
+			border-bottom: 1px solid $gray2;
+
+			padding-bottom: 20px;
+			margin-bottom: 30px;
+			@include media-breakpoint-up(md){
+				font-size: 28px;
+				margin-bottom: 21px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 32px;
+				margin-bottom: 22px;
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 35px;
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__row{
+		@include roww(20px);
+	}
+	&__col{
+		margin-bottom: 20px;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sProdDet
