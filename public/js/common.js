@@ -614,7 +614,7 @@ function eventHandler() {
 		}
 	});
 	var prodCardSlider = new Swiper('.prod-slider-js', {
-		//spaceBetween: 20,
+		spaceBetween: 20,
 		thumbs: {
 			swiper: prodCardThumb
 		},

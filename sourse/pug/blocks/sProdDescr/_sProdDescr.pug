@@ -1,0 +1,38 @@
+mixin sProdDescr(data)
+	// start sProdDescr
+	+b.SECTION.sProdDescr.section#sProdDescr&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+e.col--left.col-xl-6.col-xll-5
+					+e.tags-row.row
+						+prodDescrTag('Beseitigen')
+						+prodDescrTag('Pflegen')
+						+prodDescrTag('Wachstum & Schutz')
+					+b.section-title
+						h2 Beschreibung
+						p
+							| Die kompakte
+							|
+							b Hand-Druckspritze 403
+							|
+							| ist klein, leicht und handlich und dabei doch robust und vielfältig einsetzbar. Durch die große Einfüllöffnung wird das Spritzmittel sauber in den
+							|
+							b 1,25 l fassenden Behälter
+							|
+							| gegossen, Restmengen können sehr gut wieder entleert werden. Der maximale Druck von 2 bar Druck wird durch den großen Pumpenhebel schnell aufgebaut. Danach kann fast der komplette Füllinhalt ohne Nachpumpen ausgebracht werden. Vor zuviel Druck schützt das eingebaute Überdruckventil.
+				+e.col--right.col-xl-6.col-xll-5.offset-xll-2
+					+e.white-bl
+						+e.w-title Produktmerkmale
+						+e.UL.check-list
+							li Pumphebel aus Metall
+							li Überdruckventil
+							li Verstellbare Universaldüse
+							li Große Einfüllöffnung
+							li Ergonomischer, robuster Griff, der auch mit Handschuhen gut umfasst werden kann
+							li Transparenter Behälter mit Skala Füllvolumen
+							li Sicherer Stand durch drei Stehfüße
+	// end sProdDescr
+
+mixin prodDescrTag(txt)
+	.col-auto
+		+e.tag(href="#")=txt

@@ -27,6 +27,8 @@ include ../blocks/sCartFinish/_sCartFinish.pug
 include ../blocks/sGuestOrder/_sGuestOrder.pug
 
 include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sProdNav/_sProdNav.pug
+include ../blocks/sProdDescr/_sProdDescr.pug
 
 block variables
 	- let  mainPage= null
@@ -39,6 +41,8 @@ block pagecontent
 		+topLine()
 	+sProdCard()
 		+breadcrumb("Haus und Garten", "Spritzen", "Handspritzen", "403 Hand-Druckspritze")
+	+sProdNav()
+	+sProdDescr()
 	+sHSlider()
 	+sVantageLine()
 	+sUsage()

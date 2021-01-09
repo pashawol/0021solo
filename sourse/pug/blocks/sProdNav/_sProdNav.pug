@@ -1,0 +1,46 @@
+mixin sProdNav(data)
+	// start sProdNav
+	+b.SECTION.sProdNav.section#sProdNav&attributes(attributes)
+		+e.container.container
+			+e.links-row.row
+				+prodNavItem('Anwendung', '#')
+				+prodNavItem('Beschreibung', '#')
+				+prodNavItem('Technische Daten', '#')
+				+prodNavItem('Download', '#')
+				+prodNavItem('Bewertung', '#')
+				+prodNavItem('Ausstattung und Funktion', '#')
+			+e.baner
+				+e.banner-bg
+					img(loading="lazy" src="img/@2x/prodNav-baner.png" alt="")
+				+e.b-row.row
+					.col-12.col-sm-9.col-md-8.col-xl-6.col-xll-5.ms-auto
+						+e.white-bl
+							+e.w-name Handdruckspritze mit 1,25l
+							+e.H2.w-title
+								| Anwendung für
+								|
+								br.d-none.d-xxl-block
+								| Pflanzenschutz und Pflege
+							+e.balls.row
+								+prodNavBall(1, 'Haushalt')
+								+prodNavBall(2, 'Terrasse')
+								+prodNavBall(3, 'Balkon und  Wintergarten')
+							+e.w-descr
+								b Lorem ipsum
+								|
+								| dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+								|
+								b ligula eget dolor.
+								|
+								| Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+	// end sProdNav
+
+mixin prodNavBall(imgNum, txt)
+	+e.ball-col.col-4
+		+e.ball
+			img(loading="lazy" src=`img/svg/prodNav-${imgNum}.svg` alt="")
+		+e.ball-descr=txt
+
+mixin prodNavItem(txt, hrefAtt)
+	+e.l-col.col-12.col-sm-auto
+		a(href=hrefAtt)=txt

@@ -649,7 +649,7 @@ function eventHandler() {
 
 	});
 	let prodCardSlider = new Swiper('.prod-slider-js', {
-		//spaceBetween: 20,
+		spaceBetween: 20,
 
 		thumbs: {
 			swiper: prodCardThumb,

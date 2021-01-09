@@ -36,6 +36,11 @@
 		&--slider{
 			display: flex;
 
+			margin-bottom: 40px;
+			@include media-breakpoint-up(xl){
+				margin-bottom: 0;
+			}
+
 			flex-direction: column-reverse;
 			justify-content: flex-end;
 			@include media-breakpoint-up(xll){
