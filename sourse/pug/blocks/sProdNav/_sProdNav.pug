@@ -4,11 +4,11 @@ mixin sProdNav(data)
 		+e.container.container
 			+e.links-row.row
 				+prodNavItem('Anwendung', '#')
-				+prodNavItem('Beschreibung', '#')
-				+prodNavItem('Technische Daten', '#')
-				+prodNavItem('Download', '#')
-				+prodNavItem('Bewertung', '#')
-				+prodNavItem('Ausstattung und Funktion', '#')
+				+prodNavItem('Beschreibung', '#sProdDescr')
+				+prodNavItem('Technische Daten', '#sProdData')
+				+prodNavItem('Download', '#sPDownload')
+				+prodNavItem('Bewertung', '#sPFeedback')
+				+prodNavItem('Ausstattung und Funktion', '#sPFunctionality')
 			+e.baner
 				+e.banner-bg
 					img(loading="lazy" src="img/@2x/prodNav-baner.png" alt="")
@@ -43,4 +43,4 @@ mixin prodNavBall(imgNum, txt)
 
 mixin prodNavItem(txt, hrefAtt)
 	+e.l-col.col-12.col-sm-auto
-		a(href=hrefAtt)=txt
+		a(href=hrefAtt).ancor-js=txt

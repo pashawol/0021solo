@@ -167,12 +167,11 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	animateScroll() {
-		$(" .top-nav li a, .scroll-link").click(function () {
+		$(".scroll-link").click(function () {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
 			$('html, body').animate({ scrollTop: destination }, 1100);
-
 			return false;
 		});
 	},
@@ -674,8 +673,50 @@ function eventHandler() {
 		},
 
 	});
-
 	//end prod card
+
+	//vanilla js .scroll-link
+	function smoothScroll(qSelector){
+		let elements = document.querySelectorAll(qSelector);
+		if (elements.length === 0) return
+
+		for (let elem of elements){
+
+			elem.addEventListener('click', function () {
+				let destinyID = this.getAttribute('href');
+				event.preventDefault();
+
+				let destinyElem = document.querySelector(destinyID);
+				if (!destinyElem) return
+
+				let destinyTop = getCoords(destinyElem).top;
+
+				window.scrollTo({
+					top: destinyTop,
+					behavior: "smooth"
+				});
+
+			});
+		}
+	}
+	smoothScroll('.ancor-js');
+	function getCoords(elem) { // crossbrowser version
+		var box = elem.getBoundingClientRect();
+
+		var body = document.body;
+		var docEl = document.documentElement;
+
+		var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+		var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+		var clientTop = docEl.clientTop || body.clientTop || 0;
+		var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+		var top  = box.top +  scrollTop - clientTop;
+		var left = box.left + scrollLeft - clientLeft;
+
+		return { top: Math.round(top), left: Math.round(left) };
+	}
 
 
 };
