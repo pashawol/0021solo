@@ -115,6 +115,32 @@ mixin catalogSlide(data)
 					span Inhalt:
 					span=data.grayTxt
 
+mixin catalogItem(data)
+	//-.sCatalog__
+	.sCatalog__item
+		if data.discount
+			.sCatalog__discount=data.discount
+		if data.activeLike
+			.sCatalog__like-btn.active(href="#")
+				+icon('heart')
+		else
+			.sCatalog__like-btn(href="#")
+				+icon('heart')
+		.sCatalog__img(href="#")
+			img(loading="lazy" src=`img/@2x/catalog-item-${data.imgNum}.png` alt="")
+		.sCatalog__name=data.nameTxt
+		.sCatalog__descr=data.descr
+		.sCatalog__price-cont
+			if data.newPrice
+				.sCatalog__price.sCatalog__price--new=data.newPrice
+				.sCatalog__price.sCatalog__price--old=data.oldPrice
+			else
+				.sCatalog__price.sCatalog__price--common=data.oldPrice
+		if data.grayTxt
+			.sCatalog__gray
+				span Inhalt:
+				span=data.grayTxt
+
 mixin sMayInteresting(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
@@ -253,3 +279,74 @@ mixin sPopular(data)
 							grayTxt: '6',
 						})
 				+b.catalog-pugin--js.d-sm-none
+
+mixin sMayInterestingAlt(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Kürzlich angesehene Artikel
+			+e.slider
+				+b.catalog-prev--js
+					+icon('chevron-left')
+				+b.catalog-next--js
+					+icon('chevron-right')
+				.swiper-container.catalog-slider-js
+					.swiper-wrapper
+						//-try use object later
+						+catalogSlide({
+							imgNum: '1',
+							nameTxt: '402 Hand-Druckspritze',
+							descr: '2,0 Liter  Handruckspitze',
+							discount: '-15%',
+							activeLike: false,
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+						+catalogSlide({
+							imgNum: '2',
+							nameTxt: '416 LI AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-21%',
+							activeLike: true,
+							oldPrice: '499,48 €*',
+							newPrice: '484.50 €*',
+							grayTxt: '3',
+						})
+						+catalogSlide({
+							imgNum: '3',
+							nameTxt: '404 COMFORT',
+							descr: '2,0 Liter  Handruckspitze',
+							oldPrice: '€18.89 ',
+						})
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+				+b.catalog-pugin--js.d-sm-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN

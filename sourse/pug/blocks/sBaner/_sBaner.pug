@@ -1,0 +1,38 @@
+mixin sBaner(data)
+	// start sBaner
+	+b.SECTION.sBaner.section#sBaner&attributes(attributes)
+		+e.container.container
+			block
+			+e.box
+				+e.img-bl
+					img(loading="lazy" src="img/@2x/sBaner.png" alt="")
+				+e.txt-bl
+					+e.row.row
+						+e.col--left.col-12.col-xl-8
+							+b.section-title
+								h2
+									strong Druckspritze mit FKM Dichtungen
+									span zum Ausbringen von Reinigungsschaum
+								p Ob Pflege, Wartung, Innen- oder Außenreinigung – die professionellen Sprühgeräte von SOLO Unterstürzen Sie bei jeder Anwendung. Und sind leistungsstark, zuverlässig und langlebig.
+							+b.filters-row.row
+								+banerSelect('Nach Anwendung filtern')
+								+banerSelect('Technische Details')
+								+banerSelect('Filtern nach')
+						+e.col--right.col-12.col-sm-8.offset-sm-2.col-xl-4.offset-xl-0
+							+e.item
+								+e.i-img
+									img(loading="lazy" src='img/@2x/sBaner-thing.png' alt="")
+								+e.i-txt.text-center
+									| 301-FA CLEANLINE
+									|
+									br
+									| SCHAUMSPRÜHER
+	// end sBaner
+
+mixin banerSelect(placeholder)
+	+e.col.col-12.col-sm-auto
+		select.form-control.form-select.form-select--red(name="")
+			option.d-none(value="" disabled selected)=placeholder
+			option option1
+			option option2
+			option option3

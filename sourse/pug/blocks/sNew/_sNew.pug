@@ -69,3 +69,36 @@ mixin sPFunctionality(data)
 							+usageSlide(3,'new-slide-')
 								| Sicherheitsventil
 						+b.usage-pugin--js.d-flex.d-md-none
+
+mixin sCatFunc(data)
+	// start sNew
+	+b.SECTION.sNew--cat-func#sPFunctionality&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Ausstattung und Funktion
+				p Solide, gegen UV-Strahlung und Chemikalien resistente Kunststoffbehälter mit unterschiedlichen Füllvolumen bilden die Basis. Dichtungen und Düsen sind den jeweiligen Anwendungsbereichen angepasst.
+			+b.sUsage
+				+e.slider
+					+b.usage-prev--js.d-flex.d-md-none
+						+icon('chevron-left')
+					+b.usage-next--js.d-flex.d-md-none
+						+icon('chevron-right')
+					.swiper-container.usage-slider-js
+						.swiper-wrapper
+							+usageSlide(1)
+								span.d-block.mb-2 Dichtungen
+								a.sUsage__all-link(href="#") PRODUKTE ANSEHEN
+							+usageSlide(2,'new-slide-')
+								span.d-block.mb-2
+									| Druckluft-
+									br.d-none.d-xxl-block
+									| anschluss-
+									br.d-none.d-xxl-block
+									| ventil
+								a.sUsage__all-link(href="#") PRODUKTE ANSEHEN
+							+usageSlide(3,'new-slide-')
+								span.d-block.mb-2 Griffrohre und Distanzstücke
+								a.sUsage__all-link(href="#") PRODUKTE ANSEHEN
+						+b.usage-pugin--js.d-flex.d-md-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN

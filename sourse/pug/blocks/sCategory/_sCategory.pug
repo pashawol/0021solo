@@ -1,0 +1,126 @@
+mixin sCategory(data)
+	// start sCategory
+	+b.SECTION.sCategory.section#sCategory&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+e.col--left.col-xl-3
+					+categorySidebar()
+				+e.col--right.col-xl-9
+					+b.section-title
+						h2
+							span
+								| VarioFOAM Schaumsprüher
+								|
+							span.gray.d-block.d-sm-inline.pt-2 (4 Artikel )
+					+e.sort-txt Sortierung
+					+b.filters-row.row
+						+banerSelect('Sortieren nach Technische Details')
+						+banerSelect('Filtern nach')
+						+e.col.col
+							+e.result Seite 1 von 1
+					+e.items-row.row
+						//-
+						+e.col.col-md-4
+							+catalogItem({
+								imgNum: 'cgry-1',
+								activeLike: true,
+								nameTxt: '301-FA CLEANLine Schaumsprüher',
+								descr: '2,0 Liter  Handruckspitze',
+								discount: '-21%',
+								oldPrice: '499,48 €*',
+								newPrice: '484.50 €*',
+								grayTxt: 'Inhalt: 3',
+							})
+						//-
+						+e.col.col-md-4
+							+catalogItem({
+								imgNum: 'cgry-1',
+								activeLike: false,
+								nameTxt: '301-FB CLEANLine Schaumsprüher',
+								descr: '2,0 Liter  Handruckspitze',
+								oldPrice: '€18.89 ',
+							})
+						//-
+						+e.col.col-md-4
+							+catalogItem({
+								imgNum: 'cgry-2',
+								activeLike: false,
+								nameTxt: '309-FA CLEANLine Schaumsprüher',
+								descr: '9 Liter',
+								discount: '-15%',
+								oldPrice: '289,48 €*',
+								newPrice: '281,02 €*',
+								grayTxt: 'Inhalt: 6',
+							})
+						//-
+						+e.col.col-md-8
+							.sUsage__item
+								.sUsage__img.sUsage__img--md
+									img(loading="lazy" src=`img/@2x/category-big.png` alt="")
+								.sUsage__descr
+									.sUsage__txt
+										| Leistungsstark und
+										br.d-none.d-xxl-block
+										| Chemikalienbeständig
+									.sUsage__icon
+										img(loading="lazy" src=`img/svg/usage-slide-icon-1.svg` alt="")
+						//-
+						+e.col.col-md-4
+							+catalogItem({
+								imgNum: 'cgry-2',
+								activeLike: true,
+								nameTxt: '309-FB CLEANLine Schaumsprüher',
+								descr: '9 Liter',
+								discount: '-15%',
+								oldPrice: '10,92 €*',
+								newPrice: '10,59 €*',
+								grayTxt: 'Inhalt: 20',
+							})
+					+sCatFunc()
+	// end sCategory
+
+mixin categorySidebar()
+	+b.cSidebar
+		+e.box
+			+e.back(href="#")
+				+icon('arrow-left')
+				span PROFI
+			+e.UL.menu
+				+cSidebarMenuItem('Anwendung', 'active')
+					+cSbarSubMenuItem('Pflanzenschutz/-Pflege', 1)
+					+cSbarSubMenuItem('Schädlingsbekämpfung', 2)
+					+cSbarSubMenuItem('Reinigung/Desinfektion', 3)
+					+cSbarSubMenuItem('Land und Forstwirtschaft', 4)
+					+cSbarSubMenuItem('Baugewerbe', 5)
+					+cSbarSubMenuItem('Streuen', 6)
+				+cSidebarMenuItem('Spritzen', 'active')
+					+cSbarSubMenuItem('Handspritzen')
+					+cSbarSubMenuItem('Druckspritze')
+					+cSbarSubMenuItem('Rückenspritze')
+					+cSbarSubMenuItem('Akkuspritzen')
+					+cSbarSubMenuItem('Schaumsprüher')
+				+cSidebarMenuItem('Granulatstreuer')
+					+cSbarSubMenuItem('option')
+					+cSbarSubMenuItem('option')
+				+cSidebarMenuItem('Zubehör')
+					+cSbarSubMenuItem('option')
+					+cSbarSubMenuItem('option')
+		+e.txt.d-xl-block.d-none
+			p Fahrzeug-Vorreinigung, Schmutz abspülen und Felgen reinigen – SOLO CleanLine Sprühgeräte finden in vielen Waschstraßen Ihren Einsatz und verrichten zuverlässig ihren Dienst.
+			p Ob Drucksprühgeräte mit einem maximalen Betriebsdruck von 3 bar zur Ausbringung saurer und alkalischer Medien oder Schaumsprühgeräte, die Reinigungsmittel in wirkungsvollen Reinigungsschaum verwandeln, der intensiv einwirkt und ein optimales Reinigungsergebnis bewirkt - mit der SOLO CleanLine  liegen Sie immer richtig.
+			p Ausgestattet mit hochwertigen FKM-Dichtungen zeigt zum Beispiel der CleanMaster PERFORMANCE PF 50 eine besonders hohe Beständigkeit gegenüber Reinigungsmedien und zeichnet sich zudem durch eine hohe Chemikalien-, Temperatur- und Alterungsbeständigkeit aus.
+			p Der PF 50 weißt dank eines maximalen Betriebsdrucks von 3 bar und einem Füllinhalt von 5 Liter ein lange Zeit gleichbleibendes Sprühbild auf und sorgt somit für optimale Arbeitsergebnisse und -intervalle bei der Fahrzeugreinigung in der Waschstraße.
+
+mixin cSidebarMenuItem(title, activeClass='')
+	+e.LI.item
+		+e.title.cat-title-js(href="#" class=activeClass)=title
+		+e.UL.submenu.cat-sbmnu-js(class=activeClass)
+			block
+
+mixin cSbarSubMenuItem(title, icon)
+	+e.LI.sub-item
+		+e.sub-item-link(href="#")
+			if icon
+				+e.sb-icon
+					img.img-svg-js(loading="lazy" src=`img/svg/cat-mnu-icon-${icon}.svg` alt="")
+			.txt=title

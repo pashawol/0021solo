@@ -211,7 +211,7 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 	var x = window.location.host;
 	var screenName;
-	screenName = '06.png';
+	screenName = '07.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")); //$(".footerCart").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
@@ -606,10 +606,6 @@ function eventHandler() {
 				direction: 'horizontal',
 				spaceBetween: 10
 			},
-			// 1024: {
-			// 	direction: 'vertical',
-			// 	spaceBetween: 10,
-			// },
 			1300: {
 				direction: 'vertical',
 				spaceBetween: 8
@@ -690,7 +686,17 @@ function eventHandler() {
 			top: Math.round(top),
 			left: Math.round(left)
 		};
-	}
+	} //category menu js
+
+
+	$('.cat-title-js').click(function () {
+		event.preventDefault();
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.cat-sbmnu-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //- TODO
+	// 1 clean js file
 }
 
 ;

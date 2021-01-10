@@ -36,6 +36,14 @@
 		}
 	}
 
+	&--cat-func{
+		@include media-breakpoint-down(md){
+			position: relative;
+			width: 100vw;
+			left: calc(-1 * (100vw - 100%) / 2);
+		}
+	}
+
 	&__container{
 		padding-left: 10px;
 		padding-right: 10px;
