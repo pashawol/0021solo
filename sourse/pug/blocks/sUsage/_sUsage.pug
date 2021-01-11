@@ -50,6 +50,37 @@ mixin sUsageBalls(data)
 							| Kulturen
 					+b.usage-pugin--js.d-flex.d-md-none
 
+mixin sUsageBalls2(data)
+	// start sUsage
+	+b.SECTION.sUsage.section#sUsage&attributes(attributes)
+		+e.container.container
+			+e.slider
+				+b.usage-prev--js.d-flex.d-md-none
+					+icon('chevron-left')
+				+b.usage-next--js.d-flex.d-md-none
+					+icon('chevron-right')
+				.swiper-container.usage-slider-js
+					.swiper-wrapper
+						+usageSlide(3)
+							| Desinfektion von
+							br.d-none.d-xxl-block
+							| Gebäude und Objekte
+						+usageSlide(3)
+							| Reinigen und Pflegen
+							br.d-none.d-xxl-block
+							| von Fahrzeug
+						+usageSlide(3)
+							| Lebensmittelindustrie
+						+usageSlide(3)
+							| Industrie und
+							br.d-none.d-xxl-block
+							| Handel
+						+usageSlide(3)
+							| Saniär
+						+usageSlide(3)
+							| Hygieneeinrichtungen
+					+b.usage-pugin--js.d-flex.d-md-none
+
 mixin usageSlide(imgNum, name='usage-slide-')
 	.swiper-slide&attributes(attributes)
 		+e.item

@@ -44,29 +44,29 @@ include ../blocks/sFAQ/_sFAQ.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '08-red'
+	- let  title= '08-blue'
 	title= title
 block pagecontent
 	+header()
 		+top-nav()
 		+topLine()
 	+sWBaner({
-		imgName: 'red',
-		smTxt: 'SPRÜHGERÄTE / SPRITZGERÄTE',
-		title: 'Spritzen für die professionelle Pflanzenpflege',
-		descr: 'SOLO bietet ein umfassendes Sortiment an Sprühgeräten für die anspruchsvolle Anwendung in Industrie, Handwerk und Landwirtschaft. Gerade im professionellen Einsatz werden an diese Geräte höchste Anforderungen hinsichtlich Qualität, Funktionalität, Einsatzmöglichkeit und Ausstattung gestellt.',
+		imgName: 'blue',
+		smTxt: 'SOLO Clean Line',
+		title: 'Spritzen für die professionelle Reinigung und Desinfektion',
+		descr: 'Die SOLO CleanLine Handsprühgeräte sind in den verschie- densten Spezial-Ausführungen erhältlich: als Fein- und Drucksprüher, für die Ausbringung von ölhaltigen und aggressiven Medien, für die verschiedensten Anwendungs-bereiche in der professionellen Reinigung.',
 	})
 		+breadcrumb("Profi", "Anwendungen", "Pflanzenschutz/- pflege")
 	+sBalls2()
-	+sUsageBalls()
+	+sUsageBalls2()
 	+sCatalog()
-	+sPromo({
-		flagClass: "red",
+	+sPromoBlue({
+		flagClass: "blue",
 	})
-	+sMailRedBaner()
-	+sAccessories()
-	+sFAQ()
-	+sCleanRed()
+	+sMailBlueBaner()
+	+sAccessories()(class="sCatalog--blue")
+	+sFAQBlue()
+	+sCleanBlue()
 	+sContact()
 	+sInfo()
 	+sMailTxtWrap()

@@ -75,3 +75,33 @@ mixin sCleanRed(data)
 				+b.catalog-pugin--js.d-sm-none
 			+e.btn-cont
 				+e.btn(href="#") ALLE PRUKTE ENTDECKEN
+
+mixin sCleanBlue(data)
+	// start sClean
+	+b.SECTION.sClean.section#sClean&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 SOLO–CLEAN LINE Produkte
+				p Von 1,5-Liter-Drucksprühern mit Kunststoff-Überzugrohr über dem Pumpenzylinder über 5- und 10-Liter-Sprühgeräte bis hin zu Schaumdrucksprühgeräten bietet SOLO seinen Kunden eine ausgereifte Range an professionellen Sprühgeräten für die Reinigung und Desinfektion. Smarte Extras und durchdachte Details sorgen für einfache Unterscheidung anhand von Farbcodierungen und ein Maximum an Sicherheit und Komfort in der Anwendung.
+			+e.slider
+				+b.catalog-prev--js
+					+icon('chevron-left')
+				+b.catalog-next--js
+					+icon('chevron-right')
+				.swiper-container.clean-slider-js
+					.swiper-wrapper
+						+cleanSlide({
+							imgName: '1',
+							ballTxt: 'SOLO-CLEANLine',
+							title: 'Fahrzeugpflege mit SOLO',
+							descr: 'Reinigen und Pflegen Sie Ihr Fahrzeug mit dem Schaumsprühgerät von SOLO. Zur Aufbringung von Reinigungsmitteln bestehst geeignet.',
+						})
+						+cleanSlide({
+							imgName: '2',
+							ballTxt: 'Handsprüh-gerät',
+							title: 'Sprühgeräte für die Desinfektion und Reinigung',
+							descr: 'Hochleistungs-Sprühsysteme, Akku- und Elektrobürsten sowie Spezial-Reinigungsmittel für effektive Reinigungsarbeiten rund um das Haus und unterwegs.',
+						})
+				+b.catalog-pugin--js.d-sm-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN

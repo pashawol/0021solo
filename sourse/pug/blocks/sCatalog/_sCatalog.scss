@@ -1,5 +1,10 @@
 // start .sCatalog
 .sCatalog {
+	--themeColor: #{$primary};
+	&--blue{
+		--themeColor: #{$blue};
+	}
+
 	overflow: hidden;
 
 	--sPT: 28px;
@@ -127,6 +132,11 @@
 		@include media-breakpoint-up(xll){
 			padding: 6.5px 19px;
 			font-size: 16px;
+		}
+
+		&.active{
+			background-color: var(--themeColor);
+			color: $white;
 		}
 	}
 

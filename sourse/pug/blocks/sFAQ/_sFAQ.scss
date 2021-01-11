@@ -1,6 +1,5 @@
 // start .sFAQ
 .sFAQ {
-	background-color: $primary;
 	color: $white;
 
 	--sPT: 50px;
@@ -20,6 +19,15 @@
 		--sPT: 111px;
 		--sPB: 131px;
 		--sTPB: 109px;
+	}
+
+	//blue
+
+	background-color: $primary;
+	--backplateColor: #{$crimson};
+	&--blue{
+		background-color: $blue;
+		--backplateColor: #{$blue3};
 	}
 
 	&__container{
@@ -83,7 +91,7 @@
 			left: 50%;
 			transform: translateX(-50%);
 			top: 0;
-			background-color: $crimson;
+			background-color: var(--backplateColor);
 		}
 	}
 	&__item{
@@ -258,6 +266,19 @@
 		}
 	}
 	//
-	&__{}
+	&__btn-white{
+		@extend .btn;
+		@extend .btn-white;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 14px;
+		//letter-spacing: .5px;
+
+		min-width: 277px;
+		padding: 10px 20px;
+		@include media-breakpoint-up(xxl){
+			padding: 12px 20px;
+		}
+	}
 	&__{}
 } // end.sFAQ

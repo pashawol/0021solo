@@ -9,9 +9,9 @@ mixin sWBaner(data)
 				+e.row.row
 					.col-sm-9.col-md-7.col-xl-6.col-xll-5.ms-auto
 						+e.white-bl
-							+e.sm SPRÜHGERÄTE / SPRITZGERÄTE
-							+e.H2.title Spritzen für die professionelle Pflanzenpflege
-							+e.descr SOLO bietet ein umfassendes Sortiment an Sprühgeräten für die anspruchsvolle Anwendung in Industrie, Handwerk und Landwirtschaft. Gerade im professionellen Einsatz werden an diese Geräte höchste Anforderungen hinsichtlich Qualität, Funktionalität, Einsatzmöglichkeit und Ausstattung gestellt.
+							+e.sm=data.smTxt
+							+e.H2.title=data.title
+							+e.descr=data.descr
 							+e.foot-row.row.align-items-end
 								.col
 									+e.link(href='#') PRODUKTE ENTDECKEN

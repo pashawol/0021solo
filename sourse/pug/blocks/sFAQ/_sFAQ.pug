@@ -28,3 +28,23 @@ mixin faqItem(imgNum, title, descr)
 			+e.descr=descr
 			+e.questions
 				block
+
+mixin sFAQBlue(data)
+	// start sFAQ
+	+b.SECTION.sFAQ--blue.section#sFAQ&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Unsere Entscheidungshilfen und FAQ’s für das passende Zubehör
+			+e.box
+				+faqItem(1, 'SOLO Hochleistungssprühgeräte Sie wollen große Flächen behandlen?')
+					+sFAQQuestion('Sprühgerät zur Ausbringung von lösungsmittelfreien Medien?')
+					+sFAQQuestion('Ölfestes Hochleistungssprühgerät?')
+				+faqItem(2, 'Loren ipsum ist dolor ?')
+					+sFAQQuestion('Kontrolliertes Beseitigen von Unkraut?')
+					+sFAQQuestion('Ausbringung von Pflanzenschutzmitteln?')
+					+sFAQQuestion('Wässern und Pflegen von Pflanzen?')
+				+faqItem(3, 'Hallo. Ich bin ein kleiner Blindtext. Und zwar schon so lange.')
+					+sFAQQuestion('Feinzerstäuber für die Pflege von Früchten, Obst und Gemüse?')
+					+sFAQQuestion('Zur Ausbringung säurehaltiger Pflanzenschutzmittel?')
+			+e.btn-cont.text-center
+				+e.btn-white(href='#') Mehr FAQ`s

@@ -26,6 +26,10 @@
 
 	&__red-wrap{
 		background-color: $primary;
+
+		&--blue{
+			background-color: $blue;
+		}
 		/*
 		old style
 

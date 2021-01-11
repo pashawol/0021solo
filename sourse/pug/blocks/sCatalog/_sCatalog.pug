@@ -87,7 +87,7 @@ mixin sCatalog(data)
 
 mixin filterItem(txt)
 	+e.row-col.col-auto.d-none.d-sm-block
-		+e.filter-item(href="#")=txt
+		+e.filter-item(href="#")&attributes(attributes)=txt
 
 mixin catalogSlide(data)
 	.swiper-slide
@@ -362,7 +362,7 @@ mixin sAccessories(data)
 					br.d-none.d-xxl-block
 					| Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 			+e.filter-row.row
-				+filterItem("Lanzen")
+				+filterItem("Lanzen")(class="active")
 				+filterItem("Düsen und Spritzschrime")
 				+filterItem("Dichtungen")
 				+filterItem("Zubehör für Motorspritzen und Sprühgeräte")
