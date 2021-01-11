@@ -81,3 +81,11 @@ mixin faqQuestion(title, activeClass='')
 			span=title
 			.plus
 		+e.q-descr.q-descr-js(class=activeClass) Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa uis enim. Donec pede justo, fringilla vel, aliquet nec.
+
+mixin sFAQQuestion(title, activeClass='')
+	.faq__question
+		.faq__header.q-head-js(class=activeClass)
+			+icon('chevron-r-circle')
+			span=title
+			.plus
+		.faq__q-descr.q-descr-js(class=activeClass) Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa uis enim. Donec pede justo, fringilla vel, aliquet nec.

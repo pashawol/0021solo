@@ -29,6 +29,27 @@ mixin sUsage(data)
 					+b.usage-pugin--js.d-flex.d-md-none
 	// end sUsage
 
+mixin sUsageBalls(data)
+	// start sUsage
+	+b.SECTION.sUsage.section#sUsage&attributes(attributes)
+		+e.container.container
+			+e.slider
+				+b.usage-prev--js.d-flex.d-md-none
+					+icon('chevron-left')
+				+b.usage-next--js.d-flex.d-md-none
+					+icon('chevron-right')
+				.swiper-container.usage-slider-js
+					.swiper-wrapper
+						+usageSlide(3)
+							| Garten und Landschaftsbau
+						+usageSlide(3)
+							| Spaliergehölze und Bäume
+						+usageSlide(3)
+							| Landwirtschaftliche
+							br.d-xll-block
+							| Kulturen
+					+b.usage-pugin--js.d-flex.d-md-none
+
 mixin usageSlide(imgNum, name='usage-slide-')
 	.swiper-slide&attributes(attributes)
 		+e.item

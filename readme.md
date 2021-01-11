@@ -9,3 +9,4 @@
 1. <https://pashawol.github.io/0021solo/public/05.html>
 1. <https://pashawol.github.io/0021solo/public/06-prod-card.html>
 1. <https://pashawol.github.io/0021solo/public/07-catalog.html>
+1. <https://pashawol.github.io/0021solo/public/08-red.html>

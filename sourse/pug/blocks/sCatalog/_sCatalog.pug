@@ -350,3 +350,95 @@ mixin sMayInterestingAlt(data)
 				+b.catalog-pugin--js.d-sm-none
 			+e.btn-cont
 				+e.btn(href="#") ALLE PRUKTE ENTDECKEN
+
+mixin sAccessories(data)
+	// start sCatalog
+	+b.SECTION.sCatalog--accssesories.section#sCatalog&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Zubehör macht den Unterschied
+				p
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					br.d-none.d-xxl-block
+					| Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			+e.filter-row.row
+				+filterItem("Lanzen")
+				+filterItem("Düsen und Spritzschrime")
+				+filterItem("Dichtungen")
+				+filterItem("Zubehör für Motorspritzen und Sprühgeräte")
+				+filterItem("weiteres Zubehör")
+				.col-12.d-sm-none
+					select.form-control.form-select
+						//-Filtern nach:
+						option Druckspritzen
+						option Druckspritzen2
+						option Druckspritzen3
+			+e.slider
+				+b.catalog-prev--js
+					+icon('chevron-left')
+				+b.catalog-next--js
+					+icon('chevron-right')
+				.swiper-container.catalog-slider-js
+					.swiper-wrapper
+						//-big-slide
+						+b.swiper-slide--big
+							.sUsage__item
+								.sUsage__img.sUsage__img--long
+									img(loading="lazy" src=`img/@2x/sProdDet-1.png` alt="")
+								.sUsage__descr
+									.sUsage__txt
+										span.d-block
+											| Düsen und Spritzschirme
+											|
+											br.d-none.d-xxl-block
+											| für Druck und Rückenspritzen
+										.sUsage__all-link(href="#") ALLE PRODUKTE ANSEHEN
+									.sUsage__icon
+										img(loading="lazy" src=`img/svg/usage-slide-icon-2.svg` alt="")
+						+catalogSlide({
+							imgNum: '2',
+							nameTxt: '416 LI AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-21%',
+							activeLike: true,
+							oldPrice: '499,48 €*',
+							newPrice: '484.50 €*',
+							grayTxt: '3',
+						})
+						+catalogSlide({
+							imgNum: '3',
+							nameTxt: '404 COMFORT',
+							descr: '2,0 Liter  Handruckspitze',
+							oldPrice: '€18.89 ',
+						})
+						//-
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+						+catalogSlide({
+							imgNum: '4',
+							nameTxt: '417 AKKU-SPRITZE',
+							descr: 'Rückentragbar',
+							discount: '-15%',
+							oldPrice: '289,48 €*',
+							newPrice: '281,02 €*',
+							grayTxt: '6',
+						})
+				+b.catalog-pugin--js.d-sm-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN

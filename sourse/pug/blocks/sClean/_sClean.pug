@@ -45,3 +45,33 @@ mixin cleanSlide(data)
 				+e.prod-img(href="#")
 					img.swiper-lazy(src="#" data-src=`img/@2x/sClean-prod-${data.imgName}.png` alt="")
 				+e.link(href="#") PRODUKTE ENTDECKEN
+
+mixin sCleanRed(data)
+	// start sClean
+	+b.SECTION.sClean--red.section#sClean&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 SOLO–Pflanzenschutz/- pflege-Produkte
+				p SOLO Drucksprühgeräte unterstützen Sie effizient unter anderem bei der professionellen landwirtschaftlichen Arbeit, beim Obstanbau oder im Weinberg.
+			+e.slider
+				+b.catalog-prev--js
+					+icon('chevron-left')
+				+b.catalog-next--js
+					+icon('chevron-right')
+				.swiper-container.clean-slider-js
+					.swiper-wrapper
+						+cleanSlide({
+							imgName: '3',
+							ballTxt: 'RÜCKEN- sprühgeräte',
+							title: 'Akkuspritzen für Land- und Forstwirtschaft',
+							descr: 'Drucksprühgeräte die großen Sprühwolke Und Unterseiten tiefer Blattschichten Erreichen.',
+						})
+						+cleanSlide({
+							imgName: '4',
+							ballTxt: 'Druck- sprühgeräte',
+							title: 'Druckspritzen für präzise und punktuelle Anwendungen',
+							descr: 'Mit einem manuellen Spritzgerät arbeiten Sie Blatt für Blatt ganz sauber – bei einzelnen Pflanzen und ganzen Flächenkulturen.',
+						})
+				+b.catalog-pugin--js.d-sm-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN

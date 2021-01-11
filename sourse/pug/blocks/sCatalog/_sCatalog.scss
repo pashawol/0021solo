@@ -158,6 +158,18 @@
 				width: calc((100% / 4) - (17px * 3 / 4));
 			}
 			height: auto;
+
+			&--big{
+				//background-color: $blue;
+
+				width: 100%!important;
+				@include media-breakpoint-up(xl){
+					width: calc((100% * 2 / 3) - (17px * 1 / 3))!important;
+				}
+				@include media-breakpoint-up(xll){
+					width: calc((100% / 2) - (17px * 2 / 3)) !important;
+				}
+			}
 		}
 		//prev, next
 		.catalog-prev,

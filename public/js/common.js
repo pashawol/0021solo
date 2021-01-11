@@ -211,7 +211,7 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 	var x = window.location.host;
 	var screenName;
-	screenName = '07.png';
+	screenName = '08-red.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")); //$(".footerCart").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);

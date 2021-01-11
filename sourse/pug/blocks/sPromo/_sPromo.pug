@@ -15,7 +15,7 @@ mixin sPromo(data)
 					+promoSmItem('1.jpg', 'Qualität des Produktionsprozesses', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
 					+promoSmItem('2.png', 'Flexibel Einsetzbar', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolo')
 				.col-md-8.offset-md-2.col-xl-6.offset-xl-0
-					+b.red-promo
+					+b.red-promo(class=data.flagClass)
 						+e.made
 							img(loading="lazy" src="img/@2x/madeIn.png" alt="")
 						+e.title
@@ -41,6 +41,7 @@ mixin sPromo(data)
 						+promoSlide('4.png', 'Akku Power', 'blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. ')
 				+b.promo-pugin--js.d-sm-none
 	// end sPromo
+
 mixin promoSlide(imgEnd, title, descr)
 	.swiper-slide
 		+e.item

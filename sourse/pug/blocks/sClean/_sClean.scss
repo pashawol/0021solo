@@ -2,6 +2,13 @@
 .sClean {
 	overflow: hidden;
 
+
+	&--red{
+		.sClean__item{
+			background-color: $primary;
+		}
+	}
+
 	--sPT: 44px;
 	--sPB: 72px;
 	--sTPB: 41px;

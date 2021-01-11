@@ -1,5 +1,8 @@
 // start .sBalls
 .sBalls {
+	position: relative;
+	z-index: 1;
+
 	--sPT: 15px;
 	--sPB: 25px;
 	--sTPB: 48px;
@@ -119,6 +122,33 @@
 			}
 		}
 	}
+
+	//sBalls2
+	&__mark{
+		margin: 0 auto 30px auto;
+		width: 133px;
+		
+		@include media-breakpoint-up(md){
+			position: absolute;
+
+			top: 20px;
+			right: 20px;
+			width: calc(133px * 3 / 4);
+		}
+		@include media-breakpoint-up(xll){
+			top: var(--sPT);
+			right: 60px;
+			width: 133px;
+		}
+
+		z-index: -1;
+		img{
+			max-width: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+
 
 	//
 	&__{}
