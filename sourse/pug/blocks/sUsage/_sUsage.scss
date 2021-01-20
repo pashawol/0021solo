@@ -83,6 +83,7 @@
 			line-height: 1.52;
 			@include media-breakpoint-up(md){
 				line-height: 1.6;
+				font-size: 15px;
 			}
 
 			@include media-breakpoint-up(xl){
@@ -243,6 +244,9 @@
 		font-size: 16.5px;
 		margin-bottom: 5px;
 		width: 100%;
+		@include media-breakpoint-up(md){
+			font-size: 18px;
+		}
 		@include media-breakpoint-up(xl){
 			margin-bottom: 0;
 			width: auto;

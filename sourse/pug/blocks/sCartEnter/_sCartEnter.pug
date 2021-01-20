@@ -35,7 +35,7 @@ mixin enterCol(titleTxt)
 mixin cartCheckLine(checkedSteps=0)
 	+b.checkLine
 		+e.container.container
-			- var stepsArr = ['Anmelden', 'Adresse', 'Zahlungsart', 'Bestätigen', 'Fertig']
+			- var stepsArr = ['Anmelden', 'Adresse', 'Zahlungsart', 'Fertig']
 			-for (var i = 0; i < stepsArr.length; i++)
 				if i < checkedSteps && i !== checkedSteps
 					+e.item.checked=stepsArr[i]

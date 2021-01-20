@@ -136,7 +136,7 @@
 			width: calc(133px * 3 / 4);
 		}
 		@include media-breakpoint-up(xll){
-			top: var(--sPT);
+			top: calc(var(--sPT) + var(--sTPB) + 42px);
 			right: 60px;
 			width: 133px;
 		}

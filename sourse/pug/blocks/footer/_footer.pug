@@ -20,7 +20,11 @@ mixin footer()
 								| +49 (0) 7031 - 301-0
 						.col-xll-12.col-xl.mb-4
 							+e.text.small.mb-2 Montag&nbsp;&mdash; Freitag: 9:00&nbsp;&mdash; 18:00 Uhr (ausgenommen regionale Feiertage)
-							.small.text-secondary *Regul&auml;rer Festnetztarif Ihres Telefonanbieters.
+							.small.text-secondary
+								| *Regul&auml;rer Festnetztarif Ihres
+								|
+								br.d-xll-none
+								| Telefonanbieters.
 				mixin list(t,...items)
 					+e.col-nav.col-xl.col-sm-6
 						+e.group
