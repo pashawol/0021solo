@@ -25,5 +25,10 @@
 		--swiperBorderColorDefHover: var(--bs-primary);
 		--swiperColorDefHover: var(--bs-primary);
 		--swiperBgDefHover: #ffffff;
-	
+
+	--mainColor: #{$blue};
+}
+
+.red-mainColor{
+	--mainColor: #{$danger};
 }

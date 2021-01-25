@@ -600,6 +600,7 @@ function eventHandler() {
 	//img-svg
 	$('img.img-svg-js').each(function () {
 		var $img = $(this);
+		console.log(this);
 		var imgClass = $img.attr('class');
 		var imgURL = $img.attr('src');
 		$.get(imgURL, function (data) {

@@ -31,7 +31,7 @@ mixin sUsage(data)
 
 mixin sUsageBalls(data)
 	// start sUsage
-	+b.SECTION.sUsage.section#sUsage&attributes(attributes)
+	+b.SECTION.sUsage.red-mainColor.section#sUsage&attributes(attributes)
 		+e.container.container
 			+e.slider
 				+b.usage-prev--js.d-flex.d-md-none
@@ -90,4 +90,4 @@ mixin usageSlide(imgNum, name='usage-slide-')
 				+e.txt
 					block
 				+e.icon
-					img.swiper-lazy(src="#" data-src=`img/svg/usage-slide-icon-${imgNum}.svg` alt="")
+					img.img-svg-js(src=`img/svg/usage-slide-icon-${imgNum}.svg` alt="")
