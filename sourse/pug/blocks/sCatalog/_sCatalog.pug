@@ -102,7 +102,7 @@ mixin catalogSlide(data)
 					+icon('heart')
 			+e.img(href="#")
 				img.swiper-lazy(src="#" data-src=`img/@2x/catalog-item-${data.imgNum}.png` alt="")
-			+e.name=data.nameTxt
+			+e.name(href="#")=data.nameTxt
 			+e.descr=data.descr
 			+e.price-cont
 				if data.newPrice
@@ -128,7 +128,7 @@ mixin catalogItem(data)
 				+icon('heart')
 		.sCatalog__img(href="#")
 			img(loading="lazy" src=`img/@2x/catalog-item-${data.imgNum}.png` alt="")
-		.sCatalog__name=data.nameTxt
+		a.sCatalog__name(href="#")=data.nameTxt
 		.sCatalog__descr=data.descr
 		.sCatalog__price-cont
 			if data.newPrice
@@ -383,10 +383,10 @@ mixin sAccessories(data)
 						//-big-slide
 						+b.swiper-slide--big
 							.sUsage__item
-								.sUsage__img.sUsage__img--long
+								a.sUsage__img.sUsage__img--long(href='#')
 									img(loading="lazy" src=`img/@2x/sProdDet-1.png` alt="")
 								.sUsage__descr
-									.sUsage__txt
+									a.sUsage__txt(href="#")
 										span.d-block
 											| Düsen und Spritzschirme
 											|
@@ -394,7 +394,7 @@ mixin sAccessories(data)
 											| für Druck und Rückenspritzen
 										.sUsage__all-link(href="#") ALLE PRODUKTE ANSEHEN
 									.sUsage__icon
-										img(loading="lazy" src=`img/svg/usage-slide-icon-2.svg` alt="")
+										img.img-svg-js(loading="lazy" src=`img/svg/usage-slide-icon-2.svg` alt="")
 						+catalogSlide({
 							imgNum: '2',
 							nameTxt: '416 LI AKKU-SPRITZE',

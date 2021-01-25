@@ -250,6 +250,10 @@
 		align-items: flex-start;
 
 		color: var(--curColor);
+		&:hover{
+			color: var(--curColor);
+			opacity: .9;
+		}
 
 		font-size: 16.5px;
 		margin-bottom: 5px;
@@ -337,6 +341,7 @@
 		color: var(--curColor);
 		&:hover{
 			color: var(--curColor);
+			border-bottom: 2px solid transparent;
 		}
 	}
 	&__{}

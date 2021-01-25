@@ -84,10 +84,10 @@ mixin sUsageBalls2(data)
 mixin usageSlide(imgNum, name='usage-slide-')
 	.swiper-slide&attributes(attributes)
 		+e.item
-			+e.img
+			+e.img(href='#')
 				img.swiper-lazy(src="#" data-src=`img/@2x/${name}${imgNum}.jpg` alt="")
 			+e.descr
-				+e.txt
+				+e.txt(href='#')
 					block
 				+e.icon
 					img.img-svg-js(src=`img/svg/usage-slide-icon-${imgNum}.svg` alt="")
