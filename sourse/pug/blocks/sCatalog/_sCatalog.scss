@@ -184,12 +184,85 @@
 		//prev, next
 		.catalog-prev,
 		.catalog-next{
-			@extend .swiper-arrow-frame-alt;
+			@include media-breakpoint-down(md){
+				box-shadow: none!important;
+				outline: none!important;
+				border: none!important;
+				background-color: darken($gray, 1);
+				z-index: 5;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 20px;
+				height: 47px;
+
+				@include mt();
+				.icon{
+					@include mt();
+					font-size: 12px;
+					color: darken($secondary, 3);
+				}
+
+				opacity: .85;
+				&:hover{
+					opacity: 1;
+					.icon{
+						transform: scale(1.1);
+					}
+				}
+			}
+			@include media-breakpoint-up(md){
+				box-shadow: none!important;
+				outline: none!important;
+				background-color: transparent;
+
+				border: 2px solid $gray2!important;
+
+				width: 29px;
+				height: 29px;
+				@include media-breakpoint-up(xll){
+					width: 40px;
+					height: 40px;
+				}
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				position: absolute;
+				z-index: 5;
+				top: 50%;
+				transform: translateY(-50%);
+
+				@include mt();
+				.icon{
+					@include mt();
+					font-size: 14px;
+					@include media-breakpoint-up(xll){
+						font-size: 19px;
+					}
+					color: darken($gray2, 3);
+				}
+
+				opacity: .85;
+				&:hover{
+					opacity: 1;
+					.icon{
+						transform: scale(1.1);
+					}
+				}
+			}
 		}
 
 		.catalog-prev{
-			right: calc(100% + 7px);
-			@include media-breakpoint-up(xl){
+			right: calc(100% + 11px);
+			@include media-breakpoint-up(md){
 				right: calc(100% + 7px);
 			}
 			@include media-breakpoint-up(xll){
@@ -197,8 +270,8 @@
 			}
 		}
 		.catalog-next{
-			left: calc(100% + 7px);
-			@include media-breakpoint-up(xl){
+			left: calc(100% + 11px);
+			@include media-breakpoint-up(md){
 				left: calc(100% + 7px);
 			}
 			@include media-breakpoint-up(xll){

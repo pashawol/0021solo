@@ -8,6 +8,10 @@ mixin sHSlider(data)
 					+hSlide()
 					+hSlide()
 			+b.h-pugin--js.d-none.d-xll-flex
+			+b.h-slide-prev--js
+				+icon('chevron-left')
+			+b.h-slide-next--js
+				+icon('chevron-right')
 	// end sHSlider
 
 mixin hSlide()
@@ -33,10 +37,6 @@ mixin hSildeItem(imgNum, itemName)
 
 mixin hSlideTitle()
 	+b.section-title.text-center&attributes(attributes)
-		+b.h-slide-prev--js
-			+icon('chevron-left')
-		+b.h-slide-next--js
-			+icon('chevron-right')
 		h6 SOLO Sprühgeräte
 		h1
 			| Pflanzenschutz &

@@ -44,9 +44,10 @@
 				width: 31px;
 				height: 77px;
 			}
-			@include media-breakpoint-up(xll){
-				width: 31px;
-				height: 77px;
+
+			@include media-breakpoint-between(xl, xll){
+				top: unset!important;
+				bottom: calc(120px - 77px);
 			}
 		}
 		.h-slide-prev{

@@ -161,8 +161,9 @@
 
 		height: auto;
 		padding: rem(10);
-		box-shadow: 3px 3px -5px 12px rgba($black, .5);
+		box-shadow: 3px 3px 12px -5px rgba(0,0,0, .5);
 		background-color: $white;
+		border: 1px solid $gray-500;
 		border-radius: rem(3);
 
 		a{
