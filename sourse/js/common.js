@@ -106,7 +106,7 @@ const JSCCommon = {
 	},
 	// /mobileMenu
 
-	// табы  .
+	// tabs  .
 	tabscostume(tab) {
 
 		let tabs = {
@@ -135,7 +135,7 @@ const JSCCommon = {
 		// });
 
 	},
-	// /табы
+	// /tabs
 
 	inputMask() {
 		// mask for input

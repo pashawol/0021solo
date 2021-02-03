@@ -121,7 +121,7 @@ var JSCCommon = {
 		}
 	},
 	// /mobileMenu
-	// табы  .
+	// tabs  .
 	tabscostume: function tabscostume(tab) {
 		var tabs = {
 			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
@@ -146,7 +146,7 @@ var JSCCommon = {
 		// 		.eq($(this).index()).fadeIn().addClass('active');
 		// });
 	},
-	// /табы
+	// /tabs
 	inputMask: function inputMask() {
 		// mask for input
 		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
