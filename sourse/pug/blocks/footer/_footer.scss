@@ -160,6 +160,12 @@
 	}
 
 	&__copy-line{
+		.container{
+			margin-right: auto !important;
+		}
+		span{
+			display: inline-block;
+		}
 			@include media-breakpoint-up(xl) {
 
 				font-size: $small;
