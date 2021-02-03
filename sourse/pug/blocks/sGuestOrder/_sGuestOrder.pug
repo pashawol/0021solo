@@ -1,0 +1,127 @@
+mixin sGuestOrder(data)
+	// start sGuestOrder
+	+b.SECTION.sGuestOrder.section#sGuestOrder&attributes(attributes)
+		+e.container.container
+			//-title
+			+e.row.row
+				+e.col.col-12.col-xl-8
+					+e.item--title
+						h2.mb-0 Bestellung als Gast abschließen
+			//-main r
+			+e.row.row
+				+e.col--left.col-12.col-xl-8
+					//inner-row
+					+e.row.row
+						+guestOItem('Rechnungsadresse', 'flex')
+							+e.addr-item
+								strong Silke Mustermann
+								span Osterholzallee 144/2
+								span 71763 Ludwigsburg
+							+e.addr-item
+								span Baden-Württemberg
+								span Deutschland
+							+e.gray-btn(href='#') Rechnungsadresse ändern
+						+guestOItem('Lieferadresse', 'flex')
+							+e.addr-item
+								span Entspricht der Rechnungsadresse
+							+e.gray-btn(href='#') Lieferadresse ändern
+						//-payment
+						+guestOItem('Lieferadresse')
+							+bigRadio({
+								name: "payment",
+								value: "payment1",
+								imgSrc: "payment-1",
+								title: "Rechnung",
+								grayTxt: "(kostenlos)",
+								descr: "Der Rechnungsbetrag wird erst innerhalb 14 Tagen nach der Versandbestätigung per E-Mail fällig.",
+							})(checked)
+							+bigRadio({
+								name: "payment",
+								value: "payment2",
+								imgSrc: "payment-2",
+								title: "SEPA-Lastschrift",
+								grayTxt: "(kostenlos)",
+							})
+							+bigRadio({
+								name: "payment",
+								value: "payment3",
+								imgSrc: "payment-3",
+								title: "PayPal",
+								grayTxt: "(kostenlos)",
+							})
+						//-delivey
+						+guestOItem('Versandart')
+							+bigRadio({
+								name: "delivery",
+								value: "delivery1",
+								imgSrc: "delivery-1",
+								title: "UPS Deliveries",
+								descr: "Lieferung innerhalb 3 Werktagen",
+							})(checked)
+							+bigRadio({
+								name: "delivery",
+								value: "delivery1",
+								imgSrc: "delivery-2",
+								title: "DHL Express",
+								descr: "Lieferung innerhalb 3 Werktagen",
+							})
+					+cartSummeryLg()
+				+e.col--right.col-xl-4
+					+e.item--outer
+						+e.title Versandart
+						+e.ta-title Möchten Sie uns etwas über Ihre Bestellung mitteilen?
+						+e.TEXTAREA.message.form-control(placeholder="Kommentieren Sie hier …")
+					+e.item--outer
+						+e.title AGB und Widerrufsbelehrung
+						+e.withdraw-txt Bitte beachten Sie die Widerrufsbelehrung.
+						//-chb-frame
+						+b.LABEL.chb-frame.withdraw-chb
+							input.d-none(type="checkbox" name='agb' checked)
+							.circle
+							.txt
+								span Ich habe die
+								a(href="#") AGB
+								span gelesen und bin mit ihnen einverstanden.
+					//-
+					+b.iResult
+						+e.ir-header Zusammenfassung
+						+e.ir-content
+							+e.ir-top
+								+e.ir-item
+									span Zwischensumme
+									span 357,00 €*
+								+e.ir-item
+									span Versandkosten
+									span gratis
+							+e.ir-item--bold2
+								span Gesamtsumme
+								span 357,00 €*
+							+e.ir-item--gray
+								span Gesamtnettosumme
+								span 300,00 €
+							+e.ir-item--gray.mb-40
+								span zzgl. 19% MwSt.
+								span 57,00 €
+							+e.ir-gray *Preise inkl. Gesenkter Mehrwertsteuer. Nur garantiert für SOLO-Artikel.
+							+e.ir-btn(href='#') Zur Kasse
+	// end sGuestOrder
+
+mixin bigRadio(data)
+	+b.LABEL.big-radio
+		input.d-none(type="radio" name=data.name value=data.value)&attributes(attributes)
+		.circle
+		+e.img
+			img(loading="lazy" src=`img/@2x/${data.imgSrc}.png` alt="")
+		+e.txt
+			+e.title
+				strong=data.title
+				if data.grayTxt
+					span=data.grayTxt
+			if data.descr
+				+e.descr=data.descr
+
+mixin guestOItem(titleTxt, itemClasses)
+	+e.col.col-xl-6
+		+e.item(class=itemClasses)
+			+e.title=titleTxt
+			block

@@ -1,0 +1,197 @@
+// start .sProdDescr
+.sProdDescr {
+	background-color: $light;
+
+	--pt: 40px;
+	--spb: 40px;
+	--stpb: 20px;
+	@include media-breakpoint-up(md){
+		--pt: 50px;
+		--spb: 50px;
+	}
+	@include media-breakpoint-up(xl){
+		--pt: 60px;
+		--spb: 60px;
+	}
+	@include media-breakpoint-up(xxl){
+		--pt: 87.5px;
+		--spb: 87.5px;
+	}
+
+	&__container{
+		padding: 0 10px;
+		@include media-breakpoint-up(xxl){
+			padding: 0 12px;
+		}
+	}
+
+	&__tags-row{
+		@include roww(10px);
+
+		padding-bottom: 20px;
+		@include media-breakpoint-up(xxl){
+			padding-bottom: 24px;
+		}
+		//col
+		& > *{
+			margin-bottom: 10px;
+		}
+	}
+	&__tag{
+		@extend .btn;
+		@extend .btn-secondary;
+
+		background-color: $gray3;
+		border: none;
+		border-radius: 4px;
+
+		font-size: 13.5px;
+		padding: 6px 9px;
+		@include media-breakpoint-up(sm){
+			font-size: 16px;
+			padding: 7px 16.5px;
+		}
+	}
+	//
+	&__row{
+		@include roww(20px);
+	}
+	&__col{
+
+		&--right{
+
+		}
+		&--left{
+			margin-bottom: 20px;
+			@include media-breakpoint-up(xl){
+				margin-bottom: 0;
+			}
+		}
+	}
+	.section-title{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		h2{
+			font-size: 22px;
+			margin-bottom: 15px;
+			@include media-breakpoint-up(md){
+				font-size: 28px;
+				margin-bottom: 20px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 32px;
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 35px;
+				margin-bottom: 22px;
+			}
+		}
+
+		p{
+
+			font-size: 14px;
+			@include media-breakpoint-up(md){
+				font-size: 15px;
+				line-height: (25/15);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 16px;
+				line-height: (25/16);
+			}
+			@include media-breakpoint-up(xll){
+				font-size: 18px;
+				line-height: (25/18);
+			}
+		}
+	}
+	&__white-bl{
+		background-color: $white;
+
+		padding: 35px 20px 30px;
+		@include media-breakpoint-up(sm){
+			padding: 35px 25px 30px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 55px 50px 40px;
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 55px 52px 56px;
+		}
+	}
+	&__w-title{
+		font-weight: 900;
+		text-transform: uppercase;
+
+		font-size: 14px;
+		margin-bottom: 15px;
+		@include media-breakpoint-up(md){
+			font-size: 15px;
+			letter-spacing: .5px;
+			line-height: (25/15);
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 16px;
+			letter-spacing: .7px;
+			line-height: (25/16);
+		}
+		@include media-breakpoint-up(xll){
+			font-size: 18px;
+			letter-spacing: .8px;
+			line-height: (25/18);
+			margin-bottom: 23px;
+		}
+	}
+
+	//ul
+	&__check-list{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li{
+			position: relative;
+
+			padding-left: 35px;
+			margin-bottom: 9px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			&:before{
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 3px;
+				width: 20px;
+				height: 20px;
+
+				background-image: url(../img/svg/check-bold.svg);
+				background-repeat: no-repeat;
+				background-size: 16.7px 14.5px;
+				background-position: 0 0;
+			}
+
+			font-size: 14px;
+			@include media-breakpoint-up(md){
+				font-size: 15px;
+				line-height: (25/15);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 16px;
+				line-height: (25/16);
+			}
+			@include media-breakpoint-up(xll){
+				font-size: 18px;
+				line-height: (25/18);
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sProdDescr

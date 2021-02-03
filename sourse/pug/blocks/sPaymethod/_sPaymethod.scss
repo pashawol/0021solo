@@ -2,8 +2,8 @@
 	// start .sPaymethod
 	.sPaymethod {
 		 background-color: $light;
-		 --sPT: #{rem(57)};
-		 --sPB: #{rem(20)};
+		 --pt: #{rem(57)};
+		 --spb: #{rem(20)};
 		 &__row{
 			 justify-content: space-between;
 		 }

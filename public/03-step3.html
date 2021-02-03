@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>03-step3</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
+		<link type="image/png" href="img/favicon/favicon.png" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<!-- Custom Browsers Color-->
+		<meta name="theme-color" content="#3361d8">
+		<!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
+		<!--<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">--><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body class="loaded_hiding"> 
+		<!-- start header-->
+		<header class="header" id="header">
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy">
+				<div class="red-line">
+					<div class="red-line__container container">
+						<div class="red-line__row row">
+							<div class="red-line__col col-auto d-none d-xll-flex"><a class="red-line__btn" href="#">
+								<svg class="icon icon-s-icon ">
+									<use xlink:href="img/svg/sprite.svg#s-icon"></use>
+								</svg><span>Händler Finden</span></a><a class="red-line__btn" href="#">
+								<svg class="icon icon-book ">
+									<use xlink:href="img/svg/sprite.svg#book"></use>
+								</svg><span>Katalog</span></a>
+							</div>
+							<div class="red-line__col red-line__col--mid col">
+								<div class="red-line__btn red-line__btn--mid">
+									<svg class="icon icon-car-long ">
+										<use xlink:href="img/svg/sprite.svg#car-long"></use>
+									</svg><span>Kostenloser Versand</span>
+								</div><a class="red-line__btn red-line__btn--mid d-none d-xll-flex" href="tel:+49070313010">
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg><span>+49 (0)7031 - 301 - 0</span></a>
+							</div>
+							<div class="red-line__col col-auto d-none d-sm-flex">
+								<div class="red-line__btn">
+									<div class="red-line__dd dd-js">
+										<div class="red-line__dd-btn dd-btn-js">€ EURO
+										</div>
+										<div class="red-line__dd-content dd-content-js"><a class="red-line__dd-item" href="#">€  EURO 2</a><a class="red-line__dd-item" href="#">€  EURO 3</a><a class="red-line__dd-item" href="#">€  EURO 4</a>
+										</div>
+									</div>
+								</div>
+								<div class="red-line__btn">
+									<div class="red-line__q-sign">?
+									</div>
+									<div class="red-line__dd dd-js">
+										<div class="red-line__dd-btn dd-btn-js">Service/Hilfe
+										</div>
+										<div class="red-line__dd-content dd-content-js"><a class="red-line__dd-item" href="#">€  EURO 2</a><a class="red-line__dd-item" href="#">€  EURO 3</a><a class="red-line__dd-item" href="#">€  EURO 4</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="white-line">
+					<div class="container"></div>
+				</div>
+			</div>
+			<!-- end top-nav-->
+			<!-- start topLine-->
+			<div class="topLine topLine--cart" id="topLine">
+				<div class="topLine__container container">
+					<div class="topLine__row row align-items-center">
+						<div class="topLine__logo-col topLine__logo-col--static col col-xl-auto"><a class="topLine__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+						</div>
+						<div class="topLine__question-col col-12 col-xl">
+							<div class="topLine__qc-content">
+								<div class="topLine__qc-title">Fragen zu Ihrer Bestellung?
+								</div>
+								<div class="topLine__qc-bot"><a class="topLine__qc-link" href="tell:+49070313010">+49 (0) 7031 - 301-0</a>
+									<div class="topLine__qc-shedule">Montag – Freitag: 7:00 – 17:00 Uhr
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto col-xl-auto"><a class="topLine__back-shop-btn" href="#">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg><span>Zurück zum Shop</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end topLine-->
+		</header>
+		<!-- end header-->
+		<div class="checkLine">
+			<div class="checkLine__container container">
+				<div class="checkLine__item checked">Anmelden
+				</div>
+				<div class="checkLine__item checked">Adresse
+				</div>
+				<div class="checkLine__item checked current">Zahlungsart
+				</div>
+				<div class="checkLine__item">Fertig
+				</div>
+			</div>
+		</div>
+		<!-- start sGuestOrder-->
+		<section class="sGuestOrder section" id="sGuestOrder">
+			<div class="sGuestOrder__container container">
+				<div class="sGuestOrder__row row">
+					<div class="sGuestOrder__col col-12 col-xl-8">
+						<div class="sGuestOrder__item sGuestOrder__item--title">
+							<h2 class="mb-0">Bestellung als Gast abschließen</h2>
+						</div>
+					</div>
+				</div>
+				<div class="sGuestOrder__row row">
+					<div class="sGuestOrder__col sGuestOrder__col--left col-12 col-xl-8">
+						<!--inner-row-->
+						<div class="sGuestOrder__row row">
+							<div class="sGuestOrder__col col-xl-6">
+								<div class="sGuestOrder__item flex">
+									<div class="sGuestOrder__title">Rechnungsadresse
+									</div>
+									<div class="sGuestOrder__addr-item"><strong>Silke Mustermann</strong><span>Osterholzallee 144/2</span><span>71763 Ludwigsburg</span>
+									</div>
+									<div class="sGuestOrder__addr-item"><span>Baden-Württemberg</span><span>Deutschland</span>
+									</div><a class="sGuestOrder__gray-btn" href="#">Rechnungsadresse ändern</a>
+								</div>
+							</div>
+							<div class="sGuestOrder__col col-xl-6">
+								<div class="sGuestOrder__item flex">
+									<div class="sGuestOrder__title">Lieferadresse
+									</div>
+									<div class="sGuestOrder__addr-item"><span>Entspricht der Rechnungsadresse</span>
+									</div><a class="sGuestOrder__gray-btn" href="#">Lieferadresse ändern</a>
+								</div>
+							</div>
+							<div class="sGuestOrder__col col-xl-6">
+								<div class="sGuestOrder__item">
+									<div class="sGuestOrder__title">Lieferadresse
+									</div>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="payment" value="payment1" checked="checked"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/payment-1.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>Rechnung</strong><span>(kostenlos)</span></span><span class="big-radio__descr">Der Rechnungsbetrag wird erst innerhalb 14 Tagen nach der Versandbestätigung per E-Mail fällig.</span></span>
+									</label>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="payment" value="payment2"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/payment-2.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>SEPA-Lastschrift</strong><span>(kostenlos)</span></span></span>
+									</label>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="payment" value="payment3"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/payment-3.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>PayPal</strong><span>(kostenlos)</span></span></span>
+									</label>
+								</div>
+							</div>
+							<div class="sGuestOrder__col col-xl-6">
+								<div class="sGuestOrder__item">
+									<div class="sGuestOrder__title">Versandart
+									</div>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="delivery" value="delivery1" checked="checked"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/delivery-1.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>UPS Deliveries</strong></span><span class="big-radio__descr">Lieferung innerhalb 3 Werktagen</span></span>
+									</label>
+									<label class="big-radio">
+										<input class="d-none" type="radio" name="delivery" value="delivery1"/>
+										<div class="circle"></div><span class="big-radio__img"><img loading="lazy" src="img/@2x/delivery-2.png" alt=""/></span><span class="big-radio__txt"><span class="big-radio__title"><strong>DHL Express</strong></span><span class="big-radio__descr">Lieferung innerhalb 3 Werktagen</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="cSummery">
+							<div class="cSummery__header d-none d-xll-flex">
+								<div class="cSummery__h-item cSummery__h-item--prod">Produkt
+								</div>
+								<div class="cSummery__h-item cSummery__h-item--amount">Anzahl
+								</div>
+								<div class="cSummery__h-item cSummery__h-item--tax">inkl. MwSt.
+								</div>
+								<div class="cSummery__h-item cSummery__h-item--total">Summe
+								</div>
+							</div>
+							<div class="cSummery__items">
+								<div class="cSummery__item">
+									<div class="cSummery__i-col cSummery__i-col--prod">
+										<div class="cSummery__img"><img loading="lazy" src="img/@2x/cSummery-item-1.png" alt=""/>
+										</div>
+										<div class="cSummery__i-descr">
+											<div class="cSummery__i-name">403 HAND-DRUCKSPRITZE
+											</div>
+											<div class="cSummery__i-volume">3 Liter
+											</div>
+											<div class="cSummery__i-code">Produkt-Nr. SW21431
+											</div>
+											<div class="cSummery__i-delivery">Lieferzeitraum: 28.11.20 – 01.12.20
+											</div>
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--amount">
+										<div class="amount-inp">
+											<input class="form-control" type="number" name="prod-amount" value="3"/>
+											<button class="amount-inp__btn amount-inp__btn--plus">
+											</button>
+											<button class="amount-inp__btn amount-inp__btn--min">
+											</button>
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--tax">
+										<div class="cSummery__tax-txt d-xll-none">inkl. MwSt.
+										</div>
+										<div class="cSummery__tax">57,00 €
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--total">
+										<div class="cSummery__total-txt d-xll-none">Summe
+										</div>
+										<div class="cSummery__total-price">357,00 €
+										</div>
+									</div><a class="cSummery__trash-btn" href="#">
+									<svg class="icon icon-trash ">
+										<use xlink:href="img/svg/sprite.svg#trash"></use>
+									</svg></a>
+								</div>
+								<div class="cSummery__item">
+									<div class="cSummery__i-col cSummery__i-col--prod">
+										<div class="cSummery__img"><img loading="lazy" src="img/@2x/cSummery-item-2.png" alt=""/>
+										</div>
+										<div class="cSummery__i-descr">
+											<div class="cSummery__i-name">417 AKKU-SPRITZE, RÜCKENTRAGBAR
+											</div>
+											<div class="cSummery__i-volume">18 Liter
+											</div>
+											<div class="cSummery__i-code">Produkt-Nr. SW214334
+											</div>
+											<div class="cSummery__i-delivery">Lieferzeitraum: 28.11.20 – 01.12.20
+											</div>
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--amount">
+										<div class="amount-inp">
+											<input class="form-control" type="number" name="prod-amount" value="1"/>
+											<button class="amount-inp__btn amount-inp__btn--plus">
+											</button>
+											<button class="amount-inp__btn amount-inp__btn--min">
+											</button>
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--tax">
+										<div class="cSummery__tax-txt d-xll-none">inkl. MwSt.
+										</div>
+										<div class="cSummery__tax">57,00 €
+										</div>
+									</div>
+									<div class="cSummery__i-col cSummery__i-col--total">
+										<div class="cSummery__total-txt d-xll-none">Summe
+										</div>
+										<div class="cSummery__total-price">281,02 €
+										</div>
+									</div><a class="cSummery__trash-btn" href="#">
+									<svg class="icon icon-trash ">
+										<use xlink:href="img/svg/sprite.svg#trash"></use>
+									</svg></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sGuestOrder__col sGuestOrder__col--right col-xl-4">
+						<div class="sGuestOrder__item sGuestOrder__item--outer">
+							<div class="sGuestOrder__title">Versandart
+							</div>
+							<div class="sGuestOrder__ta-title">Möchten Sie uns etwas über Ihre Bestellung mitteilen?
+							</div><textarea class="sGuestOrder__message form-control" placeholder="Kommentieren Sie hier …"></textarea>
+						</div>
+						<div class="sGuestOrder__item sGuestOrder__item--outer">
+							<div class="sGuestOrder__title">AGB und Widerrufsbelehrung
+							</div>
+							<div class="sGuestOrder__withdraw-txt">Bitte beachten Sie die Widerrufsbelehrung.
+							</div>
+							<label class="chb-frame withdraw-chb">
+								<input class="d-none" type="checkbox" name="agb" checked="checked"/>
+								<div class="circle"></div>
+								<div class="txt"><span>Ich habe die</span><a href="#">AGB</a><span>gelesen und bin mit ihnen einverstanden.</span></div>
+							</label>
+						</div>
+						<div class="iResult">
+							<div class="iResult__ir-header">Zusammenfassung
+							</div>
+							<div class="iResult__ir-content">
+								<div class="iResult__ir-top">
+									<div class="iResult__ir-item"><span>Zwischensumme</span><span>357,00 €*</span>
+									</div>
+									<div class="iResult__ir-item"><span>Versandkosten</span><span>gratis</span>
+									</div>
+								</div>
+								<div class="iResult__ir-item iResult__ir-item--bold2"><span>Gesamtsumme</span><span>357,00 €*</span>
+								</div>
+								<div class="iResult__ir-item iResult__ir-item--gray"><span>Gesamtnettosumme</span><span>300,00 €</span>
+								</div>
+								<div class="iResult__ir-item iResult__ir-item--gray mb-40"><span>zzgl. 19% MwSt.</span><span>57,00 €</span>
+								</div>
+								<div class="iResult__ir-gray">*Preise inkl. Gesenkter Mehrwertsteuer. Nur garantiert für SOLO-Artikel.
+								</div><a class="iResult__ir-btn" href="#">Zur Kasse</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sGuestOrder-->
+		<div class="footerCart">
+			<div class="container">
+				<div class="footerCart__row row">
+					<div class="footerCart__col col-12 col-sm-6 col-xl-3">
+						<div class="footerCart__item">
+							<div class="footerCart__i-img"><img loading="lazy" src="img/svg/footersCart-1.svg" alt=""/>
+							</div>
+							<div class="footerCart__txt">Kostenloser Versand Deutschlandweit
+							</div>
+						</div>
+					</div>
+					<div class="footerCart__col col-12 col-sm-6 col-xl-3">
+						<div class="footerCart__item">
+							<div class="footerCart__i-img"><img loading="lazy" src="img/svg/vantage-item-4.svg" alt=""/>
+							</div>
+							<div class="footerCart__txt">Kostenlose Rückgabe Innerhalb von 30 Tagen
+							</div>
+						</div>
+					</div>
+					<div class="footerCart__col col-12 col-sm-6 col-xl-3">
+						<div class="footerCart__item">
+							<div class="footerCart__i-img"><img loading="lazy" src="img/svg/vantage-item-3.svg" alt=""/>
+							</div>
+							<div class="footerCart__txt">Sichere Bezahlmöglichkeit Verschlüsselte Übertragung
+							</div>
+						</div>
+					</div>
+					<div class="footerCart__col col-12 col-sm-6 col-xl-3"><a class="footerCart__pay-img" href="#"><img loading="lazy" src="img/@2x/pay-ways.png" alt=""/></a>
+					</div>
+				</div>
+				<div class="footerCart__bot-links"><a href="#">Download</a><a href="#">Händlersuche</a><a href="#">Support</a><a href="#">Kataloge</a><a href="#">FAQ</a><a href="#">Datenschutz</a>
+				</div>
+			</div>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

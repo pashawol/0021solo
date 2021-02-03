@@ -1,0 +1,17 @@
+mixin sVantageLine(data)
+	// start sVantageLine
+	+b.sVantageLine.section#sVantageLine&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+sVantageItem(1, 'Kostenloser Versand')
+				+sVantageItem(2, 'Versandfertig in 24 h')
+				+sVantageItem(3, 'Sicher einkaufen')
+				+sVantageItem(4, '30 Tage Rückgaberecht')
+	// end sVantageLine
+
+mixin sVantageItem(imgNum, txt)
+	+e.col.col-md-3.col-6
+		+e.item
+			+e.icon
+				img(loading="lazy" src=`img/svg/vantage-item-${imgNum}.svg` alt="")
+			+e.txt=txt

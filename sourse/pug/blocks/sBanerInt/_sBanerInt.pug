@@ -1,0 +1,39 @@
+mixin sBanerInt(data)
+	// start sBanerInt
+	+b.SECTION.sBanerInt.section#sBanerInt&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Das könnte Sie auch interessieren
+		+e.row.row
+			//-
+			+e.col.col-xl-4.col-sm-6.col-12
+				+e.item
+					+e.img
+						img(loading="lazy" src="img/@2x/banerInt-1.jpg" alt="")
+					+e.txt
+						| Pflanzenschutz/
+						br
+						| - Pflege
+			+e.col.col-xl-4.col-12.order-first.order-xl-0
+				+e.item--red
+					+e.r-content.text-center
+						+e.r-sm SOLO Haus und Garten
+						+e.r-title
+							| Handspritzen für
+							br
+							| Haus und Garten
+						+e.r-img
+							img(loading="lazy" src="img/@2x/sBanerInt-thing.png" alt="")
+			//-
+			+e.col.col-xl-4.col-sm-6.col-12
+				+e.item
+					+e.img
+						img(loading="lazy" src="img/@2x/banerInt-2.jpg" alt="")
+					+e.txt
+						| Schädlings-
+						br
+						| bekämpfung
+		.container
+			.text-center
+				+e.btn(href='#') SOLO HANDSPRITZEN ENTDECKEN
+	// end sBanerInt

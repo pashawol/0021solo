@@ -1,0 +1,48 @@
+mixin sHSlider(data)
+	// start sHSlider
+	+b.SECTION.sHSlider.section#sHSlider&attributes(attributes)
+		+e.slider
+			.swiper-container.h-slider-js
+				.swiper-wrapper
+					+hSlide()
+					+hSlide()
+					+hSlide()
+			+b.h-pugin--js.d-none.d-xll-flex
+			+b.h-slide-prev--js
+				+icon('chevron-left')
+			+b.h-slide-next--js
+				+icon('chevron-right')
+	// end sHSlider
+
+mixin hSlide()
+	.swiper-slide
+		+e.img--left
+			img.swiper-lazy(src="#" data-src="img/@2x/h-slide-l-img.jpg" alt="")
+			+hSildeItem(1, 'HAUS UND GARTEN')
+		+e.img--right
+			img.swiper-lazy(src="#" data-src="img/@2x/h-slide-r-img.jpg" alt="")
+			+hSildeItem(2, 'PROFI')
+		+e.txt-wrap
+			+e.container.container
+				+hSlideTitle()
+				+e.items.d-none.d-xll-flex
+					+hSildeItem(1, 'HAUS UND GARTEN')
+					+hSildeItem(2, 'PROFI')
+
+mixin hSildeItem(imgNum, itemName)
+	+e.item
+		+e.i-img
+			img.swiper-lazy(src="#" data-src=`img/@2x/h-item${imgNum}.png` alt="")
+		+e.i-name(href="#")=itemName
+
+mixin hSlideTitle()
+	+b.section-title.text-center&attributes(attributes)
+		h6 SOLO Sprühgeräte
+		h1
+			| Pflanzenschutz &
+			br
+			| Pflanzenpflege
+		p
+			| Sie sind auf der Suche nach dem passenden
+			br.d-block.d-md-none.d-xll-block
+			| Spritz/- Sprühgerät?

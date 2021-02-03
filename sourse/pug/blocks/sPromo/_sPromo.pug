@@ -1,0 +1,105 @@
+mixin sPromo(data)
+	// start sPromo
+	+b.SECTION.sPromo.section#sPromo&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2.text-danger
+					| Leistungsstarken
+					br.d-xl-none
+					| SOLO Sprühgeräten und Spritzgeräten
+				p
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					| Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			+e.row.row
+				.col-xl-3.d-none.d-xl-block
+					+promoSmItem('1.jpg', 'Qualität des Produktionsprozesses', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
+					+promoSmItem('2.png', 'Flexibel Einsetzbar', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolo')
+				.col-md-8.offset-md-2.col-xl-6.offset-xl-0
+					+b.red-promo(class=data.flagClass)
+						+e.made
+							img(loading="lazy" src="img/@2x/madeIn.png" alt="")
+						+e.title
+							| Qualität zahlt sich aus,
+							br
+							| seit 1948
+						+e.img
+							img(loading="lazy" src="img/@2x/promo-big-img.png" alt="")
+						+e.small Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolo
+				.col-xl-3.d-none.d-xl-block
+					+promoSmItem('3.png', 'ISO 9001 Zertifizierung', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
+					+promoSmItem('4.png', 'Akku Power', 'blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. ')
+			+e.slider.d-xl-none
+				+b.promo-prev--js.d-sm-none
+					+icon('chevron-left')
+				+b.promo-next--js.d-sm-none
+					+icon('chevron-right')
+				.swiper-container.promo-slider-js
+					.swiper-wrapper
+						+promoSlide('1.jpg', 'Qualität des Produktionsprozesses', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
+						+promoSlide('2.png', 'Flexibel Einsetzbar', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolo')
+						+promoSlide('3.png', 'ISO 9001 Zertifizierung', 'Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur')
+						+promoSlide('4.png', 'Akku Power', 'blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. ')
+				+b.promo-pugin--js.d-sm-none
+	// end sPromo
+
+mixin promoSlide(imgEnd, title, descr)
+	.swiper-slide
+		+e.item
+			+e.item-img
+				img(loading="lazy" src=`img/@2x/promo-sm-${imgEnd}` alt="")
+			+e.title=title
+			+e.descr=descr
+
+mixin promoSmItem(imgEnd, title, descr)
+	+e.item
+		+e.item-img
+			img(loading="lazy" src=`img/@2x/promo-sm-${imgEnd}` alt="")
+		+e.title=title
+		+e.descr=descr
+
+mixin sPromoBlue(data)
+	// start sPromo
+	+b.SECTION.sPromo.section#sPromo&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2.text-danger
+					strong
+						| SOLO Clean Line
+						|
+					span – Loren Ipsum sit dolor
+				p
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					| Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			+e.row.row
+				.col-xl-3.d-none.d-xl-block
+					+promoSmItem('b-1.png', 'SOLO CLEAN LINE ist für alle Medien mit einem  pH-Wert von 1 – 14', 'Konzentrierte oder verdünnte Säuren, sowie Alkalische und Basische Mittel sind geeignet.')
+					+promoSmItem('b-2.png', 'FKM Dichtungen ', 'In den SOLO CLEANLine Spritzen für die Ausbringung säurehaltiger Medien werden daher nur FKM Dichtungen eingesetzt. Mit ihnen ist es auch möglich, öl- und lösungsmittelhaltige Produkte auszubringen.')
+				.col-md-8.offset-md-2.col-xl-6.offset-xl-0
+					+b.red-promo(class=data.flagClass)
+						+e.made
+							img(loading="lazy" src="img/@2x/madeIn.png" alt="")
+						+e.title
+							| Qualität zahlt sich aus,
+							br
+							| seit 1948
+						+e.img
+							img(loading="lazy" src="img/@2x/sPromoBlue-big.png" alt="")
+						+e.small
+							| Handspritzen. Druckspritzen. Schaumsprüher.
+							br.d-none.d-xxl-block
+							| Gemacht für Reinigung und Desinfektion.
+				.col-xl-3.d-none.d-xl-block
+					+promoSmItem('b-3.png', 'varioFOAM', 'Mit der verstellbaren, von SOLO patentierten Schaumdüse varioFOAM regeln sie den Feuchtigkeitsgrad des Schaums stufenlos durch Drehen des Einstellrades sogar während des Arbeitens.')
+					+promoSmItem('b-4.png', 'EPDM-Dichtungen', 'Neben alkalischen Reinigungsmitteln ist EPDM auch geeignet, um Desinfektionsmittel auszubringen - beispielsweise in Krankenhäusern oder Schwimm- und Freibädern.')
+			+e.slider.d-xl-none
+				+b.promo-prev--js.d-sm-none
+					+icon('chevron-left')
+				+b.promo-next--js.d-sm-none
+					+icon('chevron-right')
+				.swiper-container.promo-slider-js
+					.swiper-wrapper
+						+promoSlide('b-1.png', 'SOLO CLEAN LINE ist für alle Medien mit einem  pH-Wert von 1 – 14', 'Konzentrierte oder verdünnte Säuren, sowie Alkalische und Basische Mittel sind geeignet.')
+						+promoSlide('b-2.png', 'FKM Dichtungen ', 'In den SOLO CLEANLine Spritzen für die Ausbringung säurehaltiger Medien werden daher nur FKM Dichtungen eingesetzt. Mit ihnen ist es auch möglich, öl- und lösungsmittelhaltige Produkte auszubringen.')
+						+promoSlide('b-3.png', 'varioFOAM', 'Mit der verstellbaren, von SOLO patentierten Schaumdüse varioFOAM regeln sie den Feuchtigkeitsgrad des Schaums stufenlos durch Drehen des Einstellrades sogar während des Arbeitens.')
+						+promoSlide('b-4.png', 'EPDM-Dichtungen', 'Neben alkalischen Reinigungsmitteln ist EPDM auch geeignet, um Desinfektionsmittel auszubringen - beispielsweise in Krankenhäusern oder Schwimm- und Freibädern.')
+				+b.promo-pugin--js.d-sm-none

@@ -1,9 +1,48 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+		+e.container.container
+			+e.wrap
+				+b.section-title.text-center
+					h2 Kontakt
+					p
+						| Sie wünschen Sich eine persönliche Beratung oder haben Fragen zu unseren Produkten?
+						| Unsere Experten beraten Sie gerne!  8 Uhr bis 16 Uhr
+					+e.links-row.row
+						+e.col.col-auto
+							+e.item(href="tel:+49070313010")
+								+e.icon
+									img(loading="lazy" src="img/svg/contact-phone.svg" alt="")
+								span +49 (0) 7031 - 301-0
+						+e.col.col-auto
+							+e.item(href="mailto:info@solo-germany.de")
+								+e.icon
+									img(loading="lazy" src="img/svg/contact-mail.svg" alt="")
+								span info@solo-germany.de
+				+e.white-box
+					+e.img.d-none.d-xll-block
+						img(loading="lazy" src="img/@2x/kontakt-img.jpg" alt="")
+					+e.content
+						+e.form-bl
+							+e.mob-img.d-none.d-xl-block.d-xll-none
+								img(loading="lazy" src="img/@2x/kontakt-img.jpg" alt="")
+							+form-wrap()
+								+e.big-txt Sie haben Fragen oder möchten sich vor Ort überzeugen?
+								+e.sm-txt Hier finden Sie SOLO Partner in Ihrer Nähe.
+								+e.inps
+									+e.select
+										select.form-control.form-select
+											option Suchradius
+											option Suchradius1
+											option Suchradius2
+											option Suchradius3
+									+e.input
+										input.form-control(placeholder="Postleitzahl, Adresse,  Ort oder Land" type="text" name="address")
+									+e.BUTTON.btn(type="submit" )
+										+icon('zoom')
+								+e.after-txt Bitte geben Sie Ihren Standort ein (z.B. Postleitzahl, Adresse, Ort oder Land), damit wir Ihren nächstgelegenen SOLO Partner finden können.
+						+e.map
+							+e.map-inner
+								//-iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11077913.606350653!2d8.712330506232567!3d47.322762763105516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cedc854eaaab%3A0x8e6a68b1cee0a013!2z0JrQsNC00LDRgdGC0YDQvtCy0LDRjyDQutCw0YDRgtCw!5e0!3m2!1sru!2sua!4v1608753706268!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+								iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11077913.606350653!2d8.712330506232567!3d47.322762763105516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cedc854eaaab%3A0x8e6a68b1cee0a013!2z0JrQsNC00LDRgdGC0YDQvtCy0LDRjyDQutCw0YDRgtCw!5e0!3m2!1sde!2sde!4v1608753706268!5m2!1sde!2sde&language=de' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
 	// end sContact

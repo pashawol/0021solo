@@ -1,0 +1,168 @@
+// start .sBalls
+.sBalls {
+	position: relative;
+	z-index: 1;
+
+	--pt: 15px;
+	--spb: 25px;
+	--stpb: 48px;
+	@include media-breakpoint-up(md){
+		--pt: 30px;
+		--spb: 25px;
+		--stpb: 53px;
+	}
+	@include media-breakpoint-up(xl){
+		--pt: 33px;
+		--spb: 43px;
+		--stpb: 41px;
+	}
+	@include media-breakpoint-up(xll){
+		--pt: 30px;
+		--spb: 39px;
+		--stpb: 46px;
+	}
+	@include media-breakpoint-up(xxl){
+		--pt: 23px;
+		--spb: 75px;
+		//--stpb: 46px;
+	}
+
+	.section-title{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		h2{
+			color: $black;
+			font-weight: 400;
+
+			font-size: 22px;
+			@include media-breakpoint-up(md){
+				font-size: 28px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 32px;
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 35px;
+			}
+		}
+	}
+
+
+	&__container{
+		@include media-breakpoint-up(xll){
+			padding: 0 150px 0 151px;
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 0 211px 0 214px;
+		}
+	}
+	&__row{
+
+	}
+	&__col{
+		text-align: center;
+		margin-bottom: 44px;
+		@include mt;
+		&:hover{
+			color: $primary;
+			.sBalls__txt{
+				color: $primary;
+
+			}
+		}
+		@include media-breakpoint-up(md){
+			margin-bottom: 53px;
+		}
+
+		@include media-breakpoint-up(xl){
+			width: calc(100% / 6);
+			margin-bottom: 20px;
+		}
+	}
+	&__icon{
+		margin-left: auto;
+		margin-right: auto;
+
+		width: 70px;
+		height: 70px;
+		padding: 10px;
+
+		border-radius: 50%;
+		border: 1px solid currentColor;
+
+
+		margin-bottom: 23px;
+		@include media-breakpoint-up(xl){
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(xxl){
+			margin-bottom: 19px;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg,
+		img{
+			path{
+				fill: currentColor !important;
+			}
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt{
+		color: $brown;
+		line-height: 1.2;
+		@include mt;
+
+		font-size: 12px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+		@include media-breakpoint-up(xll){
+			font-size: 16px;
+		}
+
+		&.big{
+			@include media-breakpoint-up(xxl){
+				margin: 0 -17px;
+			}
+		}
+	}
+
+	//sBalls2
+	&__mark{
+		margin: 0 auto 30px auto;
+		width: 133px;
+		
+		@include media-breakpoint-up(md){
+			position: absolute;
+
+			top: 20px;
+			right: 20px;
+			width: calc(133px * 3 / 4);
+		}
+		@include media-breakpoint-up(xll){
+			top: calc(var(--pt) + var(--stpb) + 42px);
+			right: 60px;
+			width: 133px;
+		}
+
+		z-index: -1;
+		img{
+			max-width: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+
+
+	//
+	&__{}
+	&__{}
+} // end.sBalls

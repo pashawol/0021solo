@@ -1,50 +1,198 @@
 .top-nav {
-	position: sticky; 
-	left: 0;
-	top: 0;
-	z-index: 800;
-	background-color: #fff;
-	border-bottom: 1px solid #000; 
-	&.fixed { 
-		bottom: auto;
-		margin-top: 0;
-	}
 
-	// 
-	@include media-breakpoint-up(xl) {}
-
-	@include media-breakpoint-up(lg) {}
-
-	@include media-breakpoint-up(md) {}
-
-	@include media-breakpoint-up(sm) {}
-
-	@include media-breakpoint-up(xs) {}
-
-	// 
-	@include media-breakpoint-between(md, xl) {}
-
-	// 
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	// 
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
 }
 
+.red-line{
+	color: $white;
+	background-color: $crimson;
+	border-bottom: 1px solid rgba($crimson, .5);
 
+	--btn-space: 20px;
+	@include media-breakpoint-up(xl){
+		--btn-space: 20px;
+	}
+	@include media-breakpoint-up(xll){
+		--btn-space: 30px;
+	}
+
+	a{
+		color: $white;
+		&:hover{
+			color: rgba($white, .6);
+		}
+	}
+
+	&__container{
+		padding: 12px 10px 11px;
+		@include media-breakpoint-up(sm) {
+			padding: 6px 10px 7px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 6px 10px 9px;
+		}
+		@include media-breakpoint-only(xll){
+			max-width: calc(100% - 30px);
+			padding: 6px 10px 9px;
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 6px 10px 9px;
+		}
+	}
+	&__row{
+
+	}
+	&__col{
+		display: flex;
+		align-items: center;
+
+		&--mid{
+
+			@include media-breakpoint-up(xll){
+				justify-content: center;
+			}
+
+			span{
+				font-size: 13px;
+			}
+			@include media-breakpoint-up(xxl){
+				span{
+					font-size: 13px;
+				}
+			}
+
+			.red-line__btn{
+				&:not(:last-child) {
+					&:after{
+						content: none;
+					}
+					margin-right: calc(var(--btn-space) + 10px);
+				}
+			}
+		}
+	}
+	//
+	&__btn{
+
+		.icon{
+			font-size: 15px;
+
+			margin-right: 15px;
+			@include media-breakpoint-up(xll){
+				margin-right: 10px;
+			}
+			&.icon-car-long{
+				font-size: 16px;
+			}
+			&.icon-phone{
+				font-size: 16px;
+			}
+		}
+
+		span{
+			font-size: 13px;
+			font-weight: 500;
+		}
+
+		display: inline-flex;
+		align-items: center;
+
+		&:not(:last-child){
+			margin-right: var(--btn-space);
+			&:after{
+				content: '';
+				height: 13px;
+				width: 1px;
+				background-color: currentColor;
+				display: block;
+				margin-left: var(--btn-space);
+			}
+		}
+	}
+	&__dd{
+		position: relative;
+		//background-color: pink;
+
+		--content-s-sc: scale(0);
+		--tr-arrow: rotateX(0deg);
+		&.active{
+			--content-s-sc: scale(1);
+			--tr-arrow: rotateX(180deg);
+		}
+	}
+	&__dd-btn{
+		//background-color: $blue;
+		padding-right: 16px;
+		@include media-breakpoint-up(xll){
+			padding-right: 13px;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-right: 20px;
+		}
+		position: relative;
+		cursor: pointer;
+
+		&:after{
+			@include mt();
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%) var(--tr-arrow);
+
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 3.5px 0 3.5px;
+			border-color: $white transparent transparent transparent;
+		}
+
+		font-size: 13px;
+	}
+	&__dd-content{
+		transform-origin: 0 0;
+		@include mt();
+		transform: var(--content-s-sc);
+
+		position: absolute;
+		z-index: 900;
+		top: 100%;
+		left: 0;
+		width: auto;
+
+		height: auto;
+		padding: rem(10);
+		box-shadow: 3px 3px 12px -5px rgba(0,0,0, .5);
+		background-color: $white;
+		//border: 1px solid $gray-500;
+		border-radius: rem(3);
+
+		a{
+			display: block;
+			white-space: nowrap;
+			color: $body-color;
+			&:hover{
+				color: rgba($body-color, .6);
+			}
+		}
+	}
+	&__dd-item{
+		padding-bottom: rem(2);
+		margin-bottom: rem(2);
+		border-bottom: 1px solid $gray-400;
+		&:last-child{
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	&__q-sign{
+		font-size: 19px;
+		font-weight: 900;
+		margin-right: rem(10);
+	}
+	//
+	&__{}
+	&__{}
+	&__{}
+}

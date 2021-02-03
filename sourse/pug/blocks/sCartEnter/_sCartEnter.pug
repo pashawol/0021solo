@@ -1,0 +1,45 @@
+mixin sCartEnter(data)
+	// start sCartEnter
+	+b.sCartEnter.section#sCartEnter&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+enterCol('Ich habe bereits ein Konto')
+					+e.descr Einloggen mit E-Mail-Adresse und Passwort
+					+form-wrap
+						+input('E-Mail-Adresse', 'email', 'Ihre E-Mail Adresse')
+						+input('Passwort', 'password', 'Ihr Passwort')
+						+e.pass-restor(href="#") Ich habe mein Passwort vergessen.
+						button.sCartEnter__btn.btn-primary(type="submit") Anmelden
+				+enterCol('Ich möchte mich als neuer Kunde registrieren')
+					+e.descr Die Regierung Ihrer Kundenkontos bietet Ihnen bei zukünftigen Bestellungen einige Vorteile.
+					+e.UL.ch-list
+						li Bequemes Bestellen
+						li Noch schnellere Abwicklung
+						li Einfacher Zugriff auf Ihre Bestellungen
+					+e.btn.btn-primary(href="#") Ein Konto erstellen
+				+enterCol('Ich möchte nur als Gast bestellen')
+					+e.descr Der schnelle Weg zu Ihrer Bestellung ohne Kundenkonto
+					+e.UL.ch-list
+						li Datensicherheit dank SSL-Verschlüsselung
+						li Schnelle Abwicklung
+						li Schneller und sicherer Versand
+					+e.btn.btn-brown(href="#") Bestellung als Gast
+	// end sCartEnter
+
+mixin enterCol(titleTxt)
+	+e.col.col-12.col-xl-4
+		+e.item
+			+e.title=titleTxt
+			block
+
+mixin cartCheckLine(checkedSteps=0)
+	+b.checkLine
+		+e.container.container
+			- var stepsArr = ['Anmelden', 'Adresse', 'Zahlungsart', 'Fertig']
+			-for (var i = 0; i < stepsArr.length; i++)
+				if i < checkedSteps && i !== checkedSteps
+					+e.item.checked=stepsArr[i]
+				else if i === checkedSteps
+					+e.item.checked.current=stepsArr[i]
+				else
+					+e.item=stepsArr[i]

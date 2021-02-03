@@ -17,6 +17,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
+$gray550: #a2a2a2;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
@@ -35,14 +36,19 @@ $grays: ("100": $gray-100,
   "900": $gray-900) !default;
 // fusv-enable
 
-$blue: #0d6efd !default;
+$blue:  #004389 !default;
+$blue2: #3259db;
+$blue3: #043B76;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
 $red: #dc3545 !default;
+$crimson: #cc1a1a;
 $orange: #fd7e14 !default;
-$yellow: #ffc107 !default;
+$yellow: #e3d200 !default;
 $green: #28a745 !default;
+$green2: #54b105;
+$green3: #54b105;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
@@ -65,13 +71,21 @@ $cyan: #17a2b8 !default;
 
 $primary: #f73429 !default;
 $gray: #eee !default;
+$gray2: #e0e0e0 !default;
+$gray3: #E8E8E8;
+$gray4: #F9F9F9;
 $secondary: #969696 !default;
+$secondary2: #7d7d7d !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: #f6f7fc !default;
+
 $dark: $gray-800 !default;
+$brown: #333333;
+$dark-gray: #575757;
+$dark-blue: #22252a;
 
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,
@@ -83,7 +97,8 @@ $theme-colors: ("primary": $primary,
   "light": $light,
   "white": $white,
   "gray": $gray,
-  "dark": $dark) !default;
+  "dark": $dark,
+  "brown": $brown) !default;
 // scss-docs-end theme-colors-map
 
 // Set a specific jump point for requesting color jumps
@@ -142,6 +157,9 @@ $spacers: (0: 0,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  6: $spacer * 4.8,
+  20: 20px,
+  40: 40px,
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -182,6 +200,8 @@ $paragraph-margin-bottom: 1rem !default;
 // adapting to different screen sizes, for use in media queries.
 
 // scss-docs-start grid-breakpoints
+
+//!! change carefully, need to change css for submenu [ctrl + shift + f => //it will be broken]
 $grid-breakpoints: (xs: 0,
   sm: 576px,
   md: 768px,
@@ -632,7 +652,7 @@ $form-select-bg: $input-bg !default;
 $form-select-disabled-bg: $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position: right $form-select-padding-x center !default;
-$form-select-bg-size: 16px 12px !default; // In pixels because image dimensions
+$form-select-bg-size: 7px 5px !default; // In pixels because image dimensions
 $form-select-indicator-color: $gray-800 !default;
 $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
 

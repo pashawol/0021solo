@@ -1,0 +1,85 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Neuigkeiten
+			//-|
+			+e.slider
+				.swiper-container.news-slider-js
+					.swiper-wrapper
+						+newsSlide({
+							imgNum: "1",
+							boldTxt: "YouTube",
+							dateTxt: "OCTOBER 2019",
+							title: "Solo 451 3-Gallon 66.5cc",
+							descr: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget",
+							youtube: true,
+							linkTxt: "VIDEO ANSEHEN",
+						})
+						+newsSlide({
+							imgNum: "2",
+							boldTxt: "NEWS",
+							dateTxt: "Februar 2020",
+							title: "Solo im Einsatz gegen Corona",
+							descr: "Das Thema Desinfektion hat momentan leider einen dramatischen Stellenwert erlangt. Das Corona-Virus COVID-19 breitet sich rasant aus.",
+							youtube: false,
+							linkTxt: "WEITER LESEN",
+						})
+						+newsSlide({
+							imgNum: "3",
+							boldTxt: "NEWS",
+							dateTxt: "Februar 2020",
+							title: "SEHR GUT bei Vergleich.org für den SOLO 421",
+							descr: "Qualität zahlt sich aus. Unser Granulatstreuer SOLO 421 wurde bei Vergleich.ORG mit „sehr gut“ ausgezeichnet…",
+							youtube: false,
+							linkTxt: "WEITER LESEN",
+						})
+	// end sNews
+
+mixin newsSlide(data)
+	.swiper-slide
+		+e.item
+			if data.youtube
+				+e.img.play-btn(href='#')
+					img.swiper-lazy(src="#" data-src=`img/@2x/sNews-${data.imgNum}.jpg` alt="")
+			else
+				+e.img(href='#')
+					img.swiper-lazy(src="#" data-src=`img/@2x/sNews-${data.imgNum}.jpg` alt="")
+			+e.descr-bl
+				+e.date-line
+					+e.d-bold=data.boldTxt
+					+e.d-date=data.dateTxt
+				+e.title(href="#")=data.title
+				+e.descr=data.descr
+				if data.youtube
+					+e.link(href="#")
+						+e.icon
+							img.img-svg-js(src="img/svg/youtube-logo.svg" alt="")
+						+e.l-txt=data.linkTxt
+				else
+					+e.link(href="#")
+						+e.l-txt=data.linkTxt
+
+mixin newsItem(data)
+	+e.item&attributes(attributes)
+		if data.youtube
+			+e.img.play-btn(href='#')
+				img(loading="lazy" src=`img/@2x/sNews-${data.imgNum}.jpg` alt="")
+		else
+			+e.img(href='#')
+				img(loading="lazy" src=`img/@2x/sNews-${data.imgNum}.jpg` alt="")
+		+e.descr-bl
+			+e.date-line
+				+e.d-bold=data.boldTxt
+				+e.d-date=data.dateTxt
+			+e.title(href='#')=data.title
+			+e.descr=data.descr
+			if data.youtube
+				+e.link
+					+e.icon
+						img.img-svg-js(loading="lazy" src="img/svg/youtube-logo.svg" alt="")
+					+e.l-txt=data.linkTxt
+			else
+				+e.link(href="#")
+					+e.l-txt=data.linkTxt

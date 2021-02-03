@@ -1,0 +1,135 @@
+// start .sPrivacy
+.sPrivacy {
+	--pt: 0;
+	--stpb: 0px;
+
+	--spb: 80px;
+	@include media-breakpoint-up(md){
+		--spb: 76px;
+	}
+	@include media-breakpoint-up(xl){
+		--spb: 84px;
+	}
+	@include media-breakpoint-up(xxl){
+		--spb: 86px;
+	}
+
+	&__container{
+		padding: 0 10px;
+		@include media-breakpoint-up(xxl){
+			padding: 0 12px;
+		}
+	}
+
+	.section-title{
+		margin-bottom: 15px;
+
+		border-bottom: 1px solid $gray2;
+		h1,h2{
+			color: $black;
+			font-weight: 400;
+
+			font-size: 22px;
+			margin-bottom: 15px;
+			@include media-breakpoint-up(md){
+				font-size: 28px;
+				margin-bottom: 15px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
+			@include media-breakpoint-up(xll){
+				font-size: 35px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__date{
+		color: $secondary2;
+
+		font-size: 12px;
+		@include media-breakpoint-up(md){
+			font-size: 13px;
+		}
+		margin-bottom: 30px;
+		@include media-breakpoint-up(xll){
+			font-size: 14px;
+			margin-bottom: 40px;
+		}
+	}
+	&__content{
+		color: $brown;
+
+		p{
+			@include media-breakpoint-up(xl){
+				margin-bottom: 20px;
+			}
+			@include media-breakpoint-up(xxl){
+				margin-bottom: 24.5px;
+			}
+		}
+
+		font-size: 13px;
+		@include media-breakpoint-up(md){
+			font-size: 15px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 16px;
+			line-height: (26/16);
+		}
+		@include media-breakpoint-up(xll){
+			//letter-spacing: .45px;
+			font-size: 18px;
+			line-height: (25/18);
+		}
+
+		a{
+			display: block;
+			color: $primary;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+
+			&.black{
+				font-weight: 700;
+				text-decoration: none;
+				color: $black;
+				&:hover{
+					color: $primary;
+				}
+			}
+		}
+		h4{
+			color: $primary;
+
+			font-size: 18px;
+			@include media-breakpoint-up(md){
+				font-size: 20px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 22px;
+			}
+			@include media-breakpoint-up(xll){
+				font-size: 25px;
+				margin-bottom: 20px;
+			}
+
+			&:first-of-type{
+				margin-top: 10px;
+			}
+		}
+		h6{
+			font-weight: 700;
+			text-transform: uppercase;
+
+			margin-bottom: 10px;
+		}
+
+	}
+	//
+	&__{}
+	&__{}
+} // end.sPrivacy

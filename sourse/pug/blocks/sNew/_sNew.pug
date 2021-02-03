@@ -1,0 +1,104 @@
+mixin sNew(data)
+	// start sNew
+	+b.SECTION.sNew.section#sNew&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Entdecken Sie das gesamte SOLO Sortiment
+				p Bei SOLO finden Sie für Ihren privaten Garten aber auch für die Landschaftspflege, Land- und Forstwirtschaft oder Bauwirtschaft genau das Richtige, um Ihre Herausforderungen zu meistern.
+			+b.sUsage
+				+e.slider
+					+b.usage-prev--js.d-flex.d-md-none
+						+icon('chevron-left')
+					+b.usage-next--js.d-flex.d-md-none
+						+icon('chevron-right')
+					.swiper-container.usage-slider-js
+						.swiper-wrapper
+							+usageSlide(1,'new-slide-')
+								| Pflanzenschutz/
+								br
+								|
+								| -pflege
+							+usageSlide(2,'new-slide-')
+								| Schädlings-
+								br
+								| bekämpfung
+							+usageSlide(3,'new-slide-')
+								| Land- und
+								| Forstwirtschaft
+							+usageSlide(4,'new-slide-')
+								| Reinigung/
+								br
+								| Desinfektion
+							+usageSlide(5,'new-slide-')
+								| Streuen
+							+usageSlide(6,'new-slide-')
+								| Baugewerbe
+							+usageSlide(7,'new-slide-')(class="d-none d-xl-block")
+								| Trennschleifer
+							+usageSlide(8,'new-slide-')(class="d-none d-xl-block")
+								| Blasgeräte
+							+usageSlide(9,'new-slide-')(class="d-none d-xl-block")
+								| Zubehör
+						+b.usage-pugin--js.d-flex.d-md-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN
+	// end sNew
+
+mixin sPFunctionality(data)
+	// start sNew
+	+b.SECTION.sNew--sFunc.section#sPFunctionality&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Ausstattung und Funktion
+				p Bei den Abbildungen handelt es sich um Musterfotos. Aussehen und die konkrete Anbringung der Ausstattungsmerkmale am Produkt können – bei gleichartiger Funktionalität – von den bildlichen Darstellungen abweichen.
+			+b.sUsage
+				+e.slider
+					+b.usage-prev--js.d-flex.d-md-none
+						+icon('chevron-left')
+					+b.usage-next--js.d-flex.d-md-none
+						+icon('chevron-right')
+					.swiper-container.usage-slider-js
+						.swiper-wrapper
+							+usageSlide(1)
+								| Ergonomische
+								|
+								br
+								| Bedienelemente
+							+usageSlide(2,'new-slide-')
+								| Hohlkehldüsen
+							+usageSlide(3,'new-slide-')
+								| Sicherheitsventil
+						+b.usage-pugin--js.d-flex.d-md-none
+
+mixin sCatFunc(data)
+	// start sNew
+	+b.SECTION.sNew--cat-func#sPFunctionality&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Ausstattung und Funktion
+				p Solide, gegen UV-Strahlung und Chemikalien resistente Kunststoffbehälter mit unterschiedlichen Füllvolumen bilden die Basis. Dichtungen und Düsen sind den jeweiligen Anwendungsbereichen angepasst.
+			+b.sUsage
+				+e.slider
+					+b.usage-prev--js.d-flex.d-md-none
+						+icon('chevron-left')
+					+b.usage-next--js.d-flex.d-md-none
+						+icon('chevron-right')
+					.swiper-container.usage-slider-js
+						.swiper-wrapper
+							+usageSlide(1)
+								span.d-block.mb-2 Dichtungen
+								.sUsage__all-link PRODUKTE ANSEHEN
+							+usageSlide(2,'new-slide-')
+								span.d-block.mb-2
+									| Druckluft-
+									br.d-none.d-xxl-block
+									| anschluss-
+									br.d-none.d-xxl-block
+									| ventil
+								.sUsage__all-link PRODUKTE ANSEHEN
+							+usageSlide(3,'new-slide-')
+								span.d-block.mb-2 Griffrohre und Distanzstücke
+								.sUsage__all-link PRODUKTE ANSEHEN
+						+b.usage-pugin--js.d-flex.d-md-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN

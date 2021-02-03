@@ -1,0 +1,109 @@
+// start .sPDownload
+.sPDownload {
+	background-color: $light;
+
+	--pt: 40px;
+	--spb: 40px;
+	--stpb: 25px;
+	@include media-breakpoint-up(md){
+		--pt: 55px;
+		--spb: 45px;
+	}
+	@include media-breakpoint-up(xl){
+		--pt: 60px;
+		--spb: 50px;
+		--stpb: 37px;
+	}
+	@include media-breakpoint-up(xxl){
+		--pt: 78px;
+		--spb: 68px;
+	}
+
+	&__container{
+		padding: 0 10px;
+		@include media-breakpoint-up(xxl){
+			padding: 0 12px;
+		}
+	}
+
+
+	.section-title{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		h2{
+			font-size: 22px;
+			@include media-breakpoint-up(md){
+				font-size: 28px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 32px;
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 35px;
+			}
+		}
+	}
+	&__row{
+		@include roww(20px);
+	}
+
+	&__col{
+		margin-bottom: 20px;
+	}
+	&__item{
+		background-color: $white;
+
+		padding: 15px;
+		@include media-breakpoint-up(sm){
+			padding: 15px 20px;
+		}
+		@include media-breakpoint-up(xll){
+			padding: 15px 27px;
+		}
+
+		@include mt();
+		color: $secondary2;
+		&:hover{
+			color: $black;
+			box-shadow: 3px 3px 12px -5px rgba($black, .5);
+		}
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	//
+	&__i-txt{
+		font-size: 14px;
+		line-height: 1.2;
+	}
+	&__name{
+		display: block;
+		font-weight: 900;
+	}
+	&__size{
+		display: block;
+	}
+	//
+	&__i-circle{
+		flex-shrink: 0;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: $gray3;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			font-size: 22px;
+			color: $primary;
+		}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sPDownload

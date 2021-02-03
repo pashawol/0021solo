@@ -6,12 +6,12 @@
 		text-align: center;
 		@include media-breakpoint-up(xl){
 
-			--sPB: #{rem(42)};
+			--spb: #{rem(42)};
 		} 
-		--sPB: #{rem(38)};
+		--spb: #{rem(38)};
 	// 	@include media-breakpoint-up(xll){
 	// 	}
-	// --sPB: #{rem(46)};
+	// --spb: #{rem(46)};
 		&__title{ 
 			font-weight: 500;
 			@include media-breakpoint-up(xll){
@@ -76,7 +76,13 @@
 		}
 		&__btn{
 			@extend .btn;
-			@extend .btn-outline-white;
+			border-color: #fff;
+			color: #ffffff;
+			&:hover{
+				background-color: $brown;
+				border-color: $brown;
+				color: #ffffff;
+			}	
 			border-radius: 0;
 			border-width: 2px;
 			font-size: $small;

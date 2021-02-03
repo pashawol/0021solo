@@ -1,27 +1,51 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
 			.text-right
-	//  мобильное меню
+	//  mob-menu
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			+mnu()
-					
+		+b.red-line
+			+e.container.container
+				+e.row.row
+					+e.col.col-auto.d-none.d-xll-flex
+						+e.btn(href="#")
+							+icon('s-icon')
+							span Händler Finden
+						+e.btn(href="#")
+							+icon('book')
+							span Katalog
+					+e.col--mid.col
+						+e.btn--mid
+							+icon('car-long')
+							span Kostenloser Versand
+						+e.btn--mid.d-none.d-xll-flex(href="tel:+49070313010")
+							+icon('phone')
+							span +49 (0)7031 - 301 - 0
+					+e.col.col-auto.d-none.d-sm-flex
+						+e.btn
+							+e.dd.dd-js
+								+e.dd-btn.dd-btn-js € EURO
+								+e.dd-content.dd-content-js
+									+e.dd-item(href="#") €  EURO 2
+									+e.dd-item(href="#") €  EURO 3
+									+e.dd-item(href="#") €  EURO 4
+						+e.btn
+							+e.q-sign ?
+							+e.dd.dd-js
+								+e.dd-btn.dd-btn-js Service/Hilfe
+								+e.dd-content.dd-content-js
+									+e.dd-item(href="#") €  EURO 2
+									+e.dd-item(href="#") €  EURO 3
+									+e.dd-item(href="#") €  EURO 4
+		+b.white-line
+			.container
+			//-+mnu()
 	// end top-nav

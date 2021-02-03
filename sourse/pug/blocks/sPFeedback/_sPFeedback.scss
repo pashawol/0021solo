@@ -1,0 +1,61 @@
+// start .sPFeedback
+.sPFeedback {
+	background-color: $gray4;
+
+	--pt: 40px;
+	--spb: 40px;
+	--stpb: 25px;
+	@include media-breakpoint-up(md){
+		--pt: 55px;
+		--spb: 45px;
+	}
+	@include media-breakpoint-up(xl){
+		--pt: 60px;
+		--spb: 50px;
+		--stpb: 37px;
+	}
+	@include media-breakpoint-up(xxl){
+		--pt: 58px;
+		--spb: 48px;
+	}
+
+	&__container{
+		padding: 0 10px;
+		@include media-breakpoint-up(xxl){
+			padding: 0 12px;
+		}
+	}
+
+	.section-title{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		h2{
+			font-size: 22px;
+			@include media-breakpoint-up(md){
+				font-size: 28px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 32px;
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 35px;
+			}
+		}
+	}
+
+	&__stab{
+		width: 100%;
+		height: auto;
+		img{
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sPFeedback

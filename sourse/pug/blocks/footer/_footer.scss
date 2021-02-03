@@ -1,9 +1,9 @@
 .footer {
 		@include media-breakpoint-up(xll){
-			--sPT: #{rem(80)};
+			--pt: #{rem(80)};
 		}
-		--sPT: #{rem(56)};
-		--sPB: #{rem(0)};
+		--pt: #{rem(56)};
+		--spb: #{rem(0)};
 	margin-top: auto;
 	border: 1px solid #707070;
 	background-color: #22252a;
@@ -176,8 +176,8 @@
 		}
 		padding: rem(20) 0;
 		background-color: $body-color; 
-		--sPB: #{rem(57)};
-		margin-top: var(--sPB);
+		--spb: #{rem(57)};
+		margin-top: var(--spb);
 		;
 		img{
 			width: rem(51);
@@ -228,6 +228,7 @@
 	padding-top: rem(18);
 	padding-bottom: rem(18);
 	position: sticky;
+	z-index: 100;
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -264,6 +265,7 @@
 }
 .btn-top {
 	position: fixed;
+	z-index: 101;
 	right: rem(43);
 	// @extend .btn;
 	@extend .btn-primary;
@@ -288,5 +290,76 @@
 		transform: translateX(0);
 	}
 
- 
+}
+
+.footerCart{
+	padding: 30px 0;
+
+	background-color: $light;
+	&__row{
+		padding-bottom: 30px;
+		@include media-breakpoint-up(xl){
+			padding-bottom: 40px;
+		}
+		@include media-breakpoint-up(xxl){
+			max-width: 80%;
+			margin: 0 auto;
+			padding-bottom: 51px;
+		}
+	}
+	&__col{
+		margin-bottom: 20px;
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+	&__i-img{
+		margin-right: 15px;
+		img{
+			max-width: 35px;
+			height: auto;
+			width: auto;
+		}
+	}
+	&__txt{
+		color: $secondary2;
+		font-size: 14px;
+		line-height: (18/14);
+	}
+
+	&__bot-links{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		a{
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 10px;
+
+			color: $primary;
+			font-size: 14px;
+			line-height: (18/14);
+
+			&:after{
+				content: '|';
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 10px;
+
+				color: $secondary2;
+				font-size: 10px;
+			}
+
+			&:last-child:after{
+				content: none;
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
 }

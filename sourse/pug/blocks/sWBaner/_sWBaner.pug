@@ -1,0 +1,21 @@
+mixin sWBaner(data)
+	// start sWBaner
+	+b.SECTION.sWBaner.section#sWBaner&attributes(attributes)
+		+e.container.container
+			block
+			+e.box
+				+e.img
+					img(loading="lazy" src=`img/@2x/sWBaner-${data.imgName}.jpg` alt="")
+				+e.row.row
+					.col-sm-9.col-md-7.col-xl-6.col-xll-5.ms-auto
+						+e.white-bl
+							+e.sm=data.smTxt
+							+e.H2.title=data.title
+							+e.descr=data.descr
+							+e.foot-row.row.align-items-end
+								.col
+									+e.link(href='#') PRODUKTE ENTDECKEN
+								.col-auto
+									+e.mark
+										img(loading="lazy" src="img/@2x/quality-sm.png" alt="")
+	// end sWBaner

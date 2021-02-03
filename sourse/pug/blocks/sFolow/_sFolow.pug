@@ -1,0 +1,18 @@
+mixin sFolow(data)
+	// start sFolow
+	+b.SECTION.sFolow.section#sFolow&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Folgen Sie uns auf
+			+e.row.row
+				+folowItem('fb')
+				+folowItem('insta')
+				+folowItem('youtube')
+			+e.tag-cont.text-center
+				+e.hash-tag(href="#") #solo_sprühgeräte
+	// end sFolow
+
+mixin folowItem(iconName)
+	+e.col.col-auto
+		+e.item(href="#")
+			img(loading="lazy" src=`img/svg/soc-${iconName}.svg` alt="")

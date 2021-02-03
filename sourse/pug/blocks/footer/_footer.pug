@@ -20,7 +20,11 @@ mixin footer()
 								| +49 (0) 7031 - 301-0
 						.col-xll-12.col-xl.mb-4
 							+e.text.small.mb-2 Montag&nbsp;&mdash; Freitag: 9:00&nbsp;&mdash; 18:00 Uhr (ausgenommen regionale Feiertage)
-							.small.text-secondary *Regul&auml;rer Festnetztarif Ihres Telefonanbieters.
+							.small.text-secondary
+								| *Regul&auml;rer Festnetztarif Ihres
+								|
+								br.d-xll-none
+								| Telefonanbieters.
 				mixin list(t,...items)
 					+e.col-nav.col-xl.col-sm-6
 						+e.group
@@ -49,3 +53,31 @@ mixin footer()
 				+e.btns.col-sm-auto
 					+e.btn.btn-gray(href="#") Ablehnen
 					+e.btn.btn-primary(href="#") Konfigurieren
+
+mixin footerCart()
+	+b.footerCart
+		.container
+			+e.row.row
+				+footerCartItem('footersCart-1', 'Kostenloser Versand Deutschlandweit')
+				+footerCartItem('vantage-item-4', 'Kostenlose Rückgabe Innerhalb von 30 Tagen')
+				+footerCartItem('vantage-item-3', 'Sichere Bezahlmöglichkeit Verschlüsselte Übertragung')
+				+footerCartItem()
+					+e.pay-img(href="#")
+						img(loading="lazy" src='img/@2x/pay-ways.png' alt="")
+			+e.bot-links
+				a(href="#") Download
+				a(href="#") Händlersuche
+				a(href="#") Support
+				a(href="#") Kataloge
+				a(href="#") FAQ
+				a(href="#") Datenschutz
+
+mixin footerCartItem(imgName, txt)
+	+e.col.col-12.col-sm-6.col-xl-3
+		if block
+			block
+		else
+			+e.item
+				+e.i-img
+					img(loading="lazy" src=`img/svg/${imgName}.svg` alt="")
+				+e.txt=txt

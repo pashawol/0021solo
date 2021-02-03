@@ -1,0 +1,108 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		+e.container.container
+			block
+			+e.row.row
+				+e.col--slider.col-xl-6
+					+e.thumb
+						.swiper-container.prod-thumb-js
+							.swiper-wrapper
+								+prodCardThumb(1)
+								+prodCardThumb(2)
+								+prodCardThumb(1)
+					+e.slider
+						.swiper-container.prod-slider-js
+							.swiper-wrapper
+								+prodSlide(1)
+								+prodSlide(2)
+								+prodSlide(1)
+						//-nav
+						+b.prod-sl-nav
+							+b.prod-prev--js
+								+icon('chevron-left')
+							+b.prod-pugin--js
+							+b.prod-next--js
+								+icon('chevron-right')
+				+e.col--right.col-xl-6
+					+e.name-row.row
+						//-title
+						+e.name-col.col-12.col-xll
+							+e.feedback-cont
+								+e.stars
+									+icon('star')
+									+icon('star')
+									+icon('star')
+									+icon('star')
+									+icon('star')
+								+e.feedback-txt 1 Bewertung
+							+e.H1.name 403 HAND-DRUCKSPRITZE
+						//-
+						+e.name-col.col-auto
+							+e.ball
+								img(loading="lazy" src=`img/svg/sBalls-3.svg` alt="")
+						+e.name-col.col-auto
+							+e.ball
+								img(loading="lazy" src=`img/svg/sBalls-5.svg` alt="")
+					//-price
+					+e.price
+						+e.price-big.text-primary 10,59 €*
+						+e.discont %
+						+e.d-gray
+							+e.old-price 10,92 €*
+							+e.d-txt (10,5% gespart)
+					//-sm
+					+e.sm-cont
+						+e.sm-gray Inhalt: 3
+						+e.sm-gray Preise inkl. MwSt. Zzgl. Versandkosten
+					+e.descr Der Drucksprüher ist der ideale Helfer für Haus und Garten bietet eine extra große Einfüllöffnung. Die verstellbare Düse sorgt für eine feine gleichmäßige Zerstäubung. Nur zur Ausbringung von Wasser geeignet!
+					//-
+					+e.nav-row.row
+						+e.nav-col.col.col-xll-auto
+							+b.amount-inp
+								input.form-control(type="number" name="prod-amount" value=1)
+								+e.BUTTON.btn--plus
+								+e.BUTTON.btn--min
+						+e.nav-col.col-12.col-xll.order-first.order-xll-0
+							+e.BUTTON.cart-btn(href="#")
+								+icon("cart")
+								span In den Warenkorb
+						+e.nav-col.col-auto
+							+e.like-btn(href="#")
+								+icon('heart')
+					//-
+					+e.article-cont
+						+e.article Artikel-Nr: 40301
+						+e.recomend-link
+							+icon('recomend')
+							span Weiterempfehlen
+					//-
+					+e.status
+						+e.s-ball
+						+e.s-txt Versandfertig in 3 Tage, Lieferzeit 2-5 Tage
+					//-
+					+e.pills-row.row
+						+pillItem(1, 'Kostenloser Versand', 'Deutschlandweit')
+						+pillItem(2, 'Kostenlose Rückgabe', 'Innerhalb von 30 Tagen')
+						+pillItem(3, 'Sichere Bezahlmöglichkeit', 'Verschlüsselte Übertragung')
+	// end sProdCard
+
+mixin pillItem(imgNum, title, txt)
+	+e.pill-col.col-12.col-xll-4
+		+e.p-img
+			img(loading="lazy" src=`img/svg/pill-img-${imgNum}.svg` alt="")
+		+e.p-txt
+			strong=title
+			span.d-block=txt
+
+mixin prodCardThumb(imgNum)
+	.swiper-slide
+		+e.thumb-img
+			img(src=`img/@2x/prod-thumb-${imgNum}.png` alt="")
+			//-prod-thumb-
+
+mixin prodSlide(imgNum)
+	.swiper-slide
+		//-+e.zoom-btn(href=`img/@2x/prod-img-${imgNum}.png` data-fancybox=`prodImgs`)
+		+e.img-link(href=`img/@2x/prod-img-${imgNum}.png` data-fancybox=`prodImgs`)
+			img(src=`img/@2x/prod-img-${imgNum}.png` alt="")

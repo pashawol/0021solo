@@ -1,0 +1,77 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sWmailAddress/_sWmailAddress.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sPaymethod/_sPaymethod.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sVantageLine/_sVantageLine.pug
+include ../blocks/sUsage/_sUsage.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sClean/_sClean.pug
+include ../blocks/sPromo/_sPromo.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sSocMedia/_sSocMedia.pug
+include ../blocks/sFolow/_sFolow.pug
+include ../blocks/sMail/_sMail.pug
+include ../blocks/sHSlider/_sHSlider.pug
+include ../blocks/sInfo/_sInfo.pug
+include ../blocks/sImpressum/_sImpressum.pug
+include ../blocks/sPrivacy/_sPrivacy.pug
+include ../blocks/sCartEnter/_sCartEnter.pug
+include ../blocks/sCartAdress/_sCartAdress.pug
+include ../blocks/sCartFinish/_sCartFinish.pug
+include ../blocks/sGuestOrder/_sGuestOrder.pug
+
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sProdNav/_sProdNav.pug
+include ../blocks/sProdDescr/_sProdDescr.pug
+include ../blocks/sProdData/_sProdData.pug
+include ../blocks/sPDownload/_sPDownload.pug
+include ../blocks/sPFeedback/_sPFeedback.pug
+include ../blocks/sProdDet/_sProdDet.pug
+
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sCategory/_sCategory.pug
+include ../blocks/sBanerInt/_sBanerInt.pug
+
+include ../blocks/sWBaner/_sWBaner.pug
+include ../blocks/sFAQ/_sFAQ.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '08-red'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+		+topLine()
+	+sWBaner({
+		imgName: 'red',
+		smTxt: 'SPRÜHGERÄTE / SPRITZGERÄTE',
+		title: 'Spritzen für die professionelle Pflanzenpflege',
+		descr: 'SOLO bietet ein umfassendes Sortiment an Sprühgeräten für die anspruchsvolle Anwendung in Industrie, Handwerk und Landwirtschaft. Gerade im professionellen Einsatz werden an diese Geräte höchste Anforderungen hinsichtlich Qualität, Funktionalität, Einsatzmöglichkeit und Ausstattung gestellt.',
+	})
+		+breadcrumb("Profi", "Anwendungen", "Pflanzenschutz/- pflege")
+	+sBalls2()
+	+sUsageBalls()
+	+sCatalog()
+	+sPromo({
+		flagClass: "red",
+	})
+	+sMailRedBaner()
+	+sAccessories()(class='red-mainColor')
+	+sFAQ()
+	+sCleanRed()
+	+sContact()
+	+sInfo()
+	+sMailTxtWrap()
+	+sWmailAddress
+	+sIcons
+	+sPaymethod
+	+sCategories
+	+footer()

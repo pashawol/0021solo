@@ -1,0 +1,351 @@
+// start .sUsage
+.sUsage {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	--pt: 52px;
+	--spb: 15px;
+	--stpb: 36px;
+	@include media-breakpoint-up(md){
+		--pt: 57px;
+		--spb: 23px;
+		--stpb: 22px;
+	}
+	@include media-breakpoint-up(xl){
+		--pt: 62px;
+		--spb: 22px;
+		--stpb: 47px;
+	}
+	@include media-breakpoint-up(xll){
+		--pt: 70px;
+		--spb: 20px;
+		--stpb: 44px;
+	}
+	@include media-breakpoint-up(xxl){
+		--pt: 49px;
+		--spb: 3px;
+		--stpb: 62px;
+	}
+
+	&__container{
+		padding-left: 10px;
+		padding-right: 10px;
+		@include media-breakpoint-up(md){
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	.section-title{
+		margin-left: auto;
+		margin-right: auto;
+
+		max-width: 570px;
+		@include media-breakpoint-up(xl){
+			max-width: 710px;
+		}
+		@include media-breakpoint-up(xll){
+			max-width: 730px;
+		}
+		@include media-breakpoint-up(xxl){
+			max-width: 860px;
+		}
+
+		h2{
+			color: $black;
+			font-weight: 400;
+
+			font-size: 22px;
+			border-bottom: 1px solid $gray2;
+			padding-bottom: 28px;
+			margin-bottom: 30px;
+			@include media-breakpoint-up(md){
+				border-bottom: 0;
+				padding-bottom: 0;
+				font-size: 28px;
+				margin-bottom: 21px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 32px;
+				margin-bottom: 22px;
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 45px;
+				margin-bottom: 16px;
+			}
+		}
+		p{
+			color: $brown;
+			font-size: 16px;
+			//1.6
+
+			line-height: 1.52;
+			@include media-breakpoint-up(md){
+				line-height: 1.6;
+				font-size: 15px;
+			}
+
+			@include media-breakpoint-up(xl){
+				font-size: 16px;
+				line-height: (25/18);
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 18px;
+			}
+		}
+	}
+
+	//slider
+	&__slider{
+		position: relative;
+
+		@include media-breakpoint-down(md){
+			padding: 0 30px;
+			left: calc(-1 * (100vw - 100%) / 2);
+			width: 100vw;
+		}
+
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+
+			@include media-breakpoint-up(md){
+				transform: none!important;
+				flex-wrap: wrap!important;
+			}
+		}
+		.swiper-slide{
+			height: auto;
+
+			width: 216px;
+			@include media-breakpoint-up(md){
+				width: calc((100% / 3) - (20px * 2 / 3));
+				margin-bottom: 30px;
+
+				margin-right: 20px!important;
+				&:nth-child(3n){
+					margin-right: 0!important;
+				}
+			}
+
+			@include media-breakpoint-up(xxl){
+				margin-bottom: 40px;
+			}
+		}
+		//pugin
+		.usage-pugin{
+			@extend .swiper-pugin-frame;
+		}
+		//prev, next
+		.usage-prev,
+		.usage-next{
+			@extend .swiper-arrow-frame;
+		}
+		.usage-prev{
+			left: 0;
+		}
+		.usage-next{
+			right: 0;
+		}
+	}
+	&__item{
+		@include mt();
+
+
+		background-color: $light;
+		--cur-color: #{$brown};
+		&:hover{
+			--cur-color: #{$white};
+			background-color: var(--main-color);
+		}
+
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+	}
+	&__img{
+		@extend .accept-ratio-frame-nh;
+
+		padding-top: 114%;
+		@include media-breakpoint-up(md){
+			padding-top: 114%;
+		}
+		@include media-breakpoint-up(xl){
+			padding-top: 112%;
+		}
+		@include media-breakpoint-up(xll){
+			padding-top: 82%;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-top: 74%;
+		}
+		//82%
+
+		&--sm{
+			padding-top: 50%!important;
+			@include media-breakpoint-up(xl){
+				padding-top: 58.7%!important;
+			}
+		}
+
+		&--md{
+			padding-top: 50%!important;
+			@include media-breakpoint-up(xl){
+				padding-top: 64.5%!important;
+			}
+		}
+
+		&--long {
+			padding-top: 115%;
+			@include media-breakpoint-up(sm){
+				padding-top: 70%;
+			}
+			@include media-breakpoint-up(md) {
+				padding-top: 60%;
+			}
+			@include media-breakpoint-up(xl) {
+				padding-top: 70%;
+			}
+			@include media-breakpoint-up(xll) {
+				padding-top: 60%;
+			}
+			@include media-breakpoint-up(xxl) {
+				padding-top: 59.5%;
+			}
+		}
+
+	}
+	&__descr{
+		width: 100%;
+		flex-grow: 1;
+
+		display: flex;
+		margin-right: auto;
+
+		padding: 18px 18px 21px 16px;
+		@include media-breakpoint-up(md){
+			padding: 17px 15px 20px 18px;
+		}
+		flex-direction: column;
+		@include media-breakpoint-up(xl){
+			padding: 25px 15px 43px 20px;
+			flex-direction: row;
+		}
+		@include media-breakpoint-up(xll){
+			padding: 25px 30px 27px 31px;
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 25px 30px 27px 31px;
+		}
+	}
+	&__txt{
+		//-
+		@include mt();
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		color: var(--cur-color);
+		&:hover{
+			color: var(--cur-color);
+			opacity: .9;
+		}
+
+		font-size: 16.5px;
+		margin-bottom: 5px;
+		width: 100%;
+		@include media-breakpoint-up(md){
+			font-size: 18px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 0;
+			width: auto;
+			flex-grow: 1;
+			font-size: 24px;
+			line-height: 1.25;
+		}
+		@include media-breakpoint-up(xll){
+			font-size: 26px;
+			line-height: 1.2;
+		}
+		@include media-breakpoint-up(xxl){
+			font-size: 30px;
+		}
+	}
+	&__icon{
+		flex-shrink: 0;
+
+		margin-top: auto;
+		margin-left: auto;
+		@include media-breakpoint-up(xl){
+			margin-top: 5px;
+			margin-left: 20px;
+		}
+
+		width: 50px;
+		height: 50px;
+		padding: 8px;
+		@include media-breakpoint-up(xll){
+			width: 70px;
+			height: 70px;
+			padding: 10px;
+		}
+
+		border-radius: 50%;
+		border: 1px solid var(--cur-color);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include mt();
+		& > *{
+			@include mt();
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+
+			path{
+				fill: var(--cur-color) !important;
+			}
+		}
+	}
+
+
+	//for sProdDet
+	&__all-link{
+		display: inline-block;
+
+		font-size: 12px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+
+		@include media-breakpoint-only(xl){
+			margin-right: -50px;
+		}
+
+		margin: 10px 0;
+		@include media-breakpoint-up(xxl){
+			margin: 0;
+		}
+
+		padding: 5px;
+		border-bottom: 2px solid currentColor;
+
+		color: var(--cur-color);
+		&:hover{
+			color: var(--cur-color);
+			border-bottom: 2px solid transparent;
+		}
+	}
+	&__{}
+	//
+	&__{}
+	&__{}
+} // end.sUsage

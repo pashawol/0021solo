@@ -1,0 +1,107 @@
+mixin sClean(data)
+	// start sClean
+	+b.SECTION.sClean.section#sClean&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Sprühgeräte für Reinigung und Desinfektion
+				p Hochleistung im täglichen Einsatz zur Aufbringung von Schalöl, Bauchemikalien und Reinigungsmittel.
+			+e.slider
+				+b.clean-prev--js
+					+icon('chevron-left')
+				+b.clean-next--js
+					+icon('chevron-right')
+				.swiper-container.clean-slider-js
+					.swiper-wrapper
+						+cleanSlide({
+							imgName: '1',
+							ballTxt: 'SOLO-CLEANLine',
+							title: 'Fahrzeugpflege mit SOLO',
+							descr: 'Reinigen und Pflegen Sie Ihr Fahrzeug mit dem Schaumsprühgerät von SOLO. Zur Aufbringung von Reinigungsmitteln bestehst geeignet.',
+						})
+						+cleanSlide({
+							imgName: '2',
+							ballTxt: 'Handsprüh-gerät',
+							title: 'Sprühgeräte für die Desinfektion und Reinigung',
+							descr: 'Hochleistungs-Sprühsysteme, Akku- und Elektrobürsten sowie Spezial-Reinigungsmittel für effektive Reinigungsarbeiten rund um das Haus und unterwegs.',
+						})
+				+b.clean-pugin--js.d-sm-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN
+	// end sClean
+
+mixin cleanSlide(data)
+	.swiper-slide
+		+e.item
+			+e.img(href="#")
+				img.swiper-lazy(src="#" data-src=`img/@2x/sClean-${data.imgName}.jpg` alt="")
+			+e.content
+				+e.ball
+					+e.icon
+						img.img-svg-js(src=`img/svg/clean-icon-${data.imgName}.svg` alt="")
+					+e.txt=data.ballTxt
+				//-
+				+e.title=data.title
+				+e.descr=data.descr
+				+e.prod-img(href="#")
+					img.swiper-lazy(src="#" data-src=`img/@2x/sClean-prod-${data.imgName}.png` alt="")
+				+e.link(href="#") PRODUKTE ENTDECKEN
+
+mixin sCleanRed(data)
+	// start sClean
+	+b.SECTION.sClean--red.section#sClean&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 SOLO–Pflanzenschutz/- pflege-Produkte
+				p SOLO Drucksprühgeräte unterstützen Sie effizient unter anderem bei der professionellen landwirtschaftlichen Arbeit, beim Obstanbau oder im Weinberg.
+			+e.slider
+				+b.catalog-prev--js
+					+icon('chevron-left')
+				+b.catalog-next--js
+					+icon('chevron-right')
+				.swiper-container.clean-slider-js
+					.swiper-wrapper
+						+cleanSlide({
+							imgName: '3',
+							ballTxt: 'RÜCKEN- sprühgeräte',
+							title: 'Akkuspritzen für Land- und Forstwirtschaft',
+							descr: 'Drucksprühgeräte die großen Sprühwolke Und Unterseiten tiefer Blattschichten Erreichen.',
+						})
+						+cleanSlide({
+							imgName: '4',
+							ballTxt: 'Druck- sprühgeräte',
+							title: 'Druckspritzen für präzise und punktuelle Anwendungen',
+							descr: 'Mit einem manuellen Spritzgerät arbeiten Sie Blatt für Blatt ganz sauber – bei einzelnen Pflanzen und ganzen Flächenkulturen.',
+						})
+				+b.catalog-pugin--js.d-sm-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN
+
+mixin sCleanBlue(data)
+	// start sClean
+	+b.SECTION.sClean.section#sClean&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 SOLO–CLEAN LINE Produkte
+				p Von 1,5-Liter-Drucksprühern mit Kunststoff-Überzugrohr über dem Pumpenzylinder über 5- und 10-Liter-Sprühgeräte bis hin zu Schaumdrucksprühgeräten bietet SOLO seinen Kunden eine ausgereifte Range an professionellen Sprühgeräten für die Reinigung und Desinfektion. Smarte Extras und durchdachte Details sorgen für einfache Unterscheidung anhand von Farbcodierungen und ein Maximum an Sicherheit und Komfort in der Anwendung.
+			+e.slider
+				+b.catalog-prev--js
+					+icon('chevron-left')
+				+b.catalog-next--js
+					+icon('chevron-right')
+				.swiper-container.clean-slider-js
+					.swiper-wrapper
+						+cleanSlide({
+							imgName: '1',
+							ballTxt: 'SOLO-CLEANLine',
+							title: 'Fahrzeugpflege mit SOLO',
+							descr: 'Reinigen und Pflegen Sie Ihr Fahrzeug mit dem Schaumsprühgerät von SOLO. Zur Aufbringung von Reinigungsmitteln bestehst geeignet.',
+						})
+						+cleanSlide({
+							imgName: '2',
+							ballTxt: 'Handsprüh-gerät',
+							title: 'Sprühgeräte für die Desinfektion und Reinigung',
+							descr: 'Hochleistungs-Sprühsysteme, Akku- und Elektrobürsten sowie Spezial-Reinigungsmittel für effektive Reinigungsarbeiten rund um das Haus und unterwegs.',
+						})
+				+b.catalog-pugin--js.d-sm-none
+			+e.btn-cont
+				+e.btn(href="#") ALLE PRUKTE ENTDECKEN

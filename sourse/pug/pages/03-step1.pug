@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sWmailAddress/_sWmailAddress.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sPaymethod/_sPaymethod.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sVantageLine/_sVantageLine.pug
+include ../blocks/sUsage/_sUsage.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sClean/_sClean.pug
+include ../blocks/sPromo/_sPromo.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sSocMedia/_sSocMedia.pug
+include ../blocks/sFolow/_sFolow.pug
+include ../blocks/sMail/_sMail.pug
+include ../blocks/sHSlider/_sHSlider.pug
+include ../blocks/sInfo/_sInfo.pug
+include ../blocks/sImpressum/_sImpressum.pug
+include ../blocks/sPrivacy/_sPrivacy.pug
+include ../blocks/sCartEnter/_sCartEnter.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '03-step1'
+	title= title
+block pagecontent
+	//-+mob-mnu()
+	+header()
+		+top-nav()
+		+topLineCart()
+	+cartCheckLine(0)
+	+sCartEnter()
+	+footerCart()
