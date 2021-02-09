@@ -163,8 +163,10 @@
 		.container{
 			margin-right: auto !important;
 		}
+		a,
 		span{
 			display: inline-block;
+			margin-bottom: 0.5em;
 		}
 			@include media-breakpoint-up(xl) {
 
