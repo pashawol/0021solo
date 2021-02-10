@@ -166,6 +166,9 @@
 		a,
 		span{
 			display: inline-block;
+				@include media-breakpoint-up(sm){
+					margin-bottom: 0;
+				}
 			margin-bottom: 0.5em;
 		}
 			@include media-breakpoint-up(xl) {
