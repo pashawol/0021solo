@@ -43,7 +43,7 @@ $.gulp.task('default', $.gulp.series('svg', 'svgCopy',
 		'img',
 		'libs',
 		'scripts',
-		'sass',
+		'sass2',
 		'serv', 'watch'
 		// 'scripts:common',
 		// 'scripts:app',

@@ -1,10 +1,11 @@
 module.exports = () => {
-	$.gulp.task('sass', () => {
+
+	$.gulp.task('sass2', () => {
 		var processors = [
 			// $.pcmq,
 			// $.postcssCustomProperties,
 			$.autoprefixer(),
-			$.cssnano(),
+			// $.cssnano(),
 			$.nested(),
 			// $.flexGapPolyfill(),
 			// $.postcssPresetEnv(),
@@ -16,7 +17,7 @@ module.exports = () => {
 			//.pipe(gulpif(envDev, sourcemaps.write({includeContent: false, sourceRoot: '/public'})))
 			.pipe($.gcmq())
 			.pipe($.postcss(processors))
-			.pipe($.gp.rename({ suffix: '.min', prefix: '' }))
+			// .pipe($.gp.rename({ suffix: '.min', prefix: '' }))
 			// .pipe($.gulpif(!$.envDev, $.gcmq()))
 			// .pipe($.gp.autoprefixer({
 
