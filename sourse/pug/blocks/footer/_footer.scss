@@ -231,7 +231,14 @@
 
 @include media-breakpoint-down(sm) {}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+	.text-secondary{
+		font-size: 0;
+		a{
+			font-size: 12px;
+		}
+	}
+}
 }
 
 

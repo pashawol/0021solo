@@ -24,6 +24,13 @@ mixin sUsage(data)
 							br
 							|
 							| Desinfektion
+						+usageSlide(2)
+							|Reinigung/
+							br
+							|
+							| Desinfektion
+						+usageSlide(3)
+							| Streuen
 						+usageSlide(3)
 							| Streuen
 					+b.usage-pugin--js.d-flex.d-md-none
@@ -44,6 +51,10 @@ mixin sUsageBalls(data)
 							| Garten und Landschaftsbau
 						+usageSlide(3)
 							| Spaliergehölze und Bäume
+						+usageSlide(3)
+							| Landwirtschaftliche
+							br.d-xll-block
+							| Kulturen
 						+usageSlide(3)
 							| Landwirtschaftliche
 							br.d-xll-block
@@ -90,4 +101,4 @@ mixin usageSlide(imgNum, name='usage-slide-')
 				+e.txt(href='#')
 					block
 				+e.icon
-					img.img-svg-js(src=`img/svg/usage-slide-icon-${imgNum}.svg` alt="")
+					img(src=`img/svg/usage-slide-icon-${imgNum}.svg` alt="")

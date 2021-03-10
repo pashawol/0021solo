@@ -303,6 +303,9 @@
 			.picture-bg{
 				opacity: 1;
 			}
+			.sCatalog__img  {
+				opacity: 0 ;
+			}
 			.sCatalog__caption-toggle{
 				opacity: 0;
 			}
@@ -385,8 +388,8 @@
 
 		@include mt();
 		&:hover{
-			filter: brightness(1.05);
-			transform: scale(1.05);
+			// filter: brightness(1.05);
+			// transform: scale(1.05);
 		}
 
 		img{

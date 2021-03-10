@@ -575,7 +575,7 @@ function eventHandler() {
 		});
 	}); //img-svg
 
-	$('img.img-svg-js, .menu-image, .sBalls__icon img, .sFolow__item img, .sIcons__item img').each(function () {
+	$('img.img-svg-js, .menu-image, .sBalls__icon img, .sFolow__item img, .sIcons__item img, .sUsage__icon img').each(function () {
 		var $img = $(this);
 		var imgClass = $img.attr('class');
 		var imgURL = $img.attr('src');

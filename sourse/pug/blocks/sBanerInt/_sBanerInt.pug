@@ -1,6 +1,6 @@
 mixin sBanerInt(data)
 	// start sBanerInt
-	+b.SECTION.sBanerInt.section#sBanerInt&attributes(attributes)
+	+b.SECTION.sBanerInt.section(style="--main-color: var(--bs-primary)")#sBanerInt&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 Das könnte Sie auch interessieren
@@ -10,7 +10,7 @@ mixin sBanerInt(data)
 				+e.item
 					+e.img
 						img(loading="lazy" src="img/@2x/banerInt-1.jpg" alt="")
-					+e.txt
+					+e.txt(href="#")
 						| Pflanzenschutz/
 						br
 						| - Pflege
@@ -29,7 +29,7 @@ mixin sBanerInt(data)
 				+e.item
 					+e.img
 						img(loading="lazy" src="img/@2x/banerInt-2.jpg" alt="")
-					+e.txt
+					+e.txt(href="#")
 						| Schädlings-
 						br
 						| bekämpfung

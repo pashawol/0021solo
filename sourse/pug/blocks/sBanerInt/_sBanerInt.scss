@@ -92,7 +92,7 @@
 				height: 500px;
 			}
 
-			background-color: $primary;
+			background-color: var(--main-color);
 		}
 	}
 	&__img{
@@ -118,6 +118,11 @@
 		max-width: 90%;
 		text-align: center;
 		background-color: rgba($white, .9);
+		color: $body-color;
+		&:hover{
+			color: #fff;
+			background-color: var(--main-color);
+		}
 
 
 		font-weight: 900;

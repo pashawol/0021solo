@@ -575,9 +575,9 @@ iframe {
 //select
 .form-select{
 	cursor: pointer;
-	background-image: url(../img/svg/select-chevron-down.svg);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='5' viewBox='0 0 7 5'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23333' d='M3.5 5L0 0h7z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 	&--red{
-		background-image: url(../img/svg/select-chevron-down-red.svg);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='5' viewBox='0 0 7 5'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23DB3232' d='M3.5 5L0 0h7z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 	}
 }
 
@@ -626,7 +626,7 @@ iframe {
 			width: 7px;
 			height: 12px;
 
-			background-image: url(../img/svg/breadcrumb-chevron-right.svg);
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4.305' height='7.417' viewBox='0 0 4.305 7.417'%3E%3Cpath d='M.172,3.289a.58.58,0,0,0,0,.823L3.31,7.25a.582.582,0,0,0,.823-.823L1.423,3.7,4.133.99A.557.557,0,0,0,4.3.579.532.532,0,0,0,4.133.167a.59.59,0,0,0-.823,0Z' transform='translate(4.305 7.417) rotate(180)'/%3E%3C/svg%3E");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -670,5 +670,18 @@ iframe {
 	}
 	&:focus{
 		box-shadow: 0 0 0 0.2rem rgba($color: $brown, $alpha: .5);
+	}
+}
+@include media-breakpoint-up(xl) {
+
+	.column-menu{
+		columns: 3;
+		&__item{
+			display: inline-block;
+			width: 100%;
+			-webkit-column-break-inside: avoid;
+			-moz-column-break-inside: avoid;
+			break-inside: avoid;
+		}
 	}
 }
