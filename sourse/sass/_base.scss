@@ -677,7 +677,7 @@ iframe {
 	.column-menu{
 		columns: 3;
 		&__item{
-			display: inline-block;
+			// display: inline-block;
 			width: 100%;
 			-webkit-column-break-inside: avoid;
 			-moz-column-break-inside: avoid;

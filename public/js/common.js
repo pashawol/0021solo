@@ -118,8 +118,7 @@ var JSCCommon = {
 				passive: true
 			});
 			window.addEventListener('resize', function () {
-				if (window.matchMedia("(min-width: 992px)").matches) {
-					JSCCommon.closeMenu();
+				if (window.matchMedia("(min-width: 992px)").matches) {// JSCCommon.closeMenu();
 				}
 			}, {
 				passive: true
