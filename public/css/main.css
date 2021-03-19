@@ -14162,14 +14162,12 @@ a {
   margin-bottom: 44px;
   -webkit-transition: all 0.36s;
   transition: all 0.36s;
+  display: block;
+  color: #333333;
 }
 
 .sBalls__col:hover {
-  color: #f73429;
-}
-
-.sBalls__col:hover .sBalls__txt {
-  color: #f73429;
+  color: var(--hover-color, #f73429);
 }
 
 .sBalls__icon {
@@ -14206,10 +14204,7 @@ a {
 }
 
 .sBalls__txt {
-  color: #333333;
   line-height: 1.2;
-  -webkit-transition: all 0.36s;
-  transition: all 0.36s;
   font-size: 12px;
 }
 
@@ -16000,7 +15995,7 @@ a {
   color: #333;
   --sb-item-left: 0px;
   --sb-itemopac: 0;
-  --sblinktxtshdw: 0 0 0 rgba($black, .5);
+  --sblinktxtshdw: 0 0 0 rgba($color: #000000, $alpha: 1.0);
 }
 
 .cSidebar__sub-item-link.active,
