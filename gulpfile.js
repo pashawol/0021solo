@@ -19,7 +19,9 @@ global.$ = {
 	postcssPresetEnv: require('postcss-preset-env'),
 	cssnano: require('cssnano'),
 	nested: require('postcss-nested'),
-	plumber: require('gulp-plumber'), 
+	plumber: require('gulp-plumber'),
+	responsive: require('@tigersway/gulp-responsive'),
+	resizer: require('gulp-images-resizer'),
 	path: {
 		tasks: require('./gulp/config/tasks.js'),
 	},
@@ -31,16 +33,16 @@ $.path.tasks.forEach(function (taskPath) {
 });
 
 
-$.gulp.task('img', $.gulp.series('cleanimg', 'img-responsive'));
+$.gulp.task('img', $.gulp.series('cleanimg', 'img-responsive', 'img1x'));
 $.gulp.task('libs', $.gulp.series('cleanlibs', 'copylibs'));
 
 $.gulp.task('default', $.gulp.series('svg', 'svgCopy',
 	// $.gulp.parallel('svg','pug','scripts:lib','scripts','file'),
 	// $.gulp.parallel('file'),
-
+	
+	'img',
 	$.gulp.parallel( 
 		'pug',
-		'img',
 		'libs',
 		'scripts',
 		'sass2',
