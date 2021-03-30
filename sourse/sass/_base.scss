@@ -685,3 +685,21 @@ iframe {
 		}
 	}
 }
+
+
+.icon.icon-filter-panel-item-toggle > svg {
+    top: 0px;
+    position: relative;
+}
+
+.custom-checkbox{
+	@extend .form-check;
+}
+
+.custom-control-input{
+	@extend .form-check-input;
+
+}
+.custom-control-label {
+	@extend .form-check-label
+}

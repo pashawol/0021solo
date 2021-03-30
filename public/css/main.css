@@ -1170,19 +1170,24 @@ textarea.form-control-lg {
   font-size: 1.25rem;
 }
 
-.form-check {
+.form-check,
+.custom-checkbox {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.75em;
   margin-bottom: 0.125rem;
 }
 
-.form-check .form-check-input {
+.form-check .form-check-input,
+.custom-checkbox .form-check-input,
+.form-check .custom-control-input,
+.custom-checkbox .custom-control-input {
   float: left;
   margin-left: -1.75em;
 }
 
-.form-check-input {
+.form-check-input,
+.custom-control-input {
   width: 1.25em;
   height: 1.25em;
   margin-top: 0.125em;
@@ -1203,42 +1208,50 @@ textarea.form-control-lg {
   transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-.form-check-input[type="radio"] {
+.form-check-input[type="radio"],
+.custom-control-input[type="radio"] {
   border-radius: 50%;
 }
 
-.form-check-input:active {
+.form-check-input:active,
+.custom-control-input:active {
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
 }
 
-.form-check-input:focus {
+.form-check-input:focus,
+.custom-control-input:focus {
   border-color: #fca9a4;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 52, 41, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(247, 52, 41, 0.25);
 }
 
-.form-check-input:checked {
+.form-check-input:checked,
+.custom-control-input:checked {
   background-color: #f73429;
   border-color: #f73429;
 }
 
-.form-check-input:checked[type="checkbox"] {
+.form-check-input:checked[type="checkbox"],
+.custom-control-input:checked[type="checkbox"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
 }
 
-.form-check-input:checked[type="radio"] {
+.form-check-input:checked[type="radio"],
+.custom-control-input:checked[type="radio"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
 
-.form-check-input[type="checkbox"]:indeterminate {
+.form-check-input[type="checkbox"]:indeterminate,
+.custom-control-input[type="checkbox"]:indeterminate {
   background-color: #f73429;
   border-color: #f73429;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 
-.form-check-input:disabled {
+.form-check-input:disabled,
+.custom-control-input:disabled {
   pointer-events: none;
   -webkit-filter: none;
           filter: none;
@@ -1246,7 +1259,13 @@ textarea.form-control-lg {
 }
 
 .form-check-input[disabled] ~ .form-check-label,
-.form-check-input:disabled ~ .form-check-label {
+.custom-control-input[disabled] ~ .form-check-label,
+.form-check-input[disabled] ~ .custom-control-label,
+.custom-control-input[disabled] ~ .custom-control-label,
+.form-check-input:disabled ~ .form-check-label,
+.custom-control-input:disabled ~ .form-check-label,
+.form-check-input:disabled ~ .custom-control-label,
+.custom-control-input:disabled ~ .custom-control-label {
   opacity: 0.5;
 }
 
@@ -1254,7 +1273,8 @@ textarea.form-control-lg {
   padding-left: 2.5em;
 }
 
-.form-switch .form-check-input {
+.form-switch .form-check-input,
+.form-switch .custom-control-input {
   width: 2em;
   margin-left: -2.5em;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
@@ -1263,11 +1283,13 @@ textarea.form-control-lg {
   transition: background-position 0.15s ease-in-out;
 }
 
-.form-switch .form-check-input:focus {
+.form-switch .form-check-input:focus,
+.form-switch .custom-control-input:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fca9a4'/%3e%3c/svg%3e");
 }
 
-.form-switch .form-check-input:checked {
+.form-switch .form-check-input:checked,
+.form-switch .custom-control-input:checked {
   background-position: right center;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
@@ -1771,27 +1793,40 @@ textarea.form-control.is-valid {
 }
 
 .was-validated .form-check-input:valid,
-.form-check-input.is-valid {
+.was-validated .custom-control-input:valid,
+.form-check-input.is-valid,
+.is-valid.custom-control-input {
   border-color: #28a745;
 }
 
 .was-validated .form-check-input:valid:checked,
-.form-check-input.is-valid:checked {
+.was-validated .custom-control-input:valid:checked,
+.form-check-input.is-valid:checked,
+.is-valid.custom-control-input:checked {
   background-color: #28a745;
 }
 
 .was-validated .form-check-input:valid:focus,
-.form-check-input.is-valid:focus {
+.was-validated .custom-control-input:valid:focus,
+.form-check-input.is-valid:focus,
+.is-valid.custom-control-input:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 .was-validated .form-check-input:valid ~ .form-check-label,
-.form-check-input.is-valid ~ .form-check-label {
+.was-validated .custom-control-input:valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .custom-control-label,
+.was-validated .custom-control-input:valid ~ .custom-control-label,
+.form-check-input.is-valid ~ .form-check-label,
+.is-valid.custom-control-input ~ .form-check-label,
+.form-check-input.is-valid ~ .custom-control-label,
+.is-valid.custom-control-input ~ .custom-control-label {
   color: #28a745;
 }
 
-.form-check-inline .form-check-input ~ .valid-feedback {
+.form-check-inline .form-check-input ~ .valid-feedback,
+.form-check-inline .custom-control-input ~ .valid-feedback {
   margin-left: .5em;
 }
 
@@ -1871,27 +1906,40 @@ textarea.form-control.is-invalid {
 }
 
 .was-validated .form-check-input:invalid,
-.form-check-input.is-invalid {
+.was-validated .custom-control-input:invalid,
+.form-check-input.is-invalid,
+.is-invalid.custom-control-input {
   border-color: #dc3545;
 }
 
 .was-validated .form-check-input:invalid:checked,
-.form-check-input.is-invalid:checked {
+.was-validated .custom-control-input:invalid:checked,
+.form-check-input.is-invalid:checked,
+.is-invalid.custom-control-input:checked {
   background-color: #dc3545;
 }
 
 .was-validated .form-check-input:invalid:focus,
-.form-check-input.is-invalid:focus {
+.was-validated .custom-control-input:invalid:focus,
+.form-check-input.is-invalid:focus,
+.is-invalid.custom-control-input:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 .was-validated .form-check-input:invalid ~ .form-check-label,
-.form-check-input.is-invalid ~ .form-check-label {
+.was-validated .custom-control-input:invalid ~ .form-check-label,
+.was-validated .form-check-input:invalid ~ .custom-control-label,
+.was-validated .custom-control-input:invalid ~ .custom-control-label,
+.form-check-input.is-invalid ~ .form-check-label,
+.is-invalid.custom-control-input ~ .form-check-label,
+.form-check-input.is-invalid ~ .custom-control-label,
+.is-invalid.custom-control-input ~ .custom-control-label {
   color: #dc3545;
 }
 
-.form-check-inline .form-check-input ~ .invalid-feedback {
+.form-check-inline .form-check-input ~ .invalid-feedback,
+.form-check-inline .custom-control-input ~ .invalid-feedback {
   margin-left: .5em;
 }
 
@@ -13895,6 +13943,11 @@ iframe {
 .sFAQ__btn-white:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.5);
+}
+
+.icon.icon-filter-panel-item-toggle > svg {
+  top: 0px;
+  position: relative;
 }
 
 .footer {
@@ -35696,12 +35749,14 @@ a {
     transition: none;
   }
 
-  .form-check-input {
+  .form-check-input,
+  .custom-control-input {
     -webkit-transition: none;
     transition: none;
   }
 
-  .form-switch .form-check-input {
+  .form-switch .form-check-input,
+  .form-switch .custom-control-input {
     -webkit-transition: none;
     transition: none;
   }
