@@ -6,40 +6,34 @@ mixin sNew(data)
 				h2 Entdecken Sie das gesamte SOLO Sortiment
 				p Bei SOLO finden Sie für Ihren privaten Garten aber auch für die Landschaftspflege, Land- und Forstwirtschaft oder Bauwirtschaft genau das Richtige, um Ihre Herausforderungen zu meistern.
 			+b.sUsage
-				+e.slider
-					+b.usage-prev--js.d-flex.d-md-none
-						+icon('chevron-left')
-					+b.usage-next--js.d-flex.d-md-none
-						+icon('chevron-right')
-					.swiper-container.usage-slider-js
-						.swiper-wrapper
-							+usageSlide(1,'new-slide-')
-								| Pflanzenschutz/
-								br
-								|
-								| -pflege
-							+usageSlide(2,'new-slide-')
-								| Schädlings-
-								br
-								| bekämpfung
-							+usageSlide(3,'new-slide-')
-								| Land- und
-								| Forstwirtschaft
-							+usageSlide(4,'new-slide-')
-								| Reinigung/
-								br
-								| Desinfektion
-							+usageSlide(5,'new-slide-')
-								| Streuen
-							+usageSlide(6,'new-slide-')
-								| Baugewerbe
-							+usageSlide(7,'new-slide-')(class="d-none d-xl-block")
-								| Trennschleifer
-							+usageSlide(8,'new-slide-')(class="d-none d-xl-block")
-								| Blasgeräte
-							+usageSlide(9,'new-slide-')(class="d-none d-xl-block")
-								| Zubehör
-						+b.usage-pugin--js.d-flex.d-md-none
+				.row
+					+usageSlide(1,'new-slide-')
+						| Pflanzenschutz/
+						br
+						|
+						| -pflege
+					+usageSlide(2,'new-slide-')
+						| Schädlings-
+						br
+						| bekämpfung
+					+usageSlide(3,'new-slide-')
+						| Land- und
+						| Forstwirtschaft
+					+usageSlide(4,'new-slide-')
+						| Reinigung/
+						br
+						| Desinfektion
+					+usageSlide(5,'new-slide-')
+						| Streuen
+					+usageSlide(6,'new-slide-')
+						| Baugewerbe
+					+usageSlide(7,'new-slide-')(class="d-none d-xl-block")
+						| Trennschleifer
+					+usageSlide(8,'new-slide-')(class="d-none d-xl-block")
+						| Blasgeräte
+					+usageSlide(9,'new-slide-')(class="d-none d-xl-block")
+						| Zubehör
+				+b.usage-pugin--js.d-flex.d-md-none
 			+e.btn-cont
 				+e.btn(href="#") ALLE PRUKTE ENTDECKEN
 	// end sNew

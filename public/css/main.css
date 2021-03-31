@@ -7684,6 +7684,13 @@ fieldset:disabled .mob-menu__search-btn {
   visibility: hidden !important;
 }
 
+.modal-close {
+  border: none;
+  background: none;
+  top: -5px;
+  position: relative;
+}
+
 /*
 Basic styles
 ==================================================
@@ -13950,6 +13957,30 @@ iframe {
   position: relative;
 }
 
+.neti-next-store-locator {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#unzer-payment-credit-card-number-input {
+  width: calc(90% - 20px);
+}
+
+.unzer-payment-text-input {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .footer {
   --pt: 3.5rem;
   --spb: 0rem;
@@ -20108,7 +20139,8 @@ a {
   transition: all 0.36s;
   background-color: #f6f7fc;
   --cur-color: #333333;
-  height: 100%;
+  height: calc(100% - var(--bs-gutter-x));
+  margin-bottom: var(--bs-gutter-x);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21067,6 +21099,17 @@ a {
           align-items: center;
 }
 
+.topLine__cart > a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .topLine__c-ball {
   width: 44px;
   height: 44px;
@@ -21212,6 +21255,10 @@ a {
 
 .navMenu__link.active {
   color: #f73429;
+}
+
+.navMenu__link.active.menu-link-js {
+  pointer-events: none;
 }
 
 .navMenu__link.active:before {
@@ -35265,6 +35312,61 @@ a {
   .document-item {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .unzer-payment-credit-card-wrapper table {
+    width: 100%;
+  }
+
+  .unzer-payment-credit-card-wrapper table th {
+    display: none;
+  }
+
+  .unzer-payment-credit-card-wrapper table td,
+  .unzer-payment-credit-card-wrapper table tr,
+  .unzer-payment-credit-card-wrapper table tbody {
+    display: block;
+  }
+
+  .unzer-payment-credit-card-wrapper table tr {
+    border-bottom: 1px solid #969696;
+  }
+
+  .unzer-payment-credit-card-wrapper table td {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .unzer-payment-credit-card-wrapper table td::before {
+    font-weight: bold;
+  }
+
+  .unzer-payment-credit-card-wrapper table td:nth-child(1)::before {
+    content: 'Marke';
+  }
+
+  .unzer-payment-credit-card-wrapper table td:nth-child(2)::before {
+    content: 'Nummer';
+  }
+
+  .unzer-payment-credit-card-wrapper table td:nth-child(3)::before {
+    content: 'Ablaufdatum';
+  }
+
+  .unzer-payment-credit-card-wrapper table td:nth-child(4)::before {
+    content: 'CVC';
+  }
+
+  .unzer-payment-credit-card-wrapper table td:nth-child(5)::before {
+    content: 'Secret';
   }
 
   .sBanerInt__item--red {

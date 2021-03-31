@@ -703,3 +703,60 @@ iframe {
 .custom-control-label {
 	@extend .form-check-label
 }
+
+
+
+.neti-next-store-locator {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+.unzer-payment-credit-card-wrapper { 
+		table{
+				@include media-breakpoint-down(md) {
+					width: 100%;
+					th{
+						display: none;
+					}
+					td,
+					tr,
+					tbody{
+						display: block;
+					}
+					tr{
+						border-bottom: 1px solid $secondary;
+
+					}
+					td{
+						display: flex;
+						justify-content: space-between;
+						padding-top: 0.5rem;
+						padding-bottom: 0.5rem;
+						&::before{
+							font-weight: bold;
+						}
+						&:nth-child(1){ &::before{content: 'Marke';} }
+						&:nth-child(2){ &::before{content: 'Nummer';} }
+						&:nth-child(3){ &::before{content: 'Ablaufdatum';} }
+						&:nth-child(4){ &::before{content: 'CVC';} }
+						&:nth-child(5){ &::before{content: 'Secret';} }
+					}
+				}
+	}
+}
+
+
+
+#unzer-payment-credit-card-number-input {
+    width: calc(90% - 20px);
+}
+
+.unzer-payment-text-input{
+	padding-top: rem(5);
+	padding-bottom: rem(5);
+	height: auto;
+	display: flex;
+    align-items: center;
+}

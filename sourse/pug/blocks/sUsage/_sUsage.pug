@@ -93,10 +93,10 @@ mixin sUsageBalls2(data)
 					+b.usage-pugin--js.d-flex.d-md-none
 
 mixin usageSlide(imgNum, name='usage-slide-')
-	.swiper-slide&attributes(attributes)
+	.col-lg-4.col-sm-6&attributes(attributes)
 		+e.item
 			+e.img(href='#')
-				img.swiper-lazy(src="#" data-src=`img/@2x/${name}${imgNum}.jpg` alt="")
+				img.swiper-lazy(loading="lazy" src=`img/@2x/${name}${imgNum}.jpg` alt="")
 			+e.descr
 				+e.txt(href='#')
 					block

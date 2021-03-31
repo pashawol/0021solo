@@ -156,12 +156,14 @@
 
 		background-color: $light;
 		--cur-color: #{$brown};
+
 		&:hover{
 			--cur-color: #{$white};
 			background-color: var(--main-color);
 		}
 
-		height: 100%;
+		height: calc(100% - var(--bs-gutter-x));
+		margin-bottom: var(--bs-gutter-x);
 
 		display: flex;
 		flex-direction: column;
@@ -349,3 +351,5 @@
 	&__{}
 	&__{}
 } // end.sUsage
+
+

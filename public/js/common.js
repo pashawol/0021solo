@@ -483,24 +483,31 @@ function eventHandler() {
 		$('.menu-link-js').each(function () {
 			if (this === self) {
 				$(this).toggleClass('active');
-				$(this.parentElement).find('.dt-dd-menu--js').toggleClass('active');
+				$(this.parentElement).find('.dt-dd-menu--js').addClass('active');
 			} else {
 				$(this).removeClass('active');
 				$(this.parentElement).find('.dt-dd-menu--js').removeClass('active');
 			}
 		});
+	});
+	document.addEventListener('mouseup', function (event) {
+		var container = event.target.closest(".dt-dd-menu--js.active .dt-dd-menu__wrap"); // (1)
+
+		var link = event.target.closest(".menu-link-js.active"); // (1)
+
+		if (!container && !link) closeAllMenu();
+	}, {
+		passive: true
 	}); //close on resize/scroll prevent all display bugs connected with menu usage on diff screen sizes
 
 	window.addEventListener('scroll', function () {
-		if (window.matchMedia("(min-width: 1024px)").matches) {
-			closeAllMenu();
+		if (window.matchMedia("(min-width: 1024px)").matches) {// closeAllMenu();
 		}
 	}, {
 		passive: true
 	});
 	window.addEventListener('resize', function () {
-		if (window.matchMedia("(min-width: 1024px)").matches) {
-			closeAllMenu();
+		if (window.matchMedia("(min-width: 1024px)").matches) {// closeAllMenu();
 		}
 	}, {
 		passive: true
