@@ -495,7 +495,7 @@ function eventHandler() {
 
 		var link = event.target.closest(".menu-link-js.active"); // (1)
 
-		if (!container && !link) closeAllMenu();
+		if (!container && !link) closeSubMenu();
 	}, {
 		passive: true
 	}); //close on resize/scroll prevent all display bugs connected with menu usage on diff screen sizes

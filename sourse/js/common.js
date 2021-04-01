@@ -515,7 +515,7 @@ function eventHandler() {
 	document.addEventListener('mouseup', (event) => {
 		let container = event.target.closest(".dt-dd-menu--js.active .dt-dd-menu__wrap"); // (1)
 		let link = event.target.closest(".menu-link-js.active"); // (1)
-		if (!container && !link) closeAllMenu();
+		if (!container && !link) closeSubMenu();
 	}, { passive: true });
 
 
