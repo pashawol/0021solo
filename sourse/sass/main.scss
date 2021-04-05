@@ -135,3 +135,9 @@ $output-bourbon-deprecation-warnings: false;
       opacity: 0;
     }
 }
+
+.product-detail-review-form-star.is-active {
+  .icon-star{
+    color: var(--bs-warning);
+  }
+}

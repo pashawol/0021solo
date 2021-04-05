@@ -21571,6 +21571,10 @@ a {
   opacity: 0;
 }
 
+.product-detail-review-form-star.is-active .icon-star {
+  color: var(--bs-warning);
+}
+
 @media (min-width: 576px) {
   .container,
   .cms-section .boxed,
