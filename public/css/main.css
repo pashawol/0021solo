@@ -14695,7 +14695,7 @@ a {
 }
 
 .sBaner__txt-bl {
-  background-color: #004389;
+  background-color: var(--main-color, #004389);
   color: #fff;
 }
 
@@ -31787,11 +31787,6 @@ a {
   .sCategory .section-title--top {
     padding-bottom: 17px;
     margin-bottom: 21px;
-  }
-
-  .sCategory__sort-txt {
-    font-size: 18px;
-    line-height: 1.38889;
   }
 
   .cSidebar__back {

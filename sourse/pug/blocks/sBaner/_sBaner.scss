@@ -52,7 +52,7 @@
 		}
 	}
 	&__txt-bl{
-		background-color: $blue;
+		background-color: var(--main-color, #{$blue});
 		color: $white;
 	}
 	//
