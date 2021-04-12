@@ -411,7 +411,7 @@
 
   width: 100%;
   display: block;
-  padding: 6.5px var(--mmPright) 6.5px var(--mmPLeft);
+  //padding: 6.5px var(--mmPright) 6.5px var(--mmPLeft);
 
   @include media-breakpoint-up(xl){
     width: 962px;
@@ -469,7 +469,13 @@
   &__link{
     position: relative;
 
-    padding: 10px 0;
+    //padding: 10px 0;
+    padding: 10px var(--mmPright) 10px var(--mmPLeft);
+    border-bottom: 2px solid $light;
+    @include media-breakpoint-up(xl){
+      border-bottom: 0;
+      padding: 10px 0;
+    }
     @include media-breakpoint-up(xll){
       padding: 42px 0;
     }
@@ -496,17 +502,34 @@
     &:after{
       @include mt();
       content: "";
-      margin-left: 7px;
 
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 5px 3.5px 0 3.5px;
-      border-color: currentColor transparent transparent transparent;
+      @include media-breakpoint-down(xl){
+        margin-left: auto;
+
+        display: inline-block;
+        //margin-left: 20px;
+        height: 16px;
+        width: 16px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain;
+        background-image: url(../img/svg/chevror-right-black.svg);
+      }
+      @include media-breakpoint-up(xl){
+        margin-left: 7px;
+
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 3.5px 0 3.5px;
+        border-color: currentColor transparent transparent transparent;
+      }
     }
     &:before{
       opacity: 0;
-      content: '';
+      @include media-breakpoint-up(xl){
+        content: '';
+      }
       background-color: $primary;
       position: absolute;
       bottom: 0;
