@@ -91,7 +91,8 @@ mixin filterItem(txt)
 
 mixin catalogSlide(data)
 	.swiper-slide
-		+e.item
+		+e.item.bg-wrap
+			+pic("new-slide-6.jpg",'bg',0).picture-bg
 			if data.discount
 				+e.discount=data.discount
 			if data.activeLike
@@ -102,22 +103,34 @@ mixin catalogSlide(data)
 					+icon('heart')
 			+e.img(href="#")
 				img.swiper-lazy(src="#" data-src=`img/@2x/catalog-item-${data.imgNum}.png` alt="")
-			+e.name(href="#")=data.nameTxt
-			+e.descr=data.descr
-			+e.price-cont
-				if data.newPrice
-					+e.price--new=data.newPrice
-					+e.price--old=data.oldPrice
-				else
-					+e.price--common=data.oldPrice
-			if data.grayTxt
-				+e.gray
-					span Inhalt:
-					span=data.grayTxt
+			+e.caption
+				+e.caption-head
+					+b.stars-block
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+					+e.descr(href="#") Details
+				+e.caption-toggle
+					+e.name(href="#")=data.nameTxt
+					+e.descr=data.descr
+				+e.price-cont
+					if data.newPrice
+						+e.price--new=data.newPrice
+						+e.price--old=data.oldPrice
+					else
+						+e.price--common=data.oldPrice
+				if data.grayTxt
+					+e.gray
+						span Inhalt:
+						span=data.grayTxt
 
 mixin catalogItem(data)
 	//-.sCatalog__
-	.sCatalog__item
+	.sCatalog__item.bg-wrap
+		
+		+pic("new-slide-6.jpg",'bg',0).picture-bg
 		if data.discount
 			.sCatalog__discount=data.discount
 		if data.activeLike
@@ -128,18 +141,28 @@ mixin catalogItem(data)
 				+icon('heart')
 		.sCatalog__img(href="#")
 			img(loading="lazy" src=`img/@2x/catalog-item-${data.imgNum}.png` alt="")
-		a.sCatalog__name(href="#")=data.nameTxt
-		.sCatalog__descr=data.descr
-		.sCatalog__price-cont
-			if data.newPrice
-				.sCatalog__price.sCatalog__price--new=data.newPrice
-				.sCatalog__price.sCatalog__price--old=data.oldPrice
-			else
-				.sCatalog__price.sCatalog__price--common=data.oldPrice
-		if data.grayTxt
-			.sCatalog__gray
-				span Inhalt:
-				span=data.grayTxt
+		.sCatalog__caption
+				.sCatalog__caption-head
+					+b.stars-block
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+					.sCatalog__descr(href="#") Details
+				.sCatalog__caption-toggle
+					.sCatalog__name(href="#")=data.nameTxt
+					.sCatalog__descr=data.descr
+				.sCatalog__price-cont
+					if data.newPrice
+						.sCatalog__price.sCatalog__price--new=data.newPrice
+						.sCatalog__price.sCatalog__price--old=data.oldPrice
+					else
+						.sCatalog__price.sCatalog__price--common=data.oldPrice
+				if data.grayTxt
+					.sCatalog__gray
+						span Inhalt:
+						span=data.grayTxt
 
 mixin sMayInteresting(data)
 	// start sCatalog

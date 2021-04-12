@@ -1,18 +1,18 @@
 // start .sWBaner
 .sWBaner {
 	//no actual here
-	--sTPB: 0;
-	--sPT: 0;
+	--stpb: 0;
+	--pt: 0;
 
-	--sPB: 40px;
+	--spb: 40px;
 	@include media-breakpoint-up(md){
-		--sPB: 45px;
+		--spb: 45px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPB: 50px;
+		--spb: 50px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPB: 53px;
+		--spb: 53px;
 	}
 
 	.breadcrumb-wrap{

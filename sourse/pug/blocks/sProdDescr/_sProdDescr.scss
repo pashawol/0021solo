@@ -2,20 +2,20 @@
 .sProdDescr {
 	background-color: $light;
 
-	--sPT: 40px;
-	--sPB: 40px;
-	--sTPB: 20px;
+	--pt: 40px;
+	--spb: 40px;
+	--stpb: 20px;
 	@include media-breakpoint-up(md){
-		--sPT: 50px;
-		--sPB: 50px;
+		--pt: 50px;
+		--spb: 50px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 60px;
-		--sPB: 60px;
+		--pt: 60px;
+		--spb: 60px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 87.5px;
-		--sPB: 87.5px;
+		--pt: 87.5px;
+		--spb: 87.5px;
 	}
 
 	&__container{
@@ -168,7 +168,7 @@
 				width: 20px;
 				height: 20px;
 
-				background-image: url(../img/svg/check-bold.svg);
+				background-image: var(--check-bold);
 				background-repeat: no-repeat;
 				background-size: 16.7px 14.5px;
 				background-position: 0 0;

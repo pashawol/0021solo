@@ -2,28 +2,28 @@
 .sNews {
 	overflow: hidden;
 
-	--sPT: 46px;
-	--sPB: 45px;
-	--sTPB: 55px;
+	--pt: 46px;
+	--spb: 45px;
+	--stpb: 55px;
 	@include media-breakpoint-up(md){
-		--sPT: 45px;
-		--sPB: 45px;
-		--sTPB: 53px;
+		--pt: 45px;
+		--spb: 45px;
+		--stpb: 53px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 49px;
-		--sPB: 10px;
-		--sTPB: 53px;
+		--pt: 49px;
+		--spb: 10px;
+		--stpb: 53px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 40px;
-		--sPB: 46px;
-		--sTPB: 57px;
+		--pt: 40px;
+		--spb: 46px;
+		--stpb: 57px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 68px;
-		--sPB: 34px;
-		--sTPB: 56px;
+		--pt: 68px;
+		--spb: 34px;
+		--stpb: 56px;
 	}
 
 	&__container{
@@ -133,13 +133,13 @@
 		@include mt();
 
 		background-color: $light;
-		--nItemColor: #{$brown};
-		--nItemGrayColor: #{$gray550};
-		--nYoutubeColor: #{#db3232};
+		--n-item-color: #{$brown};
+		--n-item-gray-color: #{$gray550};
+		--n-youtube-color: #{#db3232};
 		&:hover{
-			--nItemColor: #{$white};
-			--nItemGrayColor: #{$white};
-			--nYoutubeColor: #{$white};
+			--n-item-color: #{$white};
+			--n-item-gray-color: #{$white};
+			--n-youtube-color: #{$white};
 			background-color: $primary;
 		}
 
@@ -186,8 +186,7 @@
 
 				background-repeat: no-repeat;
 				background-position: center;
-				background-image: url(../img/svg/play-btn.svg);
-
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='98' height='61' viewBox='0 0 98 61'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23f6f7fc' d='M28.08 46.295V14.662l28 15.555zM67.793 0H11.635C5.22 0 0 5.22 0 11.635v37.233c0 6.415 5.22 11.635 11.635 11.635h56.16c6.414 0 11.634-5.22 11.634-11.635V11.635C79.43 5.22 74.21 0 67.794 0z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23f6f7fc' d='M46.08 46.295V14.662l28 15.555zM85.793 0H29.635C23.22 0 18 5.22 18 11.635v37.233c0 6.415 5.22 11.635 11.635 11.635h56.16c6.414 0 11.634-5.22 11.634-11.635V11.635C97.43 5.22 92.21 0 85.794 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 				background-size: 91px 61px;
 				@include media-breakpoint-up(xll){
 					background-size: 98px 61px;
@@ -204,7 +203,7 @@
 	&__descr-bl{
 		flex-grow: 1;
 		@include mt();
-		color: var(--nItemColor);
+		color: var(--n-item-color);
 		display: flex;
 		flex-direction: column;
 
@@ -244,7 +243,7 @@
 		font-weight: 900;
 		align-items: center;
 		@include mt();
-		color: var(--nItemColor);
+		color: var(--n-item-color);
 
 		&:after{
 			content: '|';
@@ -253,7 +252,7 @@
 	}
 	&__d-date{
 		@include mt();
-		color: var(--nItemGrayColor);
+		color: var(--n-item-gray-color);
 		font-weight: 700;
 		text-transform: uppercase;
 
@@ -261,7 +260,7 @@
 	}
 	&__title{
 		@include mt();
-		color: var(--nItemColor)!important;
+		color: var(--n-item-color)!important;
 		font-weight: 700;
 
 		font-size: 16px;
@@ -311,7 +310,7 @@
 		margin-top: auto;
 
 		@include mt();
-		color: var(--nItemColor)!important;
+		color: var(--n-item-color)!important;
 	}
 	&__l-txt{
 		font-weight: 700;
@@ -340,7 +339,7 @@
 
 		path{
 			@include mt();
-			fill: var(--nYoutubeColor)!important;
+			fill: var(--n-youtube-color)!important;
 		}
 		img{
 			width: auto;

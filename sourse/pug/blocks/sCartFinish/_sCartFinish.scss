@@ -2,21 +2,21 @@
 .sCartFinish {
 	background-color: $light;
 
-	--sPT: 20px;
-	--sPB: 20px;
-	--sTPB: 20px;
+	--pt: 20px;
+	--spb: 20px;
+	--stpb: 20px;
 	@include media-breakpoint-up(md){
-		--sPT: 30px;
-		--sPB: 20px;
+		--pt: 30px;
+		--spb: 20px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 40px;
-		--sPB: 20px;
-		--sTPB: 25px;
+		--pt: 40px;
+		--spb: 20px;
+		--stpb: 25px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 42px;
-		--sPB: 32px;
+		--pt: 42px;
+		--spb: 32px;
 	}
 
 	&__container{
@@ -154,24 +154,24 @@
 		padding: 32px 25px 25px 28px;
 	}
 
-	--prodW: 100%;
+	--prod-w: 100%;
 	@include media-breakpoint-up(sm){
-		--prodW: calc(100% - 70px);
+		--prod-w: calc(100% - 70px);
 	}
-	--amountW: calc(100% / 3);
-	--taxW: calc(100% / 3);
-	--sumW: calc(100% / 3);
+	--amount-w: calc(100% / 3);
+	--tax-w: calc(100% / 3);
+	--sum-w: calc(100% / 3);
 	@include media-breakpoint-up(xll){
-		--prodW: 45%;
-		--amountW: 15%;
-		--taxW: 13.5%;
-		--sumW: 13.5%;
+		--prod-w: 45%;
+		--amount-w: 15%;
+		--tax-w: 13.5%;
+		--sum-w: 13.5%;
 	}
 	@include media-breakpoint-up(xxl){
-		--prodW: 51%;
-		--amountW: 13.3%;
-		--taxW: 13.7%;
-		--sumW: 15%;
+		--prod-w: 51%;
+		--amount-w: 13.3%;
+		--tax-w: 13.7%;
+		--sum-w: 15%;
 	}
 
 	&__header{
@@ -202,16 +202,16 @@
 		flex-shrink: 0;
 
 		&--prod{
-			width: var(--prodW);
+			width: var(--prod-w);
 		}
 		&--amount{
-			width: var(--amountW);
+			width: var(--amount-w);
 		}
 		&--tax{
-			width: var(--taxW);
+			width: var(--tax-w);
 		}
 		&--total{
-			width: var(--sumW);
+			width: var(--sum-w);
 		}
 	}
 	//items
@@ -236,7 +236,7 @@
 		flex-shrink: 0;
 
 		&--prod{
-			width: var(--prodW);
+			width: var(--prod-w);
 			display: flex;
 			padding-right: 25px;
 
@@ -246,10 +246,10 @@
 			}
 		}
 		&--amount{
-			width: var(--amountW);
+			width: var(--amount-w);
 		}
 		&--tax{
-			width: var(--taxW);
+			width: var(--tax-w);
 
 			text-align: center;
 			@include media-breakpoint-up(xll){
@@ -257,7 +257,7 @@
 			}
 		}
 		&--total{
-			width: var(--sumW);
+			width: var(--sum-w);
 
 			text-align: right;
 			@include media-breakpoint-up(xll){

@@ -2,21 +2,21 @@
 .sMail {
 	overflow: hidden;
 
-	--sPT: 0;
-	//--sTPB: 72px; dont work here
+	--pt: 0;
+	//--stpb: 72px; dont work here
 
-	--sPB: 45px;
+	--spb: 45px;
 	@include media-breakpoint-up(md){
-		--sPB: 45px;
+		--spb: 45px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPB: 0px;
+		--spb: 0px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPB: 46px;
+		--spb: 46px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPB: 34px;
+		--spb: 34px;
 	}
 
 	.container{
@@ -135,10 +135,16 @@
 		//
 		&__btn{
 			@extend .btn;
-			@extend .btn-white;
+			background-color: #fff;
+			border-color: #fff;
 			font-weight: 700;
 			text-transform: uppercase;
 			color: $brown;
+			&:hover{
+				background-color: $brown;
+				border-color: $brown;
+				color: #ffffff;
+			}	
 
 			font-size: 14px;
 			letter-spacing: 0.56px;

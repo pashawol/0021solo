@@ -3,28 +3,28 @@
 	position: relative;
 	z-index: 1;
 
-	--sPT: 15px;
-	--sPB: 25px;
-	--sTPB: 48px;
+	--pt: 15px;
+	--spb: 25px;
+	--stpb: 48px;
 	@include media-breakpoint-up(md){
-		--sPT: 30px;
-		--sPB: 25px;
-		--sTPB: 53px;
+		--pt: 30px;
+		--spb: 25px;
+		--stpb: 53px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 33px;
-		--sPB: 43px;
-		--sTPB: 41px;
+		--pt: 33px;
+		--spb: 43px;
+		--stpb: 41px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 30px;
-		--sPB: 39px;
-		--sTPB: 46px;
+		--pt: 30px;
+		--spb: 39px;
+		--stpb: 46px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 23px;
-		--sPB: 75px;
-		//--sTPB: 46px;
+		--pt: 23px;
+		--spb: 75px;
+		//--stpb: 46px;
 	}
 
 	.section-title{
@@ -64,6 +64,12 @@
 	&__col{
 		text-align: center;
 		margin-bottom: 44px;
+		@include mt;
+		display: block;
+		color: $brown;
+		&:hover{
+			color: var(--hover-color, #{$primary}); 
+		}
 		@include media-breakpoint-up(md){
 			margin-bottom: 53px;
 		}
@@ -82,7 +88,7 @@
 		padding: 10px;
 
 		border-radius: 50%;
-		border: 1px solid $black;
+		border: 1px solid currentColor;
 
 
 		margin-bottom: 23px;
@@ -96,8 +102,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
+		svg,
 		img{
+			path{
+				fill: currentColor !important;
+			}
 			width: auto;
 			height: auto;
 			max-width: 100%;
@@ -105,9 +114,8 @@
 		}
 	}
 	&__txt{
-		color: $brown;
-		line-height: 1.2;
-
+		
+		line-height: 1.2; 
 		font-size: 12px;
 		@include media-breakpoint-up(md){
 			font-size: 14px;
@@ -136,7 +144,7 @@
 			width: calc(133px * 3 / 4);
 		}
 		@include media-breakpoint-up(xll){
-			top: calc(var(--sPT) + var(--sTPB) + 42px);
+			top: calc(var(--pt) + var(--stpb) + 42px);
 			right: 60px;
 			width: 133px;
 		}

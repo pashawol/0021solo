@@ -1,17 +1,17 @@
 // start .sImpressum
 .sImpressum {
-	--sPT: 0;
-	--sTPB: 0px;
+	--pt: 0;
+	--stpb: 0px;
 
-	--sPB: 80px;
+	--spb: 80px;
 	@include media-breakpoint-up(md){
-		--sPB: 76px;
+		--spb: 76px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPB: 84px;
+		--spb: 84px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPB: 86px;
+		--spb: 86px;
 	}
 
 	&__container{

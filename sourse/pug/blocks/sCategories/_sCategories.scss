@@ -2,15 +2,15 @@
 	// start .sCategories
 	.sCategories {
 			@include media-breakpoint-up(xll){
-				--sPT: #{rem(82)};
-				--sPB: #{rem(47)};
+				--pt: #{rem(82)};
+				--spb: #{rem(47)};
 			}
-			--sPB: #{rem(24)};
+			--spb: #{rem(24)};
 			@include media-breakpoint-up(xl){
-				--sPT: #{rem(24)};
+				--pt: #{rem(24)};
 			}
-			--sPT: #{rem(54)};
-		--sTPB: #{rem(22)};
+			--pt: #{rem(54)};
+		--stpb: #{rem(22)};
 		h2{
 			font-size: 1rem;
 			font-weight: 900;
@@ -26,17 +26,23 @@
 				}
 				font-size: rem(14);
 				margin-bottom: em(13);
-			position: relative;
-			padding-left: rem(15);
-			&::before{
-				content: url(../img/svg/chevron-right.svg);
-				position: absolute;
-				left: 0;
-				top: rem(-2);
 			}
-		}
-		a{
-			@extend .text-body;
+			a{
+				color: #333;
+				position: relative;
+				padding-left: rem(15);
+				&::before{
+					content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4.305' height='7.417' viewBox='0 0 4.305 7.417'%3E%3Cpath d='M.172,3.289a.58.58,0,0,0,0,.823L3.31,7.25a.582.582,0,0,0,.823-.823L1.423,3.7,4.133.99A.557.557,0,0,0,4.3.579.532.532,0,0,0,4.133.167a.59.59,0,0,0-.823,0Z' transform='translate(4.305 7.417) rotate(180)' fill='%23333333'/%3E%3C/svg%3E");
+					position: absolute;
+					left: 0;
+					top: rem(-2);
+				}
+			&:hover{
+				color: $primary;
+				&::before{
+					content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4.305' height='7.417' viewBox='0 0 4.305 7.417'%3E%3Cpath d='M.172,3.289a.58.58,0,0,0,0,.823L3.31,7.25a.582.582,0,0,0,.823-.823L1.423,3.7,4.133.99A.557.557,0,0,0,4.3.579.532.532,0,0,0,4.133.167a.59.59,0,0,0-.823,0Z' transform='translate(4.305 7.417) rotate(180)' fill='%23f73429'/%3E%3C/svg%3E");
+				}
+			}
 		}
 		 
 	@include media-breakpoint-up(xl) {}

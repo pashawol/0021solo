@@ -5,9 +5,7 @@ mixin sNews(data)
 			+b.section-title.text-center
 				h2 Neuigkeiten
 			//-|
-			+e.slider
-				.swiper-container.news-slider-js
-					.swiper-wrapper
+			.row
 						+newsSlide({
 							imgNum: "1",
 							boldTxt: "YouTube",
@@ -38,7 +36,7 @@ mixin sNews(data)
 	// end sNews
 
 mixin newsSlide(data)
-	.swiper-slide
+	.col-xl-4.col-sm-6
 		+e.item
 			if data.youtube
 				+e.img.play-btn(href='#')

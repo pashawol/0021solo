@@ -1,21 +1,21 @@
 // start .sProdDet
 .sProdDet {
-	--sPT: 30px;
-	--sPB: 40px;
-	--sTPB: 25px;
+	--pt: 30px;
+	--spb: 40px;
+	--stpb: 25px;
 	@include media-breakpoint-up(md){
-		--sPT: 35px;
-		--sPB: 45px;
+		--pt: 35px;
+		--spb: 45px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 40px;
-		--sPB: 50px;
-		--sTPB: 35px;
+		--pt: 40px;
+		--spb: 50px;
+		--stpb: 35px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 31px;
-		--sPB: 53px;
-		--sTPB: 49px;
+		--pt: 31px;
+		--spb: 53px;
+		--stpb: 49px;
 	}
 
 	&__container{

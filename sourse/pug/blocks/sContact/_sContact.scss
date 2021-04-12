@@ -2,28 +2,28 @@
 .sContact {
 	overflow: hidden;
 
-	--sPT: 44px;
-	--sPB: 45px;
-	--sTPB: 26px;
+	--pt: 44px;
+	--spb: 45px;
+	--stpb: 26px;
 	@include media-breakpoint-up(md){
-		--sPT: 45px;
-		--sPB: 45px;
-		--sTPB: 38px;
+		--pt: 45px;
+		--spb: 45px;
+		--stpb: 38px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 27px;
-		--sPB: 40px;
-		--sTPB: 29px;
+		--pt: 27px;
+		--spb: 40px;
+		--stpb: 29px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 32px;
-		--sPB: 46px;
-		--sTPB: 26px;
+		--pt: 32px;
+		--spb: 46px;
+		--stpb: 26px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 75px;
-		--sPB: 34px;
-		--sTPB: 26px;
+		--pt: 75px;
+		--spb: 34px;
+		--stpb: 26px;
 	}
 
 	&__container{

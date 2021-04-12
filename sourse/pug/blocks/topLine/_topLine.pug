@@ -86,30 +86,32 @@ mixin dtDDMenu(diff='', backBtnTxt='Haus & Garten')
 					span=`Zurük`
 					+icon('arrow-right')
 				+e.row.row
-					.col-xl-3
-						+e.title.sb-title-js=`Anwendung${diff}`
-						+e.UL.submenu.sb-mnu-js
-							+submenuItem('Pflanzenschutz/ -pflege', 'submenu-icon-1')
-							+submenuItem('Reinigung/Desinfektion', 'submenu-icon-2')
-							+submenuItem('Streuen', 'submenu-icon-3')
-					.col-xl-3
-						+e.title.sb-title-js=`Spritzen${diff}`
-						+e.UL.submenu.sb-mnu-js
-							+submenuItem('Handspritze')
-							+submenuItem('Druckspritze')
-							+submenuItem('Rückenspritze')
-							+submenuItem('Akkuspritzen')
-							+submenuItem('Schaumsprüher')
-					.col-xl-3
-						+e.title.sb-title-js Granulatstreuer
-						+e.UL.submenu.sb-mnu-js
-							+submenuItem('421 Granulatstreuer')
-						+e.title.sb-title-js Zubehör
-						+e.UL.submenu.sb-mnu-js
-							+submenuItem('Lanzen')
-							+submenuItem('Düsen und Spritzschirme')
-							+submenuItem('Dichtungen')
-							+submenuItem('weiteres Zubehör')
+					.column-menu.col-xl-9
+						.column-menu__item
+							+e.title.sb-title-js=`Anwendung${diff}`
+							+e.UL.submenu.sb-mnu-js
+								+submenuItem('Pflanzenschutz/ -pflege', 'submenu-icon-1')
+								+submenuItem('Reinigung/Desinfektion', 'submenu-icon-2')
+								+submenuItem('Streuen', 'submenu-icon-3')
+						.column-menu__item
+							+e.title.sb-title-js=`Spritzen${diff}`
+							+e.UL.submenu.sb-mnu-js
+								+submenuItem('Handspritze')
+								+submenuItem('Druckspritze')
+								+submenuItem('Rückenspritze')
+								+submenuItem('Akkuspritzen')
+								+submenuItem('Schaumsprüher')
+						.column-menu__item
+							+e.title.sb-title-js Zubehör
+							+e.UL.submenu.sb-mnu-js
+								+submenuItem('Lanzen')
+								+submenuItem('Düsen und Spritzschirme')
+								+submenuItem('Dichtungen')
+								+submenuItem('weiteres Zubehör')
+						.column-menu__item
+							+e.title.sb-title-js Granulatstreuer
+							+e.UL.submenu.sb-mnu-js
+								+submenuItem('421 Granulatstreuer')
 					.col-xl-3.d-none.d-xl-block
 						+e.img
 							img(loading="lazy" src="img/@2x/submenu-img.jpg" alt="")

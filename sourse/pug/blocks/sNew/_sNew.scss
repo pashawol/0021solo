@@ -4,35 +4,35 @@
 	z-index: 1;
 	overflow: hidden;
 
-	--sPT: 44px;
-	--sPB: 45px;
-	--sTPB: 72px;
+	--pt: 44px;
+	--spb: 45px;
+	--stpb: 72px;
 	@include media-breakpoint-up(md){
-		--sPT: 88px;
-		--sPB: 45px;
-		--sTPB: 35px;
+		--pt: 88px;
+		--spb: 45px;
+		--stpb: 35px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 46px;
-		--sPB: 37px;
-		--sTPB: 76px;
+		--pt: 46px;
+		--spb: 37px;
+		--stpb: 76px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 91px;
-		--sPB: 46px;
-		--sTPB: 60px;
+		--pt: 91px;
+		--spb: 46px;
+		--stpb: 60px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 87px;
-		--sPB: 43px;
-		--sTPB: 81px;
+		--pt: 87px;
+		--spb: 43px;
+		--stpb: 81px;
 	}
 
 	&--sFunc{
 		@include media-breakpoint-up(xxl){
-			--sPT: 84px;
-			--sPB: 30px;
-			--sTPB: 50px;
+			--pt: 84px;
+			--spb: 30px;
+			--stpb: 50px;
 		}
 	}
 

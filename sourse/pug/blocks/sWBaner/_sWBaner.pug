@@ -10,7 +10,10 @@ mixin sWBaner(data)
 					.col-sm-9.col-md-7.col-xl-6.col-xll-5.ms-auto
 						+e.white-bl
 							+e.sm=data.smTxt
-							+e.H2.title=data.title
+							if data.h1
+								+e.H1.title=data.title
+							else
+								+e.H2.title=data.title 
 							+e.descr=data.descr
 							+e.foot-row.row.align-items-end
 								.col

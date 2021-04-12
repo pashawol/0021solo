@@ -1,21 +1,21 @@
 // start .sCartEnter
 .sCartEnter {
 	background-color: $light;
-	--sTPB: 0px;
+	--stpb: 0px;
 
-	--sPT: 20px;
-	--sPB: 20px;
+	--pt: 20px;
+	--spb: 20px;
 	@include media-breakpoint-up(md){
-		--sPT: 60px;
-		--sPB: 20px;
+		--pt: 60px;
+		--spb: 20px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 80px;
-		--sPB: 20px;
+		--pt: 80px;
+		--spb: 20px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 70px;
-		--sPB: 10px;
+		--pt: 70px;
+		--spb: 10px;
 	}
 
 	&__container{
@@ -127,7 +127,7 @@
 				width: 17px;
 				height: 15px;
 
-				background-image: url(../img/svg/check-bold.svg);
+				background-image: var(--check-bold);
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: contain;
@@ -326,7 +326,7 @@
 				border: 2px solid $green2;
 				background-color: $white;
 
-				background-image: url(../img/svg/check-bold-green.svg);
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='15' viewBox='0 0 17 15'%3E%3Cg%3E%3Cg clip-path='url(%23clip-ee98581a-fb08-416c-a102-22c9a8bf62b7)'%3E%3Cpath fill='%2354b105' d='M15.849.001c-4.975 3.05-8.56 6.9-10.015 8.611L2.097 5.684c-.1-.07-2.15 1.75-2.096 1.807l6.806 6.92a.25.25 0 0 0 .193.082c.014 0 .035 0 .053-.004a.272.272 0 0 0 .198-.17c1.096-2.804 4.717-8.671 9.34-12.928a.276.276 0 0 0 .066-.306c-.001 0-.74-1.126-.808-1.084'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 				background-position: center;
 				background-repeat: no-repeat;
 			}

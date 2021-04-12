@@ -4,28 +4,28 @@
 	background-color: $light;
 	border-top: 12px solid $primary;
 
-	--sPT: 44px;
-	--sPB: 45px;
-	--sTPB: 72px;
+	--pt: 44px;
+	--spb: 45px;
+	--stpb: 72px;
 	@include media-breakpoint-up(md){
-		--sPT: 45px;
-		--sPB: 45px;
-		--sTPB: 66px;
+		--pt: 45px;
+		--spb: 45px;
+		--stpb: 66px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 43px;
-		--sPB: 0px;
-		--sTPB: 68px;
+		--pt: 43px;
+		--spb: 0px;
+		--stpb: 68px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 44px;
-		--sPB: 46px;
-		--sTPB: 77px;
+		--pt: 44px;
+		--spb: 46px;
+		--stpb: 77px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 66px;
-		--sPB: 34px;
-		--sTPB: 88px;
+		--pt: 66px;
+		--spb: 34px;
+		--stpb: 88px;
 	}
 
 	&__container{

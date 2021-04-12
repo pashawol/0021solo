@@ -2,21 +2,21 @@
 .sPDownload {
 	background-color: $light;
 
-	--sPT: 40px;
-	--sPB: 40px;
-	--sTPB: 25px;
+	--pt: 40px;
+	--spb: 40px;
+	--stpb: 25px;
 	@include media-breakpoint-up(md){
-		--sPT: 55px;
-		--sPB: 45px;
+		--pt: 55px;
+		--spb: 45px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 60px;
-		--sPB: 50px;
-		--sTPB: 37px;
+		--pt: 60px;
+		--spb: 50px;
+		--stpb: 37px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 78px;
-		--sPB: 68px;
+		--pt: 78px;
+		--spb: 68px;
 	}
 
 	&__container{

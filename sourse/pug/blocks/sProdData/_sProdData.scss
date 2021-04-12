@@ -1,20 +1,20 @@
 // start .sProdData
 .sProdData {
-	--sPT: 30px;
-	--sPB: 40px;
-	--sTPB: 25px;
+	--pt: 30px;
+	--spb: 40px;
+	--stpb: 25px;
 	@include media-breakpoint-up(md){
-		--sPT: 35px;
-		--sPB: 45px;
+		--pt: 35px;
+		--spb: 45px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 40px;
-		--sPB: 50px;
-		--sTPB: 37px;
+		--pt: 40px;
+		--spb: 50px;
+		--stpb: 37px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 47.5px;
-		--sPB: 53px;
+		--pt: 47.5px;
+		--spb: 53px;
 	}
 
 	&__container{

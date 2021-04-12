@@ -2,25 +2,25 @@
 .sVantageLine {
 	background-color: $light;
 	//background-color: $pink;
-	--sTPB: 0;
+	--stpb: 0;
 
-	--sPT: 34px;
-	--sPB: 0px;
+	--pt: 34px;
+	--spb: 0px;
 	@include media-breakpoint-up(md){
-		--sPT: 35px;
-		--sPB: 10px;
+		--pt: 35px;
+		--spb: 10px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 36px;
-		--sPB: 0;
+		--pt: 36px;
+		--spb: 0;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 48px;
-		--sPB: 16px;
+		--pt: 48px;
+		--spb: 16px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 48px;
-		--sPB: 16px;
+		--pt: 48px;
+		--spb: 16px;
 	}
 
 	//

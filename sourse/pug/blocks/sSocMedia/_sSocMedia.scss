@@ -2,28 +2,28 @@
 .sSocMedia {
 	overflow: hidden;
 
-	--sPT: 74px;
-	--sPB: 45px;
-	--sTPB: 38px;
+	--pt: 74px;
+	--spb: 45px;
+	--stpb: 38px;
 	@include media-breakpoint-up(md){
-		--sPT: 37px;
-		--sPB: 25px;
-		--sTPB: 56px;
+		--pt: 37px;
+		--spb: 25px;
+		--stpb: 56px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 61px;
-		--sPB: 10px;
-		--sTPB: 55px;
+		--pt: 61px;
+		--spb: 10px;
+		--stpb: 55px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 45px;
-		--sPB: 30px;
-		--sTPB: 57px;
+		--pt: 45px;
+		--spb: 30px;
+		--stpb: 57px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 38px;
-		--sPB: 34px;
-		--sTPB: 56px;
+		--pt: 38px;
+		--spb: 34px;
+		--stpb: 56px;
 	}
 
 	&__container{
@@ -131,8 +131,26 @@
 		}
 	}
 	&__link{
-		@extend .accept-ratio-frame;
-		padding-top: 100%;
+		display: block;
+	width: 100%;
+	height: 0;
+	position: relative;
+
+	overflow: hidden;
+	padding-top: 100%;
+	img{
+		@include mt();
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+	&:hover{ 
+			// filter: brightness(80%);
+			transform: scale(1.1); 
+	}
 	}
 	//
 	&__{}

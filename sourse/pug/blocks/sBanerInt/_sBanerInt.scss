@@ -1,20 +1,20 @@
 // start .sBanerInt
 .sBanerInt {
-	--sTPB: 0;
+	--stpb: 0;
 
-	--sPT: 40px;
-	--sPB: 40px;
+	--pt: 40px;
+	--spb: 40px;
 	@include media-breakpoint-up(md){
-		--sPT: 45px;
-		--sPB: 45px;
+		--pt: 45px;
+		--spb: 45px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 55px;
-		--sPB: 50px;
+		--pt: 55px;
+		--spb: 50px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 83px;//!!!
-		--sPB: 53px;
+		--pt: 83px;//!!!
+		--spb: 53px;
 	}
 
 	.section-title{
@@ -92,7 +92,7 @@
 				height: 500px;
 			}
 
-			background-color: $primary;
+			background-color: var(--main-color);
 		}
 	}
 	&__img{
@@ -118,6 +118,11 @@
 		max-width: 90%;
 		text-align: center;
 		background-color: rgba($white, .9);
+		color: $body-color;
+		&:hover{
+			color: #fff;
+			background-color: var(--main-color);
+		}
 
 
 		font-weight: 900;

@@ -2,28 +2,28 @@
 .sFolow {
 	overflow: hidden;
 
-	--sPT: 26px;
-	--sPB: 96px;
-	--sTPB: 38px;
+	--pt: 26px;
+	--spb: 96px;
+	--stpb: 38px;
 	@include media-breakpoint-up(md){
-		--sPT: 22px;
-		--sPB: 85px;
-		--sTPB: 16px;
+		--pt: 22px;
+		--spb: 85px;
+		--stpb: 16px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 38px;
-		--sPB: 89px;
-		--sTPB: 17px;
+		--pt: 38px;
+		--spb: 89px;
+		--stpb: 17px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 20px;
-		--sPB: 88px;
-		--sTPB: 15px;
+		--pt: 20px;
+		--spb: 88px;
+		--stpb: 15px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 11px;
-		--sPB: 88px;
-		--sTPB: 13px;
+		--pt: 11px;
+		--spb: 88px;
+		--stpb: 13px;
 	}
 
 	&__container{
@@ -129,17 +129,23 @@
 		align-items: center;
 		justify-content: center;
 		padding: 10px;
-
+		path{
+			@include mt;
+		}
+		svg,
 		img{
 			width: auto;
 			height: auto;
 			max-width: 100%;
 			max-height: 100%;
+			@include mt;
 		}
 
 		&:hover{
-			background-color: $light;
-			box-shadow: 5px 5px 15px -5px rgba($brown, .5);
+			path{
+				fill: $primary !important;
+			}
+			border-color: $primary;
 		}
 	}
 	&__tag-cont{

@@ -100,7 +100,7 @@
       background-color: $light;
       margin-right: 14px;
 
-      background-image: url(../img/svg/red-phone.svg);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='13' viewBox='0 0 12 13'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23f73429' d='M10.927 10.01l-.067-.134c-.186-.44-2.477-1.106-2.664-1.119l-.146.013c-.28.054-.587.307-1.186.826a.362.362 0 0 1-.426.054c-.786-.44-1.745-1.32-2.225-1.852-.52-.573-1.145-1.518-1.438-2.278a.399.399 0 0 1 .106-.413c.68-.612.973-.905 1-1.225.013-.186-.387-2.544-.8-2.77l-.12-.08C2.695.857 2.295.604 1.856.697a1.222 1.222 0 0 0-.307.12c-.293.187-1.025.693-1.358 1.346-.2.413-.293 4.156 2.504 7.312 2.77 3.13 6.194 3.264 6.7 3.157h.013l.04-.013c.693-.253 1.279-.906 1.505-1.185.413-.493.134-1.093-.026-1.426z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -301,6 +301,11 @@
   &__cart{
     display: flex;
     align-items: center;
+    >a {
+      display: flex;
+      align-items: center;
+
+    }
   }
   &__c-ball{
     width: 44px;
@@ -540,6 +545,10 @@
 
     &.active{
       color: $primary;
+      &.menu-link-js{
+
+        pointer-events: none;
+      }
       &:before{
         opacity: 1;
       }
@@ -582,7 +591,7 @@
   &__wrap{
     background-color: $white;
     padding: 0 0 70px 0;
-    //padding: 0 var(--mmPright) 0 var(--mmPLeft);
+    //padding: 0 var(--mm-p-right) 0 var(--mm-p-left);
     @include media-breakpoint-up(xl){
       box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
       background-color: $light;
@@ -602,7 +611,7 @@
   &__back-btn{
     cursor: pointer;
 
-    padding: 15px var(--mmPright) 15px var(--mmPLeft);
+    padding: 15px var(--mm-p-right) 15px var(--mm-p-left);
     background-color: $light;
     @include media-breakpoint-up(xl){
       background-color: transparent;
@@ -646,7 +655,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      background-image: url(../img/svg/chevror-right-black.svg);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='12' viewBox='0 0 7 12'%3E%3Cg%3E%3Cg%3E%3Cpath fill='black' d='M6.535 6.53a.947.947 0 0 0 .271-.65.947.947 0 0 0-.271-.65L1.573.266a.933.933 0 0 0-1.302 0 .933.933 0 0 0 0 1.302L4.556 5.88.27 10.165a.881.881 0 0 0-.271.65c0 .244.081.488.271.651a.933.933 0 0 0 1.302 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
 
     &.active{
@@ -660,7 +669,7 @@
     font-weight: 900;
     text-transform: uppercase;
 
-    padding: 15px var(--mmPright) 15px var(--mmPLeft);
+    padding: 15px var(--mm-p-right) 15px var(--mm-p-left);
     border-bottom: 2px solid $light;
     @include media-breakpoint-up(xl){
       pointer-events: none;
@@ -698,7 +707,7 @@
   &__item{
     display: block;
 
-    padding: 12px var(--mmPright) 12px var(--mmPLeft);
+    padding: 12px var(--mm-p-right) 12px var(--mm-p-left);
     border-bottom: 2px solid $light;
     @include media-breakpoint-up(xl){
       border-bottom: 0;
@@ -732,7 +741,7 @@
       vertical-align: baseline;
 
       background-repeat: no-repeat;
-      background-image: url(../img/svg/chevror-right-red.svg);
+      background-image: var(--chevron-right-red);
       background-size: cover;
       background-position: center;
       width: 7px;
@@ -763,7 +772,7 @@
   }
   //
   &__img{
-    padding: 15px var(--mmPright) 15px var(--mmPLeft);
+    padding: 15px var(--mm-p-right) 15px var(--mm-p-left);
     @include media-breakpoint-up(xl){
       padding: 0;
     }
@@ -782,8 +791,8 @@
   &__{}
 }
 .mob-menu{
-  --mmPLeft: 41px;
-  --mmPright: 21px;
+  --mm-p-left: 41px;
+  --mm-p-right: 21px;
 
   @include media-breakpoint-down(xl){
     //@include mt();
@@ -825,7 +834,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16.5px var(--mmPright) 16.5px var(--mmPLeft);
+    padding: 16.5px var(--mm-p-right) 16.5px var(--mm-p-left);
 
     span{
       font-size: 14px;
@@ -839,13 +848,13 @@
   }
   //red line
   .red-line--mob{
-    padding: 6.5px var(--mmPright) 6.5px var(--mmPLeft);
+    padding: 6.5px var(--mm-p-right) 6.5px var(--mm-p-left);
   }
   //search-strip
   &__search-strip{
     display: flex;
     align-items: stretch;
-    padding: 19px var(--mmPright) 13px var(--mmPLeft);
+    padding: 19px var(--mm-p-right) 13px var(--mm-p-left);
     border-bottom: 2px solid $light;
   }
   &__search-btn{

@@ -2,37 +2,37 @@
 .sClean {
 	overflow: hidden;
 
-	--mainColor: #{$blue};
+	--main-color: #{$blue};
 	&--red{
 		.sClean__item{
 			background-color: $primary;
 		}
 
-		--mainColor: #{$danger};
+		--main-color: #{$danger};
 	}
 
-	--sPT: 44px;
-	--sPB: 72px;
-	--sTPB: 41px;
+	--pt: 44px;
+	--spb: 72px;
+	--stpb: 41px;
 	@include media-breakpoint-up(md){
-		--sPT: 42px;
-		--sPB: 129px;
-		--sTPB: 31px;
+		--pt: 42px;
+		--spb: 129px;
+		--stpb: 31px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 33px;
-		--sPB: 113px;
-		--sTPB: 45px;
+		--pt: 33px;
+		--spb: 113px;
+		--stpb: 45px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 45px;
-		--sPB: 75px;
-		--sTPB: 26px;
+		--pt: 45px;
+		--spb: 75px;
+		--stpb: 26px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 43px;
-		--sPB: 86px;
-		--sTPB: 80px;
+		--pt: 43px;
+		--spb: 86px;
+		--stpb: 80px;
 	}
 
 	&__container{
@@ -250,9 +250,9 @@
 		flex-direction: column;
 	}
 	&__img{
-		--imgAftOpacity: 0;
+		--img-aft-opacity: 0;
 		&:hover{
-			--imgAftOpacity: .4;
+			--img-aft-opacity: .4;
 		}
 
 		@extend .accept-ratio-frame-nh;
@@ -268,7 +268,7 @@
 			//z-index: 2;
 			background-color: $brown;
 
-			opacity: var(--imgAftOpacity);
+			opacity: var(--img-aft-opacity);
 		}
 
 		padding-top: 82.6%;
@@ -312,7 +312,7 @@
 
 		color: $brown;
 		&:hover{
-			color: var(--mainColor);
+			color: var(--main-color);
 		}
 
 		transform: translateY(-54%) translateX(50%);
@@ -451,8 +451,9 @@
 		width: 100%;
 		height: 180px;
 		margin-bottom: 20px;
-
+		margin-top: auto;
 		@include media-breakpoint-up(xll){
+			margin-top: 0;
 			margin-bottom: 0;
 			position: absolute;
 			z-index: -1;
@@ -484,13 +485,13 @@
 		@include media-breakpoint-up(xll){
 			align-self: flex-start;
 		}
-		margin-top: auto;
 		padding: 5px 0;
 		border-bottom: 2px solid currentColor;
-
+		
 		font-size: 14px;
 		letter-spacing: 0.56px;
 		@include media-breakpoint-up(xxl){
+			margin-top: auto;
 			font-size: 14px;
 			letter-spacing: 0.56px;
 		}

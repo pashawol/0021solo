@@ -41,9 +41,10 @@ mixin footer()
 		+e.copy-line 
 			.container
 				img(src="img/svg/logo-white.svg", alt="", loading="lazy")
-				strong © 2020 SOLO Kleinmotoren GmbH  
+				strong
+					a.text-white(href="#")  © 2020 SOLO Kleinmotoren GmbH  
 				| 
-				span.text-secondary |  Design: VI-BRAND STUDIOS  |  Entwicklung: VI-ARISE Communikation
+				.text-secondary | #[a.text-secondary(href="#")  Design: VI-BRAND STUDIOS]  |  #[a.text-secondary(href="#")  Entwicklung: VI-ARISE Communikation]
 	+b.btn-top
 		img(src="img/svg/arrow-up.svg", alt="")
 	+b.cookies-block

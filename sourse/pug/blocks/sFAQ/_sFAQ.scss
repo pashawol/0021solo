@@ -2,32 +2,45 @@
 .sFAQ {
 	color: $white;
 
-	--sPT: 50px;
-	--sPB: 50px;
-	--sTPB: 40px;
+	--pt: 50px;
+	--spb: 50px;
+	--stpb: 40px;
 	@include media-breakpoint-up(md){
-		--sPT: 70px;
-		--sPB: 70px;
-		--sTPB: 60px;
+		--pt: 70px;
+		--spb: 70px;
+		--stpb: 60px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 80px;
-		--sPB: 90px;
-		--sTPB: 60px;
+		--pt: 80px;
+		--spb: 90px;
+		--stpb: 60px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 111px;
-		--sPB: 131px;
-		--sTPB: 109px;
+		--pt: 111px;
+		--spb: 131px;
+		--stpb: 109px;
 	}
 
 	//blue
 
 	background-color: $primary;
-	--backplateColor: #{$crimson};
+	--backplate-color: #{$crimson};
+	&:not(.sFAQ--blue) {
+		.btn-brown{
+			&:hover,
+			&:focus{
+				background-color: $dark !important;
+				border-color: $dark !important;
+		
+			}
+			&:focus{
+				box-shadow: 0 0 0 0.2rem rgba($color: $primary, $alpha: .5);
+			}
+		}
+	}
 	&--blue{
 		background-color: $blue;
-		--backplateColor: #{$blue3};
+		--backplate-color: #{$blue3};
 	}
 
 	&__container{
@@ -91,7 +104,7 @@
 			left: 50%;
 			transform: translateX(-50%);
 			top: 0;
-			background-color: var(--backplateColor);
+			background-color: var(--backplate-color);
 		}
 	}
 	&__item{
@@ -104,20 +117,20 @@
 			margin-bottom: 0;
 		}
 
-		--contentAlign: flex-start;
-		--contentTxtAlign: left;
-		--imgMargLeft: auto;
+		--content-align: flex-start;
+		--content-txt-align: left;
+		--img-marg-left: auto;
 		&:nth-child(even){
 			flex-direction: row-reverse;
-			--contentAlign: flex-end;
-			--contentTxtAlign: right;
-			--imgMargLeft: 0;
+			--content-align: flex-end;
+			--content-txt-align: right;
+			--img-marg-left: 0;
 		}
 	}
 	&__img{
 		flex-shrink: 0;
 
-		margin-left: var(--imgMargLeft);
+		margin-left: var(--img-marg-left);
 		@include media-breakpoint-up(md){
 			margin: 0;
 		}
@@ -144,7 +157,7 @@
 		@include media-breakpoint-up(sm){
 			display: flex;
 			flex-direction: column;
-			align-items: var(--contentAlign);
+			align-items: var(--content-align);
 		}
 
 		margin: 0 20px;
@@ -171,7 +184,7 @@
 	}
 	&__title{
 		@include media-breakpoint-up(sm){
-			text-align: var(--contentTxtAlign);
+			text-align: var(--content-txt-align);
 		}
 
 		font-size: 22px;
@@ -190,7 +203,7 @@
 	}
 	&__descr{
 		@include media-breakpoint-up(sm){
-			text-align: var(--contentTxtAlign);
+			text-align: var(--content-txt-align);
 		}
 
 		@include media-breakpoint-up(sm){

@@ -2,21 +2,21 @@
 .sCartAdress {
 	background-color: $light;
 
-	--sPT: 20px;
-	--sPB: 20px;
-	--sTPB: 18px;
+	--pt: 20px;
+	--spb: 20px;
+	--stpb: 18px;
 	@include media-breakpoint-up(md){
-		--sPT: 60px;
-		--sPB: 20px;
+		--pt: 60px;
+		--spb: 20px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 80px;
-		--sPB: 20px;
-		--sTPB: 34px;
+		--pt: 80px;
+		--spb: 20px;
+		--stpb: 34px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 70px;
-		--sPB: 32px;
+		--pt: 70px;
+		--spb: 32px;
 	}
 
 	&__container{
@@ -478,7 +478,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: 10px 10px;
-			background-image: url(../img/svg/check-bold.svg);
+			background-image: var(--check-bold);
 		}
 	}
 	.txt{

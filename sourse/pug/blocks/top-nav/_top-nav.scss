@@ -7,12 +7,12 @@
 	background-color: $crimson;
 	border-bottom: 1px solid rgba($crimson, .5);
 
-	--btnSpace: 20px;
+	--btn-space: 20px;
 	@include media-breakpoint-up(xl){
-		--btnSpace: 20px;
+		--btn-space: 20px;
 	}
 	@include media-breakpoint-up(xll){
-		--btnSpace: 30px;
+		--btn-space: 30px;
 	}
 
 	a{
@@ -65,7 +65,7 @@
 					&:after{
 						content: none;
 					}
-					margin-right: calc(var(--btnSpace) + 10px);
+					margin-right: calc(var(--btn-space) + 10px);
 				}
 			}
 		}
@@ -97,14 +97,14 @@
 		align-items: center;
 
 		&:not(:last-child){
-			margin-right: var(--btnSpace);
+			margin-right: var(--btn-space);
 			&:after{
 				content: '';
 				height: 13px;
 				width: 1px;
 				background-color: currentColor;
 				display: block;
-				margin-left: var(--btnSpace);
+				margin-left: var(--btn-space);
 			}
 		}
 	}
@@ -112,11 +112,11 @@
 		position: relative;
 		//background-color: pink;
 
-		--contentSc: scale(0);
-		--trArrow: rotateX(0deg);
+		--content-s-sc: scale(0);
+		--tr-arrow: rotateX(0deg);
 		&.active{
-			--contentSc: scale(1);
-			--trArrow: rotateX(180deg);
+			--content-s-sc: scale(1);
+			--tr-arrow: rotateX(180deg);
 		}
 	}
 	&__dd-btn{
@@ -137,7 +137,7 @@
 			position: absolute;
 			right: 0;
 			top: 50%;
-			transform: translateY(-50%) var(--trArrow);
+			transform: translateY(-50%) var(--tr-arrow);
 
 			width: 0;
 			height: 0;
@@ -151,10 +151,10 @@
 	&__dd-content{
 		transform-origin: 0 0;
 		@include mt();
-		transform: var(--contentSc);
+		transform: var(--content-s-sc);
 
 		position: absolute;
-		z-index: 900;
+		z-index: 1000;
 		top: 100%;
 		left: 0;
 		width: auto;

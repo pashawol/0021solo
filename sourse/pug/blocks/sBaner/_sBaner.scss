@@ -1,19 +1,19 @@
 // start .sBaner
 .sBaner {
-	--sPT: 0px;
+	--pt: 0px;
 
-	--sPB: 40px;
+	--spb: 40px;
 	@include media-breakpoint-up(md){
-		--sPB: 45px;
+		--spb: 45px;
 	}
-	--sTPB: 30px;
+	--stpb: 30px;
 	@include media-breakpoint-up(xl){
-		--sPB: 50px;
-		--sTPB: 40px;
+		--spb: 50px;
+		--stpb: 40px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPB: 53px;
-		--sTPB: 64px;
+		--spb: 53px;
+		--stpb: 64px;
 	}
 
 	&__container{
@@ -52,7 +52,7 @@
 		}
 	}
 	&__txt-bl{
-		background-color: $blue;
+		background-color: var(--main-color, #{$blue});
 		color: $white;
 	}
 	//

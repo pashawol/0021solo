@@ -5,28 +5,28 @@
 	border-top: 13px solid $primary;
 	border-bottom: 13px solid $primary;
 
-	--sPT: 62px;
-	--sPB: 80px;
-	--sTPB: 37px;
+	--pt: 62px;
+	--spb: 80px;
+	--stpb: 37px;
 	@include media-breakpoint-up(md){
-		--sPT: 80px;
-		--sPB: 76px;
-		--sTPB: 26px;
+		--pt: 80px;
+		--spb: 76px;
+		--stpb: 26px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 82px;
-		--sPB: 84px;
-		--sTPB: 34px;
+		--pt: 82px;
+		--spb: 84px;
+		--stpb: 34px;
 	}
 	@include media-breakpoint-up(xll){
-		--sPT: 80px;
-		--sPB: 84px;
-		--sTPB: 55px;
+		--pt: 80px;
+		--spb: 84px;
+		--stpb: 55px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 80px;
-		--sPB: 86px;
-		--sTPB: 53px;
+		--pt: 80px;
+		--spb: 86px;
+		--stpb: 53px;
 	}
 
 	&__container{

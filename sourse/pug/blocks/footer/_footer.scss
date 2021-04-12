@@ -1,9 +1,9 @@
 .footer {
 		@include media-breakpoint-up(xll){
-			--sPT: #{rem(80)};
+			--pt: #{rem(80)};
 		}
-		--sPT: #{rem(56)};
-		--sPB: #{rem(0)};
+		--pt: #{rem(56)};
+		--spb: #{rem(0)};
 	margin-top: auto;
 	border: 1px solid #707070;
 	background-color: #22252a;
@@ -160,6 +160,17 @@
 	}
 
 	&__copy-line{
+		.container{
+			margin-right: auto !important;
+		}
+		a,
+		span{
+			display: inline-block;
+				@include media-breakpoint-up(sm){
+					margin-bottom: 0;
+				}
+			margin-bottom: 0.5em;
+		}
 			@include media-breakpoint-up(xl) {
 
 				font-size: $small;
@@ -176,8 +187,8 @@
 		}
 		padding: rem(20) 0;
 		background-color: $body-color; 
-		--sPB: #{rem(57)};
-		margin-top: var(--sPB);
+		--spb: #{rem(57)};
+		margin-top: var(--spb);
 		;
 		img{
 			width: rem(51);
@@ -220,7 +231,14 @@
 
 @include media-breakpoint-down(sm) {}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+	.text-secondary{
+		font-size: 0;
+		a{
+			font-size: 12px;
+		}
+	}
+}
 }
 
 

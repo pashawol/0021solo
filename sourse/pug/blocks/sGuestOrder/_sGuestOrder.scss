@@ -2,21 +2,21 @@
 .sGuestOrder {
 	background-color: $light;
 
-	--sPT: 20px;
-	--sPB: 20px;
-	--sTPB: 20px;
+	--pt: 20px;
+	--spb: 20px;
+	--stpb: 20px;
 	@include media-breakpoint-up(md){
-		--sPT: 30px;
-		--sPB: 20px;
+		--pt: 30px;
+		--spb: 20px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPT: 40px;
-		--sPB: 20px;
-		--sTPB: 25px;
+		--pt: 40px;
+		--spb: 20px;
+		--stpb: 25px;
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: 42px;
-		--sPB: 32px;
+		--pt: 42px;
+		--spb: 32px;
 	}
 
 	&__container{

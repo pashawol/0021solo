@@ -33,7 +33,7 @@ mixin hSildeItem(imgNum, itemName)
 	+e.item
 		+e.i-img
 			img.swiper-lazy(src="#" data-src=`img/@2x/h-item${imgNum}.png` alt="")
-		+e.i-name=itemName
+		+e.i-name(href="#")=itemName
 
 mixin hSlideTitle()
 	+b.section-title.text-center&attributes(attributes)

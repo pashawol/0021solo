@@ -1,8 +1,8 @@
 // start .sHSlider
 .sHSlider {
-	--sPT: 0px;
-	--sPB: 0px;
-	--sTPB: 0px;
+	--pt: 0px;
+	--spb: 0px;
+	--stpb: 0px;
 
 	&__slider{
 		position: relative;
@@ -118,23 +118,23 @@
 		@include media-breakpoint-up(xll){
 			height: 100%;
 		}
-		&:after{
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba($dark-gray, .41);
-		}
+		// &:after{
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	background-color: rgba($dark-gray, .41);
+		// }
 
 		&--left{
 			left: 0;
 			@include media-breakpoint-up(xl){
 				width: 62%;
 				clip-path: polygon(0 0,100% 0,62.5% 100%,0 100%);
-				--itemL: 102px;
-				--itemR: unset;
+				--item-l: 102px;
+				--item-r: unset;
 			}
 			@include media-breakpoint-up(xll){
 				width: 64.6%;
@@ -160,8 +160,8 @@
 			order: 1;
 			@include media-breakpoint-up(xl){
 				order: 0;
-				--itemL: unset;
-				--itemR: 102px;
+				--item-l: unset;
+				--item-r: 102px;
 				width: 62.6%;
 				right: 0;
 				z-index: -2;
@@ -306,8 +306,8 @@
 			top: 57%;
 			transform: translateY(-50%);
 
-			left: var(--itemL);
-			right: var(--itemR);
+			left: var(--item-l);
+			right: var(--item-r);
 		}
 		//3
 		@include media-breakpoint-up(xll){
@@ -382,6 +382,10 @@
 		text-transform: uppercase;
 		text-align: center;
 		font-weight: 900;
+		&:hover{
+			background-color: $primary;
+			color: #ffffff;
+		}
 
 		padding: 13px 9px;
 		font-size: 14px;
