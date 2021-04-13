@@ -6,7 +6,7 @@ mixin sCatalog(data)
 				h2 Produkte
 				p Mit leistungsstarken SOLO Sprühgeräten und Spritzgeräten können Sie kräfteschonend und präzise Samen, Granulate, Dünger oder Pflanzenschutzmittel ausbringen – auch auf schwierigem Terrain.
 			+e.filter-row.row
-				+filterItem("Alle Produkte")
+				+filterItem("Alle Produkte")(class="active")
 				+filterItem("Spritzen")
 				+filterItem("Handspritzen")
 				+filterItem("Druckspritzen")
@@ -87,7 +87,7 @@ mixin sCatalog(data)
 
 mixin filterItem(txt)
 	+e.row-col.col-auto.d-none.d-sm-block
-		+e.filter-item.filter-item-js(href="#")&attributes(attributes)=txt
+		+e.filter-item(href="#")&attributes(attributes)=txt
 
 mixin catalogSlide(data)
 	.swiper-slide

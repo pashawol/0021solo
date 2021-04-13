@@ -1327,6 +1327,8 @@ textarea.form-control-lg {
 .btn-check[disabled] + .sNew__btn,
 .btn-check[disabled] + .sProdCard__cart-btn,
 .btn-check[disabled] + .sProdDescr__tag,
+.btn-check[disabled] + .sWishList__cart-btn,
+.btn-check[disabled] + .sWishList__cross-btn,
 .btn-check[disabled] + .sWmailAddress__btn,
 .btn-check[disabled] + .topLine__back-shop-btn,
 .btn-check[disabled] + .mob-menu__search-btn,
@@ -1350,6 +1352,8 @@ textarea.form-control-lg {
 .btn-check:disabled + .sNew__btn,
 .btn-check:disabled + .sProdCard__cart-btn,
 .btn-check:disabled + .sProdDescr__tag,
+.btn-check:disabled + .sWishList__cart-btn,
+.btn-check:disabled + .sWishList__cross-btn,
 .btn-check:disabled + .sWmailAddress__btn,
 .btn-check:disabled + .topLine__back-shop-btn,
 .btn-check:disabled + .mob-menu__search-btn {
@@ -1601,6 +1605,8 @@ textarea.form-control-lg {
 .input-group .sNew__btn,
 .input-group .sProdCard__cart-btn,
 .input-group .sProdDescr__tag,
+.input-group .sWishList__cart-btn,
+.input-group .sWishList__cross-btn,
 .input-group .sWmailAddress__btn,
 .input-group .topLine__back-shop-btn,
 .input-group .mob-menu__search-btn {
@@ -1632,6 +1638,8 @@ textarea.form-control-lg {
 .input-group .sNew__btn:focus,
 .input-group .sProdCard__cart-btn:focus,
 .input-group .sProdDescr__tag:focus,
+.input-group .sWishList__cart-btn:focus,
+.input-group .sWishList__cross-btn:focus,
 .input-group .sWmailAddress__btn:focus,
 .input-group .topLine__back-shop-btn:focus,
 .input-group .mob-menu__search-btn:focus {
@@ -1681,6 +1689,8 @@ textarea.form-control-lg {
 .input-group-lg > .sNew__btn,
 .input-group-lg > .sProdCard__cart-btn,
 .input-group-lg > .sProdDescr__tag,
+.input-group-lg > .sWishList__cart-btn,
+.input-group-lg > .sWishList__cross-btn,
 .input-group-lg > .sWmailAddress__btn,
 .input-group-lg > .topLine__back-shop-btn,
 .input-group-lg > .mob-menu__search-btn {
@@ -1711,6 +1721,8 @@ textarea.form-control-lg {
 .input-group-sm > .sNew__btn,
 .input-group-sm > .sProdCard__cart-btn,
 .input-group-sm > .sProdDescr__tag,
+.input-group-sm > .sWishList__cart-btn,
+.input-group-sm > .sWishList__cross-btn,
 .input-group-sm > .sWmailAddress__btn,
 .input-group-sm > .topLine__back-shop-btn,
 .input-group-sm > .mob-menu__search-btn {
@@ -1973,6 +1985,8 @@ textarea.form-control.is-invalid {
 .sNew__btn,
 .sProdCard__cart-btn,
 .sProdDescr__tag,
+.sWishList__cart-btn,
+.sWishList__cross-btn,
 .sWmailAddress__btn,
 .topLine__back-shop-btn,
 .mob-menu__search-btn {
@@ -2018,6 +2032,8 @@ textarea.form-control.is-invalid {
 .sNew__btn:hover,
 .sProdCard__cart-btn:hover,
 .sProdDescr__tag:hover,
+.sWishList__cart-btn:hover,
+.sWishList__cross-btn:hover,
 .sWmailAddress__btn:hover,
 .topLine__back-shop-btn:hover,
 .mob-menu__search-btn:hover {
@@ -2044,6 +2060,8 @@ textarea.form-control.is-invalid {
 .btn-check:focus + .sNew__btn,
 .btn-check:focus + .sProdCard__cart-btn,
 .btn-check:focus + .sProdDescr__tag,
+.btn-check:focus + .sWishList__cart-btn,
+.btn-check:focus + .sWishList__cross-btn,
 .btn-check:focus + .sWmailAddress__btn,
 .btn-check:focus + .topLine__back-shop-btn,
 .btn-check:focus + .mob-menu__search-btn,
@@ -2067,6 +2085,8 @@ textarea.form-control.is-invalid {
 .sNew__btn:focus,
 .sProdCard__cart-btn:focus,
 .sProdDescr__tag:focus,
+.sWishList__cart-btn:focus,
+.sWishList__cross-btn:focus,
 .sWmailAddress__btn:focus,
 .topLine__back-shop-btn:focus,
 .mob-menu__search-btn:focus {
@@ -2095,6 +2115,8 @@ textarea.form-control.is-invalid {
 .sNew__btn:disabled,
 .sProdCard__cart-btn:disabled,
 .sProdDescr__tag:disabled,
+.sWishList__cart-btn:disabled,
+.sWishList__cross-btn:disabled,
 .sWmailAddress__btn:disabled,
 .topLine__back-shop-btn:disabled,
 .mob-menu__search-btn:disabled,
@@ -2118,6 +2140,8 @@ textarea.form-control.is-invalid {
 .disabled.sNew__btn,
 .disabled.sProdCard__cart-btn,
 .disabled.sProdDescr__tag,
+.disabled.sWishList__cart-btn,
+.disabled.sWishList__cross-btn,
 .disabled.sWmailAddress__btn,
 .disabled.topLine__back-shop-btn,
 .disabled.mob-menu__search-btn,
@@ -2145,6 +2169,8 @@ fieldset:disabled .sMail .section-title__btn,
 fieldset:disabled .sNew__btn,
 fieldset:disabled .sProdCard__cart-btn,
 fieldset:disabled .sProdDescr__tag,
+fieldset:disabled .sWishList__cart-btn,
+fieldset:disabled .sWishList__cross-btn,
 fieldset:disabled .sWmailAddress__btn,
 fieldset:disabled .topLine__back-shop-btn,
 fieldset:disabled .mob-menu__search-btn {
@@ -2563,14 +2589,16 @@ fieldset:disabled .mob-menu__search-btn {
 }
 
 .btn-light,
-.sCatalog__filter-item {
+.sCatalog__filter-item,
+.sWishList__cross-btn {
   color: #212529;
   background-color: #f6f7fc;
   border-color: #f6f7fc;
 }
 
 .btn-light:hover,
-.sCatalog__filter-item:hover {
+.sCatalog__filter-item:hover,
+.sWishList__cross-btn:hover {
   color: #212529;
   background-color: #f7f8fc;
   border-color: #f7f8fc;
@@ -2578,8 +2606,10 @@ fieldset:disabled .mob-menu__search-btn {
 
 .btn-check:focus + .btn-light,
 .btn-check:focus + .sCatalog__filter-item,
+.btn-check:focus + .sWishList__cross-btn,
 .btn-light:focus,
-.sCatalog__filter-item:focus {
+.sCatalog__filter-item:focus,
+.sWishList__cross-btn:focus {
   color: #212529;
   background-color: #f7f8fc;
   border-color: #f7f8fc;
@@ -2589,14 +2619,19 @@ fieldset:disabled .mob-menu__search-btn {
 
 .btn-check:checked + .btn-light,
 .btn-check:checked + .sCatalog__filter-item,
+.btn-check:checked + .sWishList__cross-btn,
 .btn-check:active + .btn-light,
 .btn-check:active + .sCatalog__filter-item,
+.btn-check:active + .sWishList__cross-btn,
 .btn-light:active,
 .sCatalog__filter-item:active,
+.sWishList__cross-btn:active,
 .btn-light.active,
 .active.sCatalog__filter-item,
+.active.sWishList__cross-btn,
 .show > .btn-light.dropdown-toggle,
-.show > .dropdown-toggle.sCatalog__filter-item {
+.show > .dropdown-toggle.sCatalog__filter-item,
+.show > .dropdown-toggle.sWishList__cross-btn {
   color: #212529;
   background-color: #f8f9fd;
   border-color: #f7f8fc;
@@ -2604,22 +2639,29 @@ fieldset:disabled .mob-menu__search-btn {
 
 .btn-check:checked + .btn-light:focus,
 .btn-check:checked + .sCatalog__filter-item:focus,
+.btn-check:checked + .sWishList__cross-btn:focus,
 .btn-check:active + .btn-light:focus,
 .btn-check:active + .sCatalog__filter-item:focus,
+.btn-check:active + .sWishList__cross-btn:focus,
 .btn-light:active:focus,
 .sCatalog__filter-item:active:focus,
+.sWishList__cross-btn:active:focus,
 .btn-light.active:focus,
 .active.sCatalog__filter-item:focus,
+.active.sWishList__cross-btn:focus,
 .show > .btn-light.dropdown-toggle:focus,
-.show > .dropdown-toggle.sCatalog__filter-item:focus {
+.show > .dropdown-toggle.sCatalog__filter-item:focus,
+.show > .dropdown-toggle.sWishList__cross-btn:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(214, 216, 220, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(214, 216, 220, 0.5);
 }
 
 .btn-light:disabled,
 .sCatalog__filter-item:disabled,
+.sWishList__cross-btn:disabled,
 .btn-light.disabled,
-.disabled.sCatalog__filter-item {
+.disabled.sCatalog__filter-item,
+.disabled.sWishList__cross-btn {
   color: #212529;
   background-color: #f6f7fc;
   border-color: #f6f7fc;
@@ -2973,44 +3015,60 @@ fieldset:disabled .mob-menu__search-btn {
   border-color: #333333;
 }
 
-.btn-outline-primary {
+.btn-outline-primary,
+.sWishList__cart-btn {
   color: #f73429;
   border-color: #f73429;
 }
 
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.sWishList__cart-btn:hover {
   color: #fff;
   background-color: #f73429;
   border-color: #f73429;
 }
 
 .btn-check:focus + .btn-outline-primary,
-.btn-outline-primary:focus {
+.btn-check:focus + .sWishList__cart-btn,
+.btn-outline-primary:focus,
+.sWishList__cart-btn:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 52, 41, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(247, 52, 41, 0.5);
 }
 
 .btn-check:checked + .btn-outline-primary,
+.btn-check:checked + .sWishList__cart-btn,
 .btn-check:active + .btn-outline-primary,
+.btn-check:active + .sWishList__cart-btn,
 .btn-outline-primary:active,
+.sWishList__cart-btn:active,
 .btn-outline-primary.active,
-.btn-outline-primary.dropdown-toggle.show {
+.active.sWishList__cart-btn,
+.btn-outline-primary.dropdown-toggle.show,
+.dropdown-toggle.show.sWishList__cart-btn {
   color: #fff;
   background-color: #f73429;
   border-color: #f73429;
 }
 
 .btn-check:checked + .btn-outline-primary:focus,
+.btn-check:checked + .sWishList__cart-btn:focus,
 .btn-check:active + .btn-outline-primary:focus,
+.btn-check:active + .sWishList__cart-btn:focus,
 .btn-outline-primary:active:focus,
+.sWishList__cart-btn:active:focus,
 .btn-outline-primary.active:focus,
-.btn-outline-primary.dropdown-toggle.show:focus {
+.active.sWishList__cart-btn:focus,
+.btn-outline-primary.dropdown-toggle.show:focus,
+.dropdown-toggle.show.sWishList__cart-btn:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 52, 41, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(247, 52, 41, 0.5);
 }
 
 .btn-outline-primary:disabled,
-.btn-outline-primary.disabled {
+.sWishList__cart-btn:disabled,
+.btn-outline-primary.disabled,
+.disabled.sWishList__cart-btn {
   color: #f73429;
   background-color: transparent;
 }
@@ -3471,6 +3529,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-lg > .sNew__btn,
 .btn-group-lg > .sProdCard__cart-btn,
 .btn-group-lg > .sProdDescr__tag,
+.btn-group-lg > .sWishList__cart-btn,
+.btn-group-lg > .sWishList__cross-btn,
 .btn-group-lg > .sWmailAddress__btn,
 .btn-group-lg > .topLine__back-shop-btn,
 .btn-group-lg > .mob-menu__search-btn {
@@ -3500,9 +3560,12 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-sm > .sNew__btn,
 .btn-group-sm > .sProdCard__cart-btn,
 .btn-group-sm > .sProdDescr__tag,
+.btn-group-sm > .sWishList__cart-btn,
+.btn-group-sm > .sWishList__cross-btn,
 .btn-group-sm > .sWmailAddress__btn,
 .btn-group-sm > .topLine__back-shop-btn,
-.btn-group-sm > .mob-menu__search-btn {
+.btn-group-sm > .mob-menu__search-btn,
+.sWishList__cross-btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0;
@@ -3814,6 +3877,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group > .sNew__btn,
 .btn-group > .sProdCard__cart-btn,
 .btn-group > .sProdDescr__tag,
+.btn-group > .sWishList__cart-btn,
+.btn-group > .sWishList__cross-btn,
 .btn-group > .sWmailAddress__btn,
 .btn-group > .topLine__back-shop-btn,
 .btn-group > .mob-menu__search-btn,
@@ -3837,6 +3902,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .sNew__btn,
 .btn-group-vertical > .sProdCard__cart-btn,
 .btn-group-vertical > .sProdDescr__tag,
+.btn-group-vertical > .sWishList__cart-btn,
+.btn-group-vertical > .sWishList__cross-btn,
 .btn-group-vertical > .sWmailAddress__btn,
 .btn-group-vertical > .topLine__back-shop-btn,
 .btn-group-vertical > .mob-menu__search-btn {
@@ -3867,6 +3934,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group > .btn-check:checked + .sNew__btn,
 .btn-group > .btn-check:checked + .sProdCard__cart-btn,
 .btn-group > .btn-check:checked + .sProdDescr__tag,
+.btn-group > .btn-check:checked + .sWishList__cart-btn,
+.btn-group > .btn-check:checked + .sWishList__cross-btn,
 .btn-group > .btn-check:checked + .sWmailAddress__btn,
 .btn-group > .btn-check:checked + .topLine__back-shop-btn,
 .btn-group > .btn-check:checked + .mob-menu__search-btn,
@@ -3890,6 +3959,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group > .btn-check:focus + .sNew__btn,
 .btn-group > .btn-check:focus + .sProdCard__cart-btn,
 .btn-group > .btn-check:focus + .sProdDescr__tag,
+.btn-group > .btn-check:focus + .sWishList__cart-btn,
+.btn-group > .btn-check:focus + .sWishList__cross-btn,
 .btn-group > .btn-check:focus + .sWmailAddress__btn,
 .btn-group > .btn-check:focus + .topLine__back-shop-btn,
 .btn-group > .btn-check:focus + .mob-menu__search-btn,
@@ -3913,6 +3984,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group > .sNew__btn:hover,
 .btn-group > .sProdCard__cart-btn:hover,
 .btn-group > .sProdDescr__tag:hover,
+.btn-group > .sWishList__cart-btn:hover,
+.btn-group > .sWishList__cross-btn:hover,
 .btn-group > .sWmailAddress__btn:hover,
 .btn-group > .topLine__back-shop-btn:hover,
 .btn-group > .mob-menu__search-btn:hover,
@@ -3936,6 +4009,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group > .sNew__btn:focus,
 .btn-group > .sProdCard__cart-btn:focus,
 .btn-group > .sProdDescr__tag:focus,
+.btn-group > .sWishList__cart-btn:focus,
+.btn-group > .sWishList__cross-btn:focus,
 .btn-group > .sWmailAddress__btn:focus,
 .btn-group > .topLine__back-shop-btn:focus,
 .btn-group > .mob-menu__search-btn:focus,
@@ -3959,6 +4034,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group > .sNew__btn:active,
 .btn-group > .sProdCard__cart-btn:active,
 .btn-group > .sProdDescr__tag:active,
+.btn-group > .sWishList__cart-btn:active,
+.btn-group > .sWishList__cross-btn:active,
 .btn-group > .sWmailAddress__btn:active,
 .btn-group > .topLine__back-shop-btn:active,
 .btn-group > .mob-menu__search-btn:active,
@@ -3982,6 +4059,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group > .active.sNew__btn,
 .btn-group > .active.sProdCard__cart-btn,
 .btn-group > .active.sProdDescr__tag,
+.btn-group > .active.sWishList__cart-btn,
+.btn-group > .active.sWishList__cross-btn,
 .btn-group > .active.sWmailAddress__btn,
 .btn-group > .active.topLine__back-shop-btn,
 .btn-group > .active.mob-menu__search-btn,
@@ -4005,6 +4084,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .btn-check:checked + .sNew__btn,
 .btn-group-vertical > .btn-check:checked + .sProdCard__cart-btn,
 .btn-group-vertical > .btn-check:checked + .sProdDescr__tag,
+.btn-group-vertical > .btn-check:checked + .sWishList__cart-btn,
+.btn-group-vertical > .btn-check:checked + .sWishList__cross-btn,
 .btn-group-vertical > .btn-check:checked + .sWmailAddress__btn,
 .btn-group-vertical > .btn-check:checked + .topLine__back-shop-btn,
 .btn-group-vertical > .btn-check:checked + .mob-menu__search-btn,
@@ -4028,6 +4109,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .btn-check:focus + .sNew__btn,
 .btn-group-vertical > .btn-check:focus + .sProdCard__cart-btn,
 .btn-group-vertical > .btn-check:focus + .sProdDescr__tag,
+.btn-group-vertical > .btn-check:focus + .sWishList__cart-btn,
+.btn-group-vertical > .btn-check:focus + .sWishList__cross-btn,
 .btn-group-vertical > .btn-check:focus + .sWmailAddress__btn,
 .btn-group-vertical > .btn-check:focus + .topLine__back-shop-btn,
 .btn-group-vertical > .btn-check:focus + .mob-menu__search-btn,
@@ -4051,6 +4134,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .sNew__btn:hover,
 .btn-group-vertical > .sProdCard__cart-btn:hover,
 .btn-group-vertical > .sProdDescr__tag:hover,
+.btn-group-vertical > .sWishList__cart-btn:hover,
+.btn-group-vertical > .sWishList__cross-btn:hover,
 .btn-group-vertical > .sWmailAddress__btn:hover,
 .btn-group-vertical > .topLine__back-shop-btn:hover,
 .btn-group-vertical > .mob-menu__search-btn:hover,
@@ -4074,6 +4159,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .sNew__btn:focus,
 .btn-group-vertical > .sProdCard__cart-btn:focus,
 .btn-group-vertical > .sProdDescr__tag:focus,
+.btn-group-vertical > .sWishList__cart-btn:focus,
+.btn-group-vertical > .sWishList__cross-btn:focus,
 .btn-group-vertical > .sWmailAddress__btn:focus,
 .btn-group-vertical > .topLine__back-shop-btn:focus,
 .btn-group-vertical > .mob-menu__search-btn:focus,
@@ -4097,6 +4184,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .sNew__btn:active,
 .btn-group-vertical > .sProdCard__cart-btn:active,
 .btn-group-vertical > .sProdDescr__tag:active,
+.btn-group-vertical > .sWishList__cart-btn:active,
+.btn-group-vertical > .sWishList__cross-btn:active,
 .btn-group-vertical > .sWmailAddress__btn:active,
 .btn-group-vertical > .topLine__back-shop-btn:active,
 .btn-group-vertical > .mob-menu__search-btn:active,
@@ -4120,6 +4209,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .active.sNew__btn,
 .btn-group-vertical > .active.sProdCard__cart-btn,
 .btn-group-vertical > .active.sProdDescr__tag,
+.btn-group-vertical > .active.sWishList__cart-btn,
+.btn-group-vertical > .active.sWishList__cross-btn,
 .btn-group-vertical > .active.sWmailAddress__btn,
 .btn-group-vertical > .active.topLine__back-shop-btn,
 .btn-group-vertical > .active.mob-menu__search-btn {
@@ -4164,6 +4255,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group > .sNew__btn:not(:first-child),
 .btn-group > .sProdCard__cart-btn:not(:first-child),
 .btn-group > .sProdDescr__tag:not(:first-child),
+.btn-group > .sWishList__cart-btn:not(:first-child),
+.btn-group > .sWishList__cross-btn:not(:first-child),
 .btn-group > .sWmailAddress__btn:not(:first-child),
 .btn-group > .topLine__back-shop-btn:not(:first-child),
 .btn-group > .mob-menu__search-btn:not(:first-child),
@@ -4207,9 +4300,12 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-sm > .sNew__btn + .dropdown-toggle-split,
 .btn-group-sm > .sProdCard__cart-btn + .dropdown-toggle-split,
 .btn-group-sm > .sProdDescr__tag + .dropdown-toggle-split,
+.btn-group-sm > .sWishList__cart-btn + .dropdown-toggle-split,
+.btn-group-sm > .sWishList__cross-btn + .dropdown-toggle-split,
 .btn-group-sm > .sWmailAddress__btn + .dropdown-toggle-split,
 .btn-group-sm > .topLine__back-shop-btn + .dropdown-toggle-split,
-.btn-group-sm > .mob-menu__search-btn + .dropdown-toggle-split {
+.btn-group-sm > .mob-menu__search-btn + .dropdown-toggle-split,
+.sWishList__cross-btn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
@@ -4235,6 +4331,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-lg > .sNew__btn + .dropdown-toggle-split,
 .btn-group-lg > .sProdCard__cart-btn + .dropdown-toggle-split,
 .btn-group-lg > .sProdDescr__tag + .dropdown-toggle-split,
+.btn-group-lg > .sWishList__cart-btn + .dropdown-toggle-split,
+.btn-group-lg > .sWishList__cross-btn + .dropdown-toggle-split,
 .btn-group-lg > .sWmailAddress__btn + .dropdown-toggle-split,
 .btn-group-lg > .topLine__back-shop-btn + .dropdown-toggle-split,
 .btn-group-lg > .mob-menu__search-btn + .dropdown-toggle-split {
@@ -4278,6 +4376,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .sNew__btn,
 .btn-group-vertical > .sProdCard__cart-btn,
 .btn-group-vertical > .sProdDescr__tag,
+.btn-group-vertical > .sWishList__cart-btn,
+.btn-group-vertical > .sWishList__cross-btn,
 .btn-group-vertical > .sWmailAddress__btn,
 .btn-group-vertical > .topLine__back-shop-btn,
 .btn-group-vertical > .mob-menu__search-btn,
@@ -4305,6 +4405,8 @@ fieldset:disabled .mob-menu__search-btn {
 .btn-group-vertical > .sNew__btn:not(:first-child),
 .btn-group-vertical > .sProdCard__cart-btn:not(:first-child),
 .btn-group-vertical > .sProdDescr__tag:not(:first-child),
+.btn-group-vertical > .sWishList__cart-btn:not(:first-child),
+.btn-group-vertical > .sWishList__cross-btn:not(:first-child),
 .btn-group-vertical > .sWmailAddress__btn:not(:first-child),
 .btn-group-vertical > .topLine__back-shop-btn:not(:first-child),
 .btn-group-vertical > .mob-menu__search-btn:not(:first-child),
@@ -4913,6 +5015,8 @@ fieldset:disabled .mob-menu__search-btn {
 .sNew__btn .badge,
 .sProdCard__cart-btn .badge,
 .sProdDescr__tag .badge,
+.sWishList__cart-btn .badge,
+.sWishList__cross-btn .badge,
 .sWmailAddress__btn .badge,
 .topLine__back-shop-btn .badge,
 .mob-menu__search-btn .badge {
@@ -9306,7 +9410,8 @@ Credit: https://github.com/FortAwesome/Font-Awesome
 }
 
 .btn-light .icon,
-.sCatalog__filter-item .icon {
+.sCatalog__filter-item .icon,
+.sWishList__cross-btn .icon {
   color: #212529;
 }
 
@@ -9356,6 +9461,8 @@ Credit: https://github.com/FortAwesome/Font-Awesome
 .sNew__btn .icon > svg,
 .sProdCard__cart-btn .icon > svg,
 .sProdDescr__tag .icon > svg,
+.sWishList__cart-btn .icon > svg,
+.sWishList__cross-btn .icon > svg,
 .sWmailAddress__btn .icon > svg,
 .topLine__back-shop-btn .icon > svg,
 .mob-menu__search-btn .icon > svg {
@@ -10018,6 +10125,8 @@ This file contains the generic styling for all filter items.
 .filter-reset-all.sNew__btn,
 .filter-reset-all.sProdCard__cart-btn,
 .filter-reset-all.sProdDescr__tag,
+.filter-reset-all.sWishList__cart-btn,
+.filter-reset-all.sWishList__cross-btn,
 .filter-reset-all.sWmailAddress__btn,
 .filter-reset-all.topLine__back-shop-btn,
 .filter-reset-all.mob-menu__search-btn {
@@ -10106,6 +10215,8 @@ This file contains the generic styling for all filter items.
 .filter-panel-wrapper-toggle.sNew__btn,
 .filter-panel-wrapper-toggle.sProdCard__cart-btn,
 .filter-panel-wrapper-toggle.sProdDescr__tag,
+.filter-panel-wrapper-toggle.sWishList__cart-btn,
+.filter-panel-wrapper-toggle.sWishList__cross-btn,
 .filter-panel-wrapper-toggle.sWmailAddress__btn,
 .filter-panel-wrapper-toggle.topLine__back-shop-btn,
 .filter-panel-wrapper-toggle.mob-menu__search-btn {
@@ -10135,6 +10246,8 @@ This file contains the generic styling for all filter items.
 .filter-panel-wrapper-toggle.sNew__btn:hover,
 .filter-panel-wrapper-toggle.sProdCard__cart-btn:hover,
 .filter-panel-wrapper-toggle.sProdDescr__tag:hover,
+.filter-panel-wrapper-toggle.sWishList__cart-btn:hover,
+.filter-panel-wrapper-toggle.sWishList__cross-btn:hover,
 .filter-panel-wrapper-toggle.sWmailAddress__btn:hover,
 .filter-panel-wrapper-toggle.topLine__back-shop-btn:hover,
 .filter-panel-wrapper-toggle.mob-menu__search-btn:hover {
@@ -20462,6 +20575,92 @@ a {
   height: auto;
 }
 
+.sWishList__item {
+  -webkit-transition: all 0.36s;
+  transition: all 0.36s;
+  border: 1px solid #e9ecef;
+  margin-bottom: 24px;
+  position: relative;
+  padding: 30px 15px;
+  -webkit-box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.03);
+          box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.03);
+}
+
+.sWishList__item:hover {
+  -webkit-box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+          box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+}
+
+.sWishList__img {
+  width: 90px;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sWishList__img img {
+  width: auto;
+  max-width: 100%;
+}
+
+.sWishList__name {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.sWishList__descr {
+  font-size: 14px;
+}
+
+.sWishList__date {
+  font-size: 14px;
+}
+
+.sWishList__price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.sWishList__cross-btn {
+  margin: 0 !important;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.sWishList__cross-btn .icon {
+  font-size: 14px;
+  color: #212529;
+}
+
 .sWmailAddress {
   color: #ffffff;
   background-color: #f73429;
@@ -26034,6 +26233,14 @@ a {
   .sWBaner__descr {
     font-size: 15px;
     line-height: 1.66667;
+  }
+
+  .sWishList__item {
+    padding: 30px 20px;
+  }
+
+  .sWishList__price {
+    text-align: right;
   }
 
   .topLine__qc-title {
@@ -35340,6 +35547,8 @@ a {
   .filter-panel-wrapper-toggle.sNew__btn,
   .filter-panel-wrapper-toggle.sProdCard__cart-btn,
   .filter-panel-wrapper-toggle.sProdDescr__tag,
+  .filter-panel-wrapper-toggle.sWishList__cart-btn,
+  .filter-panel-wrapper-toggle.sWishList__cross-btn,
   .filter-panel-wrapper-toggle.sWmailAddress__btn,
   .filter-panel-wrapper-toggle.topLine__back-shop-btn,
   .filter-panel-wrapper-toggle.mob-menu__search-btn {
@@ -35943,6 +36152,8 @@ a {
   .sNew__btn,
   .sProdCard__cart-btn,
   .sProdDescr__tag,
+  .sWishList__cart-btn,
+  .sWishList__cross-btn,
   .sWmailAddress__btn,
   .topLine__back-shop-btn,
   .mob-menu__search-btn {

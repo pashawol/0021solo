@@ -701,11 +701,6 @@ function eventHandler() {
 		$(this.parentElement).find('.cat-sbmnu-js').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
-	}); //12.04.2021
-
-	$('.filter-item-js').click(function () {
-		event.preventDefault();
-		$(this).toggleClass('active');
 	}); //- TODO
 	// 1 clean js file
 }

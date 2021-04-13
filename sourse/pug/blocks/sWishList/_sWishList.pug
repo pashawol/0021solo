@@ -1,0 +1,52 @@
+mixin sWishList(data)
+	// start sWishList
+	+b.SECTION.sWishList.section#sWishList&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Merkzettel
+			+e.items
+				+wishListItem({
+					imgName: 1,
+					name: 'Schaumsprüher 9L für pH-Wert 1-7 geeignet - 309 FA',
+					price: '93,50 €*'
+				})
+				+wishListItem({
+					imgName: 1,
+					name: 'Motor-Rückenspritze 20L - 433',
+					price: '93,50 €*'
+				})
+				+wishListItem({
+					imgName: 1,
+					name: 'Druckluft-Anschlussventil',
+					price: '12,40 €*'
+				})
+				+wishListItem({
+					imgName: 1,
+					name: 'Baumspritzrohr Carbon 120 cm für Druck- und Rückenspritzen',
+					price: '31,20 €*'
+				})
+	// end sWishList
+
+mixin wishListItem(data)
+	+e.item
+		.row.gy-3
+			.col-lg
+				.row
+					.col-auto
+						+e.img(href='#')
+							img(loading="lazy" src=`img/@2x/catalog-item-${data.imgName}.png` alt="")
+					.col
+						+e.name(href="#")=data.name
+						+e.descr Hersteller: SOLO Kleinmotoren GmbH
+			.col-md.col-lg-auto.me-xl-5
+				+e.date
+					strong.d-block.mb-1 Produkt hinzugefügt:
+					span.d-block 13.04.2021
+			.col-md-auto
+				.row.align-items-center.text-lg-end
+					.col.col-lg-12
+						+e.price.mb-2=data.price
+					.col-auto.col-lg-12
+						+e.cart-btn(type='button') In den Warenkorb
+			+e.cross-btn(type='button')
+				+icon('cross')

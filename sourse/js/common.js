@@ -720,6 +720,7 @@ function eventHandler() {
 
 		return { top: Math.round(top), left: Math.round(left) };
 	}
+
 	//category menu js
 	$('.cat-title-js').click(function () {
 		event.preventDefault();
@@ -729,15 +730,6 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
-
-	//12.04.2021
-	$('.filter-item-js').click(function (){
-		event.preventDefault();
-		$(this).toggleClass('active');
-	});
-
-
-
 
 	//- TODO
 	// 1 clean js file
