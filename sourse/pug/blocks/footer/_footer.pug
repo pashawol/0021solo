@@ -40,11 +40,14 @@ mixin footer()
 				+list('Informationen','AGB','Impressum','Datenschutz','Widerrufsrecht','Cookie-Einstellungen')
 		+e.copy-line 
 			.container
-				img(src="img/svg/logo-white.svg", alt="", loading="lazy")
-				strong
-					a.text-white(href="#")  © 2020 SOLO Kleinmotoren GmbH  
-				| 
-				.text-secondary | #[a.text-secondary(href="#")  Design: VI-BRAND STUDIOS]  |  #[a.text-secondary(href="#")  Entwicklung: VI-ARISE Communikation]
+				+e.cl-row.row.justify-content-center.align-items-center.gy-2
+					.col-sm-auto
+						+e.cl-img
+							img(src="img/svg/logo-white.svg", alt="", loading="lazy")
+					.col-auto
+						strong
+							a.text-white(href="#")  © 2020 SOLO Kleinmotoren GmbH
+					.col-auto.text-secondary | #[a.text-secondary(href="#")  Design: VI-BRAND STUDIOS]  |  #[a.text-secondary(href="#")  Entwicklung: VI-ARISE Communikation]
 	+b.btn-top
 		img(src="img/svg/arrow-up.svg", alt="")
 	+b.cookies-block

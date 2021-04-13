@@ -1,0 +1,311 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sWmailAddress/_sWmailAddress.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sPaymethod/_sPaymethod.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sVantageLine/_sVantageLine.pug
+include ../blocks/sUsage/_sUsage.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sClean/_sClean.pug
+include ../blocks/sPromo/_sPromo.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sSocMedia/_sSocMedia.pug
+include ../blocks/sFolow/_sFolow.pug
+include ../blocks/sMail/_sMail.pug
+include ../blocks/sHSlider/_sHSlider.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	//-+mob-mnu()
+	+header()
+		+top-nav()
+		+topLine()
+	+sHSlider()
+	.section
+		.container
+			.card
+				.card-body
+					form(method='post' action='/account/address/create' data-form-csrf-handler='true' data-form-validation='true' novalidate='')
+						input(type='hidden' name='_csrf_token' value='Knmt_23ZCJ2CSWyioTDZ61PZzk7jJ-Z9nseKkxyV_MM')
+						.form-row.row
+							.form-group.col-md-3.col-sm-6.contact-type
+								label.form-label(for='addressaccountType')
+									span.form-wrap__title Ich bin*
+								select#addressaccountType.custom-select.contact-select(name='address[accountType]' required='required' data-form-field-toggle='true' data-form-field-toggle-target='.js-field-toggle-contact-type-company' data-form-field-toggle-value='business' data-form-field-toggle-scope='all')
+									option(value='private' selected='selected')
+										| Privat
+									option(value='business')
+										| Gewerblich
+						.form-wrap__radio-cont
+							.form-label.form-wrap__title.form-wrap__title--lonely(for='addresspersonalSalutation')
+								| Anrede*
+							.form-wrap__radio-box
+								label.radio-frame
+									input#addresspersonalSalutation.d-none(type='radio' name='address[salutationId]' value='1606d43defb249f695066e7ef91fffbf')
+									.r-btn
+										| Keine Angabe
+								label.radio-frame
+									input#addresspersonalSalutation.d-none(type='radio' name='address[salutationId]' value='c15dc78bdaad4db08f9301bebb58c922')
+									.r-btn
+										| Frau
+								label.radio-frame
+									input#addresspersonalSalutation.d-none(type='radio' name='address[salutationId]' value='b800a4ad935941319d658d8768bb6fa8')
+									.r-btn
+										| Herr
+						.form-wrap__inner-row.form-wrap__inner-row--top.row
+							.col-12.col-xxl-6
+								.form-wrap__input-wrap.form-group
+									label(for='addresspersonalFirstName')
+										span.form-wrap__title
+											| Vorname*
+									input#addresspersonalFirstName.form-wrap__input.form-control(type='text' autocomplete='section-personal given-name' placeholder='Vorname eingeben ...' name='address[firstName]' value='' required='required')
+							.col-12.col-xxl-6
+								.form-wrap__input-wrap.form-group
+									label.form-label(for='addresspersonalLastName' class='form-label')
+										span.form-wrap__title
+											| Nachname*
+									input#addresspersonalLastName.form-wrap__input.form-control(type='text' autocomplete='section-personal family-name' placeholder='Nachname eingeben ...' name='address[lastName]' value='' required='required')
+							.col-12.col-xxl-6
+								.form-wrap__input-wrap.form-group
+									label.form-label(for='personalMail')
+										span.form-wrap__title Neue E-Mail-Adresse*
+									input#personalMail.form-wrap__input.form-control(type='email' autocomplete='section-personal email' placeholder='Neue E-Mail-Adresse eingeben ...' name='email' value='' data-form-validation-equal='personalMail' required='required')
+							.col-12.col-xxl-6
+								.form-wrap__input-wrap.form-group
+									label.form-label(for='personalMailConfirmation')
+										span.form-wrap__title E-Mail-Best&auml;tigung*
+									input#personalMailConfirmation.form-wrap__input.form-control(type='email' autocomplete='section-personal email' placeholder='Wiederholen Sie Ihre E-Mail-Adresse ...' name='emailConfirmation' value='' data-form-validation-equal='personalMail' data-form-validation-equal-message='Die E-Mail-Adressen stimmen nicht überein.' required='required')
+						.js-field-toggle-contact-type-company.form-wrap__inner-row.form-wrap__inner-row--top.row.d-none
+							.col-12.col-xxl-6
+								.form-wrap__input-wrap.form-group
+									label(for='addresscompany')
+										span.form-wrap__title
+											| Firma*
+										input#addresscompany.form-control.js-field-toggle-was-required(type='text' placeholder='Firma eingeben ...' name='address[company]' value='' disabled='disabled')
+							.col-12.col-xxl-6
+								.form-wrap__two-inps
+									.form-wrap__input-wrap.form-group
+										label(for='addressdepartment')
+											span.form-wrap__title
+												| Abteilung
+											input#addressdepartment.form-control(type='text' placeholder='Abteilung eingeben ...' name='address[department]' value='' disabled='disabled')
+									.form-wrap__input-wrap.form-group
+										label(for='addressvatId')
+											span.form-wrap__title
+												| Umsatzsteuer-ID
+											input#addressvatId.form-control(type='text' placeholder='Umsatzsteuer-ID' name='address[vatId]' value='' disabled='disabled')
+						.form-wrap__inner-row.form-wrap__inner-row--last.row
+							.col-12.col-xxl-6
+								.form-wrap__input-wrap.form-group
+									label(for='addressAddressStreet')
+										span.form-wrap__title
+											| Stra&szlig;e und Hausnummer*
+										input#addressAddressStreet.form-control(type='text' placeholder='Straße und Hausnummer eingeben ...' name='address[street]' value='' required='required')
+							.col-12.col-xxl-6
+								.form-wrap__two-inps
+									.form-wrap__input-wrap.form-group
+										label(for='addressAddressZipcode')
+											span.form-wrap__title PLZ*
+											input#addressAddressZipcode.form-control(type='text' placeholder='Postleitzahl eingeben ...' name='address[zipcode]' value='' required='required')
+									.form-wrap__input-wrap.form-group
+										label(for='addressAddressCity')
+											span.form-wrap__title Ort*
+											input#addressAddressCity.form-control(type='text' placeholder='Ort eingeben ...' name='address[city]' value='' required='required')
+							.col-12.col-xxl-6
+								label(for='addressAdditionalField1')
+									span.form-wrap__title
+										| Adresszusatz 1
+								input#addressAdditionalField1.form-wrap__input.form-control(type='text' placeholder='Adresszusatz eingeben ...' name='address[additionalAddressLine1]' value='')
+							.col-12.col-xxl-6
+								label(for='addressAdditionalField2')
+									span.form-wrap__title
+										| Adresszusatz 2
+								input#addressAdditionalField2.form-wrap__input.form-control(type='text' placeholder='Adresszusatz eingeben ...' name='address[additionalAddressLine2]' value='')
+							.col-12.col-xxl-6.country-and-state-form-elements(data-country-state-select='true')
+								.form-wrap__input-wrap.form-group
+									label(for='addressAddressCountry')
+										span.form-wrap__title
+											| Land*
+										.form-wrap__select-wrap
+											select#addressAddressCountry.form-control.form-select(name='address[countryId]' required='required' data-initial-country-id='')
+												option(disabled='disabled' value='' selected='selected')
+													| Land ausw&auml;hlen ...
+												option(value='684a235024ca4963ba376084bba0539b')
+													| Deutschland
+								.col-12.col-xxl-6.d-none
+									.form-wrap__input-wrap.form-group
+										label(for='addressAddressCountry')
+											span.form-wrap__title
+												| Bundesland*
+										select#addressAddressCountryState.country-state-select.custom-select(name='address[countryStateId]' data-initial-country-state-id='')
+											option(value='' selected='selected' data-placeholder-option='true')
+												| Bundesland ausw&auml;hlen ...
+							.col-12.col-xxl-6
+								.form-wrap__input-wrap.form-group
+									label(for='addressAddressPhoneNumber')
+										span.form-wrap__title
+											| Telefonnummer
+									input#addressAddressPhoneNumber.form-wrap__input.form-control(type='text' placeholder='Telefonnummer eingeben ...' name='address[phoneNumber]' value='')
+						p.address-required-info.required-fields
+							| Die mit einem Stern (*) markierten Felder sind Pflichtfelder.
+						.address-form-actions
+							button.address-form-submit.btn.btn-primary(type='submit' title='Adresse speichern')
+								| Adresse speichern
+			h1 changed markup
+			.card
+				.card-body
+					form(method='post' action='/account/address/create' data-form-csrf-handler='true' data-form-validation='true' novalidate='')
+						input(type='hidden' name='_csrf_token' value='Knmt_23ZCJ2CSWyioTDZ61PZzk7jJ-Z9nseKkxyV_MM')
+						.row.gy-2
+							.col-12
+								.form-group.col-md-3.col-sm-6.contact-type
+									label.form-label(for='addressaccountType')
+										span.form-wrap__title Ich bin*
+									select#addressaccountType.custom-select.contact-select(name='address[accountType]' required='required' data-form-field-toggle='true' data-form-field-toggle-target='.js-field-toggle-contact-type-company' data-form-field-toggle-value='business' data-form-field-toggle-scope='all')
+										option(value='private' selected='selected')
+											| Privat
+										option(value='business')
+											| Gewerblich
+							.col-12
+								.form-wrap__radio-cont
+									.form-label.form-wrap__title.form-wrap__title--lonely(for='addresspersonalSalutation')
+										| Anrede*
+									.form-wrap__radio-box
+										label.radio-frame
+											input#addresspersonalSalutation.d-none(type='radio' name='address[salutationId]' value='1606d43defb249f695066e7ef91fffbf')
+											.r-btn
+												| Keine Angabe
+										label.radio-frame
+											input#addresspersonalSalutation.d-none(type='radio' name='address[salutationId]' value='c15dc78bdaad4db08f9301bebb58c922')
+											.r-btn
+												| Frau
+										label.radio-frame
+											input#addresspersonalSalutation.d-none(type='radio' name='address[salutationId]' value='b800a4ad935941319d658d8768bb6fa8')
+											.r-btn
+												| Herr
+							.col-md-6
+								.form-wrap__input-wrap.form-group
+									label(for='addresspersonalFirstName')
+										span.form-wrap__title
+											| Vorname*
+									input#addresspersonalFirstName.form-wrap__input.form-control(type='text' autocomplete='section-personal given-name' placeholder='Vorname eingeben ...' name='address[firstName]' value='' required='required')
+							.col-md-6
+								.form-wrap__input-wrap.form-group
+									label.form-label(for='addresspersonalLastName' class='form-label')
+										span.form-wrap__title
+											| Nachname*
+									input#addresspersonalLastName.form-wrap__input.form-control(type='text' autocomplete='section-personal family-name' placeholder='Nachname eingeben ...' name='address[lastName]' value='' required='required')
+							.col-md-6
+								.form-wrap__input-wrap.form-group
+									label.form-label(for='personalMail')
+										span.form-wrap__title Neue E-Mail-Adresse*
+									input#personalMail.form-wrap__input.form-control(type='email' autocomplete='section-personal email' placeholder='Neue E-Mail-Adresse eingeben ...' name='email' value='' data-form-validation-equal='personalMail' required='required')
+							.col-md-6
+								.form-wrap__input-wrap.form-group
+									label.form-label(for='personalMailConfirmation')
+										span.form-wrap__title E-Mail-Best&auml;tigung*
+									input#personalMailConfirmation.form-wrap__input.form-control(type='email' autocomplete='section-personal email' placeholder='Wiederholen Sie Ihre E-Mail-Adresse ...' name='emailConfirmation' value='' data-form-validation-equal='personalMail' data-form-validation-equal-message='Die E-Mail-Adressen stimmen nicht überein.' required='required')
+							.js-field-toggle-contact-type-company.d-none
+								.col-12.col-xxl-6
+									.form-wrap__input-wrap.form-group
+										label(for='addresscompany')
+											span.form-wrap__title
+												| Firma*
+											input#addresscompany.form-control.js-field-toggle-was-required(type='text' placeholder='Firma eingeben ...' name='address[company]' value='' disabled='disabled')
+								.col-12.col-xxl-6
+									.form-wrap__two-inps
+										.form-wrap__input-wrap.form-group
+											label(for='addressdepartment')
+												span.form-wrap__title
+													| Abteilung
+												input#addressdepartment.form-control(type='text' placeholder='Abteilung eingeben ...' name='address[department]' value='' disabled='disabled')
+										.form-wrap__input-wrap.form-group
+											label(for='addressvatId')
+												span.form-wrap__title
+													| Umsatzsteuer-ID
+												input#addressvatId.form-control(type='text' placeholder='Umsatzsteuer-ID' name='address[vatId]' value='' disabled='disabled')
+							.col-md-6
+								.form-wrap__inner-row.form-wrap__inner-row--last.row
+										.form-wrap__input-wrap.form-group
+											label(for='addressAddressStreet')
+												span.form-wrap__title
+													| Stra&szlig;e und Hausnummer*
+												input#addressAddressStreet.form-control(type='text' placeholder='Straße und Hausnummer eingeben ...' name='address[street]' value='' required='required')
+							.col-md-6
+								.form-wrap__two-inps
+									.form-wrap__input-wrap.form-group
+										label(for='addressAddressZipcode')
+											span.form-wrap__title PLZ*
+											input#addressAddressZipcode.form-control(type='text' placeholder='Postleitzahl eingeben ...' name='address[zipcode]' value='' required='required')
+									.form-wrap__input-wrap.form-group
+										label(for='addressAddressCity')
+											span.form-wrap__title Ort*
+											input#addressAddressCity.form-control(type='text' placeholder='Ort eingeben ...' name='address[city]' value='' required='required')
+							.col-md-6
+								label(for='addressAdditionalField1')
+									span.form-wrap__title
+										| Adresszusatz 1
+								input#addressAdditionalField1.form-wrap__input.form-control(type='text' placeholder='Adresszusatz eingeben ...' name='address[additionalAddressLine1]' value='')
+							.col-md-6
+								label(for='addressAdditionalField2')
+									span.form-wrap__title
+										| Adresszusatz 2
+								input#addressAdditionalField2.form-wrap__input.form-control(type='text' placeholder='Adresszusatz eingeben ...' name='address[additionalAddressLine2]' value='')
+							.col-12.col-xxl-6.country-and-state-form-elements(data-country-state-select='true')
+								.form-wrap__input-wrap.form-group
+									label(for='addressAddressCountry')
+										span.form-wrap__title
+											| Land*
+										.form-wrap__select-wrap
+											select#addressAddressCountry.form-control.form-select(name='address[countryId]' required='required' data-initial-country-id='')
+												option(disabled='disabled' value='' selected='selected')
+													| Land ausw&auml;hlen ...
+												option(value='684a235024ca4963ba376084bba0539b')
+													| Deutschland
+								.col-12.col-xxl-6.d-none
+									.form-wrap__input-wrap.form-group
+										label(for='addressAddressCountry')
+											span.form-wrap__title
+												| Bundesland*
+										select#addressAddressCountryState.country-state-select.custom-select(name='address[countryStateId]' data-initial-country-state-id='')
+											option(value='' selected='selected' data-placeholder-option='true')
+												| Bundesland ausw&auml;hlen ...
+							.col-md-6
+								.form-wrap__input-wrap.form-group
+									label(for='addressAddressPhoneNumber')
+										span.form-wrap__title
+											| Telefonnummer
+									input#addressAddressPhoneNumber.form-wrap__input.form-control(type='text' placeholder='Telefonnummer eingeben ...' name='address[phoneNumber]' value='')
+						p.address-required-info.required-fields
+							| Die mit einem Stern (*) markierten Felder sind Pflichtfelder.
+						.address-form-actions
+							button.address-form-submit.btn.btn-primary(type='submit' title='Adresse speichern')
+								| Adresse speichern
+	+sVantageLine()
+	+sUsage()
+	+sBalls()
+	+sCatalog()
+	+sClean()
+	+sPromo({
+		flagClass: "red"
+	})
+	+sNew()
+	+sContact()
+	+sNews()
+	+sSocMedia()
+	+sFolow()
+	+sMail()
+	+sWmailAddress
+	+sIcons
+	+sPaymethod
+	+sCategories
+	+footer()

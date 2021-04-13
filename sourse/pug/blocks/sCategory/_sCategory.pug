@@ -387,14 +387,14 @@ mixin categorySidebar()
 				span PROFI
 			+e.UL.menu
 				+cSidebarMenuItem('Anwendung', 'active')
-					+cSbarSubMenuItem('Pflanzenschutz/-Pflege', 1)
+					+cSbarSubMenuItem('Pflanzenschutz/-Pflege', 1)(class="active")
 					+cSbarSubMenuItem('Schädlingsbekämpfung', 2)
 					+cSbarSubMenuItem('Reinigung/Desinfektion', 3)
 					+cSbarSubMenuItem('Land und Forstwirtschaft', 4)
 					+cSbarSubMenuItem('Baugewerbe', 5)
 					+cSbarSubMenuItem('Streuen', 6)
 				+cSidebarMenuItem('Spritzen', 'active')
-					+cSbarSubMenuItem('Handspritzen')
+					+cSbarSubMenuItem('Handspritzen')(class="active")
 					+cSbarSubMenuItem('Druckspritze')
 					+cSbarSubMenuItem('Rückenspritze')
 					+cSbarSubMenuItem('Akkuspritzen')
@@ -419,7 +419,7 @@ mixin cSidebarMenuItem(title, activeClass='')
 
 mixin cSbarSubMenuItem(title, icon)
 	+e.LI.sub-item
-		+e.sub-item-link(href="#")
+		+e.sub-item-link(href="#")&attributes(attributes)
 			if icon
 				+e.sb-icon
 					img.img-svg-js(loading="lazy" src=`img/svg/cat-mnu-icon-${icon}.svg` alt="")

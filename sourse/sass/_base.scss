@@ -760,3 +760,47 @@ iframe {
 	display: flex;
     align-items: center;
 }
+
+//
+.account{
+	label{
+		display: block;
+		@extend .mb-2;
+	}
+
+	.table{
+		display: block !important;
+	}
+
+	.order-table-header-label{
+		display: block!important;
+		width: 100% !important;
+		@extend .pb-1;
+	}
+	.order-table-body-value{
+		display: block!important;
+		width: 100% !important;
+	}
+
+	//
+	.form-wrap__title{
+		@extend .mb-1;
+		@extend .pb-0;
+	}
+
+	.form-wrap__radio-cont{
+		@extend .mb-1;
+	}
+
+	.form-wrap__input,
+	.form-wrap__select-wrap{
+		width: 100% !important;
+		@extend .mb-1;
+	}
+
+}
+
+.form-row{
+	@extend .row;
+	@extend .pb-3;
+}
