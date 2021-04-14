@@ -416,7 +416,7 @@
 
   width: 100%;
   display: block;
-  //padding: 6.5px var(--mmPright) 6.5px var(--mmPLeft);
+
 
   @include media-breakpoint-up(xl){
     width: 962px;
@@ -475,7 +475,7 @@
     position: relative;
 
     //padding: 10px 0;
-    padding: 10px var(--mmPright) 10px var(--mmPLeft);
+    padding: 10px var(--mm-p-right) 10px var(--mm-p-right);
     border-bottom: 2px solid $light;
     @include media-breakpoint-up(xl){
       border-bottom: 0;
