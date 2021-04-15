@@ -14299,6 +14299,10 @@ iframe {
   color: #969696;
 }
 
+.footer__c-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .footer__c-link:after {
   display: inline-block;
   margin: 0 5px;

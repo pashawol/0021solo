@@ -210,6 +210,9 @@
   &__c-link{
     display: block;
     color: $secondary;
+    &:hover{
+      color: rgba($white, .8);
+    }
 
     &:after{
       @include media-breakpoint-up(sm){
