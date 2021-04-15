@@ -761,11 +761,14 @@ iframe {
     align-items: center;
 }
 
-//
+//css fix
 .account{
-	label{
+	label, .form-wrap__title{
 		display: block;
 		@extend .mb-2;
+	}
+	.card{
+		margin-bottom: rem(40) !important;
 	}
 
 	.table{
@@ -796,6 +799,15 @@ iframe {
 	.form-wrap__select-wrap{
 		width: 100% !important;
 		@extend .mb-1;
+	}
+
+	.form-wrap__radio-box{
+		@extend .row;
+		@extend .gy-2;
+
+		.radio-frame{
+			@extend .col-auto;
+		}
 	}
 
 }

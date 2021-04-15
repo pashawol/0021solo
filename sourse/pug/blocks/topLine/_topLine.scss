@@ -475,8 +475,14 @@
     position: relative;
 
     //padding: 10px 0;
-    padding: 10px var(--mm-p-right) 10px var(--mm-p-right);
+    padding: 15px var(--mm-p-right) 15px var(--mm-p-left);
     border-bottom: 2px solid $light;
+    @include media-breakpoint-down(xl){
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 0.56px;
+    }
+
     @include media-breakpoint-up(xl){
       border-bottom: 0;
       padding: 10px 0;

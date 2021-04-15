@@ -123,6 +123,7 @@
 		}
 	}
 	&__filter-item{
+		box-shadow: none!important;
 		@extend .btn;
 		@extend .btn-light;
 		color: $secondary2;
