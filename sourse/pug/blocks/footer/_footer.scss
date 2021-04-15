@@ -192,6 +192,33 @@
     }
     //margin-right: rem(17);
   }
+  &__links-col{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__links-row{
+    @include roww(0);
+    //cols
+    & > *{
+      --link-aft-content: "|";
+      &:last-child{
+        --link-aft-content: none;
+      }
+    }
+  }
+  &__c-link{
+    display: block;
+    color: $secondary;
+
+    &:after{
+      @include media-breakpoint-up(sm){
+        content: var(--link-aft-content);
+      }
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
   //&__copy-line{
   //	.container{
   //		margin-right: auto !important;
