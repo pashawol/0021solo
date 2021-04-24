@@ -461,7 +461,9 @@ function eventHandler() {
 		slidesPerView: "auto",
 		loop: true,
 		//watchOverflow: true,
-
+		autoplay: {
+			delay: 5000,
+		},
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 5,
@@ -479,6 +481,15 @@ function eventHandler() {
 			prevEl: '.h-slide-prev--js',
 		},
 	});
+
+	$(".h-slider-js").hover(function () {
+		hSlider.autoplay.stop();
+	},
+	function(){
+		hSlider.autoplay.start();
+	}
+	);
+ 
 	//menu js
 	$('.burger-js').click(function () {
 		//close dt all submenu

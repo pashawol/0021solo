@@ -16728,10 +16728,10 @@ a {
 }
 
 .cSidebar__sub-item-link:hover {
-  color: #f73429;
+  color: #004389;
   --sb-item-left: -10px;
   --sb-itemopac: 1;
-  --sblinktxtshdw: 0 0 1px #f73429;
+  --sblinktxtshdw: 0 0 1px #004389;
 }
 
 .cSidebar__sub-item-link.active {

@@ -293,10 +293,10 @@
 		--sb-itemopac: 0;
 		--sblinktxtshdw: 0 0 0 rgba($color: #000000, $alpha: 1.0);
 		&:hover{
-			color: $blue;
+			color: $primary;
 			--sb-item-left: -10px;
 			--sb-itemopac: 1;
-			--sblinktxtshdw: 0 0 1px #{$blue};
+			--sblinktxtshdw: 0 0 1px #{$primary};
 		}
 		&.active{
 			color: $danger;
