@@ -816,3 +816,23 @@ iframe {
 	@extend .row;
 	@extend .pb-3;
 }
+
+.payment-methods{
+
+}
+
+
+.payment-method{
+	border-bottom: 1px solid $secondary;
+    margin-bottom: 22px;
+		.custom-control{
+			display: flex;
+		}
+		.custom-control-label{
+			display: flex;
+			img{
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+		}
+}

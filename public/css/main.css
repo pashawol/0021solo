@@ -14140,6 +14140,30 @@ iframe {
   width: 100% !important;
 }
 
+.payment-method {
+  border-bottom: 1px solid #969696;
+  margin-bottom: 22px;
+}
+
+.payment-method .custom-control {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.payment-method .custom-control-label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.payment-method .custom-control-label img {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .footer {
   --pt: 3.5rem;
   --spb: 0rem;
