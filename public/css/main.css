@@ -14141,8 +14141,15 @@ iframe {
 }
 
 .payment-method {
-  border-bottom: 1px solid #969696;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   margin-bottom: 22px;
+}
+
+.payment-method input {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .payment-method .custom-control {
@@ -14157,10 +14164,10 @@ iframe {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 20px;
 }
 
 .payment-method .custom-control-label img {
-  margin-left: 20px;
   margin-right: 20px;
 }
 

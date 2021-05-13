@@ -620,6 +620,9 @@ function eventHandler() {
 		var $img = $(this);
 		var imgClass = $img.attr('class');
 		var imgURL = $img.attr('src');
+		if (imgURL) {
+
+		
 		$.get(imgURL, function (data) {
 			// Get the SVG tag, ignore the rest
 			var $svg = $(data).find('svg'); // Add replaced image's classes to the new SVG
@@ -648,6 +651,7 @@ function eventHandler() {
 
 			$img.replaceWith($svg);
 		}, 'xml');
+		}
 	});
 
 
