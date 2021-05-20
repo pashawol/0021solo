@@ -20116,6 +20116,10 @@ a {
   height: auto;
   max-height: 100%;
   max-width: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .sPromo__title {
