@@ -9,6 +9,8 @@ mixin topLine()
 						span
 					+e.icon.mob-search
 						+icon('zoom')
+					+e.icon.d-md-none(href='#')
+							+icon('user')
 				//-logo
 				+e.logo-col.col-auto
 					+e.logo(href='#')
@@ -68,12 +70,12 @@ mixin topLine()
 							+icon('zoom')
 						//- +e.icon.d-none.d-md-block(href='#')
 						//- 	+icon('heart')
-						//- +e.icon.d-none.d-md-block(href='#')
+						//- +e.icon.(href='#')
 						//- 	+icon('user')
 						+e.icon(href='#')
 						
 							+icon('heart')
-						+e.icon(href='#')
+						+e.icon.d-none.d-md-block(href='#')
 							+icon('user')
 						+e.cart
 							+e.c-ball.has-ball
