@@ -66,9 +66,14 @@ mixin topLine()
 					+e.icons-items
 						+e.icon.d-none.d-xll-block(href='#')
 							+icon('zoom')
-						+e.icon.d-none.d-md-block(href='#')
+						//- +e.icon.d-none.d-md-block(href='#')
+						//- 	+icon('heart')
+						//- +e.icon.d-none.d-md-block(href='#')
+						//- 	+icon('user')
+						+e.icon(href='#')
+						
 							+icon('heart')
-						+e.icon.d-none.d-md-block(href='#')
+						+e.icon(href='#')
 							+icon('user')
 						+e.cart
 							+e.c-ball.has-ball
