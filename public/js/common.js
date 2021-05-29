@@ -450,7 +450,8 @@ function eventHandler() {
 		loop: true,
 		//watchOverflow: true,
 		autoplay: {
-			delay: 5000
+			delay: 5000 // delay: 100,
+
 		},
 		lazy: {
 			loadPrevNext: true,

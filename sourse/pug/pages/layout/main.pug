@@ -31,9 +31,10 @@ html(lang="de")
 		+allcss()
 	block variables
 	body.loaded_hiding(class= mainPage) 
-		block pagecontent
-			h3 content
-		+modal()
+		.main-wrapper
+			block pagecontent
+				h3 content
+			+modal()
 		+allcjs()
 		
 		

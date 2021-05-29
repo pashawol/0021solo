@@ -13326,8 +13326,6 @@ Shows a scroll up button at the bottom right of the page.
 
 html {
   -webkit-text-size-adjust: none;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 html.fixed {
@@ -13393,6 +13391,12 @@ body.fixed {
 body.fixed::before {
   z-index: 999;
   opacity: 0.76;
+}
+
+.main-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .section {
@@ -14362,8 +14366,7 @@ iframe {
 .cookies-block {
   padding-top: 1.125rem;
   padding-bottom: 1.125rem;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   z-index: 100;
   width: 100%;
   bottom: 0;
@@ -20210,6 +20213,10 @@ a {
 .red-promo__made img {
   width: 100%;
   height: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .red-promo__title {
@@ -20224,14 +20231,6 @@ a {
   width: 110%;
   margin-left: -5%;
   margin-bottom: 45px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .red-promo__img img {
@@ -21637,6 +21636,14 @@ a {
 .dt-dd-menu__back-btn .icon {
   color: #f73429;
   font-size: 12px;
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-right: 12px;
+  position: relative;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .dt-dd-menu__title {

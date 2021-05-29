@@ -268,7 +268,9 @@
 .red-promo{
 	position: relative;
 	z-index: 1;
-
+	img{
+		
+	}
 	&.red{
 		&:before{
 			background-color: $primary;
@@ -328,6 +330,7 @@
 		img{
 			width: 100%;
 			height: auto;
+			flex: 0 0 auto;
 		}
 	}
 	&__title{
@@ -358,8 +361,8 @@
 			margin-left: 0;
 			margin-bottom: 40px;
 		}
-		display: flex;
-		justify-content: center;
+		// display: flex;
+		// justify-content: center;
 
 		img{
 			width: auto;
