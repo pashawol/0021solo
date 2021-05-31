@@ -678,29 +678,26 @@ function eventHandler() {
 		},
 
 	});
-	let prodCardSlider = new Swiper('.prod-slider-js', {
+	let prodCardSlider =  new Swiper('.prod-slider-js', {
 		spaceBetween: 20,
-
 		thumbs: {
-			swiper: prodCardThumb,
+			swiper: prodCardThumb
 		},
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 3,
+			loadPrevNextAmount: 3
 		},
 		loop: true,
 		//pugination
 		pagination: {
-			el: $(this).find('.prod-pugin--js'),
-			clickable: true,
+			el: $('.sProdCard__slider').find('.prod-pugin--js'),
+			clickable: true
 		},
-
 		//nav
 		navigation: {
-			nextEl: $(this).find('.prod-next--js'),
-			prevEl: $(this).find('.prod-prev--js'),
-		},
-
+			nextEl: $('.sProdCard__slider').find('.prod-next--js'),
+			prevEl: $('.sProdCard__slider').find('.prod-prev--js')
+		}
 	});
 	//end prod card
 

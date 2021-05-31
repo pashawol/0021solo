@@ -658,13 +658,13 @@ function eventHandler() {
 		loop: true,
 		//pugination
 		pagination: {
-			el: $(this).find('.prod-pugin--js'),
+			el: $('.sProdCard__slider').find('.prod-pugin--js'),
 			clickable: true
 		},
 		//nav
 		navigation: {
-			nextEl: $(this).find('.prod-next--js'),
-			prevEl: $(this).find('.prod-prev--js')
+			nextEl: $('.sProdCard__slider').find('.prod-next--js'),
+			prevEl: $('.sProdCard__slider').find('.prod-prev--js')
 		}
 	}); //end prod card
 	//vanilla js .scroll-link
