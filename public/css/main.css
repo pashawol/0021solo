@@ -14175,6 +14175,54 @@ iframe {
   margin-right: 20px;
 }
 
+.chb-frame {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #fff;
+  background-color: #333;
+  padding: 0.9375rem;
+  text-align: center;
+  height: auto;
+  width: 20rem;
+  height: auto;
+  bottom: 100%;
+  margin-bottom: 0.9375rem;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+.tooltip-text::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 99%;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #333;
+}
+
+.chb-frame input:checked ~ .tooltip-text {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
 .footer {
   --pt: 3.5rem;
   --spb: 0rem;

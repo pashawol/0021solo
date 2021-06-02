@@ -839,3 +839,40 @@ iframe {
 			}
 		}
 }
+
+.chb-frame{
+	position: relative;
+}
+
+
+.tooltip-text{
+	position: absolute;
+	@include a-cent1(x);
+	color: #fff;
+	background-color: $body-color;
+	padding: rem(15);
+	text-align: center;
+	height: auto;
+	width: rem(320);
+	height: auto;
+	bottom: 100%;
+	margin-bottom: rem(15);
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+	@include mt;
+	
+
+	&::before{
+		content: '';
+		@include a-cent1(x);
+		top: 99%;
+		@include triangle(16px, $body-color, down);
+	}
+}
+
+.chb-frame input:checked~.tooltip-text{
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+}
