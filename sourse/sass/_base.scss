@@ -855,8 +855,8 @@ iframe {
 	height: auto;
 	width: rem(320);
 	height: auto;
-	bottom: 100%;
-	margin-bottom: rem(15);
+	top: 100%;
+	margin-top: rem(15);
 	visibility: visible;
 	opacity: 1;
 	z-index: 1;
@@ -865,9 +865,10 @@ iframe {
 
 	&::before{
 		content: '';
-		@include a-cent1(x);
-		top: 99%;
-		@include triangle(16px, $body-color, down);
+		position: absolute;
+		left: 20px;
+		bottom: 99%;
+		@include triangle(16px, $body-color, up);
 	}
 }
 
