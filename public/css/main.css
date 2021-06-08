@@ -18282,6 +18282,8 @@ a {
   letter-spacing: 0.52px;
 }
 
+.sInfo .section-title h3:not(.section-title__info),
+.sInfo .section-title .h3:not(.section-title__info),
 .sInfo .section-title h1,
 .sInfo .section-title .h1,
 .sInfo .section-title h2,
@@ -25934,6 +25936,8 @@ a {
     letter-spacing: 0.56px;
   }
 
+  .sInfo .section-title h3:not(.section-title__info),
+  .sInfo .section-title .h3:not(.section-title__info),
   .sInfo .section-title h1,
   .sInfo .section-title .h1,
   .sInfo .section-title h2,
@@ -32498,6 +32502,8 @@ a {
     letter-spacing: 0.6px;
   }
 
+  .sInfo .section-title h3:not(.section-title__info),
+  .sInfo .section-title .h3:not(.section-title__info),
   .sInfo .section-title h1,
   .sInfo .section-title .h1,
   .sInfo .section-title h2,
