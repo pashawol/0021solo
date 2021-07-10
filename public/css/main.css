@@ -13135,9 +13135,13 @@ iframe {
   z-index: -1;
 }
 
-.filter-panel-wrapper-toggle svg {
-  top: 0;
-  margin-right: 5px;
+.filter-panel-wrapper-toggle .icon-sliders-horizontal {
+  margin-right: 5px !important;
+}
+
+.filter-panel-wrapper-toggle .icon-sliders-horizontal svg {
+  top: 0 !important;
+  display: inline-block;
 }
 
 .footer {
