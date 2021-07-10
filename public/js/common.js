@@ -1,22 +1,17 @@
 "use strict";
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var JSCCommon = {
+const JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
-	modalCall: function modalCall() {
+
+	modalCall() {
 		$(".link-modal").fancybox({
 			arrows: false,
 			infobar: false,
@@ -37,10 +32,10 @@ var JSCCommon = {
 
 				}
 			},
-			beforeLoad: function beforeLoad() {
+			beforeLoad: function () {
 				document.querySelector("html").classList.add("fixed");
 			},
-			afterClose: function afterClose() {
+			afterClose: function () {
 				document.querySelector("html").classList.remove("fixed");
 			}
 		});
@@ -48,17 +43,17 @@ var JSCCommon = {
 			$.fancybox.close();
 		});
 		$.fancybox.defaults.backFocus = false;
-		var linkModal = document.querySelectorAll('.link-modal');
+		const linkModal = document.querySelectorAll('.link-modal');
 
 		function addData() {
-			linkModal.forEach(function (element) {
-				element.addEventListener('click', function () {
-					var modal = document.querySelector(element.getAttribute("href"));
-					var data = element.dataset;
+			linkModal.forEach(element => {
+				element.addEventListener('click', () => {
+					let modal = document.querySelector(element.getAttribute("href"));
+					const data = element.dataset;
 
 					function setValue(val, elem) {
 						if (elem && val) {
-							var el = modal.querySelector(elem);
+							const el = modal.querySelector(elem);
 							el.tagName == "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
 						}
 					}
@@ -73,19 +68,14 @@ var JSCCommon = {
 
 		if (linkModal) addData();
 	},
+
 	// /modalCall
-	toggleMenu: function toggleMenu() {
-		var _this = this;
-
+	toggleMenu() {
 		if (this.btnToggleMenuMobile) {
-			this.btnToggleMenuMobile.forEach(function (element) {
-				element.addEventListener('click', function () {
-					_this.btnToggleMenuMobile.forEach(function (element) {
-						return element.classList.toggle("on");
-					});
-
-					_this.menuMobile.classList.toggle("active");
-
+			this.btnToggleMenuMobile.forEach(element => {
+				element.addEventListener('click', () => {
+					this.btnToggleMenuMobile.forEach(element => element.classList.toggle("on"));
+					this.menuMobile.classList.toggle("active");
 					document.body.classList.toggle("fixed");
 					document.querySelector('html').classList.toggle("fixed");
 					return false;
@@ -93,9 +83,10 @@ var JSCCommon = {
 			});
 		}
 	},
-	closeMenu: function closeMenu() {
+
+	closeMenu() {
 		if (this.menuMobile) {
-			this.btnToggleMenuMobile.forEach(function (element) {
+			this.btnToggleMenuMobile.forEach(element => {
 				element.classList.remove("on");
 			});
 			this.menuMobile.classList.remove("active");
@@ -103,21 +94,20 @@ var JSCCommon = {
 			document.querySelector('html').classList.remove("fixed");
 		}
 	},
-	mobileMenu: function mobileMenu() {
-		var _this2 = this;
 
+	mobileMenu() {
 		if (this.menuMobileLink) {
 			this.toggleMenu();
-			document.addEventListener('mouseup', function (event) {
-				var container = event.target.closest(".menu-mobile--js.active"); // (1)
+			document.addEventListener('mouseup', event => {
+				let container = event.target.closest(".menu-mobile--js.active"); // (1)
 
 				if (!container) {
-					_this2.closeMenu();
+					this.closeMenu();
 				}
 			}, {
 				passive: true
 			});
-			window.addEventListener('resize', function () {
+			window.addEventListener('resize', () => {
 				if (window.matchMedia("(min-width: 992px)").matches) {// JSCCommon.closeMenu();
 				}
 			}, {
@@ -125,19 +115,20 @@ var JSCCommon = {
 			});
 		}
 	},
+
 	// /mobileMenu
 	// tabs  .
-	tabscostume: function tabscostume(tab) {
-		var tabs = {
+	tabscostume(tab) {
+		let tabs = {
 			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
 			BtnParent: [].slice.call(document.querySelectorAll(".".concat(tab, "__caption"))),
 			Content: [].slice.call(document.querySelectorAll(".".concat(tab, "__content")))
 		};
-		tabs.Btn.forEach(function (element, index) {
-			element.addEventListener('click', function () {
+		tabs.Btn.forEach((element, index) => {
+			element.addEventListener('click', () => {
 				if (!element.classList.contains('active')) {
-					var siblings = element.parentNode.querySelector(".".concat(tab, "__btn.active"));
-					var siblingsContent = tabs.Content[index].parentNode.querySelector(".".concat(tab, "__content.active"));
+					let siblings = element.parentNode.querySelector(".".concat(tab, "__btn.active"));
+					let siblingsContent = tabs.Content[index].parentNode.querySelector(".".concat(tab, "__content.active"));
 					siblings.classList.remove('active');
 					siblingsContent.classList.remove('active');
 					element.classList.add('active');
@@ -151,56 +142,60 @@ var JSCCommon = {
 		// 		.eq($(this).index()).fadeIn().addClass('active');
 		// });
 	},
+
 	// /tabs
-	inputMask: function inputMask() {
+	inputMask() {
 		// mask for input
-		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(function (element) {
 			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 		});
 		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
+
 	// /inputMask
-	ifie: function ifie() {
+	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 		if (isIE11) {}
 	},
-	heightwindow: function heightwindow() {
+
+	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
+		let vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
 
 		document.documentElement.style.setProperty('--vh', "".concat(vh, "px")); // We listen to the resize event
 
-		window.addEventListener('resize', function () {
+		window.addEventListener('resize', () => {
 			// We execute the same script as before
-			var vh = window.innerHeight * 0.01;
+			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
 		}, {
 			passive: true
 		});
 	},
-	animateScroll: function animateScroll() {
+
+	animateScroll() {
 		$(".scroll-link").click(function () {
-			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top;
+			const elementClick = $(this).attr("href");
+			const destination = $(elementClick).offset().top;
 			$('html, body').animate({
 				scrollTop: destination
 			}, 1100);
 			return false;
 		});
 	},
-	getCurrentYear: function getCurrentYear(el) {
-		var now = new Date();
-		var currentYear = document.querySelector(el);
+
+	getCurrentYear(el) {
+		let now = new Date();
+		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
+
 };
-var $ = jQuery;
+const $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl;
-
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
@@ -209,7 +204,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	var x = window.location.host;
-	var screenName;
+	let screenName;
 	screenName = '08-red.png';
 
 	if (screenName && x === "localhost:3000") {
@@ -217,7 +212,7 @@ function eventHandler() {
 	}
 
 	$(document).on('click', '.btn-top', function () {
-		var th = $(this);
+		let th = $(this);
 		$('html, body').animate({
 			scrollTop: 0
 		}, 100, function () {
@@ -226,7 +221,7 @@ function eventHandler() {
 	});
 
 	function whenResize() {
-		var topH = document.documentElement.clientHeight / 2;
+		const topH = document.documentElement.clientHeight / 2;
 
 		if ($(window).scrollTop() > topH) {
 			$('.btn-top  ').addClass('show');
@@ -235,7 +230,7 @@ function eventHandler() {
 		}
 	}
 
-	window.addEventListener('resize ', function () {
+	window.addEventListener('resize ', () => {
 		whenResize();
 	}, {
 		passive: true
@@ -244,24 +239,28 @@ function eventHandler() {
 		whenResize();
 	});
 	whenResize();
-	var defaultSl = (_defaultSl = {
+	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
 			loadPrevNext: true
 		},
-		watchOverflow: true
-	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defineProperty(_defaultSl, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _defineProperty(_defaultSl, "pagination", {
-		el: ' .swiper-pagination',
-		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true // renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
 
-	}), _defaultSl);
-	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		}
+	};
+	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		freeMode: true,
 		loopFillGroupWithBlank: true,
@@ -289,11 +288,11 @@ function eventHandler() {
 		}
 	}
 
-	var closeFunc;
+	let closeFunc;
 	$('.dd-btn-js').click(function () {
 		document.removeEventListener('click', closeFunc);
 		event.stopPropagation();
-		var currDd = this.parentElement;
+		let currDd = this.parentElement;
 		$('.dd-js').each(function () {
 			if (this !== currDd) {
 				$(this).removeClass('active');
@@ -306,7 +305,7 @@ function eventHandler() {
 	}); //usageSlider
 
 	$('.sUsage').each(function () {
-		var usageSlider = new Swiper($(this).find('.usage-slider-js'), {
+		let usageSlider = new Swiper($(this).find('.usage-slider-js'), {
 			slidesPerView: "auto",
 			watchOverflow: true,
 			lazy: {
@@ -335,7 +334,7 @@ function eventHandler() {
 	}); //usageSlider
 
 	$('.sCatalog').each(function () {
-		var catalogSlider = new Swiper($(this).find('.catalog-slider-js'), {
+		let catalogSlider = new Swiper($(this).find('.catalog-slider-js'), {
 			slidesPerView: "auto",
 			//watchOverflow: true,
 			spaceBetween: 17,
@@ -356,7 +355,7 @@ function eventHandler() {
 		});
 	}); //
 
-	var cleanSlider = new Swiper('.clean-slider-js', {
+	let cleanSlider = new Swiper('.clean-slider-js', {
 		slidesPerView: "auto",
 		watchOverflow: true,
 		spaceBetween: 20,
@@ -376,7 +375,7 @@ function eventHandler() {
 		}
 	}); //promo slider
 
-	var promoSlider = new Swiper('.promo-slider-js', {
+	let promoSlider = new Swiper('.promo-slider-js', {
 		slidesPerView: "auto",
 		watchOverflow: true,
 		breakpoints: {
@@ -406,7 +405,7 @@ function eventHandler() {
 		}
 	}); //newsSlider
 
-	var newsSlider = new Swiper('.news-slider-js', {
+	let newsSlider = new Swiper('.news-slider-js', {
 		slidesPerView: "auto",
 		breakpoints: {
 			0: {
@@ -428,7 +427,7 @@ function eventHandler() {
 		}
 	}); //socMediaSlider
 
-	var socMediaSlider = new Swiper('.soc-m-slider-js', {
+	let socMediaSlider = new Swiper('.soc-m-slider-js', {
 		slidesPerView: "auto",
 		loop: true,
 		breakpoints: {
@@ -445,7 +444,7 @@ function eventHandler() {
 		}
 	}); //hSlider
 
-	var hSlider = new Swiper('.h-slider-js', {
+	let hSlider = new Swiper('.h-slider-js', {
 		slidesPerView: "auto",
 		loop: true,
 		//watchOverflow: true,
@@ -484,11 +483,23 @@ function eventHandler() {
 
 		$('.mob-menu--js').toggleClass('active');
 		$('body').toggleClass('fixed2');
+	});
+	$(".js-search-toggle-btn, .topLine__icon.mob-search").click(function () {
+		if ($('body').hasClass("fixed2")) {
+			closeSubMenu(); //decorative toggle
+
+			$('.burger-js').toggleClass('active'); //xl
+
+			$('.navMenu--js').removeClass('active'); //down xl
+
+			$('.mob-menu--js').removeClass('active');
+			$('body').removeClass('fixed2');
+		}
 	}); //dt-menu-toggle
 
 	$('.menu-link-js').click(function () {
 		event.preventDefault();
-		var self = this;
+		let self = this;
 		$('.menu-link-js').each(function () {
 			if (this === self) {
 				$(this).toggleClass('active');
@@ -499,10 +510,10 @@ function eventHandler() {
 			}
 		});
 	});
-	document.addEventListener('mouseup', function (event) {
-		var container = event.target.closest(".dt-dd-menu--js.active .dt-dd-menu__wrap"); // (1)
+	document.addEventListener('mouseup', event => {
+		let container = event.target.closest(".dt-dd-menu--js.active .dt-dd-menu__wrap"); // (1)
 
-		var link = event.target.closest(".menu-link-js.active"); // (1)
+		let link = event.target.closest(".menu-link-js.active"); // (1)
 
 		if (!container && !link) closeSubMenu();
 	}, {
@@ -524,10 +535,10 @@ function eventHandler() {
 	//back btn
 
 	$('.back-btn-js').click(function () {
-		var currDD = this.closest('.dt-dd-menu--js');
+		let currDD = this.closest('.dt-dd-menu--js');
 		if (!currDD) return;
 		currDD.classList.remove('active');
-		var currLink = currDD.parentElement.querySelector('.menu-link-js');
+		let currLink = currDD.parentElement.querySelector('.menu-link-js');
 		currLink.classList.remove('active');
 	}); //close funcs
 
@@ -557,8 +568,8 @@ function eventHandler() {
 
 
 	$('.sb-title-js').click(function () {
-		var self = this;
-		var currDD = this.closest('.dt-dd-menu--js');
+		let self = this;
+		let currDD = this.closest('.dt-dd-menu--js');
 		$(currDD).find('.sb-title-js').each(function () {
 			if (this === self) {
 				$(this).toggleClass('active');
@@ -616,8 +627,8 @@ function eventHandler() {
 
 
 				if ($svg.attr('viewBox') && !$svg.attr('height') && !$svg.attr('width')) {
-					var width = $svg.attr("viewBox").split(' ')[2];
-					var height = $svg.attr("viewBox").split(' ')[3];
+					let width = $svg.attr("viewBox").split(' ')[2];
+					let height = $svg.attr("viewBox").split(' ')[3];
 					$svg.attr('width', width);
 					$svg.attr('height', height);
 				} // Replace image with new SVG
@@ -628,7 +639,7 @@ function eventHandler() {
 		}
 	}); //prod card
 
-	var prodCardThumb = new Swiper('.prod-thumb-js', {
+	let prodCardThumb = new Swiper('.prod-thumb-js', {
 		slidesPerView: 'auto',
 		breakpoints: {
 			1: {
@@ -646,7 +657,7 @@ function eventHandler() {
 			loadPrevNextAmount: 6
 		}
 	});
-	var prodCardSlider = new Swiper('.prod-slider-js', {
+	let prodCardSlider = new Swiper('.prod-slider-js', {
 		spaceBetween: 20,
 		thumbs: {
 			swiper: prodCardThumb
@@ -670,31 +681,21 @@ function eventHandler() {
 	//vanilla js .scroll-link
 
 	function smoothScroll(qSelector) {
-		var elements = document.querySelectorAll(qSelector);
+		let elements = document.querySelectorAll(qSelector);
 		if (elements.length === 0) return;
 
-		var _iterator = _createForOfIteratorHelper(elements),
-				_step;
-
-		try {
-			for (_iterator.s(); !(_step = _iterator.n()).done;) {
-				var elem = _step.value;
-				elem.addEventListener('click', function () {
-					var destinyID = this.getAttribute('href');
-					event.preventDefault();
-					var destinyElem = document.querySelector(destinyID);
-					if (!destinyElem) return;
-					var destinyTop = getCoords(destinyElem).top;
-					window.scrollTo({
-						top: destinyTop,
-						behavior: "smooth"
-					});
+		for (let elem of elements) {
+			elem.addEventListener('click', function () {
+				let destinyID = this.getAttribute('href');
+				event.preventDefault();
+				let destinyElem = document.querySelector(destinyID);
+				if (!destinyElem) return;
+				let destinyTop = getCoords(destinyElem).top;
+				window.scrollTo({
+					top: destinyTop,
+					behavior: "smooth"
 				});
-			}
-		} catch (err) {
-			_iterator.e(err);
-		} finally {
-			_iterator.f();
+			});
 		}
 	}
 

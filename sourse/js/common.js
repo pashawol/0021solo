@@ -506,9 +506,24 @@ function eventHandler() {
 		$('.mob-menu--js').toggleClass('active');
 		$('body').toggleClass('fixed2');
 	});
+	$(".js-search-toggle-btn, .topLine__icon.mob-search").click(function(){
+		if ($('body').hasClass("fixed2")) {
 
-	//dt-menu-toggle
-	$('.menu-link-js').click(function () {
+			closeSubMenu();
+			
+			//decorative toggle
+			$('.burger-js').toggleClass('active');
+			
+			//xl
+			$('.navMenu--js').removeClass('active');
+			
+			//down xl
+			$('.mob-menu--js').removeClass('active');
+			$('body').removeClass('fixed2');
+		}
+		})
+		//dt-menu-toggle
+		$('.menu-link-js').click(function () {
 		event.preventDefault();
 
 		let self = this;
